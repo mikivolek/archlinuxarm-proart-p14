@@ -22,15 +22,71 @@
     {
       "source": "payload/README.md",
       "destination": "README.md",
-      "bytes": 7434,
-      "sha256": "4f91ab2367ab3e43fda1e88a50d5b9adc7112729c78300715f4110e525028f9c",
+      "bytes": 1635,
+      "sha256": "bd956fd99b90c32a5a4f1d1b16c5754401102ad519a2919ea5f70bd8cf83d82f",
+      "mode": 420
+    },
+    {
+      "source": "payload/docs/acpi-overrides.md",
+      "destination": "docs/acpi-overrides.md",
+      "bytes": 1593,
+      "sha256": "6f77463d1338cf1cc37598a5ce6dcc6ec2fdf97f6dba74fa3db22976c884056b",
+      "mode": 420
+    },
+    {
+      "source": "payload/docs/assembling.md",
+      "destination": "docs/assembling.md",
+      "bytes": 1772,
+      "sha256": "a2dde6f8b7394ace2d227ab1e12538f77d0ae6cc407a4e1fb179415123a6f9f7",
+      "mode": 420
+    },
+    {
+      "source": "payload/docs/development.md",
+      "destination": "docs/development.md",
+      "bytes": 1895,
+      "sha256": "c498af1ac5bcf3b8f8e6e2ebd4b15ba8613b4ee836b165e914750d28c856fc3f",
+      "mode": 420
+    },
+    {
+      "source": "payload/docs/gpl-source.md",
+      "destination": "docs/gpl-source.md",
+      "bytes": 1842,
+      "sha256": "d1cc5f225e9ea172727ac04514b7adcc178fb89d36415a0c47c18b8b51be554b",
+      "mode": 420
+    },
+    {
+      "source": "payload/docs/hardware.md",
+      "destination": "docs/hardware.md",
+      "bytes": 2545,
+      "sha256": "80db5e7d20d44f22f62b8b45d6e95d5cfbb8661f8f0adaab3ac7c854f494f31e",
+      "mode": 420
+    },
+    {
+      "source": "payload/docs/installing.md",
+      "destination": "docs/installing.md",
+      "bytes": 3232,
+      "sha256": "30df90fecbb9ed1144c887782001db1b88fddc50a44decc584a6d9e5b6651f74",
+      "mode": 420
+    },
+    {
+      "source": "payload/docs/limits.md",
+      "destination": "docs/limits.md",
+      "bytes": 900,
+      "sha256": "17b5f558306e3699469771048864f31ec2344d6b3174d8526ef9658654cf8f79",
+      "mode": 420
+    },
+    {
+      "source": "payload/docs/maintainer.md",
+      "destination": "docs/maintainer.md",
+      "bytes": 4939,
+      "sha256": "cf1896f04474fa617b32f7519dcbbe968958702abcb61abed3232f6fd97854b5",
       "mode": 420
     },
     {
       "source": "payload/docs/media-build.md",
       "destination": "docs/media-build.md",
-      "bytes": 3567,
-      "sha256": "334e6770ae7e0be725bb38d795fed2f0e2d678b7ff74992f802db876dcb5481f",
+      "bytes": 4953,
+      "sha256": "bb1e8c5264dea4cd8f97d5c24f0fcb7cfdf02d9e683fe55fdf7e1835fdbf6700",
       "mode": 420
     }
   ],
