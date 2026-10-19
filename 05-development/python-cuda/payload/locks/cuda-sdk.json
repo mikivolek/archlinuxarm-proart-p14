@@ -1,0 +1,446 @@
+{
+  "schema": "h7607a-cuda-sdk-lock-v1",
+  "reviewed_utc": "2026-10-18",
+  "toolkit_version": "13.4.3",
+  "release_date": "2026-10-13",
+  "architecture": "linux-sbsa",
+  "nvcc_version": "13.4.92",
+  "cuda_architecture": "sm_121",
+  "host_compiler": {
+    "family": "gcc",
+    "minimum_major": 6,
+    "maximum_major": 16,
+    "selected": "/usr/bin/g++",
+    "validation": "nvcc compiles and links an sm_121 C++20 program after extraction; no unsupported-compiler override"
+  },
+  "driver": {
+    "required_branch": 615,
+    "observed_device_driver": "615.78.08",
+    "physical_sdk_validation": "CUDA driver API13.4 is measured on the actual P16 with615.78.08. CUDA13.4.3SDK compilation and runtime remain deferred until explicit normal-user installation; --verify-cuda executes a tiny kernel and requires driver API>=13040.",
+    "minimum_cuda_driver_api": 13040,
+    "device_evidence": {
+      "path": "provenance/device/cpu-audit.json",
+      "bytes": 18376,
+      "sha256": "6a230e29625a9625f8798d88bf9d08e139689406e578505336e1c7b4627677c3",
+      "JSON_pointer": "/CUDA/device/CUDA_driver_API_version",
+      "value": 13040,
+      "NVIDIA_kernel_driver_version": "615.78.08",
+      "actual_P16_hardware_execution": true,
+      "scope": "Retained actual-device evidence carried in R19; originally captured 2026-10-16, not a new R19 SDK test.",
+      "original_capture_boot_id": "89c6a8df-159f-4b3b-8476-ac03675f6107",
+      "original_receipt_sha256": "fb1af5914a79f10579fd74b4efccdb48bef68af16fd645ad8377756197ee3351"
+    }
+  },
+  "manifest": {
+    "url": "https://developer.download.nvidia.com/compute/cuda/redist/redistrib_13.4.3.json",
+    "bytes": 52032,
+    "sha256": "1420d5c676cad98a5ff423d529f116fee92f6b99559a3afdad41e782d6a11dba"
+  },
+  "sources": [
+    "https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#host-compiler-support-policy",
+    "https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cuda-driver",
+    "https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#tarball-and-zip-archive-deliverables",
+    "https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/index.html#gpu-feature-list",
+    "https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html",
+    "https://docs.nvidia.com/cuda/volta-compatibility-guide/index.html"
+  ],
+  "scope": {
+    "included": "Native compiler, device compiler runtime, C/C++ headers, CCCL/Thrust/CUB, runtime, math libraries, JIT/PTX/fatbinary libraries, CUPTI/NVTX/profiler APIs, CUDA-GDB, disassembler, object tools and compute sanitizer. No PyTorch wheel substitutes.",
+    "excluded": [
+      "driver",
+      "CUDA compatibility driver",
+      "Orin/NPU-specific libraries",
+      "GPUDirect Storage and kernel modules",
+      "Nsight GUI applications",
+      "Windows integration"
+    ],
+    "automatic_downloads": false,
+    "root_install": false,
+    "system_driver_modified": false
+  },
+  "artifacts": [
+    {
+      "component": "cccl",
+      "name": "CXX Core Compute Libraries",
+      "version": "13.3.4.3.1",
+      "license": "CCCL EULA",
+      "path": "cccl-linux-sbsa-13.3.4.3.1-archive.tar.xz",
+      "bytes": 1403880,
+      "sha256": "e36cc409c7ef4c3da18f0dd7f301b0df826121924cf817a7ff2ae508c944c6a1",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/cccl/linux-sbsa/cccl-linux-sbsa-13.3.4.3.1-archive.tar.xz"
+      ],
+      "archive_root": "cccl-linux-sbsa-13.3.4.3.1-archive"
+    },
+    {
+      "component": "cuda_crt",
+      "name": "CUDA CRT",
+      "version": "13.4.92",
+      "license": "CUDA Toolkit",
+      "path": "cuda_crt-linux-sbsa-13.4.92-archive.tar.xz",
+      "bytes": 102008,
+      "sha256": "0358db52257885611664240e030e45528f052aa1360c886f55dbaf2b2d61f87d",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/cuda_crt/linux-sbsa/cuda_crt-linux-sbsa-13.4.92-archive.tar.xz"
+      ],
+      "archive_root": "cuda_crt-linux-sbsa-13.4.92-archive"
+    },
+    {
+      "component": "cuda_cudart",
+      "name": "CUDA Runtime (cudart)",
+      "version": "13.4.92",
+      "license": "CUDA Toolkit",
+      "path": "cuda_cudart-linux-sbsa-13.4.92-archive.tar.xz",
+      "bytes": 1694356,
+      "sha256": "47e65e60d0f7cf832bff7992bd7a87ba4888195c31210392b5f23c607fe6c2a8",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/cuda_cudart/linux-sbsa/cuda_cudart-linux-sbsa-13.4.92-archive.tar.xz"
+      ],
+      "archive_root": "cuda_cudart-linux-sbsa-13.4.92-archive"
+    },
+    {
+      "component": "cuda_culibos",
+      "name": "CUDA MATH Library (cuda culibos)",
+      "version": "13.4.92",
+      "license": "CUDA Toolkit",
+      "path": "cuda_culibos-linux-sbsa-13.4.92-archive.tar.xz",
+      "bytes": 21500,
+      "sha256": "f0a638aed9f073938103f6d3907c811e425fd6703324778e7959f3d9e26fab89",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/cuda_culibos/linux-sbsa/cuda_culibos-linux-sbsa-13.4.92-archive.tar.xz"
+      ],
+      "archive_root": "cuda_culibos-linux-sbsa-13.4.92-archive"
+    },
+    {
+      "component": "cuda_cuobjdump",
+      "name": "CUDA cuobjdump",
+      "version": "13.4.92",
+      "license": "CUDA Toolkit",
+      "path": "cuda_cuobjdump-linux-sbsa-13.4.92-archive.tar.xz",
+      "bytes": 273620,
+      "sha256": "7f04e612ff62539aff20b84369283da3c9f9e618fd5114bddd46ba90ca6e61ab",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/cuda_cuobjdump/linux-sbsa/cuda_cuobjdump-linux-sbsa-13.4.92-archive.tar.xz"
+      ],
+      "archive_root": "cuda_cuobjdump-linux-sbsa-13.4.92-archive"
+    },
+    {
+      "component": "cuda_cupti",
+      "name": "NVIDIA profiling tools runtime library",
+      "version": "13.4.92",
+      "license": "CUDA Toolkit",
+      "path": "cuda_cupti-linux-sbsa-13.4.92-archive.tar.xz",
+      "bytes": 14782676,
+      "sha256": "2cdf083aca9002cf4edacfaae3fee62f21c1f2408c457df81c99b651f119f78f",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/cuda_cupti/linux-sbsa/cuda_cupti-linux-sbsa-13.4.92-archive.tar.xz"
+      ],
+      "archive_root": "cuda_cupti-linux-sbsa-13.4.92-archive"
+    },
+    {
+      "component": "cuda_cuxxfilt",
+      "name": "CUDA cuxxfilt",
+      "version": "13.4.92",
+      "license": "CUDA Toolkit",
+      "path": "cuda_cuxxfilt-linux-sbsa-13.4.92-archive.tar.xz",
+      "bytes": 50900,
+      "sha256": "559e023494e58add6cf72dff0baa444f0241dfa2f18096f22ecc7102515c5db7",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/cuda_cuxxfilt/linux-sbsa/cuda_cuxxfilt-linux-sbsa-13.4.92-archive.tar.xz"
+      ],
+      "archive_root": "cuda_cuxxfilt-linux-sbsa-13.4.92-archive"
+    },
+    {
+      "component": "cuda_gdb",
+      "name": "CUDA GDB",
+      "version": "13.4.92",
+      "license": "CUDA Toolkit",
+      "path": "cuda_gdb-linux-sbsa-13.4.92-archive.tar.xz",
+      "bytes": 100498644,
+      "sha256": "5a0fac55b933dd16630d81c9b9491f4f0a88894dbcddf1efe304797df9d0d20c",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/cuda_gdb/linux-sbsa/cuda_gdb-linux-sbsa-13.4.92-archive.tar.xz"
+      ],
+      "archive_root": "cuda_gdb-linux-sbsa-13.4.92-archive"
+    },
+    {
+      "component": "cuda_nvcc",
+      "name": "Cuda Nvcc",
+      "version": "13.4.92",
+      "license": "CUDA Toolkit",
+      "path": "cuda_nvcc-linux-sbsa-13.4.92-archive.tar.xz",
+      "bytes": 28527044,
+      "sha256": "8aebd451afb3984bc0019e803ae8a01a3837b7c69f36db779a7ce77e70831f5f",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/cuda_nvcc/linux-sbsa/cuda_nvcc-linux-sbsa-13.4.92-archive.tar.xz"
+      ],
+      "archive_root": "cuda_nvcc-linux-sbsa-13.4.92-archive"
+    },
+    {
+      "component": "cuda_nvdisasm",
+      "name": "CUDA nvdisasm",
+      "version": "13.4.92",
+      "license": "CUDA Toolkit",
+      "path": "cuda_nvdisasm-linux-sbsa-13.4.92-archive.tar.xz",
+      "bytes": 5015992,
+      "sha256": "7959183e0ac67c6089fddc9e5e6c0104f68c7ed66d3d9707b5816ac800d5ea1c",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/cuda_nvdisasm/linux-sbsa/cuda_nvdisasm-linux-sbsa-13.4.92-archive.tar.xz"
+      ],
+      "archive_root": "cuda_nvdisasm-linux-sbsa-13.4.92-archive"
+    },
+    {
+      "component": "cuda_nvml_dev",
+      "name": "NVIDIA NVML Development Library",
+      "version": "13.4.92",
+      "license": "CUDA Toolkit",
+      "path": "cuda_nvml_dev-linux-sbsa-13.4.92-archive.tar.xz",
+      "bytes": 163316,
+      "sha256": "0aff9a7e8f45c4adc2781cf83ed213899a8000158b32ab400106273db3ffa4fc",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/cuda_nvml_dev/linux-sbsa/cuda_nvml_dev-linux-sbsa-13.4.92-archive.tar.xz"
+      ],
+      "archive_root": "cuda_nvml_dev-linux-sbsa-13.4.92-archive"
+    },
+    {
+      "component": "cuda_nvprune",
+      "name": "CUDA nvprune",
+      "version": "13.4.92",
+      "license": "CUDA Toolkit",
+      "path": "cuda_nvprune-linux-sbsa-13.4.92-archive.tar.xz",
+      "bytes": 533296,
+      "sha256": "0b27d76a16f8e8971c9236616e2fa76b455c0eca737079e26954a9dc80c5a23f",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/cuda_nvprune/linux-sbsa/cuda_nvprune-linux-sbsa-13.4.92-archive.tar.xz"
+      ],
+      "archive_root": "cuda_nvprune-linux-sbsa-13.4.92-archive"
+    },
+    {
+      "component": "cuda_nvrtc",
+      "name": "CUDA NVRTC",
+      "version": "13.4.92",
+      "license": "CUDA Toolkit",
+      "path": "cuda_nvrtc-linux-sbsa-13.4.92-archive.tar.xz",
+      "bytes": 66655064,
+      "sha256": "8acb2d675715488782aa1f4cb80cc8c77be01def1142fe90d8b5ed1b0b8786a6",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/cuda_nvrtc/linux-sbsa/cuda_nvrtc-linux-sbsa-13.4.92-archive.tar.xz"
+      ],
+      "archive_root": "cuda_nvrtc-linux-sbsa-13.4.92-archive"
+    },
+    {
+      "component": "cuda_nvtx",
+      "name": "NVIDIA Tools Extension",
+      "version": "13.4.92",
+      "license": "CUDA Toolkit",
+      "path": "cuda_nvtx-linux-sbsa-13.4.92-archive.tar.xz",
+      "bytes": 99088,
+      "sha256": "e30e800bdd96d389284fb036a58c9c21a32a5c7060d98db457efded46e43e0ab",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/cuda_nvtx/linux-sbsa/cuda_nvtx-linux-sbsa-13.4.92-archive.tar.xz"
+      ],
+      "archive_root": "cuda_nvtx-linux-sbsa-13.4.92-archive"
+    },
+    {
+      "component": "cuda_profiler_api",
+      "name": "NVIDIA CUDA Profiler API",
+      "version": "13.4.92",
+      "license": "CUDA Toolkit",
+      "path": "cuda_profiler_api-linux-sbsa-13.4.92-archive.tar.xz",
+      "bytes": 17120,
+      "sha256": "18f6e7917b9bd6dc93cdd560bcab5c253854e56fb18e26021c5b55f4fa00e385",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/cuda_profiler_api/linux-sbsa/cuda_profiler_api-linux-sbsa-13.4.92-archive.tar.xz"
+      ],
+      "archive_root": "cuda_profiler_api-linux-sbsa-13.4.92-archive"
+    },
+    {
+      "component": "cuda_sanitizer_api",
+      "name": "CUDA Compute Sanitizer API",
+      "version": "13.4.92",
+      "license": "CUDA Toolkit",
+      "path": "cuda_sanitizer_api-linux-sbsa-13.4.92-archive.tar.xz",
+      "bytes": 7594740,
+      "sha256": "b422bd263ec671fd3217f8329fa81423befe64e81332773af1a52df7819f63d7",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/cuda_sanitizer_api/linux-sbsa/cuda_sanitizer_api-linux-sbsa-13.4.92-archive.tar.xz"
+      ],
+      "archive_root": "cuda_sanitizer_api-linux-sbsa-13.4.92-archive"
+    },
+    {
+      "component": "cuda_tileiras",
+      "name": "CUDA TileIR Assembler",
+      "version": "13.4.92",
+      "license": "CUDA Toolkit",
+      "path": "cuda_tileiras-linux-sbsa-13.4.92-archive.tar.xz",
+      "bytes": 26145600,
+      "sha256": "3c88705c0d4f3fe2bd11d81acfb14f3cc43d6ee79d42767f9a244ba40e866027",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/cuda_tileiras/linux-sbsa/cuda_tileiras-linux-sbsa-13.4.92-archive.tar.xz"
+      ],
+      "archive_root": "cuda_tileiras-linux-sbsa-13.4.92-archive"
+    },
+    {
+      "component": "libcublas",
+      "name": "CUDA cuBLAS",
+      "version": "13.8.0.4",
+      "license": "CUDA Toolkit",
+      "path": "libcublas-linux-sbsa-13.8.0.4-archive.tar.xz",
+      "bytes": 1101568860,
+      "sha256": "34678808ea03c6fa57e62a3c8081dfa2e673da4c3838d1a6bef680a4ce22c88c",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/libcublas/linux-sbsa/libcublas-linux-sbsa-13.8.0.4-archive.tar.xz"
+      ],
+      "archive_root": "libcublas-linux-sbsa-13.8.0.4-archive"
+    },
+    {
+      "component": "libcufft",
+      "name": "CUDA cuFFT",
+      "version": "12.4.0.43",
+      "license": "CUDA Toolkit",
+      "path": "libcufft-linux-sbsa-12.4.0.43-archive.tar.xz",
+      "bytes": 247765604,
+      "sha256": "c62ea864ae7777e095463d10130d99e6d34995b996cda5f3d013c57bead7a574",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/libcufft/linux-sbsa/libcufft-linux-sbsa-12.4.0.43-archive.tar.xz"
+      ],
+      "archive_root": "libcufft-linux-sbsa-12.4.0.43-archive"
+    },
+    {
+      "component": "libcurand",
+      "name": "NVIDIA cuRAND library",
+      "version": "10.4.4.72",
+      "license": "CUDA Toolkit",
+      "path": "libcurand-linux-sbsa-10.4.4.72-archive.tar.xz",
+      "bytes": 87567908,
+      "sha256": "2968e2d86dce64896ee3c2ac86c9e0f7decec4a0f157c8d73e3d0f31582e9e0c",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/libcurand/linux-sbsa/libcurand-linux-sbsa-10.4.4.72-archive.tar.xz"
+      ],
+      "archive_root": "libcurand-linux-sbsa-10.4.4.72-archive"
+    },
+    {
+      "component": "libcusolver",
+      "name": "CUDA cuSOLVER",
+      "version": "12.3.5.3",
+      "license": "CUDA Toolkit",
+      "path": "libcusolver-linux-sbsa-12.3.5.3-archive.tar.xz",
+      "bytes": 443755860,
+      "sha256": "1cc92fdd9142bfc70c6cccb15a3e8720c8f12fa3cb4ffd849bec725d96a16d1f",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/libcusolver/linux-sbsa/libcusolver-linux-sbsa-12.3.5.3-archive.tar.xz"
+      ],
+      "archive_root": "libcusolver-linux-sbsa-12.3.5.3-archive"
+    },
+    {
+      "component": "libcusparse",
+      "name": "NVIDIA cuSPARSE library",
+      "version": "12.8.6.72",
+      "license": "CUDA Toolkit",
+      "path": "libcusparse-linux-sbsa-12.8.6.72-archive.tar.xz",
+      "bytes": 356215072,
+      "sha256": "dfc3c94bfd0f6b81503d860bd2299cf0a17e0e9819f376c88994f5e2393db074",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/libcusparse/linux-sbsa/libcusparse-linux-sbsa-12.8.6.72-archive.tar.xz"
+      ],
+      "archive_root": "libcusparse-linux-sbsa-12.8.6.72-archive"
+    },
+    {
+      "component": "libnpp",
+      "name": "CUDA NPP",
+      "version": "13.2.0.58",
+      "license": "CUDA Toolkit",
+      "path": "libnpp-linux-sbsa-13.2.0.58-archive.tar.xz",
+      "bytes": 295837484,
+      "sha256": "64deb4d377a3a257bacfbb1aa0141461dcaade53c72ed21eb0b9b412ac7568d5",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/libnpp/linux-sbsa/libnpp-linux-sbsa-13.2.0.58-archive.tar.xz"
+      ],
+      "archive_root": "libnpp-linux-sbsa-13.2.0.58-archive"
+    },
+    {
+      "component": "libnvfatbin",
+      "name": "NVIDIA fatbin library",
+      "version": "13.4.92",
+      "license": "CUDA Toolkit",
+      "path": "libnvfatbin-linux-sbsa-13.4.92-archive.tar.xz",
+      "bytes": 433664,
+      "sha256": "928c0151ae9c586095788adffc57cc1670797ecdb38d9eeb796c927a60e13e09",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/libnvfatbin/linux-sbsa/libnvfatbin-linux-sbsa-13.4.92-archive.tar.xz"
+      ],
+      "archive_root": "libnvfatbin-linux-sbsa-13.4.92-archive"
+    },
+    {
+      "component": "libnvjitlink",
+      "name": "NVIDIA compiler library for JIT LTO functionality",
+      "version": "13.4.92",
+      "license": "CUDA Toolkit",
+      "path": "libnvjitlink-linux-sbsa-13.4.92-archive.tar.xz",
+      "bytes": 53020236,
+      "sha256": "e253a1f1a1582e2221737391cccf272bf722e44b05be1ed58ebfaefe6dd79315",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/libnvjitlink/linux-sbsa/libnvjitlink-linux-sbsa-13.4.92-archive.tar.xz"
+      ],
+      "archive_root": "libnvjitlink-linux-sbsa-13.4.92-archive"
+    },
+    {
+      "component": "libnvjpeg",
+      "name": "CUDA nvJPEG",
+      "version": "13.2.3.58",
+      "license": "CUDA Toolkit",
+      "path": "libnvjpeg-linux-sbsa-13.2.3.58-archive.tar.xz",
+      "bytes": 3835572,
+      "sha256": "077518f58ff9d619b8ac679448d74bdf7be9e3619f9f688c9c6060ed8bc6c13e",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/libnvjpeg/linux-sbsa/libnvjpeg-linux-sbsa-13.2.3.58-archive.tar.xz"
+      ],
+      "archive_root": "libnvjpeg-linux-sbsa-13.2.3.58-archive"
+    },
+    {
+      "component": "libnvptxcompiler",
+      "name": "CUDA nvPTXCompiler",
+      "version": "13.4.92",
+      "license": "CUDA Toolkit",
+      "path": "libnvptxcompiler-linux-sbsa-13.4.92-archive.tar.xz",
+      "bytes": 10216284,
+      "sha256": "e19aa8b63d6e6a90eea08e9801e7f0aef0c48bd81377b3e43c604ee84937f4fe",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/libnvptxcompiler/linux-sbsa/libnvptxcompiler-linux-sbsa-13.4.92-archive.tar.xz"
+      ],
+      "archive_root": "libnvptxcompiler-linux-sbsa-13.4.92-archive"
+    },
+    {
+      "component": "libnvvm",
+      "name": "CUDA NVVM",
+      "version": "13.4.92",
+      "license": "CUDA Toolkit",
+      "path": "libnvvm-linux-sbsa-13.4.92-archive.tar.xz",
+      "bytes": 44886544,
+      "sha256": "483085a4f52d272ea2c5a6cb4727b24efc2cecab4c4df99e80dfc6548e5b7929",
+      "urls": [
+        "https://developer.download.nvidia.com/compute/cuda/redist/libnvvm/linux-sbsa/libnvvm-linux-sbsa-13.4.92-archive.tar.xz"
+      ],
+      "archive_root": "libnvvm-linux-sbsa-13.4.92-archive"
+    }
+  ],
+  "download_bytes": 2898681932,
+  "reserve_bytes": 21474836480,
+  "development_library_sonames": {
+    "libcudart.so": "libcudart.so.13",
+    "libcublas.so": "libcublas.so.13",
+    "libcublasLt.so": "libcublasLt.so.13",
+    "libcusparse.so": "libcusparse.so.12",
+    "libcufft.so": "libcufft.so.12",
+    "libcurand.so": "libcurand.so.10",
+    "libcusolver.so": "libcusolver.so.12",
+    "libnvrtc.so": "libnvrtc.so.13",
+    "libnvJitLink.so": "libnvJitLink.so.13",
+    "libnvjpeg.so": "libnvjpeg.so.13",
+    "libnppc.so": "libnppc.so.13"
+  },
+  "validation": {
+    "default": "Every artifact SHA256; required SONAMEs/DT_NEEDED and AArch64 ELF; RTLD_NOW load of core developer-library closure; nvcc C++20 sm_121 compile/link; relocatable RUNPATH. No GPU program execution by default.",
+    "explicit_verify_cuda": "Read actual loaded kernel driver branch; execute one compiled tiny sm_121 kernel with CUDA_FORCE_PTX_JIT=1 and CUDA_CACHE_DISABLE=1 to prove newly emitted PTX compatibility, cudaDriverGetVersion>=13040 and exact result42. Native cubin and PTX both compiled; no GPU execution during preparation."
+  }
+}

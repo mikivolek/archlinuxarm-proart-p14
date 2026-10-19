@@ -1,0 +1,117 @@
+From: H7607A installer maintainers
+Subject: [PATCH] arm64: confine initrd ACPI overrides to one EFI descriptor
+
+The memblock allocator merges usable EFI memory descriptors. An override
+allocated across the resulting boundary is accepted during early table
+parsing but rejected by acpi_os_ioremap() after permanent mappings begin.
+On H7607BA, a replacement DSDT at 0x2050a00000 of length 0x12144 crosses
+the conventional-memory boundary at 0x2050a0d000; ACPI then fails with
+AE_NO_ACPI_TABLES and cannot enumerate the USB, NVMe or NVIDIA devices.
+
+Add an architecture allocation hook preserving the generic allocator.
+ARM64 selects one conventional WB EFI descriptor and reserves complete
+native pages inside it, retaining existing memblock reservations, NOMAP,
+and ACPI mapping protections. Resolve the accessible-memory sentinel
+before constraining each candidate. Do not fall back across descriptors.
+
+Base: NVIDIA/NV-Kernels 2234cd7f8f8a9fdbceef37f82c531016aab8cf73
+---
+--- a/include/linux/acpi.h
++++ b/include/linux/acpi.h
+@@ -1508,6 +1508,7 @@
+ #endif
+ 
+ #ifdef CONFIG_ACPI_TABLE_UPGRADE
++phys_addr_t arch_alloc_acpi_tables(phys_addr_t size, phys_addr_t max_addr);
+ void acpi_table_upgrade(void);
+ #else
+ static inline void acpi_table_upgrade(void) { }
+--- a/drivers/acpi/tables.c
++++ b/drivers/acpi/tables.c
+@@ -418,6 +418,12 @@
+ 
+ #define MAP_CHUNK_SIZE   (NR_FIX_BTMAPS << PAGE_SHIFT)
+ 
++phys_addr_t __init __weak
++arch_alloc_acpi_tables(phys_addr_t size, phys_addr_t max_addr)
++{
++	return memblock_phys_alloc_range(size, PAGE_SIZE, 0, max_addr);
++}
++
+ void __init acpi_table_upgrade(void)
+ {
+ 	void *data;
+@@ -491,9 +497,8 @@
+ 		return;
+ 	}
+ 
+-	acpi_tables_addr =
+-		memblock_phys_alloc_range(all_tables_size, PAGE_SIZE,
+-					  0, ACPI_TABLE_UPGRADE_MAX_PHYS);
++	acpi_tables_addr = arch_alloc_acpi_tables(all_tables_size,
++						ACPI_TABLE_UPGRADE_MAX_PHYS);
+ 	if (!acpi_tables_addr) {
+ 		WARN_ON(1);
+ 		return;
+--- a/arch/arm64/kernel/acpi.c
++++ b/arch/arm64/kernel/acpi.c
+@@ -433,6 +433,59 @@
+ 	return err;
+ }
+ 
++#ifdef CONFIG_ACPI_TABLE_UPGRADE
++phys_addr_t __init
++arch_alloc_acpi_tables(phys_addr_t size, phys_addr_t max_addr)
++{
++	efi_memory_desc_t *md;
++
++	if (!size || size > PHYS_ADDR_MAX - (PAGE_SIZE - 1))
++		return 0;
++
++	if (WARN_ON_ONCE(!efi_enabled(EFI_MEMMAP)))
++		return 0;
++
++	/*
++	 * Keep table bytes and page padding in one EFI descriptor: the later
++	 * acpi_os_ioremap() mapping rejects crossings before its NOMAP check.
++	 */
++	size = ALIGN(size, PAGE_SIZE);
++	if (max_addr == MEMBLOCK_ALLOC_ACCESSIBLE)
++		max_addr = memblock_get_current_limit();
++
++	for_each_efi_memory_desc(md) {
++		phys_addr_t start, end, addr;
++
++		if (md->type != EFI_CONVENTIONAL_MEMORY ||
++		    !(md->attribute & EFI_MEMORY_WB) ||
++		    (md->attribute & EFI_MEMORY_RUNTIME))
++			continue;
++
++		if (md->phys_addr > PHYS_ADDR_MAX - (PAGE_SIZE - 1) ||
++		    md->num_pages >
++			    ((PHYS_ADDR_MAX - md->phys_addr) >> EFI_PAGE_SHIFT))
++			continue;
++
++		start = ALIGN(md->phys_addr, PAGE_SIZE);
++		end = md->phys_addr + (md->num_pages << EFI_PAGE_SHIFT);
++		end = ALIGN_DOWN(min(end, max_addr), PAGE_SIZE);
++
++		if (end <= start || size > end - start)
++			continue;
++
++		addr = memblock_phys_alloc_range(size, PAGE_SIZE, start, end);
++		if (addr) {
++			pr_info("Table override allocation %pa (%llu bytes) within EFI region %pa-%pa\n",
++				&addr, (u64)size, &start, &end);
++			return addr;
++		}
++	}
++
++	pr_err("No single usable EFI region can hold the ACPI table overrides\n");
++	return 0;
++}
++#endif
++
+ void arch_reserve_mem_area(acpi_physical_address addr, size_t size)
+ {
+ 	memblock_mark_nomap(addr, size);

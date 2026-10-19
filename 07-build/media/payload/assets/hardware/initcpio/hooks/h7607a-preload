@@ -1,0 +1,9 @@
+#!/usr/bin/ash
+# SPDX-License-Identifier: MIT
+run_earlyhook() {
+    if modprobe hid_asus; then
+        echo 'H7607BA HID early preload completed; expected srcversion D5071B2AFD2A51A2FDFD376' >/dev/kmsg
+    else
+        echo 'H7607BA HID early preload failed' >/dev/kmsg
+    fi
+}

@@ -1,0 +1,80 @@
+#!/usr/bin/python3
+"""P16 display/keyboard brightness using existing logind authorization."""
+import argparse
+from pathlib import Path
+import re
+import subprocess
+import sys
+
+SYS_CLASS = Path("/sys/class")
+ALLOWED = {
+    "brightness-up": ("backlight", "nvidia_0"),
+    "brightness-down": ("backlight", "nvidia_0"),
+    "keyboard-cycle": ("leds", "asus::kbd_backlight"),
+}
+
+
+def read_levels(subsystem, name):
+    if (subsystem, name) not in ALLOWED.values():
+        raise ValueError("device is outside the fixed P16 whitelist")
+    device = SYS_CLASS / subsystem / name
+    values = []
+    for attribute in ("brightness", "max_brightness"):
+        text = (device / attribute).read_text().strip()
+        if not re.fullmatch(r"[0-9]+", text):
+            raise ValueError("device returned an invalid brightness value")
+        values.append(int(text))
+    current, maximum = values
+    if not 0 <= current <= maximum <= 0xffffffff or maximum == 0:
+        raise ValueError("device returned an invalid brightness range")
+    return current, maximum
+
+
+def target_level(action, current, maximum):
+    if action == "keyboard-cycle":
+        return (current + 1) % (maximum + 1)
+    if action not in ("brightness-up", "brightness-down"):
+        raise ValueError("unknown brightness action")
+    step = max(1, (maximum * 5 + 99) // 100)
+    delta = step if action == "brightness-up" else -step
+    return min(maximum, max(1, current + delta))
+
+
+def bus_command(subsystem, name, level):
+    if (subsystem, name) not in ALLOWED.values() or not 0 <= level <= 0xffffffff:
+        raise ValueError("brightness request is outside the fixed P16 whitelist")
+    return ["/usr/bin/busctl", "--system", "--timeout=3s",
+            "--allow-interactive-authorization=no", "call", "org.freedesktop.login1",
+            "/org/freedesktop/login1/session/auto", "org.freedesktop.login1.Session",
+            "SetBrightness", "ssu", subsystem, name, str(level)]
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("action", choices=tuple(ALLOWED))
+    action = parser.parse_args().action
+    subsystem, name = ALLOWED[action]
+    try:
+        current, maximum = read_levels(subsystem, name)
+        target = target_level(action, current, maximum)
+        if target != current:
+            result = subprocess.run(bus_command(subsystem, name, target),
+                                    capture_output=True, text=True, timeout=4)
+            if result.returncode:
+                detail = " ".join((result.stderr or result.stdout).split())[:300]
+                raise RuntimeError(detail or "logind refused the brightness request")
+        print(f"{name}: requested {target}/{maximum}")
+        return 0
+    except FileNotFoundError:
+        detail = ("keyboard LED is unavailable; the P16 HID candidate must first be loaded and qualified"
+                  if action == "keyboard-cycle" else "NVIDIA backlight or busctl is unavailable")
+    except subprocess.TimeoutExpired:
+        detail = "logind request timed out; the hardware write may still finish"
+    except (OSError, RuntimeError, ValueError) as error:
+        detail = str(error)
+    print(f"p16-brightness: unavailable: {detail}", file=sys.stderr)
+    return 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())

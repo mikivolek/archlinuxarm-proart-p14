@@ -1,0 +1,227 @@
+{
+  "schema": 1,
+  "status": "BUILT_AND_SOFTWARE_CHECKED_PHYSICAL_BOOT_PENDING",
+  "kernel_release": "7.0.0-1022-nvidia",
+  "source": {
+    "upstream": "https://github.com/NVIDIA/NV-Kernels",
+    "commit": "2234cd7f8f8a9fdbceef37f82c531016aab8cf73",
+    "ubuntu_version": "7.0.0-1022.23~24.04.1",
+    "inputs": [
+      {
+        "file": "linux-nvidia-7.0_7.0.0.orig.tar.gz",
+        "sha256": "c6343795c8c7e4feff55f5b309365c8e0eaf49cd6abcb412e32315313f149536",
+        "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/l/linux-nvidia-7.0/linux-nvidia-7.0_7.0.0.orig.tar.gz"
+      },
+      {
+        "file": "linux-nvidia-7.0_7.0.0-1022.23~24.04.1.diff.gz",
+        "sha256": "6dbf6661592f7b6053253eea6b5411e21974627d9b76d4d3e105653c243d7718",
+        "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/l/linux-nvidia-7.0/linux-nvidia-7.0_7.0.0-1022.23~24.04.1.diff.gz"
+      },
+      {
+        "file": "linux-modules-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb",
+        "sha256": "3cb8bac5ed8ba7385f652240f9154691153f5ae86a3313d324f1e28c89aec126",
+        "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/l/linux-nvidia-7.0/linux-modules-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb"
+      }
+    ],
+    "patch": {
+      "file": "0001-arm64-bound-acpi-override-allocation.patch",
+      "sha256": "0ababbaed19c7108e8564916fac1b8fecc44010e7f3e4b419c34d01c66049e19",
+      "application_fuzz": 0
+    }
+  },
+  "build": {
+    "platform": "Ubuntu 24.04 aarch64 native",
+    "tools": {
+      "gcc-13-aarch64-linux-gnu": "13.3.0-6ubuntu2~24.04.1",
+      "binutils-aarch64-linux-gnu": "2.42-4ubuntu2.10",
+      "pahole": "1.25-0ubuntu3",
+      "make": "4.3-4.1build2",
+      "gawk": "1:5.2.1-2ubuntu0.1",
+      "xz-utils": "5.6.1+really5.4.5-1ubuntu0.3",
+      "zstd": "1.5.5+dfsg2-2build1.1",
+      "openssl": "3.0.13-0ubuntu3.16",
+      "kmod": "31+20240202-2ubuntu7.2"
+    },
+    "targets": [
+      "Image",
+      "modules",
+      "modules_install"
+    ],
+    "variables": {
+      "KBUILD_BUILD_USER": "h7607a",
+      "KBUILD_BUILD_HOST": "builder",
+      "KBUILD_BUILD_TIMESTAMP": "2026-10-19 00:00:00 UTC",
+      "KBUILD_BUILD_VERSION": "23~24.04.1",
+      "CONFIG_DEBUG_SECTION_MISMATCH": "y",
+      "CFLAGS_MODULE": "-DPKG_ABI=1022",
+      "KBUILD_GENDWARFKSYMS_STABLE": null
+    },
+    "configuration": {
+      "upstream_sha256": "3702382acae6cb607b441f0a44c2f0929a9ed98b9d33dcf2f731b1a1d1469297",
+      "rebuilt_sha256": "300b9d6316a1c772b9cb48eead848444e61d3d177daf74dee4a2007ac5e66667",
+      "differences": {
+        "CONFIG_RUSTC_HAS_SLICE_AS_FLATTENED": {
+          "upstream": "y",
+          "rebuilt": null
+        },
+        "CONFIG_RUSTC_LLVM_VERSION": {
+          "upstream": "180103",
+          "rebuilt": "0"
+        },
+        "CONFIG_RUSTC_VERSION": {
+          "upstream": "108001",
+          "rebuilt": "0"
+        },
+        "CONFIG_RUST_IS_AVAILABLE": {
+          "upstream": "y",
+          "rebuilt": null
+        }
+      },
+      "rust_enabled": false
+    },
+    "recipes": {
+      "build.sh": "e71913b3a5fcee7cb97490ef30153f7192dabd5aa6864449ff3de7840dfd8fe4",
+      "package.sh": "f367213d074b8f0df99eb6e5e08bbfc3600267f81f17884f53136a257665ff7c"
+    }
+  },
+  "outputs": {
+    "image": {
+      "bytes": 70752768,
+      "sha256": "6312b1ab41f586a42a1767e771c7cfc787246e0b83fe708006fff10903768d86"
+    },
+    "runtime_archive": {
+      "bytes": 264274598,
+      "sha256": "75b65341b58d7c171ad9482f7227f97bd88ff9e6a98b5a781609b4e5674036f6"
+    },
+    "module_symvers": {
+      "bytes": 2309301,
+      "sha256": "ad63eccd8911085a10d7996b78dd0c40f6bcaa0b32d42986a9cce39e0101a7ba"
+    },
+    "rebuilt_stock_modules": 8549,
+    "matching_kernel_btf_base_packaged": true,
+    "module_signing_certificate": {
+      "bytes": 1324,
+      "sha256": "2f29edab22e604f715ba298d74f73ff14c0289636ac877544f7cfb80f0fb4a51"
+    },
+    "non_staging_module_signatures_checked": true,
+    "staging_signatures": "Upstream Ubuntu exclusion retained",
+    "private_signing_key_packaged": false
+  },
+  "retained_module_abi": {
+    "rebuilt_symvers_sha256": "ad63eccd8911085a10d7996b78dd0c40f6bcaa0b32d42986a9cce39e0101a7ba",
+    "modules": [
+      {
+        "module": "nvidia.ko.zst",
+        "uncompressed_sha256": "530f097aa61c9939acf8f827135cd692d581f65036548d3a2fe282c8ce07b3cd",
+        "imports_checked": 481,
+        "all_import_crcs_match": true,
+        "has_coupled_btf": false
+      },
+      {
+        "module": "nvidia-uvm.ko.zst",
+        "uncompressed_sha256": "024a8e836e8e788fe07b4564048de2e37c7462e61b4af6a9f4ac5e4960cc89b5",
+        "imports_checked": 326,
+        "all_import_crcs_match": true,
+        "has_coupled_btf": false
+      },
+      {
+        "module": "soundwire-mtk.ko",
+        "uncompressed_sha256": "7162e23606a3bbcf4ff15fc2eada8662eee9962b88b5605d11f51e45e74b7d5f",
+        "imports_checked": 89,
+        "all_import_crcs_match": true,
+        "has_coupled_btf": false
+      },
+      {
+        "module": "nvidia-drm.ko",
+        "uncompressed_sha256": "9b0ceddf9da11337e9b9af1dd1c77e81fc3559cc1bfcdcc67cccd604d72e83bf",
+        "imports_checked": 280,
+        "all_import_crcs_match": true,
+        "has_coupled_btf": false
+      },
+      {
+        "module": "nvidia-modeset.ko.zst",
+        "uncompressed_sha256": "14e33fc5d00e25b4d22a33f32b73348a5360e804b79ca3e239a2372d364911d9",
+        "imports_checked": 91,
+        "all_import_crcs_match": true,
+        "has_coupled_btf": false
+      },
+      {
+        "module": "mt8901-acp-sdw-legacy-mach.ko",
+        "uncompressed_sha256": "82061bce3a3b649c9f351b398c59546c8a978b2c3badbaa07436e6221e91d5de",
+        "imports_checked": 38,
+        "all_import_crcs_match": true,
+        "has_coupled_btf": false
+      },
+      {
+        "module": "hid-asus.ko",
+        "uncompressed_sha256": "608b9297256b1e6b60fb26589777546a67f6aa2a615a8498ade8e37b8aa8e617",
+        "imports_checked": 55,
+        "all_import_crcs_match": true,
+        "has_coupled_btf": false
+      }
+    ],
+    "all_passed": true
+  },
+  "efi_smoke": {
+    "status": "PASS",
+    "cycles": 2,
+    "elapsed_seconds": 28.59,
+    "image_sha256": "6312b1ab41f586a42a1767e771c7cfc787246e0b83fe708006fff10903768d86",
+    "module_sha256": "d3f0415bd7c7b251391b01ae216ff8bd1f2bf4bf03c13585c20ffd9285b6f2ee",
+    "firmware_sha256": "86493b7dc94bb917347116c600e7e94c12ee9b295aef990bed00a101237e0d69",
+    "ssdt_sha256": "ae52c4be9c8e89bcb5dcdbf6a0fc9c86442c0e57e4ce5696c6bd7225676903ca",
+    "ssdt_bytes": 98347,
+    "initrd_sha256": "180798cd24f1b9bfc4e606efb9bbafdfb3ccfb8bc487e6032d780eabc9ba7e31",
+    "allocation_ranges": [
+      {
+        "allocation": 1140748288,
+        "bytes": 102400,
+        "region_start": 1073741824,
+        "region_end": 1140850688
+      },
+      {
+        "allocation": 1140748288,
+        "bytes": 102400,
+        "region_start": 1073741824,
+        "region_end": 1140850688
+      }
+    ],
+    "allocation_contained": true
+  },
+  "scope": {
+    "efi": "QEMU ARM64 virt EFI, actual rebuilt Image and SSDT, two boots including reboot; matching pre-package virtio_rng module loaded and supplied entropy.",
+    "physical_boot": "Pending on H7607BA; QEMU does not emulate N1X hardware.",
+    "abi": "All 1360 imports across seven retained modules match; runtime device behavior requires physical boot.",
+    "reproducibility": "Inputs, tool versions, configuration and outputs are pinned. Generated signing keys and build-time entropy prevent byte-identical independent rebuilds."
+  },
+  "final_packaged_module_efi_smoke": {
+    "image_sha256": "6312b1ab41f586a42a1767e771c7cfc787246e0b83fe708006fff10903768d86",
+    "module_sha256": "1081f4cf6553d9861507926b7a89591a7ea30e377b038bf8a8078a9045c8fe8d",
+    "firmware_sha256": "86493b7dc94bb917347116c600e7e94c12ee9b295aef990bed00a101237e0d69",
+    "ssdt_sha256": "ae52c4be9c8e89bcb5dcdbf6a0fc9c86442c0e57e4ce5696c6bd7225676903ca",
+    "ssdt_bytes": 98347,
+    "initrd_sha256": "86da28e70b1c38e4035ec74c311c47d332930dcfed0be902e00412fbdb403ef6",
+    "require_trusted_module": true,
+    "status": "PASS",
+    "reason": "two complete guest boot cycles",
+    "elapsed_seconds": 17.03,
+    "cycles": 2,
+    "allocation_ranges": [
+      {
+        "allocation": 1140748288,
+        "bytes": 102400,
+        "region_start": 1073741824,
+        "region_end": 1140850688
+      },
+      {
+        "allocation": 1140748288,
+        "bytes": 102400,
+        "region_start": 1073741824,
+        "region_end": 1140850688
+      }
+    ],
+    "allocation_contained": true,
+    "trusted_module_gate": true,
+    "scope": "Actual rebuilt Image and final stripped, signed, decompressed stock module; ACPI allocation, BTF, trusted signature and RNG device operation across two QEMU EFI boots. QEMU does not emulate N1X."
+  }
+}

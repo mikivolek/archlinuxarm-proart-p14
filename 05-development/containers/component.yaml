@@ -1,0 +1,232 @@
+{
+  "schema": "h7607a-component-v1",
+  "id": "containers",
+  "type": "custom",
+  "repo_url": null,
+  "checkout_hash": null,
+  "sparse": {
+    "enabled": false,
+    "paths": []
+  },
+  "dependencies": [
+    {
+      "name": "python",
+      "version": "3.14.8-1",
+      "command": "python3",
+      "policy": "pinned-live-inventory",
+      "scope": "runtime"
+    },
+    {
+      "name": "podman",
+      "version": "6.0.2-3",
+      "command": "podman",
+      "policy": "observed-repository-snapshot-not-target-pin",
+      "scope": "runtime"
+    },
+    {
+      "name": "crun",
+      "version": "1.28-1",
+      "command": "crun",
+      "policy": "observed-repository-snapshot-not-target-pin",
+      "scope": "runtime"
+    },
+    {
+      "name": "nvidia-container-toolkit",
+      "version": "1.20.1-1",
+      "command": "nvidia-ctk",
+      "policy": "observed-current-repository-not-target-pin",
+      "scope": "runtime"
+    },
+    {
+      "name": "shadow",
+      "version": "4.20.0.arch1-1",
+      "command": "newuidmap",
+      "policy": "observed-repository-snapshot-not-target-pin",
+      "scope": "runtime"
+    },
+    {
+      "name": "passt",
+      "version": "2026_07_28.f8df3f1-1",
+      "command": "pasta",
+      "policy": "observed-repository-snapshot-not-target-pin",
+      "scope": "runtime"
+    },
+    {
+      "name": "glibc",
+      "version": "2.43+r22+g8362e8ce10b2-2",
+      "command": "ldconfig",
+      "policy": "pinned-live-inventory",
+      "scope": "runtime"
+    },
+    {
+      "name": "nvidia-utils",
+      "version": "615.78.08-1",
+      "command": "nvidia-smi",
+      "policy": "pinned-live-inventory",
+      "scope": "runtime"
+    },
+    {
+      "name": "python",
+      "version": "3.14.8-1",
+      "scope": "ALARM runtime; standard library unless entry lists otherwise"
+    }
+  ],
+  "depends_on": [],
+  "items": [
+    {
+      "type": "custom",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "id": "development-containers",
+      "files": [
+        "src/h7607a/containers.py",
+        "runtime/usr/local/bin/h7607a-container"
+      ]
+    },
+    {
+      "id": "containers.py",
+      "type": "custom",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "code": "src/h7607a/containers.py",
+      "dependencies": [
+        {
+          "name": "python",
+          "version": "3.14.8-1",
+          "command": "python3",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "podman",
+          "version": "6.0.2-3",
+          "command": "podman",
+          "policy": "observed-repository-snapshot-not-target-pin",
+          "scope": "runtime"
+        },
+        {
+          "name": "crun",
+          "version": "1.28-1",
+          "command": "crun",
+          "policy": "observed-repository-snapshot-not-target-pin",
+          "scope": "runtime"
+        },
+        {
+          "name": "nvidia-container-toolkit",
+          "version": "1.20.1-1",
+          "command": "nvidia-ctk",
+          "policy": "observed-current-repository-not-target-pin",
+          "scope": "runtime"
+        },
+        {
+          "name": "nvidia-container-toolkit",
+          "version": "1.20.1-1",
+          "command": "nvidia-cdi-hook",
+          "policy": "observed-current-repository-not-target-pin",
+          "scope": "runtime"
+        },
+        {
+          "name": "shadow",
+          "version": "4.20.0.arch1-1",
+          "command": "newuidmap",
+          "policy": "observed-repository-snapshot-not-target-pin",
+          "scope": "runtime"
+        },
+        {
+          "name": "shadow",
+          "version": "4.20.0.arch1-1",
+          "command": "newgidmap",
+          "policy": "observed-repository-snapshot-not-target-pin",
+          "scope": "runtime"
+        },
+        {
+          "name": "passt",
+          "version": "2026_07_28.f8df3f1-1",
+          "command": "pasta",
+          "policy": "observed-repository-snapshot-not-target-pin",
+          "scope": "runtime"
+        },
+        {
+          "name": "glibc",
+          "version": "2.43+r22+g8362e8ce10b2-2",
+          "command": "ldconfig",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "nvidia-utils",
+          "version": "615.78.08-1",
+          "command": "nvidia-smi",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        }
+      ]
+    },
+    {
+      "id": "h7607a-container",
+      "type": "custom",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "code": "runtime/usr/local/bin/h7607a-container",
+      "dependencies": [
+        {
+          "name": "python",
+          "version": "3.14.8-1",
+          "command": "python3",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "podman",
+          "version": "6.0.2-3",
+          "command": "podman",
+          "policy": "observed-repository-snapshot-not-target-pin",
+          "scope": "runtime"
+        },
+        {
+          "name": "crun",
+          "version": "1.28-1",
+          "command": "crun",
+          "policy": "observed-repository-snapshot-not-target-pin",
+          "scope": "runtime"
+        },
+        {
+          "name": "nvidia-container-toolkit",
+          "version": "1.20.1-1",
+          "command": "nvidia-ctk",
+          "policy": "observed-current-repository-not-target-pin",
+          "scope": "runtime"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "source": "payload/runtime/usr/local/bin/h7607a-container",
+      "destination": "runtime/usr/local/bin/h7607a-container",
+      "bytes": 1597,
+      "sha256": "5568830b6f2106c71c1576e372ca50f994ddf630baef21f8f7b7d10a56a384ec",
+      "mode": 493
+    },
+    {
+      "source": "payload/src/h7607a/containers.py",
+      "destination": "src/h7607a/containers.py",
+      "bytes": 8333,
+      "sha256": "e7886c8bb1a2a793d127d5782e891ff4e65016c6ddc5b6c6bc62cdcb018b503e",
+      "mode": 420
+    }
+  ],
+  "links": []
+}

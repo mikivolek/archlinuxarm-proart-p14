@@ -1,0 +1,280 @@
+{
+  "schema": "h7607a-component-v1",
+  "id": "power",
+  "type": "custom",
+  "repo_url": null,
+  "checkout_hash": null,
+  "sparse": {
+    "enabled": false,
+    "paths": []
+  },
+  "dependencies": [
+    {
+      "name": "glib2",
+      "version": "2.90.1-1",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "libgudev",
+      "version": "238-3",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "polkit",
+      "version": "127-3",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "upower",
+      "version": "1.91.5-1",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "python-gobject",
+      "version": "3.58.1-1",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "meson",
+      "version": "1.12.1-2",
+      "version_status": "recorded_build_environment",
+      "source": "power-profiles-daemon-n1x package .BUILDINFO",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "ninja",
+      "version": "1.13.2-3",
+      "version_status": "recorded_build_environment",
+      "source": "power-profiles-daemon-n1x package .BUILDINFO",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "pkgconf",
+      "version": "3.0.7-1",
+      "version_status": "recorded_build_environment",
+      "source": "power-profiles-daemon-n1x package .BUILDINFO",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "glib2-devel",
+      "version": "2.90.1-1",
+      "version_status": "recorded_build_environment",
+      "source": "power-profiles-daemon-n1x package .BUILDINFO",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "python",
+      "version": "3.14.8-1",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "systemd",
+      "version": "262.1-1",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "kmod",
+      "version": "34.2-1",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "python",
+      "version": "3.14.8-1",
+      "scope": "ALARM runtime; standard library unless entry lists otherwise"
+    }
+  ],
+  "depends_on": [],
+  "items": [
+    {
+      "id": "nvidia-power-profiles",
+      "type": "direct",
+      "repo_url": "https://gitlab.freedesktop.org/upower/power-profiles-daemon",
+      "checkout_hash": "3001c25a8392d01e3c1e1a7041ebef017cdc9f8c",
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "version": "0.30.nvidia3001c25-2",
+      "dependencies": [
+        {
+          "name": "glib2",
+          "version": "2.90.1-1",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        },
+        {
+          "name": "libgudev",
+          "version": "238-3",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        },
+        {
+          "name": "polkit",
+          "version": "127-3",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        },
+        {
+          "name": "upower",
+          "version": "1.91.5-1",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        },
+        {
+          "name": "python-gobject",
+          "version": "3.58.1-1",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        },
+        {
+          "name": "meson",
+          "version": "1.12.1-2",
+          "version_status": "recorded_build_environment",
+          "source": "power-profiles-daemon-n1x package .BUILDINFO"
+        },
+        {
+          "name": "ninja",
+          "version": "1.13.2-3",
+          "version_status": "recorded_build_environment",
+          "source": "power-profiles-daemon-n1x package .BUILDINFO"
+        },
+        {
+          "name": "pkgconf",
+          "version": "3.0.7-1",
+          "version_status": "recorded_build_environment",
+          "source": "power-profiles-daemon-n1x package .BUILDINFO"
+        },
+        {
+          "name": "glib2-devel",
+          "version": "2.90.1-1",
+          "version_status": "recorded_build_environment",
+          "source": "power-profiles-daemon-n1x package .BUILDINFO"
+        }
+      ],
+      "notes": [
+        "Build upstream NVIDIA MR236 implementation with meson."
+      ]
+    },
+    {
+      "id": "cppc-init",
+      "type": "custom",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "code": "assets/hardware/power/n1x-cppc-init.py",
+      "dependencies": [
+        {
+          "name": "python",
+          "version": "3.14.8-1",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        },
+        {
+          "name": "systemd",
+          "version": "262.1-1",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        },
+        {
+          "name": "kmod",
+          "version": "34.2-1",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        }
+      ],
+      "notes": [
+        "Read CPU min/max frequency from current sysfs.",
+        "Enable autonomous selection only for NVDA0200 and cppc_cpufreq."
+      ]
+    },
+    {
+      "id": "daemon-ordering",
+      "type": "direct",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "dependencies": [
+        {
+          "name": "systemd",
+          "version": "262.1-1",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        }
+      ],
+      "values": {
+        "After": "n1x-cppc-init.service",
+        "WantedBy": "multi-user.target"
+      },
+      "notes": [
+        "Use a full unit override to remove the upstream ordering cycle."
+      ]
+    }
+  ],
+  "files": [
+    {
+      "source": "payload/assets/build-inputs/power-profiles-daemon-nvidia-3001c25.tar",
+      "destination": "assets/build-inputs/power-profiles-daemon-nvidia-3001c25.tar",
+      "bytes": 491520,
+      "sha256": "b479b101585bc65fb2b5eab9c6013fcdf54d7cee31a08ea492affbd009d7a499",
+      "mode": 420
+    },
+    {
+      "source": "payload/assets/hardware/power/n1x-cppc-init.py",
+      "destination": "assets/hardware/power/n1x-cppc-init.py",
+      "bytes": 1075,
+      "sha256": "aaae00438e0cad22150263d65b6c0fd00bf0618ca10ab8ddff47c7d00e8c77a8",
+      "mode": 420
+    },
+    {
+      "source": "payload/assets/hardware/power/n1x-cppc-init.service",
+      "destination": "assets/hardware/power/n1x-cppc-init.service",
+      "bytes": 356,
+      "sha256": "14d7908b992750aeb8e960eba1ce7cdf3a3de46af66d5d9abdf1bddc38462c65",
+      "mode": 420
+    },
+    {
+      "source": "payload/packages/power-profiles-daemon-n1x/PKGBUILD",
+      "destination": "packages/power-profiles-daemon-n1x/PKGBUILD",
+      "bytes": 967,
+      "sha256": "4f486a5f2fb7103679163bdffd4e37857e1cf1c836e0a3f0503a92a22ecd0f62",
+      "mode": 420
+    },
+    {
+      "source": "payload/packages/power-profiles-daemon-n1x/inputs.json",
+      "destination": "packages/power-profiles-daemon-n1x/inputs.json",
+      "bytes": 242,
+      "sha256": "a497fb9508ec9ea90ac64d30f439e6546989091300faaf4d0b31ecac30a158fb",
+      "mode": 420
+    },
+    {
+      "source": "payload/runtime/etc/systemd/system/power-profiles-daemon.service",
+      "destination": "runtime/etc/systemd/system/power-profiles-daemon.service",
+      "bytes": 1189,
+      "sha256": "2f177a7e63742bd9688d320bc2b226cb42c82c900ef97290b3e30fab920c0b54",
+      "mode": 420
+    }
+  ],
+  "links": []
+}

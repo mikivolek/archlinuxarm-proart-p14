@@ -1,0 +1,253 @@
+{
+  "schema": "h7607a-component-v1",
+  "id": "soundwire",
+  "type": "patch",
+  "repo_url": "https://github.com/NVIDIA/NV-Kernels",
+  "checkout_hash": "2234cd7f8f8a9fdbceef37f82c531016aab8cf73",
+  "sparse": {
+    "enabled": false,
+    "paths": []
+  },
+  "dependencies": [
+    {
+      "name": "NVIDIA kernel headers",
+      "version": "7.0.0-1022-nvidia",
+      "version_status": "artifact_and_ABI_pinned",
+      "source": "retained native module build receipts",
+      "scope": "source build: Module.symvers SHA256 ad63eccd8911085a10d7996b78dd0c40f6bcaa0b32d42986a9cce39e0101a7ba; original .config SHA256 3702382acae6cb607b441f0a44c2f0929a9ed98b9d33dcf2f731b1a1d1469297"
+    }
+  ],
+  "depends_on": [
+    "kernel"
+  ],
+  "items": [
+    {
+      "id": "soundwire-interrupt-gate",
+      "type": "patch",
+      "repo_url": "https://github.com/NVIDIA/NV-Kernels",
+      "checkout_hash": "2234cd7f8f8a9fdbceef37f82c531016aab8cf73",
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "patch": "provenance/hardware/backports/soundwire/0001-soundwire-close-interrupt-gate.patch",
+      "attribution": {
+        "author": "Ryan Hughes <ryan@heyoodle.com>",
+        "bytes": 5558,
+        "sha256": "0251766c52add0dfb792616dd93244aa242f406dd7ff8b20eec043b3fe50fa47"
+      },
+      "notes": [
+        "Use attributed source-level repair."
+      ],
+      "physical_boot_qualified": false,
+      "dependencies": [
+        {
+          "name": "NVIDIA kernel headers",
+          "version": "7.0.0-1022-nvidia",
+          "version_status": "artifact_and_ABI_pinned",
+          "source": "retained native module build receipts",
+          "scope": "source build: Module.symvers SHA256 ad63eccd8911085a10d7996b78dd0c40f6bcaa0b32d42986a9cce39e0101a7ba; original .config SHA256 3702382acae6cb607b441f0a44c2f0929a9ed98b9d33dcf2f731b1a1d1469297"
+        }
+      ]
+    },
+    {
+      "id": "soundwire-native-build",
+      "type": "custom",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "code": "provenance/hardware/backports/soundwire/build.sh",
+      "dependencies": [
+        {
+          "name": "NVIDIA kernel headers",
+          "version": "7.0.0-1022-nvidia",
+          "version_status": "artifact_and_ABI_pinned",
+          "source": "retained native module build receipts",
+          "scope": "source build: Module.symvers SHA256 ad63eccd8911085a10d7996b78dd0c40f6bcaa0b32d42986a9cce39e0101a7ba; original .config SHA256 3702382acae6cb607b441f0a44c2f0929a9ed98b9d33dcf2f731b1a1d1469297"
+        }
+      ],
+      "command": [
+        "bash",
+        "provenance/hardware/backports/soundwire/build.sh"
+      ],
+      "notes": [
+        "Run once in native AArch64 Linux with absent /var/tmp/h7607a-soundwire-backport.",
+        "The script requires the original header .config hash, not the four-Rust-capability-different config installed by the newly rebuilt kernel; supply the original pinned header input for deliberate reproduction."
+      ]
+    },
+    {
+      "id": "soundwire-build-verification",
+      "type": "custom",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "code": "provenance/hardware/backports/soundwire/check-native.py",
+      "dependencies": [
+        {
+          "name": "NVIDIA kernel headers",
+          "version": "7.0.0-1022-nvidia",
+          "version_status": "artifact_and_ABI_pinned",
+          "source": "retained native module build receipts",
+          "scope": "source build: Module.symvers SHA256 ad63eccd8911085a10d7996b78dd0c40f6bcaa0b32d42986a9cce39e0101a7ba; original .config SHA256 3702382acae6cb607b441f0a44c2f0929a9ed98b9d33dcf2f731b1a1d1469297"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "source": "payload/assets/hardware/modules/soundwire-mtk.ko",
+      "destination": "assets/hardware/modules/soundwire-mtk.ko",
+      "bytes": 227144,
+      "sha256": "7162e23606a3bbcf4ff15fc2eada8662eee9962b88b5605d11f51e45e74b7d5f",
+      "mode": 420
+    },
+    {
+      "source": "patches/provenance/hardware/backports/soundwire/0001-soundwire-close-interrupt-gate.patch",
+      "destination": "provenance/hardware/backports/soundwire/0001-soundwire-close-interrupt-gate.patch",
+      "bytes": 5558,
+      "sha256": "0251766c52add0dfb792616dd93244aa242f406dd7ff8b20eec043b3fe50fa47",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/soundwire/README.md",
+      "destination": "provenance/hardware/backports/soundwire/README.md",
+      "bytes": 2898,
+      "sha256": "4e87cbd9c48410516270aedbda5efbfff5d18051fbb5ccb3e1974a7443df9c21",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/soundwire/build-receipt.json",
+      "destination": "provenance/hardware/backports/soundwire/build-receipt.json",
+      "bytes": 2444,
+      "sha256": "0b5f0661df27c58c4e0549087a9b91e068ed6c65c873597381433c997f5fdb92",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/soundwire/build.sh",
+      "destination": "provenance/hardware/backports/soundwire/build.sh",
+      "bytes": 1718,
+      "sha256": "318e710a6a1da4dddb92bfe7b57bbc5b4381c0289315114353bbbf245de3136a",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/soundwire/check-native.py",
+      "destination": "provenance/hardware/backports/soundwire/check-native.py",
+      "bytes": 4450,
+      "sha256": "abd67c19822ee6460fe9ac5bf3c02d38607c27cbb4cb21746998b90fb7084d0c",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/soundwire/pristine/drivers/soundwire/bus.h",
+      "destination": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/bus.h",
+      "bytes": 7119,
+      "sha256": "c25915dc7b0b0357fd1260229b246c5edbf904e3f956bf8f5d7aa1473fe25663",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/Makefile",
+      "destination": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/Makefile",
+      "bytes": 406,
+      "sha256": "7a4e749b1ba6d3b64dc2593d31305923a9558c90e0e1e2bce65bd776ab5afe59",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mt8901-afe-clk.c",
+      "destination": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mt8901-afe-clk.c",
+      "bytes": 26311,
+      "sha256": "5a5d9a835707c199b4d463daf8f45eeb98be787daf0b3c20e5f6c1c8ecd7d56c",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mt8901-afe-clk.h",
+      "destination": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mt8901-afe-clk.h",
+      "bytes": 4422,
+      "sha256": "94dfebcbb8926525af9525e824f4b05f779a99990a4c2f93b42bea5edb47e68f",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw-chipglue.c",
+      "destination": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw-chipglue.c",
+      "bytes": 756,
+      "sha256": "65c7fef197e6429b39745c5686f4e1ee7a8e9a5d62dc724125d2988c91c941f0",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw-common.h",
+      "destination": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw-common.h",
+      "bytes": 2872,
+      "sha256": "27f66153ede1414f439b4256b8707b203b7ed33950ee2887155d9a5be4ad19ce",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw-core.c",
+      "destination": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw-core.c",
+      "bytes": 39612,
+      "sha256": "63ab321028387add5e8fc64e60f667c0ce1011aeea173abca8a71ed12cb1acda",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw-core.h",
+      "destination": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw-core.h",
+      "bytes": 10518,
+      "sha256": "e4676f25a3d26b5cc2c9a0666bd0f7f2c608543957b3f912caed96106d834795",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw-mach.c",
+      "destination": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw-mach.c",
+      "bytes": 11712,
+      "sha256": "c482e36577d72c02f1eb713e39e8711aa0093cd92cdf7ee9c88d122e80ab68fe",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw-mach.h",
+      "destination": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw-mach.h",
+      "bytes": 561,
+      "sha256": "6a1c67da7a0ea0be4cb25270e8aafb5d5779bd56d8f1237f25b8813206ffdc5b",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw-top.c",
+      "destination": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw-top.c",
+      "bytes": 9570,
+      "sha256": "fef501d26dd8394bca825b110d0506417bf11177fbba103134c776bd65c13129",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw-top.h",
+      "destination": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw-top.h",
+      "bytes": 3055,
+      "sha256": "a92d60aa4b3406f923f18d3fe9b6deab65fac08c52fe21318ccc7f424de95d5a",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw.c",
+      "destination": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw.c",
+      "bytes": 46714,
+      "sha256": "7bc9a0b5bc7dae9ff3c38d4e0cf510fea774cc968f6d3a128110c6a083fdec5b",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw.h",
+      "destination": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw.h",
+      "bytes": 2484,
+      "sha256": "893dbd1ade2c51cafea3d0640236aaeaf14cd878c3ac8769fed2f5104a2a7766",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/soundwire/source-receipt.json",
+      "destination": "provenance/hardware/backports/soundwire/source-receipt.json",
+      "bytes": 7500,
+      "sha256": "774b7e28dc744cb0dd42505ed1a188068f77910148694b0aad72ce0bf7cd7127",
+      "mode": 420
+    }
+  ],
+  "links": [],
+  "source_build_scope": "Normal assembly preserves the shipped hash-pinned module binaries. Source rebuilds are separate candidates, use the matched header/ABI inputs, and do not inherit physical qualification. Compiler banners in original native receipts report GCC 16.1.1."
+}

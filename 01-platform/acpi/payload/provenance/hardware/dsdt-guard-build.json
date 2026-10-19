@@ -1,0 +1,93 @@
+{
+  "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.5.0\nThread model: posix\n",
+  "linker": "LLD 19.1.7 (https://github.com/rust-lang/llvm-project.git 7e8c93c87c611f21d9bd95100563392f4c18bfe7)\n",
+  "files": {
+    "n1x-dsdt-guard.c": {
+      "bytes": 6827,
+      "sha256": "1cdac261e1785797bfa20af45232a1b923537dfd924bb6a9fc8f24db0c6c3905"
+    },
+    "guard-core.c": {
+      "bytes": 3533,
+      "sha256": "28363956065c2e468417119a20e58c5bd95212b2f6ca34ab7e74588cb8a0377d"
+    },
+    "guard-core.h": {
+      "bytes": 511,
+      "sha256": "eec2a817953b65e3ea88c9371ed70640e0546d6dd1370044c3fda29b6ae92cf8"
+    },
+    "n1x-dsdt-guard.efi": {
+      "bytes": 6656,
+      "sha256": "7e69518dbbfd33912b9d65bd9349c7340da1f4959f00d1c39dcc9efc60e58ea3"
+    }
+  },
+  "firmware_runtime_tested": false,
+  "headers_provenance": "edk2-source-provenance.json",
+  "own_code_license": "MIT",
+  "vendor_license": "vendor/edk2/License.txt",
+  "historical_commands_with_tool_paths_normalized": [
+    [
+      "clang",
+      "--target=aarch64-pc-windows-msvc",
+      "-ffreestanding",
+      "-fshort-wchar",
+      "-fno-stack-protector",
+      "-fno-builtin",
+      "-mno-stack-arg-probe",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Ivendor/edk2/MdePkg/Include",
+      "-Ivendor/edk2/MdePkg/Include/AArch64",
+      "-c",
+      "n1x-dsdt-guard.c",
+      "-o",
+      "n1x-dsdt-guard.obj"
+    ],
+    [
+      "clang",
+      "--target=aarch64-pc-windows-msvc",
+      "-ffreestanding",
+      "-fshort-wchar",
+      "-fno-stack-protector",
+      "-fno-builtin",
+      "-mno-stack-arg-probe",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Ivendor/edk2/MdePkg/Include",
+      "-Ivendor/edk2/MdePkg/Include/AArch64",
+      "-c",
+      "guard-core.c",
+      "-o",
+      "guard-core.obj"
+    ],
+    [
+      "rust-lld",
+      "-flavor",
+      "link",
+      "/subsystem:efi_application",
+      "/entry:efi_main",
+      "/nodefaultlib",
+      "/machine:arm64",
+      "/base:0",
+      "/out:n1x-dsdt-guard.efi",
+      "n1x-dsdt-guard.obj",
+      "guard-core.obj"
+    ]
+  ],
+  "bundled_artifacts": {
+    "n1x-dsdt-guard.c": "provenance/hardware/dsdt-guard.c",
+    "n1x-dsdt-guard.efi": "assets/hardware/uefi/n1x-dsdt-guard.efi"
+  },
+  "receipt_path_normalization": {
+    "schema": 1,
+    "kind": "historical receipt path normalization",
+    "original_receipt_sha256": "89a503e05edf322178b7c400f15a4ddeb95a28e3f5a9cdc92ef5c04d57f7f923",
+    "scope": "Replace historical host locations with repository artifacts or evidence identities; retain original artifact hashes, measurements and qualification states.",
+    "original_receipt_preserved_outside_release": true,
+    "not_a_new_build_or_hardware_capture": true,
+    "command_scope": "Historical command arguments, with clang/rust-lld executable locations reduced to tool names. They record the original build; they are not a complete current reconstruction recipe.",
+    "compiler_scope": "Historical compiler version/target retained; host-specific InstalledDir omitted."
+  }
+}

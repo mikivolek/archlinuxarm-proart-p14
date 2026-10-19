@@ -1,0 +1,42 @@
+@echo -off
+# Boot this filesystem with the pinned H7607BA ACPI compatibility archive.
+# homefilesystem is derived by EDK2 from this Shell's LoadedImage device.
+if x%homefilesystem% == x then
+  echo STOP: this Shell has no own-filesystem mapping.
+  exit /b 1
+endif
+%homefilesystem%
+if not %lasterror% == 0 then
+  echo STOP: cannot select the installed boot filesystem.
+  exit /b 1
+endif
+cd \
+if not %lasterror% == 0 then
+  echo STOP: cannot enter the installed boot root.
+  exit /b 1
+endif
+if not exist \@SENTINEL@ then
+  echo STOP: installed filesystem sentinel is missing.
+  exit /b 1
+endif
+if not exist \vmlinuz-linux-n1x then
+  echo STOP: installed kernel is missing.
+  exit /b 1
+endif
+if not exist \h7607a-acpi.cpio then
+  echo STOP: installed early ACPI archive is missing.
+  exit /b 1
+endif
+if not exist \initramfs-linux-n1x.img then
+  echo STOP: installed initramfs is missing.
+  exit /b 1
+endif
+echo H7607BA boot source: %homefilesystem% root UUID: @ROOT_UUID@
+echo Starting Linux kernel and initramfs.
+%homefilesystem%\vmlinuz-linux-n1x initrd=\h7607a-acpi.cpio initrd=\initramfs-linux-n1x.img @KERNEL_PARAMETERS@
+set -v H7607A_LINUX_STATUS %lasterror%
+echo STOP: Linux returned to the firmware shell. EFI status %H7607A_LINUX_STATUS%.
+if %H7607A_LINUX_STATUS% == 0 then
+  exit /b 1
+endif
+exit /b %H7607A_LINUX_STATUS%

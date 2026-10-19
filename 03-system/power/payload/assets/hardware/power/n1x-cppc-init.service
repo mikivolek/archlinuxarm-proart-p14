@@ -1,0 +1,13 @@
+[Unit]
+Description=Initialize NVIDIA N1X autonomous CPU frequency selection
+ConditionPathExistsGlob=/sys/bus/acpi/devices/NVDA0200:*
+Before=power-profiles-daemon.service
+
+[Service]
+Type=oneshot
+ExecStartPre=-/usr/bin/modprobe cppc_cpufreq
+ExecStart=/usr/bin/python /usr/lib/h7607a/n1x-cppc-init.py
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

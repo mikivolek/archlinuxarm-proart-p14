@@ -1,0 +1,56 @@
+[
+  {
+    "method": "RRA9",
+    "path": "\\_SB.EC0.RRA9",
+    "local_replaced": "Local0",
+    "new_name": "RSPB",
+    "source_line": 3586,
+    "original_source_sha256": "810af402149c5e2a0304a52368f36fa7f5c2cf0b248bfb0b71da5ca9a13a44f3",
+    "modified_source_sha256": "a9ee2c64d5c27860c621274d5d790a2e2b0a8eb6efc974770e718b8e2a26a8cd"
+  },
+  {
+    "method": "RRA8",
+    "path": "\\_SB.EC0.RRA8",
+    "local_replaced": "Local0",
+    "new_name": "RSPB",
+    "source_line": 3619,
+    "original_source_sha256": "0fab3d59ba77dee5c7ca2f31535b1872b6774c8819f59a1bc08d2f68398d6f26",
+    "modified_source_sha256": "ef2db72852bcc8800cd9e1e22507ba2d492f61afb5d19d37d08464f597193fe3"
+  },
+  {
+    "method": "WRA9",
+    "path": "\\_SB.EC0.WRA9",
+    "local_replaced": "Local0",
+    "new_name": "RSPB",
+    "source_line": 3652,
+    "original_source_sha256": "71e9dc3a756bfde381eab178580f85a5e988e329d3f31bf9343126447510c16b",
+    "modified_source_sha256": "fbf04a90cdda39b96ea65b26399efc97f30ec574e75944e12aa8ab95d7a2fa6e"
+  },
+  {
+    "method": "WRA8",
+    "path": "\\_SB.EC0.WRA8",
+    "local_replaced": "Local0",
+    "new_name": "RSPB",
+    "source_line": 3685,
+    "original_source_sha256": "9628f31caa67e531dd0b5893f20a5b39e05ef31fb74037205ed55f8683342150",
+    "modified_source_sha256": "cc33e60ca5ebf4d3a28ef663e0ba3aa1cf43de9e4968a4607e25eea7ee1ef471"
+  },
+  {
+    "method": "RWEC",
+    "path": "\\_SB.EC0.RWEC",
+    "local_replaced": "Local0",
+    "new_name": "RSPB",
+    "source_line": 3718,
+    "original_source_sha256": "c0d7ca82b55d524ea50fdcddfb526fe1427c9150009764f27e25421c27974ef0",
+    "modified_source_sha256": "1974c64614994d7dd5bfe42c269975b6eee5f02942d6201457d75f96db5f47ab"
+  },
+  {
+    "method": "GBST",
+    "path": "\\_SB.BAT0.GBST",
+    "local_replaced": "Local5",
+    "new_name": "RSPB",
+    "source_line": 5405,
+    "original_source_sha256": "8260abb2ea7100ec84d703a52af1cf51ddf7f4ddde67eb6a24a3d1d2ef3367e5",
+    "modified_source_sha256": "d1304bbf45ea26b55f6845afb4d5939a6c437a52ec42dbf322ae59071265c907"
+  }
+]

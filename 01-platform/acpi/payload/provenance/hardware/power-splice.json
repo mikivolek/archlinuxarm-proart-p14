@@ -1,0 +1,107 @@
+{
+  "baseline": "assets/hardware/uefi/n1x-asus-ssdt-baseline.bin",
+  "baseline_sha256": "46d9ed16af06093cdb849df69646683317d53d7342dfd38f24eab00795d396f0",
+  "baseline_bytes": 34278,
+  "candidate_sha256": "9b28ffc14c19f8b7ea2278de88ff9ec070f5f70401107d81fef067a916aa9695",
+  "candidate_bytes": 34465,
+  "oem_revision": {
+    "old": 1,
+    "new": 2
+  },
+  "unchanged_bytes": "Every original byte outside the six Method objects, four enclosing PkgLength fields, and ACPI header length/OEM revision/checksum is copied verbatim.",
+  "methods": [
+    {
+      "method": "RRA9",
+      "original_start": 18289,
+      "original_end": 18493,
+      "old_bytes": 204,
+      "new_bytes": 234,
+      "method_flags": 10,
+      "original_sha256": "528ae2a2fb3cf1f37fbc9902dd17baacb74988abfe339f7d2a4cbe0df98cbb30",
+      "replacement_sha256": "aae6b59b4381a859ca2d79d368afd743fc38b350c8c2c18b90eb82e6776892be"
+    },
+    {
+      "method": "RRA8",
+      "original_start": 18493,
+      "original_end": 18697,
+      "old_bytes": 204,
+      "new_bytes": 234,
+      "method_flags": 10,
+      "original_sha256": "41d25fad087281fbdc53eeff3c06e5d276c883187bc078011122e46324968038",
+      "replacement_sha256": "76822aa335329522ec5a592355087e6397d5c11b974f83074bc4dc4ddaa5b57f"
+    },
+    {
+      "method": "WRA9",
+      "original_start": 18697,
+      "original_end": 18903,
+      "old_bytes": 206,
+      "new_bytes": 236,
+      "method_flags": 11,
+      "original_sha256": "0876381b66d40c15745bf4c6d9bc0d39b6a8b7bb474515617d5fda5a6f9a06c8",
+      "replacement_sha256": "4c9a1c43234542cfb3fd04960eef17d3c56c2de77d10a8dcfc799aac17f6f655"
+    },
+    {
+      "method": "WRA8",
+      "original_start": 18903,
+      "original_end": 19109,
+      "old_bytes": 206,
+      "new_bytes": 236,
+      "method_flags": 11,
+      "original_sha256": "e2826438f520c39ac30d1feca6bfa3f194fbbc992f80054eb286c9a73629dae8",
+      "replacement_sha256": "e6672032ba48a79840b0ba3f5e654833cb7b76b4b666b872ede9649b33886045"
+    },
+    {
+      "method": "RWEC",
+      "original_start": 19109,
+      "original_end": 19479,
+      "old_bytes": 370,
+      "new_bytes": 404,
+      "method_flags": 11,
+      "original_sha256": "a6800a72acb7abfb6939a680e5216ab9cbdd1cdfa742c23f21d73b3012572a6d",
+      "replacement_sha256": "9380cff833f1f62a00e644972a7108fb2dcef6ec8315fe36f04283866aaf0e18"
+    },
+    {
+      "method": "GBST",
+      "original_start": 27277,
+      "original_end": 27596,
+      "old_bytes": 319,
+      "new_bytes": 352,
+      "method_flags": 0,
+      "original_sha256": "94050e8d0417b78fcb4f1ebd57b25809a1aaaf06ba9efe402424fcaa62d20d3e",
+      "replacement_sha256": "20942a2c775b2ab8f1ddd8ca54438f870c9a762af7d5fe51d50bd3ffc2b934b2"
+    }
+  ],
+  "containers": [
+    {
+      "device": "EC0_",
+      "device_start": 18109,
+      "device_end": 20293,
+      "scope_start": 18101,
+      "scope_end": 20293,
+      "scope_added_bytes": 154
+    },
+    {
+      "device": "BAT0",
+      "device_start": 25704,
+      "device_end": 28701,
+      "scope_start": 25696,
+      "scope_end": 28781,
+      "scope_added_bytes": 33
+    }
+  ],
+  "dsdt_changed": false,
+  "device_or_USB_modified": false,
+  "hardware_tested": false,
+  "candidate_archive_member": {
+    "archive_path": "assets/hardware/acpi/h7607a-acpi.cpio",
+    "member": "kernel/firmware/acpi/SSDT.aml"
+  },
+  "receipt_path_normalization": {
+    "schema": 1,
+    "kind": "historical receipt path normalization",
+    "original_receipt_sha256": "057234d58612c66d797fa6d61edca2e2bdd04f79132036489214c8b20f64de2c",
+    "scope": "Replace historical host locations with repository artifacts or evidence identities; retain original artifact hashes, measurements and qualification states.",
+    "original_receipt_preserved_outside_release": true,
+    "not_a_new_build_or_hardware_capture": true
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "native_build": true,
+  "kernel_release": "7.0.0-1022-nvidia",
+  "compiler": "gcc (GCC) 16.1.1 20260430",
+  "stock": {
+    "name": "soundwire_mtk",
+    "vermagic": "7.0.0-1022-nvidia SMP preempt mod_unload modversions aarch64",
+    "srcversion": "B0EEB455101BC5E89D2E1B0",
+    "depends": "snd-soc-core,snd-soc-acpi,soundwire-bus,soundwire-generic-allocation,snd-pcm",
+    "alias": "acpi*:NVDA9100:*",
+    "parm": "quarantine_uid:Suppress ALERT for the 0x3556 peripheral with this unique id (-1 = off) (int)\nrestart_on_probe:Restart each SoundWire link at probe instead of adopting the POST-enumerated bus (default: on) (bool)"
+  },
+  "patched": {
+    "name": "soundwire_mtk",
+    "vermagic": "7.0.0-1022-nvidia SMP preempt mod_unload modversions aarch64",
+    "srcversion": "7588DC9A1BF7B049DA48615",
+    "depends": "snd-soc-core,snd-soc-acpi,soundwire-bus,soundwire-generic-allocation,snd-pcm",
+    "alias": "acpi*:NVDA9100:*",
+    "parm": "quarantine_uid:Suppress ALERT for the 0x3556 peripheral with this unique id (-1 = off) (int)\nrestart_on_probe:Restart each SoundWire link at probe instead of adopting the POST-enumerated bus (default: on) (bool)"
+  },
+  "baseline_external": {
+    "name": "soundwire_mtk",
+    "vermagic": "7.0.0-1022-nvidia SMP preempt mod_unload modversions aarch64",
+    "srcversion": "59B390A448CADB0926C4FA0",
+    "depends": "snd-soc-core,snd-soc-acpi,soundwire-bus,soundwire-generic-allocation,snd-pcm",
+    "alias": "acpi*:NVDA9100:*",
+    "parm": "quarantine_uid:Suppress ALERT for the 0x3556 peripheral with this unique id (-1 = off) (int)\nrestart_on_probe:Restart each SoundWire link at probe instead of adopting the POST-enumerated bus (default: on) (bool)"
+  },
+  "baseline_intree_dependency_srcversion": "B0EEB455101BC5E89D2E1B0",
+  "baseline_intree_matches_stock": true,
+  "abi": {
+    "imported_symbol_count": 89,
+    "all_import_crcs_match_exact_header_symvers": true,
+    "all_shared_import_crcs_match_stock": true,
+    "added_imports": [],
+    "removed_imports": [],
+    "exact_header_config_sha256": "3702382acae6cb607b441f0a44c2f0929a9ed98b9d33dcf2f731b1a1d1469297",
+    "exact_header_symvers_sha256": "ad63eccd8911085a10d7996b78dd0c40f6bcaa0b32d42986a9cce39e0101a7ba"
+  },
+  "artifact": {
+    "path": "/var/tmp/h7607a-soundwire-backport/soundwire-mtk.ko",
+    "sha256": "7162e23606a3bbcf4ff15fc2eada8662eee9962b88b5605d11f51e45e74b7d5f",
+    "bytes": 227144
+  },
+  "physical_tested": false
+}

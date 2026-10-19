@@ -1,0 +1,432 @@
+{
+  "schema": "h7607a-package-lock-v1",
+  "repository": "h7607a",
+  "local_repository_path": "build/repo",
+  "artifacts": [
+    {
+      "id": "linux-headers-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb",
+      "path": ".artifacts/packages/linux-headers-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb",
+      "urls": [
+        "https://ports.ubuntu.com/ubuntu-ports/pool/main/l/linux-nvidia-7.0/linux-headers-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb",
+        "https://launchpad.net/ubuntu/+archive/primary/+files/linux-headers-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb",
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/93847c99d2a49f9713c464bb76956dc27f6709c7e20296f8eec894632cac3921"
+      ],
+      "bytes": 3602712,
+      "sha256": "93847c99d2a49f9713c464bb76956dc27f6709c7e20296f8eec894632cac3921"
+    },
+    {
+      "id": "linux-image-unsigned-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb",
+      "path": ".artifacts/packages/linux-image-unsigned-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb",
+      "urls": [
+        "https://ports.ubuntu.com/ubuntu-ports/pool/main/l/linux-nvidia-7.0/linux-image-unsigned-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb",
+        "https://launchpad.net/ubuntu/+archive/primary/+files/linux-image-unsigned-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb",
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/29ba865f5808bf26c1c8f2c919bb9a59ed395d048f3560bc94a6d753ec03d154"
+      ],
+      "bytes": 21985472,
+      "sha256": "29ba865f5808bf26c1c8f2c919bb9a59ed395d048f3560bc94a6d753ec03d154"
+    },
+    {
+      "id": "linux-modules-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb",
+      "path": ".artifacts/packages/linux-modules-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb",
+      "urls": [
+        "https://ports.ubuntu.com/ubuntu-ports/pool/main/l/linux-nvidia-7.0/linux-modules-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb",
+        "https://launchpad.net/ubuntu/+archive/primary/+files/linux-modules-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb",
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/3cb8bac5ed8ba7385f652240f9154691153f5ae86a3313d324f1e28c89aec126"
+      ],
+      "bytes": 285040832,
+      "sha256": "3cb8bac5ed8ba7385f652240f9154691153f5ae86a3313d324f1e28c89aec126"
+    },
+    {
+      "id": "linux-nvidia-7.0-headers-7.0.0-1022_7.0.0-1022.23~24.04.1_all.deb",
+      "path": ".artifacts/packages/linux-nvidia-7.0-headers-7.0.0-1022_7.0.0-1022.23~24.04.1_all.deb",
+      "urls": [
+        "https://ports.ubuntu.com/ubuntu-ports/pool/main/l/linux-nvidia-7.0/linux-nvidia-7.0-headers-7.0.0-1022_7.0.0-1022.23~24.04.1_all.deb",
+        "https://launchpad.net/ubuntu/+archive/primary/+files/linux-nvidia-7.0-headers-7.0.0-1022_7.0.0-1022.23~24.04.1_all.deb",
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/650da497156cf3518debf2f326e161b598d9fd0b41ab9e717e4bc72b3f8f87c8"
+      ],
+      "bytes": 14977920,
+      "sha256": "650da497156cf3518debf2f326e161b598d9fd0b41ab9e717e4bc72b3f8f87c8"
+    },
+    {
+      "id": "NVIDIA-Linux-aarch64-615.78.08.run",
+      "path": ".artifacts/packages/NVIDIA-Linux-aarch64-615.78.08.run",
+      "urls": [
+        "https://us.download.nvidia.com/XFree86/aarch64/615.78.08/NVIDIA-Linux-aarch64-615.78.08.run",
+        "https://download.nvidia.com/XFree86/Linux-aarch64/615.78.08/NVIDIA-Linux-aarch64-615.78.08.run",
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/5076011350181e81a031f0fd012fe35fe4be37c7820d651fb7aaa894af447a37"
+      ],
+      "bytes": 394587485,
+      "sha256": "5076011350181e81a031f0fd012fe35fe4be37c7820d651fb7aaa894af447a37"
+    },
+    {
+      "id": "power-profiles-daemon-nvidia-3001c25.tar",
+      "path": "assets/build-inputs/power-profiles-daemon-nvidia-3001c25.tar",
+      "urls": [],
+      "bytes": 491520,
+      "sha256": "b479b101585bc65fb2b5eab9c6013fcdf54d7cee31a08ea492affbd009d7a499"
+    },
+    {
+      "id": "ubuntu-noble-proposed-InRelease",
+      "path": "assets/build-inputs/ubuntu-noble-proposed-InRelease",
+      "urls": [],
+      "bytes": 265194,
+      "sha256": "35d37d04a8c3002b99f12a0178942683d988148be69db001727d691490cc5099"
+    },
+    {
+      "id": "ubuntu-noble-proposed-main-arm64-Packages.xz",
+      "path": "assets/build-inputs/ubuntu-noble-proposed-main-arm64-Packages.xz",
+      "urls": [],
+      "bytes": 337636,
+      "sha256": "86b03cbc52e0f915bbe059ba795fdd195cd3f920081c158f9a785f326e9aa9a3"
+    },
+    {
+      "id": "nvidia-open-dkms-615.78.08-1-aarch64.pkg.tar.xz",
+      "path": ".artifacts/packages/nvidia-open-dkms-615.78.08-1-aarch64.pkg.tar.xz",
+      "urls": [
+        "https://fl.us.mirror.archlinuxarm.org/aarch64/extra/nvidia-open-dkms-615.78.08-1-aarch64.pkg.tar.xz",
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/83baa42abbbfe827d4fb8588598721110ba16bdfbeeda38609c1ed19521afa7b"
+      ],
+      "bytes": 17895800,
+      "sha256": "83baa42abbbfe827d4fb8588598721110ba16bdfbeeda38609c1ed19521afa7b"
+    },
+    {
+      "id": "nvidia-open-dkms-615.78.08-1-aarch64.pkg.tar.xz.sig",
+      "path": ".artifacts/packages/nvidia-open-dkms-615.78.08-1-aarch64.pkg.tar.xz.sig",
+      "urls": [
+        "https://fl.us.mirror.archlinuxarm.org/aarch64/extra/nvidia-open-dkms-615.78.08-1-aarch64.pkg.tar.xz.sig",
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/88f98e253eb53341b6a4d48f2784bf0f77f6dbd85880fe5a2fa3960ec21ad85e"
+      ],
+      "bytes": 566,
+      "sha256": "88f98e253eb53341b6a4d48f2784bf0f77f6dbd85880fe5a2fa3960ec21ad85e"
+    },
+    {
+      "id": "local-key",
+      "path": "assets/keys/h7607a-build.gpg",
+      "urls": [],
+      "fingerprint": "100A50E46DC2C244F838DCBFABD48F465F4434BD",
+      "bytes": 250,
+      "sha256": "86d33d412a7449109926a2b4ac65504b61a1535da78d913d297d5a50e033bff0"
+    },
+    {
+      "id": "archlinuxarm-key",
+      "path": "assets/keys/archlinuxarm-builder.gpg",
+      "urls": [],
+      "fingerprint": "68B3537F39A313B3E574D06777193F152BDBE6A6",
+      "bytes": 3857,
+      "sha256": "4e4202772328674af68f90f675e077d192337fc8ced15cddcd35875a9de5b5f9"
+    },
+    {
+      "id": "ubuntu-keyring",
+      "path": "assets/keys/ubuntu-archive.gpg",
+      "urls": [
+        "https://archive.ubuntu.com/ubuntu/project/ubuntu-archive-keyring.gpg"
+      ],
+      "bytes": 3607,
+      "sha256": "80a36b0a6de2f69f49d2df75ef473ccde121e9e190b9ea01d20a4f63778d5c31"
+    },
+    {
+      "id": "nvidia-utils-615.78.08-1-aarch64.pkg.tar.xz",
+      "path": ".artifacts/packages/nvidia-utils-615.78.08-1-aarch64.pkg.tar.xz",
+      "bytes": 296038380,
+      "sha256": "ee6deebba6d983f0a8a216316379a47bc61a268d5f264a66b37335d57121b506",
+      "urls": [
+        "https://fl.us.mirror.archlinuxarm.org/aarch64/extra/nvidia-utils-615.78.08-1-aarch64.pkg.tar.xz",
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/ee6deebba6d983f0a8a216316379a47bc61a268d5f264a66b37335d57121b506"
+      ]
+    },
+    {
+      "id": "nvidia-utils-615.78.08-1-aarch64.pkg.tar.xz.sig",
+      "path": ".artifacts/packages/nvidia-utils-615.78.08-1-aarch64.pkg.tar.xz.sig",
+      "bytes": 566,
+      "sha256": "359f19af8bc38800164993226c443a2d5a7112f2d4688f7852f2fc0fcfbaaada",
+      "urls": [
+        "https://fl.us.mirror.archlinuxarm.org/aarch64/extra/nvidia-utils-615.78.08-1-aarch64.pkg.tar.xz.sig",
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/359f19af8bc38800164993226c443a2d5a7112f2d4688f7852f2fc0fcfbaaada"
+      ]
+    },
+    {
+      "id": "stock-nvidia.ko.zst",
+      "path": "assets/build-inputs/nvidia.ko.zst",
+      "bytes": 11563191,
+      "sha256": "e38370575be91aa186ee7c18b8d7e81435ae7825740304c7295d7eb9f8a4b661",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/e38370575be91aa186ee7c18b8d7e81435ae7825740304c7295d7eb9f8a4b661"
+      ],
+      "provenance": "Pristine original ALARM seed; matching signed NVIDIA 615.78.08 sources and exact kernel ABI"
+    },
+    {
+      "id": "stock-nvidia-modeset.ko.zst",
+      "path": "assets/build-inputs/nvidia-modeset.ko.zst",
+      "bytes": 776275,
+      "sha256": "f390076f7cec4a8fc7079dff8fddd7607b2d82a33b97219767d59cf98ea2475e",
+      "urls": [],
+      "provenance": "Pristine original ALARM seed; matching signed NVIDIA 615.78.08 sources and exact kernel ABI"
+    },
+    {
+      "id": "stock-nvidia-uvm.ko.zst",
+      "path": "assets/build-inputs/nvidia-uvm.ko.zst",
+      "bytes": 711118,
+      "sha256": "75a674e888a75c2c368ef868ed28749cd9add2dfed3783699ded86ac4992ac9c",
+      "urls": [],
+      "provenance": "Pristine original ALARM seed; matching signed NVIDIA 615.78.08 sources and exact kernel ABI"
+    },
+    {
+      "id": "linux-firmware-mediatek-20260916-1-any.pkg.tar.xz",
+      "path": ".artifacts/packages/linux-firmware-mediatek-20260916-1-any.pkg.tar.xz",
+      "bytes": 34714404,
+      "sha256": "0b9a3876db35b50f0cdc898a4e5570ef1d6e153a7ec6ae6216ee03eaa9305b73",
+      "urls": [
+        "https://fl.us.mirror.archlinuxarm.org/aarch64/core/linux-firmware-mediatek-20260916-1-any.pkg.tar.xz",
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/0b9a3876db35b50f0cdc898a4e5570ef1d6e153a7ec6ae6216ee03eaa9305b73"
+      ]
+    },
+    {
+      "id": "linux-firmware-mediatek-20260916-1-any.pkg.tar.xz.sig",
+      "path": ".artifacts/packages/linux-firmware-mediatek-20260916-1-any.pkg.tar.xz.sig",
+      "bytes": 566,
+      "sha256": "a2613a694171607d8b754360bfff199b0ffbcd7a8c85c2eb9c8322344dbb9705",
+      "urls": [
+        "https://fl.us.mirror.archlinuxarm.org/aarch64/core/linux-firmware-mediatek-20260916-1-any.pkg.tar.xz.sig",
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/a2613a694171607d8b754360bfff199b0ffbcd7a8c85c2eb9c8322344dbb9705"
+      ]
+    },
+    {
+      "id": "linux-firmware-cirrus-20260916-1-any.pkg.tar.xz",
+      "path": ".artifacts/packages/linux-firmware-cirrus-20260916-1-any.pkg.tar.xz",
+      "bytes": 465188,
+      "sha256": "7ff462e21e34239c4d1add91ddd38f8537f79b79acc23aa976b6d1ddc040553e",
+      "urls": [
+        "https://fl.us.mirror.archlinuxarm.org/aarch64/core/linux-firmware-cirrus-20260916-1-any.pkg.tar.xz",
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/7ff462e21e34239c4d1add91ddd38f8537f79b79acc23aa976b6d1ddc040553e"
+      ]
+    },
+    {
+      "id": "linux-firmware-cirrus-20260916-1-any.pkg.tar.xz.sig",
+      "path": ".artifacts/packages/linux-firmware-cirrus-20260916-1-any.pkg.tar.xz.sig",
+      "bytes": 566,
+      "sha256": "93fb9e99d024fedb870ff129310a0090022f9f2f5c3c66f6c96c965d0bceb6c1",
+      "urls": [
+        "https://fl.us.mirror.archlinuxarm.org/aarch64/core/linux-firmware-cirrus-20260916-1-any.pkg.tar.xz.sig",
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/93fb9e99d024fedb870ff129310a0090022f9f2f5c3c66f6c96c965d0bceb6c1"
+      ]
+    },
+    {
+      "id": "linux-firmware-whence-20260916-1-any.pkg.tar.xz",
+      "path": ".artifacts/packages/linux-firmware-whence-20260916-1-any.pkg.tar.xz",
+      "bytes": 43144,
+      "sha256": "52671ff7275c0a62029150ef700778da7e448f36b381e73da964751e8862bdbc",
+      "urls": [
+        "https://fl.us.mirror.archlinuxarm.org/aarch64/core/linux-firmware-whence-20260916-1-any.pkg.tar.xz",
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/52671ff7275c0a62029150ef700778da7e448f36b381e73da964751e8862bdbc"
+      ]
+    },
+    {
+      "id": "linux-firmware-whence-20260916-1-any.pkg.tar.xz.sig",
+      "path": ".artifacts/packages/linux-firmware-whence-20260916-1-any.pkg.tar.xz.sig",
+      "bytes": 566,
+      "sha256": "e1f33d9f53b4c27910d7ca43cb5c4d9722e6b09f92f8acbf8e4140efb65bd2e5",
+      "urls": [
+        "https://fl.us.mirror.archlinuxarm.org/aarch64/core/linux-firmware-whence-20260916-1-any.pkg.tar.xz.sig",
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/e1f33d9f53b4c27910d7ca43cb5c4d9722e6b09f92f8acbf8e4140efb65bd2e5"
+      ]
+    },
+    {
+      "id": "nvidia-modeset-pr1368",
+      "path": "assets/hardware/modules/nvidia-modeset.ko.zst",
+      "bytes": 854557,
+      "sha256": "3a1e3c07802314073eaaa03846cdd6bd197deec9674f7860fb72479fe3a3b6b5",
+      "urls": [],
+      "provenance": "NVIDIA 615.78.08 + PR1368; native ABI/import/export verified; not physically qualified",
+      "build_receipt": "provenance/hardware/backports/nvidia/native-build-receipt.json",
+      "physical_boot_qualified": false
+    },
+    {
+      "id": "acpi-bounded-kernel-runtime",
+      "path": "assets/hardware/kernel/h7607a-kernel-runtime.tar.zst",
+      "bytes": 264274598,
+      "sha256": "75b65341b58d7c171ad9482f7227f97bd88ff9e6a98b5a781609b4e5674036f6",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/75b65341b58d7c171ad9482f7227f97bd88ff9e6a98b5a781609b4e5674036f6"
+      ],
+      "provenance": "Pinned Canonical/NVIDIA source plus bounded ARM64 ACPI allocator; kernel and all stock modules built together",
+      "build_receipt": "provenance/hardware/backports/acpi/build-receipt.json",
+      "physical_boot_qualified": false
+    }
+  ],
+  "signing_keys": {
+    "local": {
+      "id": "local-key",
+      "path": "assets/keys/h7607a-build.gpg",
+      "urls": [],
+      "fingerprint": "100A50E46DC2C244F838DCBFABD48F465F4434BD",
+      "bytes": 250,
+      "sha256": "86d33d412a7449109926a2b4ac65504b61a1535da78d913d297d5a50e033bff0"
+    },
+    "archlinuxarm": {
+      "id": "archlinuxarm-key",
+      "path": "assets/keys/archlinuxarm-builder.gpg",
+      "urls": [],
+      "fingerprint": "68B3537F39A313B3E574D06777193F152BDBE6A6",
+      "bytes": 3857,
+      "sha256": "4e4202772328674af68f90f675e077d192337fc8ced15cddcd35875a9de5b5f9"
+    }
+  },
+  "packages": [
+    {
+      "name": "linux-n1x-nvidia-bin",
+      "version": "7.0.0.1022.23-3",
+      "architecture": "aarch64",
+      "kind": "custom",
+      "recipe": "packages/linux-n1x-nvidia-bin",
+      "recipe_files": {
+        "packages/linux-n1x-nvidia-bin/PKGBUILD": {
+          "bytes": 3388,
+          "sha256": "3860d61aae9bc72eded982adc788eba07c9ca9fef15a41d9e5573c37929b24b9"
+        },
+        "packages/linux-n1x-nvidia-bin/inputs.json": {
+          "bytes": 971,
+          "sha256": "d3a1da6f4432a6c820793ea4660596717c43105bd6f493e8ff9758dca48ea830"
+        },
+        "packages/linux-n1x-nvidia-bin/linux-n1x-nvidia-bin.preset": {
+          "bytes": 101,
+          "sha256": "c468c1aab1e85d9d4116748c54a1d079b2fa600991a42e674c349ae83a2955a1"
+        }
+      }
+    },
+    {
+      "name": "nvidia-n1x-modules",
+      "version": "615.78.08-4",
+      "architecture": "aarch64",
+      "kind": "custom",
+      "recipe": "packages/nvidia-n1x-modules",
+      "recipe_files": {
+        "packages/nvidia-n1x-modules/PKGBUILD": {
+          "bytes": 1219,
+          "sha256": "30d033083bf452be9468dada1d3946769fd396f894066e0e91692ee68aef8892"
+        },
+        "packages/nvidia-n1x-modules/inputs.json": {
+          "bytes": 584,
+          "sha256": "0f13fc1fb2abec9f8cafe0b71b84eb70e5e55c81e3210e3162754aaa126cda45"
+        }
+      }
+    },
+    {
+      "name": "nvidia-n1x-userspace-fix",
+      "version": "615.78.08-1",
+      "architecture": "aarch64",
+      "kind": "custom",
+      "recipe": "packages/nvidia-n1x-userspace-fix",
+      "recipe_files": {
+        "packages/nvidia-n1x-userspace-fix/PKGBUILD": {
+          "bytes": 1202,
+          "sha256": "ff831b699701d241293b7a6db05472a29cf987fe631a8b3122290f77c9bb02b9"
+        },
+        "packages/nvidia-n1x-userspace-fix/extract-nvidia-library.py": {
+          "bytes": 2496,
+          "sha256": "67098e1c811ade56ae039d08964d2ae1760d13eb60cceeb75c8d6567706901e1"
+        },
+        "packages/nvidia-n1x-userspace-fix/inputs.json": {
+          "bytes": 229,
+          "sha256": "7c5543287b28064ae96f73cf203e4a6bc5948f6c8be764ac94b699327669e7e5"
+        }
+      }
+    },
+    {
+      "name": "power-profiles-daemon-n1x",
+      "version": "0.30.nvidia3001c25-2",
+      "architecture": "aarch64",
+      "kind": "custom",
+      "recipe": "packages/power-profiles-daemon-n1x",
+      "recipe_files": {
+        "packages/power-profiles-daemon-n1x/PKGBUILD": {
+          "bytes": 967,
+          "sha256": "4f486a5f2fb7103679163bdffd4e37857e1cf1c836e0a3f0503a92a22ecd0f62"
+        },
+        "packages/power-profiles-daemon-n1x/inputs.json": {
+          "bytes": 242,
+          "sha256": "a497fb9508ec9ea90ac64d30f439e6546989091300faaf4d0b31ecac30a158fb"
+        }
+      }
+    },
+    {
+      "name": "h7607a-hardware",
+      "version": "1.0.0-4",
+      "architecture": "aarch64",
+      "kind": "custom",
+      "recipe": "packages/h7607a-hardware",
+      "recipe_files": {
+        "packages/h7607a-hardware/LICENSE": {
+          "bytes": 1075,
+          "sha256": "f904c0073e5132ca2a0640694a1236a25c64dc74c3180e8299ebb555a16ddbc9"
+        },
+        "packages/h7607a-hardware/LICENSE.ucm": {
+          "bytes": 1660,
+          "sha256": "c01bab78a49e3c20ddd3787d45f33b60898b9d26632bf4bf581fa372fefd78ab"
+        },
+        "packages/h7607a-hardware/PKGBUILD": {
+          "bytes": 4356,
+          "sha256": "fe16b0f126b8bf0c1059cf899dd371d2830cc9ca7c76ec36099af24600747b66"
+        },
+        "packages/h7607a-hardware/inputs.json": {
+          "bytes": 1739,
+          "sha256": "87d22e335edd867870470a1c004db11de86f0f380923fd0bd7a5ffe7f6bd00af"
+        }
+      }
+    },
+    {
+      "name": "nvidia-utils",
+      "version": "615.78.08-1",
+      "architecture": "aarch64",
+      "kind": "upstream",
+      "artifact_id": "nvidia-utils-615.78.08-1-aarch64.pkg.tar.xz",
+      "signature_id": "nvidia-utils-615.78.08-1-aarch64.pkg.tar.xz.sig"
+    },
+    {
+      "name": "linux-firmware-mediatek",
+      "version": "20260916-1",
+      "architecture": "any",
+      "kind": "upstream",
+      "artifact_id": "linux-firmware-mediatek-20260916-1-any.pkg.tar.xz",
+      "signature_id": "linux-firmware-mediatek-20260916-1-any.pkg.tar.xz.sig"
+    },
+    {
+      "name": "linux-firmware-cirrus",
+      "version": "20260916-1",
+      "architecture": "any",
+      "kind": "upstream",
+      "artifact_id": "linux-firmware-cirrus-20260916-1-any.pkg.tar.xz",
+      "signature_id": "linux-firmware-cirrus-20260916-1-any.pkg.tar.xz.sig"
+    },
+    {
+      "name": "linux-firmware-whence",
+      "version": "20260916-1",
+      "architecture": "any",
+      "kind": "upstream",
+      "artifact_id": "linux-firmware-whence-20260916-1-any.pkg.tar.xz",
+      "signature_id": "linux-firmware-whence-20260916-1-any.pkg.tar.xz.sig"
+    }
+  ],
+  "additional_locks": [
+    "locks/hardware.json"
+  ],
+  "ubuntu_archive": {
+    "keyring_id": "ubuntu-keyring",
+    "fingerprint": "F6ECB3762474EDA9D21B7022871920D1991BC93C",
+    "inrelease_id": "ubuntu-noble-proposed-InRelease",
+    "index_id": "ubuntu-noble-proposed-main-arm64-Packages.xz",
+    "index_path": "main/binary-arm64/Packages.xz",
+    "deb_ids": [
+      "linux-headers-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb",
+      "linux-image-unsigned-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb",
+      "linux-modules-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb",
+      "linux-nvidia-7.0-headers-7.0.0-1022_7.0.0-1022.23~24.04.1_all.deb"
+    ]
+  },
+  "provenance_packages": [
+    {
+      "artifact_id": "nvidia-open-dkms-615.78.08-1-aarch64.pkg.tar.xz",
+      "signature_id": "nvidia-open-dkms-615.78.08-1-aarch64.pkg.tar.xz.sig",
+      "signer": "archlinuxarm"
+    }
+  ]
+}

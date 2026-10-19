@@ -1,0 +1,369 @@
+{
+  "schema": "h7607a-component-v1",
+  "id": "input-audio",
+  "type": "custom",
+  "repo_url": null,
+  "checkout_hash": null,
+  "sparse": {
+    "enabled": false,
+    "paths": []
+  },
+  "dependencies": [
+    {
+      "name": "python",
+      "version": "3.14.8-1",
+      "command": "python3",
+      "policy": "pinned-live-inventory",
+      "scope": "runtime"
+    },
+    {
+      "name": "systemd",
+      "version": "262.1-1",
+      "command": "busctl",
+      "policy": "pinned-live-inventory",
+      "scope": "runtime"
+    },
+    {
+      "name": "wireplumber",
+      "version": "0.5.18-1",
+      "command": "wpctl",
+      "policy": "tested-target-package",
+      "scope": "runtime"
+    },
+    {
+      "name": "libinput",
+      "version": "1.32.0-1",
+      "version_status": "tested",
+      "source": "ALARM repository",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "python",
+      "version": "3.14.8-1",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "systemd",
+      "version": "262.1-1",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "alsa-lib",
+      "version": "1.2.16.1-1",
+      "version_status": "tested",
+      "source": "ALARM repository",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "pipewire",
+      "version": "1:1.6.9-1",
+      "version_status": "tested",
+      "source": "ALARM repository",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "pipewire-audio",
+      "version": "1:1.6.9-1",
+      "version_status": "tested",
+      "source": "ALARM repository",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "pipewire-pulse",
+      "version": "1:1.6.9-1",
+      "version_status": "tested",
+      "source": "ALARM repository",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "wireplumber",
+      "version": "0.5.18-1",
+      "version_status": "tested",
+      "source": "ALARM repository",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "rtkit",
+      "version": "0.14-2",
+      "version_status": "tested",
+      "source": "ALARM repository",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "python",
+      "version": "3.14.8-1",
+      "scope": "ALARM runtime; standard library unless entry lists otherwise"
+    }
+  ],
+  "depends_on": [],
+  "items": [
+    {
+      "id": "pixart-pressure-quirk",
+      "type": "direct",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "dependencies": [
+        {
+          "name": "libinput",
+          "version": "1.32.0-1",
+          "version_status": "tested",
+          "source": "ALARM repository"
+        }
+      ],
+      "match": {
+        "vendor": "093A",
+        "product": "4F01",
+        "DMI": "ASUS ProArt P16 H7607BA"
+      },
+      "values": {
+        "AttrPressureRange": "none",
+        "AttrPalmPressureThreshold": 0
+      }
+    },
+    {
+      "id": "brightness-controls",
+      "type": "custom",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "code": "runtime/usr/bin/h7607a-brightness",
+      "dependencies": [
+        {
+          "name": "python",
+          "version": "3.14.8-1",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        },
+        {
+          "name": "systemd",
+          "version": "262.1-1",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        }
+      ],
+      "notes": [
+        "Use logind SetBrightness for nvidia_0 and asus::kbd_backlight.",
+        "Read actual range from sysfs, use five-percent display steps."
+      ]
+    },
+    {
+      "id": "playback-routing",
+      "type": "direct",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "dependencies": [
+        {
+          "name": "alsa-lib",
+          "version": "1.2.16.1-1",
+          "version_status": "tested",
+          "source": "ALARM repository"
+        },
+        {
+          "name": "pipewire",
+          "version": "1:1.6.9-1",
+          "version_status": "tested",
+          "source": "ALARM repository"
+        },
+        {
+          "name": "pipewire-audio",
+          "version": "1:1.6.9-1",
+          "version_status": "tested",
+          "source": "ALARM repository"
+        },
+        {
+          "name": "pipewire-pulse",
+          "version": "1:1.6.9-1",
+          "version_status": "tested",
+          "source": "ALARM repository"
+        },
+        {
+          "name": "wireplumber",
+          "version": "0.5.18-1",
+          "version_status": "tested",
+          "source": "ALARM repository"
+        },
+        {
+          "name": "rtkit",
+          "version": "0.14-2",
+          "version_status": "tested",
+          "source": "ALARM repository"
+        }
+      ],
+      "notes": [
+        "Use PCM0 speakers and PCM1 headphones.",
+        "Keep normal PipeWire user sockets and WirePlumber session service.",
+        "Disable capture roles; retain A2DP/LE playback Bluetooth roles."
+      ]
+    },
+    {
+      "id": "audio-helper",
+      "type": "custom",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "code": "runtime/usr/bin/h7607a-audio",
+      "dependencies": [
+        {
+          "name": "python",
+          "version": "3.14.8-1",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        },
+        {
+          "name": "wireplumber",
+          "version": "0.5.18-1",
+          "version_status": "tested",
+          "source": "ALARM repository"
+        }
+      ]
+    },
+    {
+      "type": "custom",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "id": "brightness-helper-files",
+      "files": [
+        "runtime/usr/bin/h7607a-brightness"
+      ]
+    },
+    {
+      "type": "direct",
+      "repo_url": "https://gitlab.freedesktop.org/pipewire/pipewire",
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "version": "1.6.9",
+      "note": "WirePlumber 0.5.18; helper itself is custom and wraps wpctl.",
+      "id": "audio-playback",
+      "files": [
+        "runtime/usr/share/alsa/ucm2/MediaTek/mt8901-soundwir/P16-playback.conf",
+        "runtime/usr/share/alsa/ucm2/conf.d/mt8901-soundwir/mt8901-soundwir.conf",
+        "runtime/usr/share/wireplumber/wireplumber.conf.d/51-h7607a-playback.conf",
+        "runtime/usr/bin/h7607a-audio"
+      ]
+    },
+    {
+      "id": "h7607a-brightness",
+      "type": "custom",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "code": "runtime/usr/bin/h7607a-brightness",
+      "dependencies": [
+        {
+          "name": "python",
+          "version": "3.14.8-1",
+          "command": "python3",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "systemd",
+          "version": "262.1-1",
+          "command": "busctl",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        }
+      ]
+    },
+    {
+      "id": "h7607a-audio",
+      "type": "custom",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "code": "runtime/usr/bin/h7607a-audio",
+      "dependencies": [
+        {
+          "name": "python",
+          "version": "3.14.8-1",
+          "command": "python3",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "wireplumber",
+          "version": "0.5.18-1",
+          "command": "wpctl",
+          "policy": "tested-target-package",
+          "scope": "runtime"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "source": "payload/runtime/usr/bin/h7607a-audio",
+      "destination": "runtime/usr/bin/h7607a-audio",
+      "bytes": 1528,
+      "sha256": "9974b3ff3caf65cc25741332976362527e5e10eb090c7b0e97b9aa95b10d47fc",
+      "mode": 493
+    },
+    {
+      "source": "payload/runtime/usr/bin/h7607a-brightness",
+      "destination": "runtime/usr/bin/h7607a-brightness",
+      "bytes": 3298,
+      "sha256": "b152c2715e71bb0b6a1d5f86d86687dea989af68e5eaa6868b55fe13d8d4ef75",
+      "mode": 493
+    },
+    {
+      "source": "payload/runtime/usr/share/alsa/ucm2/MediaTek/mt8901-soundwir/P16-playback.conf",
+      "destination": "runtime/usr/share/alsa/ucm2/MediaTek/mt8901-soundwir/P16-playback.conf",
+      "bytes": 2125,
+      "sha256": "25d0ac355f3572d94106ce676e248396a0ee5af6b6ddb9319571719b9bff7e93",
+      "mode": 420
+    },
+    {
+      "source": "payload/runtime/usr/share/alsa/ucm2/conf.d/mt8901-soundwir/mt8901-soundwir.conf",
+      "destination": "runtime/usr/share/alsa/ucm2/conf.d/mt8901-soundwir/mt8901-soundwir.conf",
+      "bytes": 307,
+      "sha256": "1b6d0a8a85b748d7e09651d4931181a991e388b43729b3201040ef3e3dfb41a1",
+      "mode": 420
+    },
+    {
+      "source": "payload/runtime/usr/share/libinput/60-h7607a-touchpad.quirks",
+      "destination": "runtime/usr/share/libinput/60-h7607a-touchpad.quirks",
+      "bytes": 289,
+      "sha256": "2d87cd28673df8ad01f8fadd2d313daf5b412bafea584a894c8334b505fe23f2",
+      "mode": 420
+    },
+    {
+      "source": "payload/runtime/usr/share/wireplumber/wireplumber.conf.d/51-h7607a-playback.conf",
+      "destination": "runtime/usr/share/wireplumber/wireplumber.conf.d/51-h7607a-playback.conf",
+      "bytes": 1669,
+      "sha256": "9d03e6256d1f079be95d82ace17e90798e8cf8ac0d1db33090258ece948f5ffc",
+      "mode": 420
+    }
+  ],
+  "links": []
+}

@@ -1,0 +1,170 @@
+{
+  "kernel_repository": "https://github.com/NVIDIA/NV-Kernels",
+  "kernel_commit": "2234cd7f8f8a9fdbceef37f82c531016aab8cf73",
+  "kernel_release": "7.0.0-1022-nvidia",
+  "source_files": [
+    {
+      "path": "drivers/soundwire/mediatek/Makefile",
+      "url": "https://raw.githubusercontent.com/NVIDIA/NV-Kernels/2234cd7f8f8a9fdbceef37f82c531016aab8cf73/drivers/soundwire/mediatek/Makefile",
+      "bytes": 406,
+      "sha256": "7a4e749b1ba6d3b64dc2593d31305923a9558c90e0e1e2bce65bd776ab5afe59"
+    },
+    {
+      "path": "drivers/soundwire/mediatek/mt8901-afe-clk.c",
+      "url": "https://raw.githubusercontent.com/NVIDIA/NV-Kernels/2234cd7f8f8a9fdbceef37f82c531016aab8cf73/drivers/soundwire/mediatek/mt8901-afe-clk.c",
+      "bytes": 26311,
+      "sha256": "5a5d9a835707c199b4d463daf8f45eeb98be787daf0b3c20e5f6c1c8ecd7d56c"
+    },
+    {
+      "path": "drivers/soundwire/mediatek/mt8901-afe-clk.h",
+      "url": "https://raw.githubusercontent.com/NVIDIA/NV-Kernels/2234cd7f8f8a9fdbceef37f82c531016aab8cf73/drivers/soundwire/mediatek/mt8901-afe-clk.h",
+      "bytes": 4422,
+      "sha256": "94dfebcbb8926525af9525e824f4b05f779a99990a4c2f93b42bea5edb47e68f"
+    },
+    {
+      "path": "drivers/soundwire/mediatek/mtk-sdw-chipglue.c",
+      "url": "https://raw.githubusercontent.com/NVIDIA/NV-Kernels/2234cd7f8f8a9fdbceef37f82c531016aab8cf73/drivers/soundwire/mediatek/mtk-sdw-chipglue.c",
+      "bytes": 756,
+      "sha256": "65c7fef197e6429b39745c5686f4e1ee7a8e9a5d62dc724125d2988c91c941f0"
+    },
+    {
+      "path": "drivers/soundwire/mediatek/mtk-sdw-common.h",
+      "url": "https://raw.githubusercontent.com/NVIDIA/NV-Kernels/2234cd7f8f8a9fdbceef37f82c531016aab8cf73/drivers/soundwire/mediatek/mtk-sdw-common.h",
+      "bytes": 2872,
+      "sha256": "27f66153ede1414f439b4256b8707b203b7ed33950ee2887155d9a5be4ad19ce"
+    },
+    {
+      "path": "drivers/soundwire/mediatek/mtk-sdw-core.c",
+      "url": "https://raw.githubusercontent.com/NVIDIA/NV-Kernels/2234cd7f8f8a9fdbceef37f82c531016aab8cf73/drivers/soundwire/mediatek/mtk-sdw-core.c",
+      "bytes": 39612,
+      "sha256": "63ab321028387add5e8fc64e60f667c0ce1011aeea173abca8a71ed12cb1acda"
+    },
+    {
+      "path": "drivers/soundwire/mediatek/mtk-sdw-core.h",
+      "url": "https://raw.githubusercontent.com/NVIDIA/NV-Kernels/2234cd7f8f8a9fdbceef37f82c531016aab8cf73/drivers/soundwire/mediatek/mtk-sdw-core.h",
+      "bytes": 10518,
+      "sha256": "e4676f25a3d26b5cc2c9a0666bd0f7f2c608543957b3f912caed96106d834795"
+    },
+    {
+      "path": "drivers/soundwire/mediatek/mtk-sdw-mach.c",
+      "url": "https://raw.githubusercontent.com/NVIDIA/NV-Kernels/2234cd7f8f8a9fdbceef37f82c531016aab8cf73/drivers/soundwire/mediatek/mtk-sdw-mach.c",
+      "bytes": 11712,
+      "sha256": "c482e36577d72c02f1eb713e39e8711aa0093cd92cdf7ee9c88d122e80ab68fe"
+    },
+    {
+      "path": "drivers/soundwire/mediatek/mtk-sdw-mach.h",
+      "url": "https://raw.githubusercontent.com/NVIDIA/NV-Kernels/2234cd7f8f8a9fdbceef37f82c531016aab8cf73/drivers/soundwire/mediatek/mtk-sdw-mach.h",
+      "bytes": 561,
+      "sha256": "6a1c67da7a0ea0be4cb25270e8aafb5d5779bd56d8f1237f25b8813206ffdc5b"
+    },
+    {
+      "path": "drivers/soundwire/mediatek/mtk-sdw-top.c",
+      "url": "https://raw.githubusercontent.com/NVIDIA/NV-Kernels/2234cd7f8f8a9fdbceef37f82c531016aab8cf73/drivers/soundwire/mediatek/mtk-sdw-top.c",
+      "bytes": 9570,
+      "sha256": "fef501d26dd8394bca825b110d0506417bf11177fbba103134c776bd65c13129"
+    },
+    {
+      "path": "drivers/soundwire/mediatek/mtk-sdw-top.h",
+      "url": "https://raw.githubusercontent.com/NVIDIA/NV-Kernels/2234cd7f8f8a9fdbceef37f82c531016aab8cf73/drivers/soundwire/mediatek/mtk-sdw-top.h",
+      "bytes": 3055,
+      "sha256": "a92d60aa4b3406f923f18d3fe9b6deab65fac08c52fe21318ccc7f424de95d5a"
+    },
+    {
+      "path": "drivers/soundwire/mediatek/mtk-sdw.c",
+      "url": "https://raw.githubusercontent.com/NVIDIA/NV-Kernels/2234cd7f8f8a9fdbceef37f82c531016aab8cf73/drivers/soundwire/mediatek/mtk-sdw.c",
+      "bytes": 46714,
+      "sha256": "7bc9a0b5bc7dae9ff3c38d4e0cf510fea774cc968f6d3a128110c6a083fdec5b"
+    },
+    {
+      "path": "drivers/soundwire/mediatek/mtk-sdw.h",
+      "url": "https://raw.githubusercontent.com/NVIDIA/NV-Kernels/2234cd7f8f8a9fdbceef37f82c531016aab8cf73/drivers/soundwire/mediatek/mtk-sdw.h",
+      "bytes": 2484,
+      "sha256": "893dbd1ade2c51cafea3d0640236aaeaf14cd878c3ac8769fed2f5104a2a7766"
+    },
+    {
+      "path": "drivers/soundwire/bus.h",
+      "url": "https://raw.githubusercontent.com/NVIDIA/NV-Kernels/2234cd7f8f8a9fdbceef37f82c531016aab8cf73/drivers/soundwire/bus.h",
+      "bytes": 7119,
+      "sha256": "c25915dc7b0b0357fd1260229b246c5edbf904e3f956bf8f5d7aa1473fe25663"
+    }
+  ],
+  "patch": {
+    "author": "Ryan Hughes <ryan@heyoodle.com>",
+    "bytes": 5558,
+    "sha256": "0251766c52add0dfb792616dd93244aa242f406dd7ff8b20eec043b3fe50fa47"
+  },
+  "patched_files": [
+    {
+      "path": "drivers/soundwire/bus.h",
+      "bytes": 7119,
+      "sha256": "c25915dc7b0b0357fd1260229b246c5edbf904e3f956bf8f5d7aa1473fe25663"
+    },
+    {
+      "path": "drivers/soundwire/mediatek/Makefile",
+      "bytes": 492,
+      "sha256": "6c0e28c54ff4060667c12c1944886294538e8d1a15f89ced3a37bb8a9995a83a"
+    },
+    {
+      "path": "drivers/soundwire/mediatek/mt8901-afe-clk.c",
+      "bytes": 26311,
+      "sha256": "5a5d9a835707c199b4d463daf8f45eeb98be787daf0b3c20e5f6c1c8ecd7d56c"
+    },
+    {
+      "path": "drivers/soundwire/mediatek/mt8901-afe-clk.h",
+      "bytes": 4422,
+      "sha256": "94dfebcbb8926525af9525e824f4b05f779a99990a4c2f93b42bea5edb47e68f"
+    },
+    {
+      "path": "drivers/soundwire/mediatek/mtk-sdw-chipglue.c",
+      "bytes": 756,
+      "sha256": "65c7fef197e6429b39745c5686f4e1ee7a8e9a5d62dc724125d2988c91c941f0"
+    },
+    {
+      "path": "drivers/soundwire/mediatek/mtk-sdw-common.h",
+      "bytes": 2872,
+      "sha256": "27f66153ede1414f439b4256b8707b203b7ed33950ee2887155d9a5be4ad19ce"
+    },
+    {
+      "path": "drivers/soundwire/mediatek/mtk-sdw-core.c",
+      "bytes": 40556,
+      "sha256": "59efbe602b4a73b4a549309926e404fc945c3213518da58e95625aaa3203467e"
+    },
+    {
+      "path": "drivers/soundwire/mediatek/mtk-sdw-core.h",
+      "bytes": 10518,
+      "sha256": "e4676f25a3d26b5cc2c9a0666bd0f7f2c608543957b3f912caed96106d834795"
+    },
+    {
+      "path": "drivers/soundwire/mediatek/mtk-sdw-mach.c",
+      "bytes": 11712,
+      "sha256": "c482e36577d72c02f1eb713e39e8711aa0093cd92cdf7ee9c88d122e80ab68fe"
+    },
+    {
+      "path": "drivers/soundwire/mediatek/mtk-sdw-mach.h",
+      "bytes": 561,
+      "sha256": "6a1c67da7a0ea0be4cb25270e8aafb5d5779bd56d8f1237f25b8813206ffdc5b"
+    },
+    {
+      "path": "drivers/soundwire/mediatek/mtk-sdw-top.c",
+      "bytes": 9570,
+      "sha256": "fef501d26dd8394bca825b110d0506417bf11177fbba103134c776bd65c13129"
+    },
+    {
+      "path": "drivers/soundwire/mediatek/mtk-sdw-top.h",
+      "bytes": 3055,
+      "sha256": "a92d60aa4b3406f923f18d3fe9b6deab65fac08c52fe21318ccc7f424de95d5a"
+    },
+    {
+      "path": "drivers/soundwire/mediatek/mtk-sdw.c",
+      "bytes": 46714,
+      "sha256": "7bc9a0b5bc7dae9ff3c38d4e0cf510fea774cc968f6d3a128110c6a083fdec5b"
+    },
+    {
+      "path": "drivers/soundwire/mediatek/mtk-sdw.h",
+      "bytes": 2484,
+      "sha256": "893dbd1ade2c51cafea3d0640236aaeaf14cd878c3ac8769fed2f5104a2a7766"
+    }
+  ],
+  "packaging": "Custom isolated external-module build",
+  "scope": "Only soundwire-mtk controller; does not replace mt8901 audio-machine module"
+}

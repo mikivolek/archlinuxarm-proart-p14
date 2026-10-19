@@ -1,0 +1,132 @@
+{
+  "schema": "h7607a-component-v1",
+  "id": "keyboard",
+  "type": "custom",
+  "repo_url": null,
+  "checkout_hash": null,
+  "sparse": {
+    "enabled": false,
+    "paths": []
+  },
+  "dependencies": [
+    {
+      "name": "gcc",
+      "version": "16.1.1",
+      "version_status": "pinned",
+      "source": "hid-build.json",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "linux headers",
+      "version": "7.0.0-1022-nvidia",
+      "version_status": "pinned",
+      "source": "hid-build.json",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "python",
+      "version": "3.14.8-1",
+      "scope": "ALARM runtime; standard library unless entry lists otherwise"
+    },
+    {
+      "name": "NVIDIA kernel headers",
+      "version": "7.0.0-1022-nvidia",
+      "version_status": "artifact_and_ABI_pinned",
+      "source": "retained native module build receipts",
+      "scope": "source build: Module.symvers SHA256 ad63eccd8911085a10d7996b78dd0c40f6bcaa0b32d42986a9cce39e0101a7ba; original .config SHA256 3702382acae6cb607b441f0a44c2f0929a9ed98b9d33dcf2f731b1a1d1469297"
+    }
+  ],
+  "depends_on": [
+    "kernel"
+  ],
+  "items": [
+    {
+      "id": "asus-hid-driver",
+      "type": "direct",
+      "repo_url": "https://github.com/NVIDIA/NV-Kernels",
+      "checkout_hash": "2234cd7f8f8a9fdbceef37f82c531016aab8cf73",
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "path": "assets/hardware/modules/hid-asus.ko",
+      "source_files": [
+        "provenance/hardware/hid-asus.c",
+        "provenance/hardware/hid-ids.h"
+      ],
+      "dependencies": [
+        {
+          "name": "gcc",
+          "version": "16.1.1",
+          "version_status": "pinned",
+          "source": "hid-build.json"
+        },
+        {
+          "name": "linux headers",
+          "version": "7.0.0-1022-nvidia",
+          "version_status": "pinned",
+          "source": "hid-build.json"
+        },
+        {
+          "name": "NVIDIA kernel headers",
+          "version": "7.0.0-1022-nvidia",
+          "version_status": "artifact_and_ABI_pinned",
+          "source": "retained native module build receipts",
+          "scope": "source build: Module.symvers SHA256 ad63eccd8911085a10d7996b78dd0c40f6bcaa0b32d42986a9cce39e0101a7ba; original .config SHA256 3702382acae6cb607b441f0a44c2f0929a9ed98b9d33dcf2f731b1a1d1469297"
+        }
+      ],
+      "notes": [
+        "The included source is already patched.",
+        "The historical combined patch itself is absent; do not claim a complete patch chain.",
+        "Added HID ID 0B05:4B42 and keyboard LED/hotkey support."
+      ],
+      "source_build_note": "provenance/hardware/hid-build.sh rebuilds hid-asus.ko from the included patched .c/.h with the inputs recorded in hid-build.json and compares it with the shipped binary. Assembly retains the exact existing binary."
+    }
+  ],
+  "files": [
+    {
+      "source": "payload/assets/hardware/modules/hid-asus.ko",
+      "destination": "assets/hardware/modules/hid-asus.ko",
+      "bytes": 810056,
+      "sha256": "608b9297256b1e6b60fb26589777546a67f6aa2a615a8498ade8e37b8aa8e617",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/hid-asus.c",
+      "destination": "provenance/hardware/hid-asus.c",
+      "bytes": 52689,
+      "sha256": "4639fa303f42679b361e342b7eae4f68bb478566cf84f61278587cc5c90230de",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/hid-build.json",
+      "destination": "provenance/hardware/hid-build.json",
+      "bytes": 16098,
+      "sha256": "8c55103614373c4318114a4a79442f0dda9fec009e5997977d59b2cc7d3677d8",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/hid-build.sh",
+      "destination": "provenance/hardware/hid-build.sh",
+      "bytes": 5733,
+      "sha256": "acec66d41c32ffa6a03375d13d1ff7074f484642d64488c62e2312896fca5de1",
+      "mode": 493
+    },
+    {
+      "source": "payload/provenance/hardware/hid-ids.h",
+      "destination": "provenance/hardware/hid-ids.h",
+      "bytes": 61602,
+      "sha256": "4a4c05a345b8ddec1ebeb3f5d3e5a38edcc456f26886769a63278c19434000d8",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/hid.Kbuild",
+      "destination": "provenance/hardware/hid.Kbuild",
+      "bytes": 20,
+      "sha256": "21e14c2bf7e4e4d9de3c1d5b82853972b3ba50344fc1492646487724078773eb",
+      "mode": 420
+    }
+  ],
+  "links": [],
+  "source_build_scope": "Normal assembly preserves the shipped hash-pinned module binaries. Source rebuilds are separate candidates, use the matched header/ABI inputs, and do not inherit physical qualification. Compiler banners in original native receipts report GCC 16.1.1."
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "h7607a-live-base-v2",
+  "source": "build/cache/ArchLinuxARM-aarch64-latest.tar.gz",
+  "source_bytes": 829367415,
+  "source_sha256": "42a4eeaa038994ffd31fa173256ef2f0ef511358eeb41b9ea1f8626391b9b319",
+  "root_bytes": 9930014720,
+  "root_uuid": "4dd7d947-b72c-431f-a74e-3272227ba90c",
+  "root_label": "N1XALARM",
+  "ESP_offset": 1048576,
+  "ESP_bytes": 805306368,
+  "ESP_uuid": "8B98-C777",
+  "kernel_release": "7.0.0-1022-nvidia",
+  "kernel_sha256": "6312b1ab41f586a42a1767e771c7cfc787246e0b83fe708006fff10903768d86",
+  "nvidia_version": "615.78.08",
+  "target_install_source": "Fresh native archinstall/pacstrap",
+  "signature": "build/cache/ArchLinuxARM-aarch64-latest.tar.gz.sig",
+  "signer": "68B3537F39A313B3E574D06777193F152BDBE6A6",
+  "keyring": "assets/keys/archlinuxarm-builder.gpg",
+  "keyring_sha256": "4e4202772328674af68f90f675e077d192337fc8ced15cddcd35875a9de5b5f9",
+  "artifacts": [
+    {
+      "id": "archlinuxarm-aarch64-rootfs",
+      "path": "build/cache/ArchLinuxARM-aarch64-latest.tar.gz",
+      "bytes": 829367415,
+      "sha256": "42a4eeaa038994ffd31fa173256ef2f0ef511358eeb41b9ea1f8626391b9b319",
+      "urls": [
+        "https://de3.mirror.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz",
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/42a4eeaa038994ffd31fa173256ef2f0ef511358eeb41b9ea1f8626391b9b319"
+      ]
+    },
+    {
+      "id": "archlinuxarm-aarch64-rootfs-signature",
+      "path": "build/cache/ArchLinuxARM-aarch64-latest.tar.gz.sig",
+      "bytes": 566,
+      "sha256": "0157d8cd6261c85205931c766b754d6d56112b28800666fb64add1de192ebe11",
+      "urls": [
+        "https://de3.mirror.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz.sig",
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/0157d8cd6261c85205931c766b754d6d56112b28800666fb64add1de192ebe11"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "h7607a-package-inputs-v1",
+  "package": "linux-n1x-nvidia-bin",
+  "inputs": [
+    {
+      "artifact_id": "linux-headers-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb",
+      "filename": "linux-headers-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb"
+    },
+    {
+      "artifact_id": "linux-image-unsigned-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb",
+      "filename": "linux-image-unsigned-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb"
+    },
+    {
+      "artifact_id": "linux-modules-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb",
+      "filename": "linux-modules-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb"
+    },
+    {
+      "artifact_id": "linux-nvidia-7.0-headers-7.0.0-1022_7.0.0-1022.23~24.04.1_all.deb",
+      "filename": "linux-nvidia-7.0-headers-7.0.0-1022_7.0.0-1022.23~24.04.1_all.deb"
+    },
+    {
+      "artifact_id": "acpi-bounded-kernel-runtime",
+      "filename": "h7607a-kernel-runtime.tar.zst"
+    }
+  ]
+}

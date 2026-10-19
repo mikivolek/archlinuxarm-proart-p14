@@ -1,0 +1,5936 @@
+{
+  "schema": "h7607a-component-v1",
+  "id": "packages",
+  "type": "custom",
+  "repo_url": null,
+  "checkout_hash": null,
+  "sparse": {
+    "enabled": false,
+    "paths": []
+  },
+  "dependencies": [
+    {
+      "name": "python",
+      "version": "3.14.8-1",
+      "command": "python3",
+      "policy": "pinned-live-inventory",
+      "scope": "runtime"
+    },
+    {
+      "name": "libarchive",
+      "version": "3.8.10-1",
+      "command": "bsdtar",
+      "policy": "pinned-live-inventory",
+      "scope": "runtime"
+    },
+    {
+      "name": "gnupg",
+      "version": "2.4.9-3",
+      "command": "gpg",
+      "policy": "pinned-live-inventory",
+      "scope": "runtime"
+    },
+    {
+      "name": "pacman",
+      "version": "7.1.0.r9.g54d9411-3",
+      "command": "pacman-key",
+      "policy": "pinned-live-inventory",
+      "scope": "runtime"
+    },
+    {
+      "name": "zstd",
+      "version": "1.5.7-3",
+      "command": "zstd",
+      "policy": "pinned-live-inventory",
+      "scope": "runtime"
+    },
+    {
+      "name": "meson",
+      "version": "1.12.1-2",
+      "command": "meson",
+      "policy": "observed-repository-snapshot-not-target-pin",
+      "scope": "runtime",
+      "source": "Shipped custom package .BUILDINFO",
+      "version_status": "recorded_build_environment"
+    },
+    {
+      "name": "ninja",
+      "version": "1.13.2-3",
+      "command": "ninja",
+      "policy": "observed-repository-snapshot-not-target-pin",
+      "scope": "runtime"
+    },
+    {
+      "name": "pkgconf",
+      "version": "3.0.7-1",
+      "command": "pkg-config",
+      "policy": "observed-repository-snapshot-not-target-pin",
+      "scope": "runtime",
+      "source": "Shipped custom package .BUILDINFO",
+      "version_status": "recorded_build_environment"
+    },
+    {
+      "name": "python",
+      "version": "3.14.8-1",
+      "scope": "ALARM runtime; standard library unless entry lists otherwise"
+    }
+  ],
+  "depends_on": [
+    "media"
+  ],
+  "items": [
+    {
+      "type": "custom",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "id": "build-packages",
+      "files": [
+        "scripts/build-packages.py",
+        "scripts/fetch.py",
+        "src/h7607a/packages.py",
+        "src/h7607a/artifacts.py",
+        "locks/packages.json"
+      ]
+    },
+    {
+      "id": "artifacts.py",
+      "type": "custom",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "code": "src/h7607a/artifacts.py",
+      "dependencies": [
+        {
+          "name": "python",
+          "version": "3.14.8-1",
+          "command": "python3",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "libarchive",
+          "version": "3.8.10-1",
+          "command": "bsdtar",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        }
+      ]
+    },
+    {
+      "id": "packages.py",
+      "type": "custom",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "code": "src/h7607a/packages.py",
+      "dependencies": [
+        {
+          "name": "python",
+          "version": "3.14.8-1",
+          "command": "python3",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "libarchive",
+          "version": "3.8.10-1",
+          "command": "bsdtar",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "gnupg",
+          "version": "2.4.9-3",
+          "command": "gpg",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "gnupg",
+          "version": "2.4.9-3",
+          "command": "gpgv",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "pacman",
+          "version": "7.1.0.r9.g54d9411-3",
+          "command": "pacman-key",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "zstd",
+          "version": "1.5.7-3",
+          "command": "zstd",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        }
+      ]
+    },
+    {
+      "id": "build-packages.py",
+      "type": "custom",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "code": "scripts/build-packages.py",
+      "dependencies": [
+        {
+          "name": "python",
+          "version": "3.14.8-1",
+          "command": "python3",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "pacman",
+          "version": "7.1.0.r9.g54d9411-3",
+          "command": "makepkg",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "libarchive",
+          "version": "3.8.10-1",
+          "command": "bsdtar",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "zstd",
+          "version": "1.5.7-3",
+          "command": "zstd",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "meson",
+          "version": "1.12.1-2",
+          "command": "meson",
+          "policy": "observed-repository-snapshot-not-target-pin",
+          "scope": "runtime",
+          "source": "Shipped custom package .BUILDINFO",
+          "version_status": "recorded_build_environment"
+        },
+        {
+          "name": "ninja",
+          "version": "1.13.2-3",
+          "command": "ninja",
+          "policy": "observed-repository-snapshot-not-target-pin",
+          "scope": "runtime"
+        },
+        {
+          "name": "pkgconf",
+          "version": "3.0.7-1",
+          "command": "pkg-config",
+          "policy": "observed-repository-snapshot-not-target-pin",
+          "scope": "runtime",
+          "source": "Shipped custom package .BUILDINFO",
+          "version_status": "recorded_build_environment"
+        },
+        {
+          "name": "gnupg",
+          "version": "2.4.9-3",
+          "command": "gpg",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "pacman",
+          "version": "7.1.0.r9.g54d9411-3",
+          "command": "repo-add",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        }
+      ]
+    },
+    {
+      "id": "fetch.py",
+      "type": "custom",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "code": "scripts/fetch.py",
+      "dependencies": [
+        {
+          "name": "python",
+          "version": "3.14.8-1",
+          "command": "python3",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "source": "payload/assets/build-inputs/ubuntu-noble-proposed-InRelease",
+      "destination": "assets/build-inputs/ubuntu-noble-proposed-InRelease",
+      "bytes": 265194,
+      "sha256": "35d37d04a8c3002b99f12a0178942683d988148be69db001727d691490cc5099",
+      "mode": 420
+    },
+    {
+      "source": "payload/assets/build-inputs/ubuntu-noble-proposed-main-arm64-Packages.xz",
+      "destination": "assets/build-inputs/ubuntu-noble-proposed-main-arm64-Packages.xz",
+      "bytes": 337636,
+      "sha256": "86b03cbc52e0f915bbe059ba795fdd195cd3f920081c158f9a785f326e9aa9a3",
+      "mode": 420
+    },
+    {
+      "source": "payload/assets/keys/archlinuxarm-builder.gpg",
+      "destination": "assets/keys/archlinuxarm-builder.gpg",
+      "bytes": 3857,
+      "sha256": "4e4202772328674af68f90f675e077d192337fc8ced15cddcd35875a9de5b5f9",
+      "mode": 420
+    },
+    {
+      "source": "payload/assets/keys/h7607a-build.gpg",
+      "destination": "assets/keys/h7607a-build.gpg",
+      "bytes": 250,
+      "sha256": "86d33d412a7449109926a2b4ac65504b61a1535da78d913d297d5a50e033bff0",
+      "mode": 420
+    },
+    {
+      "source": "payload/assets/keys/ubuntu-archive.gpg",
+      "destination": "assets/keys/ubuntu-archive.gpg",
+      "bytes": 3607,
+      "sha256": "80a36b0a6de2f69f49d2df75ef473ccde121e9e190b9ea01d20a4f63778d5c31",
+      "mode": 420
+    },
+    {
+      "source": "payload/locks/packages.json",
+      "destination": "locks/packages.json",
+      "bytes": 19688,
+      "sha256": "0553d68532a419cb5d4e0ccc04c508e66c71625cc72873154c57314dea0b5bfc",
+      "mode": 420
+    },
+    {
+      "source": "payload/scripts/build-packages.py",
+      "destination": "scripts/build-packages.py",
+      "bytes": 9874,
+      "sha256": "49bc836fdcea173cd1787e0134411411e950639467b56a43bb0dba6e57f5a12a",
+      "mode": 493
+    },
+    {
+      "source": "payload/scripts/fetch.py",
+      "destination": "scripts/fetch.py",
+      "bytes": 1083,
+      "sha256": "8831ff5b0de53813a4b56d8642c5f0c6831417e307d9c45101ca73585154f3f2",
+      "mode": 493
+    },
+    {
+      "source": "payload/src/h7607a/artifacts.py",
+      "destination": "src/h7607a/artifacts.py",
+      "bytes": 11132,
+      "sha256": "88803e8935185e905ec3249adad75a1ba384a5711d736708b7d1920a00e698d2",
+      "mode": 420
+    },
+    {
+      "source": "payload/src/h7607a/packages.py",
+      "destination": "src/h7607a/packages.py",
+      "bytes": 8560,
+      "sha256": "a92e549d02bda1e59fb962af91873cc9fa1e27ad324e9e108267e0ff372748ee",
+      "mode": 420
+    },
+    {
+      "source": "payload/tests/test_artifacts.py",
+      "destination": "tests/test_artifacts.py",
+      "bytes": 1703,
+      "sha256": "9d216bc48f784758ac295c0c1913289b7d2dc7b903010262970ddb5123a6fc2f",
+      "mode": 420
+    },
+    {
+      "source": "payload/tests/test_assemble.py",
+      "destination": "tests/test_assemble.py",
+      "bytes": 10616,
+      "sha256": "c5cf068a431a46dea1e352c2d0fd857c402b92d81cb4384cb6a0190cc11153ca",
+      "mode": 420
+    },
+    {
+      "source": "payload/tests/test_build_record.py",
+      "destination": "tests/test_build_record.py",
+      "bytes": 4621,
+      "sha256": "4cb063774fd62c47f12f25a630d0824e71c7c414ee069ae95c0e466449ce3390",
+      "mode": 420
+    },
+    {
+      "source": "payload/tests/test_collect_sources.py",
+      "destination": "tests/test_collect_sources.py",
+      "bytes": 5885,
+      "sha256": "f0fa8579087026b298a973251d1216c4c3ec53931422efd0973b8b09b501ef8a",
+      "mode": 420
+    },
+    {
+      "source": "payload/tests/test_fetch_retry.py",
+      "destination": "tests/test_fetch_retry.py",
+      "bytes": 4987,
+      "sha256": "0457e69f0a08990c9f72d1482eb14b34310f58630a4769f4198ebfdf8e4651aa",
+      "mode": 420
+    },
+    {
+      "source": "payload/tests/test_packages.py",
+      "destination": "tests/test_packages.py",
+      "bytes": 3726,
+      "sha256": "5ba48258ed9e39aa6dc9dbb10936bc6482bd6dd1388e75439f4b981eb71c8691",
+      "mode": 420
+    },
+    {
+      "source": "payload/tests/test_publish_inputs.py",
+      "destination": "tests/test_publish_inputs.py",
+      "bytes": 10098,
+      "sha256": "5f7519878553463b3b1ee85235a894344ed0bb82ab07522496d3dfc5dabc4bd4",
+      "mode": 420
+    }
+  ],
+  "links": [],
+  "native_build_environments": {
+    "linux-n1x-nvidia-bin-7.0.0.1022.23-3": {
+      "artifact_sha256": "c875a1eef02defb6558ac8b7b1d51bff9fd841582c11030a1ed17a4479c487cf",
+      "buildinfo_sha256": "4590b8adba37643e57b5ae25eea078f7074145d443ef2543f0541bcf83adae1b",
+      "installed": {
+        "acl": {
+          "version": "2.4.0-1",
+          "architecture": "aarch64"
+        },
+        "arch-install-scripts": {
+          "version": "31-2",
+          "architecture": "any"
+        },
+        "archinstall": {
+          "version": "4.5-1",
+          "architecture": "any"
+        },
+        "archlinux-keyring": {
+          "version": "20260909-1",
+          "architecture": "any"
+        },
+        "archlinuxarm-keyring": {
+          "version": "20240419-2",
+          "architecture": "any"
+        },
+        "attr": {
+          "version": "2.6.0-1",
+          "architecture": "aarch64"
+        },
+        "audit": {
+          "version": "4.2.1-1",
+          "architecture": "aarch64"
+        },
+        "base": {
+          "version": "3-3",
+          "architecture": "any"
+        },
+        "bash": {
+          "version": "5.3.20-1",
+          "architecture": "aarch64"
+        },
+        "binutils": {
+          "version": "2.46+r70+g155188ea10a7-1",
+          "architecture": "aarch64"
+        },
+        "brotli": {
+          "version": "1.2.0-1",
+          "architecture": "aarch64"
+        },
+        "btrfs-progs": {
+          "version": "7.1-1",
+          "architecture": "aarch64"
+        },
+        "bzip2": {
+          "version": "1.0.8-6",
+          "architecture": "aarch64"
+        },
+        "ca-certificates": {
+          "version": "20240618-1",
+          "architecture": "any"
+        },
+        "ca-certificates-mozilla": {
+          "version": "3.131-1",
+          "architecture": "aarch64"
+        },
+        "ca-certificates-utils": {
+          "version": "20240618-1",
+          "architecture": "any"
+        },
+        "coreutils": {
+          "version": "9.12-2",
+          "architecture": "aarch64"
+        },
+        "cpio": {
+          "version": "2.15-3",
+          "architecture": "aarch64"
+        },
+        "cryptsetup": {
+          "version": "2.8.8-1",
+          "architecture": "aarch64"
+        },
+        "curl": {
+          "version": "8.23.0-1",
+          "architecture": "aarch64"
+        },
+        "dbus": {
+          "version": "1.16.2-1",
+          "architecture": "aarch64"
+        },
+        "dbus-broker": {
+          "version": "37-3",
+          "architecture": "aarch64"
+        },
+        "dbus-broker-units": {
+          "version": "37-3",
+          "architecture": "aarch64"
+        },
+        "dbus-units": {
+          "version": "37-3",
+          "architecture": "aarch64"
+        },
+        "default-cursors": {
+          "version": "3-1",
+          "architecture": "any"
+        },
+        "device-mapper": {
+          "version": "2.03.43-2",
+          "architecture": "aarch64"
+        },
+        "dhcpcd": {
+          "version": "10.5.2-1",
+          "architecture": "aarch64"
+        },
+        "diffutils": {
+          "version": "3.12-2",
+          "architecture": "aarch64"
+        },
+        "dosfstools": {
+          "version": "4.2-5",
+          "architecture": "aarch64"
+        },
+        "duktape": {
+          "version": "2.7.0-7",
+          "architecture": "aarch64"
+        },
+        "e2fsprogs": {
+          "version": "1.47.4-1",
+          "architecture": "aarch64"
+        },
+        "efibootmgr": {
+          "version": "18-4",
+          "architecture": "aarch64"
+        },
+        "efivar": {
+          "version": "39-2",
+          "architecture": "aarch64"
+        },
+        "egl-gbm": {
+          "version": "1.1.4-1",
+          "architecture": "aarch64"
+        },
+        "egl-wayland": {
+          "version": "4:1.1.24-1",
+          "architecture": "aarch64"
+        },
+        "egl-wayland2": {
+          "version": "1.0.2-1",
+          "architecture": "aarch64"
+        },
+        "egl-x11": {
+          "version": "1.0.6-1",
+          "architecture": "aarch64"
+        },
+        "eglexternalplatform": {
+          "version": "1.2.1-1",
+          "architecture": "any"
+        },
+        "ex-vi-compat": {
+          "version": "3-1",
+          "architecture": "any"
+        },
+        "expat": {
+          "version": "2.9.0-1",
+          "architecture": "aarch64"
+        },
+        "f2fs-tools": {
+          "version": "1.17.0-1",
+          "architecture": "aarch64"
+        },
+        "fakeroot": {
+          "version": "1:1.37.2-3",
+          "architecture": "aarch64"
+        },
+        "file": {
+          "version": "5.48-1",
+          "architecture": "aarch64"
+        },
+        "filesystem": {
+          "version": "2025.10.12-1",
+          "architecture": "any"
+        },
+        "findutils": {
+          "version": "4.11.0-1",
+          "architecture": "aarch64"
+        },
+        "gawk": {
+          "version": "5.4.1-1",
+          "architecture": "aarch64"
+        },
+        "gcc-libs": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "gdbm": {
+          "version": "1.26-2",
+          "architecture": "aarch64"
+        },
+        "gettext": {
+          "version": "1.0-2",
+          "architecture": "aarch64"
+        },
+        "glib2": {
+          "version": "2.90.1-1",
+          "architecture": "aarch64"
+        },
+        "glibc": {
+          "version": "2.43+r22+g8362e8ce10b2-2",
+          "architecture": "aarch64"
+        },
+        "gmp": {
+          "version": "6.3.0-3",
+          "architecture": "aarch64"
+        },
+        "gnulib-l10n": {
+          "version": "20241231-1",
+          "architecture": "any"
+        },
+        "gnupg": {
+          "version": "2.4.9-3",
+          "architecture": "aarch64"
+        },
+        "gnutls": {
+          "version": "3.8.13-3",
+          "architecture": "aarch64"
+        },
+        "gobject-introspection-runtime": {
+          "version": "1.86.0-2",
+          "architecture": "aarch64"
+        },
+        "gpgme": {
+          "version": "2.2.0-1",
+          "architecture": "aarch64"
+        },
+        "gpm": {
+          "version": "1.20.7.r38.ge82d1a6-7",
+          "architecture": "aarch64"
+        },
+        "grep": {
+          "version": "3.12-2",
+          "architecture": "aarch64"
+        },
+        "gzip": {
+          "version": "1.15-1",
+          "architecture": "aarch64"
+        },
+        "hidapi": {
+          "version": "0.15.0-1",
+          "architecture": "aarch64"
+        },
+        "hwdata": {
+          "version": "0.412-1",
+          "architecture": "any"
+        },
+        "iana-etc": {
+          "version": "20260617-1",
+          "architecture": "any"
+        },
+        "icu": {
+          "version": "78.3-1",
+          "architecture": "aarch64"
+        },
+        "iproute2": {
+          "version": "7.2.0-1",
+          "architecture": "aarch64"
+        },
+        "iptables": {
+          "version": "1:1.8.13-1",
+          "architecture": "aarch64"
+        },
+        "iputils": {
+          "version": "20250605-1",
+          "architecture": "aarch64"
+        },
+        "jansson": {
+          "version": "2.15.1-1",
+          "architecture": "aarch64"
+        },
+        "json-c": {
+          "version": "0.19-1",
+          "architecture": "aarch64"
+        },
+        "kbd": {
+          "version": "2.10.0-1",
+          "architecture": "aarch64"
+        },
+        "keyutils": {
+          "version": "1.6.3-4",
+          "architecture": "aarch64"
+        },
+        "kmod": {
+          "version": "34.2-1",
+          "architecture": "aarch64"
+        },
+        "krb5": {
+          "version": "1.22.2-1",
+          "architecture": "aarch64"
+        },
+        "leancrypto": {
+          "version": "1.9.1-1",
+          "architecture": "aarch64"
+        },
+        "libaio": {
+          "version": "0.3.113-5",
+          "architecture": "aarch64"
+        },
+        "libarchive": {
+          "version": "3.8.10-1",
+          "architecture": "aarch64"
+        },
+        "libasan": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libassuan": {
+          "version": "3.0.0-1",
+          "architecture": "aarch64"
+        },
+        "libatomic": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libbpf": {
+          "version": "1.7.0-1",
+          "architecture": "aarch64"
+        },
+        "libcap": {
+          "version": "2.78-1",
+          "architecture": "aarch64"
+        },
+        "libcap-ng": {
+          "version": "0.9.6-1",
+          "architecture": "aarch64"
+        },
+        "libcbor": {
+          "version": "0.14.0-1",
+          "architecture": "aarch64"
+        },
+        "libdaemon": {
+          "version": "0.14-6",
+          "architecture": "aarch64"
+        },
+        "libdrm": {
+          "version": "2.4.134-1",
+          "architecture": "aarch64"
+        },
+        "libedit": {
+          "version": "20260512_3.1-1",
+          "architecture": "aarch64"
+        },
+        "libelf": {
+          "version": "0.196-1",
+          "architecture": "aarch64"
+        },
+        "libevent": {
+          "version": "2.1.13-2",
+          "architecture": "aarch64"
+        },
+        "libffi": {
+          "version": "3.8.0-1",
+          "architecture": "aarch64"
+        },
+        "libfido2": {
+          "version": "1.17.0-1",
+          "architecture": "aarch64"
+        },
+        "libgcc": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libgcrypt": {
+          "version": "1.12.4-1",
+          "architecture": "aarch64"
+        },
+        "libgfortran": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libgirepository": {
+          "version": "1.86.0-2",
+          "architecture": "aarch64"
+        },
+        "libglvnd": {
+          "version": "1.7.0-3",
+          "architecture": "aarch64"
+        },
+        "libgomp": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libgpg-error": {
+          "version": "1.61-1",
+          "architecture": "aarch64"
+        },
+        "libgudev": {
+          "version": "238-3",
+          "architecture": "aarch64"
+        },
+        "libidn2": {
+          "version": "2.3.8-1",
+          "architecture": "aarch64"
+        },
+        "libimobiledevice": {
+          "version": "1.4.0-2",
+          "architecture": "aarch64"
+        },
+        "libimobiledevice-glue": {
+          "version": "1.3.2-1",
+          "architecture": "aarch64"
+        },
+        "libinih": {
+          "version": "62-2",
+          "architecture": "aarch64"
+        },
+        "libksba": {
+          "version": "1.8.1-1",
+          "architecture": "aarch64"
+        },
+        "libldap": {
+          "version": "2.7.1-1",
+          "architecture": "aarch64"
+        },
+        "liblsan": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libmakepkg-dropins": {
+          "version": "20-2",
+          "architecture": "any"
+        },
+        "libmm-glib": {
+          "version": "1.24.2-1",
+          "architecture": "aarch64"
+        },
+        "libmnl": {
+          "version": "1.0.5-2",
+          "architecture": "aarch64"
+        },
+        "libndp": {
+          "version": "1.9-1",
+          "architecture": "aarch64"
+        },
+        "libnetfilter_conntrack": {
+          "version": "1.1.1-1",
+          "architecture": "aarch64"
+        },
+        "libnewt": {
+          "version": "0.52.25-2",
+          "architecture": "aarch64"
+        },
+        "libnfnetlink": {
+          "version": "1.0.2-2",
+          "architecture": "aarch64"
+        },
+        "libnftnl": {
+          "version": "1.3.2-1",
+          "architecture": "aarch64"
+        },
+        "libnghttp2": {
+          "version": "1.70.0-1",
+          "architecture": "aarch64"
+        },
+        "libnghttp3": {
+          "version": "1.18.0-1",
+          "architecture": "aarch64"
+        },
+        "libngtcp2": {
+          "version": "1.25.0-1",
+          "architecture": "aarch64"
+        },
+        "libnl": {
+          "version": "3.12.0-1",
+          "architecture": "aarch64"
+        },
+        "libnm": {
+          "version": "1.58.1-2",
+          "architecture": "aarch64"
+        },
+        "libnsl": {
+          "version": "2.0.1-2",
+          "architecture": "aarch64"
+        },
+        "libobjc": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libp11-kit": {
+          "version": "0.26.5-1",
+          "architecture": "aarch64"
+        },
+        "libpcap": {
+          "version": "1.11.0-1",
+          "architecture": "aarch64"
+        },
+        "libpciaccess": {
+          "version": "0.19-1",
+          "architecture": "aarch64"
+        },
+        "libpgm": {
+          "version": "5.3.128-4",
+          "architecture": "aarch64"
+        },
+        "libplist": {
+          "version": "2.7.0-3",
+          "architecture": "aarch64"
+        },
+        "libpsl": {
+          "version": "0.21.5-2",
+          "architecture": "aarch64"
+        },
+        "libquadmath": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libsasl": {
+          "version": "2.1.28-5",
+          "architecture": "aarch64"
+        },
+        "libseccomp": {
+          "version": "2.6.0-1",
+          "architecture": "aarch64"
+        },
+        "libsecret": {
+          "version": "0.21.8.2-1",
+          "architecture": "aarch64"
+        },
+        "libsodium": {
+          "version": "1.0.22-1",
+          "architecture": "aarch64"
+        },
+        "libssh2": {
+          "version": "1.11.1-7",
+          "architecture": "aarch64"
+        },
+        "libstdc++": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libsysprof-capture": {
+          "version": "51.0-1",
+          "architecture": "aarch64"
+        },
+        "libtasn1": {
+          "version": "4.21.0-1",
+          "architecture": "aarch64"
+        },
+        "libtatsu": {
+          "version": "1.0.5-1",
+          "architecture": "aarch64"
+        },
+        "libteam": {
+          "version": "1.32-3",
+          "architecture": "aarch64"
+        },
+        "libtirpc": {
+          "version": "1.3.8-1",
+          "architecture": "aarch64"
+        },
+        "libtsan": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libubsan": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libunistring": {
+          "version": "1.4.2-1",
+          "architecture": "aarch64"
+        },
+        "liburcu": {
+          "version": "0.15.7-1",
+          "architecture": "aarch64"
+        },
+        "libusb": {
+          "version": "1.0.30-1",
+          "architecture": "aarch64"
+        },
+        "libusbmuxd": {
+          "version": "2.1.1-2",
+          "architecture": "aarch64"
+        },
+        "libverto": {
+          "version": "0.3.2-6",
+          "architecture": "aarch64"
+        },
+        "libx11": {
+          "version": "1.8.13-2",
+          "architecture": "aarch64"
+        },
+        "libxau": {
+          "version": "1.0.12-1",
+          "architecture": "aarch64"
+        },
+        "libxcb": {
+          "version": "1.17.0-1",
+          "architecture": "aarch64"
+        },
+        "libxcrypt": {
+          "version": "4.5.2-1",
+          "architecture": "aarch64"
+        },
+        "libxdmcp": {
+          "version": "1.1.5-2",
+          "architecture": "aarch64"
+        },
+        "libxext": {
+          "version": "1.3.7-1",
+          "architecture": "aarch64"
+        },
+        "libxml2": {
+          "version": "2.15.4-1",
+          "architecture": "aarch64"
+        },
+        "libxshmfence": {
+          "version": "1.3.3-1",
+          "architecture": "aarch64"
+        },
+        "libxxf86vm": {
+          "version": "1.1.7-1",
+          "architecture": "aarch64"
+        },
+        "licenses": {
+          "version": "20240728-1",
+          "architecture": "any"
+        },
+        "linux-api-headers": {
+          "version": "7.2-1",
+          "architecture": "aarch64"
+        },
+        "linux-firmware-cirrus": {
+          "version": "20260622-1",
+          "architecture": "any"
+        },
+        "linux-firmware-mediatek": {
+          "version": "20260622-1",
+          "architecture": "any"
+        },
+        "linux-firmware-whence": {
+          "version": "20260622-1",
+          "architecture": "any"
+        },
+        "llvm-libs": {
+          "version": "23.1.3-3",
+          "architecture": "aarch64"
+        },
+        "lm_sensors": {
+          "version": "1:3.6.2-1",
+          "architecture": "aarch64"
+        },
+        "lmdb": {
+          "version": "0.9.35-1",
+          "architecture": "aarch64"
+        },
+        "lvm2": {
+          "version": "2.03.43-2",
+          "architecture": "aarch64"
+        },
+        "lz4": {
+          "version": "1:1.10.0-2",
+          "architecture": "aarch64"
+        },
+        "lzo": {
+          "version": "2.10-5",
+          "architecture": "aarch64"
+        },
+        "mesa": {
+          "version": "1:26.2.5-1",
+          "architecture": "aarch64"
+        },
+        "meson": {
+          "version": "1.12.1-2",
+          "architecture": "any"
+        },
+        "mkinitcpio": {
+          "version": "42.2-1",
+          "architecture": "any"
+        },
+        "mkinitcpio-busybox": {
+          "version": "1.36.1-1",
+          "architecture": "aarch64"
+        },
+        "mobile-broadband-provider-info": {
+          "version": "20251101-1",
+          "architecture": "any"
+        },
+        "mpdecimal": {
+          "version": "4.0.1-3",
+          "architecture": "aarch64"
+        },
+        "mpfr": {
+          "version": "4.2.2-1",
+          "architecture": "aarch64"
+        },
+        "nano": {
+          "version": "9.2-1",
+          "architecture": "aarch64"
+        },
+        "ncurses": {
+          "version": "6.6-2",
+          "architecture": "aarch64"
+        },
+        "net-tools": {
+          "version": "2.10-3",
+          "architecture": "aarch64"
+        },
+        "netctl": {
+          "version": "1.29-2",
+          "architecture": "any"
+        },
+        "nettle": {
+          "version": "4.0-1",
+          "architecture": "aarch64"
+        },
+        "networkmanager": {
+          "version": "1.58.1-2",
+          "architecture": "aarch64"
+        },
+        "nftables": {
+          "version": "1:1.1.7-3",
+          "architecture": "aarch64"
+        },
+        "ninja": {
+          "version": "1.13.2-3",
+          "architecture": "aarch64"
+        },
+        "npth": {
+          "version": "1.8-1",
+          "architecture": "aarch64"
+        },
+        "nspr": {
+          "version": "4.40-1",
+          "architecture": "aarch64"
+        },
+        "nss": {
+          "version": "3.131-1",
+          "architecture": "aarch64"
+        },
+        "openssh": {
+          "version": "10.6p1-2",
+          "architecture": "aarch64"
+        },
+        "openssl": {
+          "version": "3.6.5-1",
+          "architecture": "aarch64"
+        },
+        "p11-kit": {
+          "version": "0.26.5-1",
+          "architecture": "aarch64"
+        },
+        "pacman": {
+          "version": "7.1.0.r9.g54d9411-3",
+          "architecture": "aarch64"
+        },
+        "pacman-mirrorlist": {
+          "version": "20260411-2",
+          "architecture": "any"
+        },
+        "pam": {
+          "version": "1.7.3-1",
+          "architecture": "aarch64"
+        },
+        "pambase": {
+          "version": "20260616-1",
+          "architecture": "any"
+        },
+        "parted": {
+          "version": "3.8-1",
+          "architecture": "aarch64"
+        },
+        "pciutils": {
+          "version": "3.15.0-1",
+          "architecture": "aarch64"
+        },
+        "pcre": {
+          "version": "8.45-5",
+          "architecture": "aarch64"
+        },
+        "pcre2": {
+          "version": "10.49-1",
+          "architecture": "aarch64"
+        },
+        "pcsclite": {
+          "version": "2.5.3-1",
+          "architecture": "aarch64"
+        },
+        "pinentry": {
+          "version": "1.3.3-1",
+          "architecture": "aarch64"
+        },
+        "pkgconf": {
+          "version": "3.0.7-1",
+          "architecture": "aarch64"
+        },
+        "polkit": {
+          "version": "127-3",
+          "architecture": "aarch64"
+        },
+        "popt": {
+          "version": "1.19-2",
+          "architecture": "aarch64"
+        },
+        "procps-ng": {
+          "version": "4.0.7-1",
+          "architecture": "aarch64"
+        },
+        "psmisc": {
+          "version": "23.7-2",
+          "architecture": "aarch64"
+        },
+        "python": {
+          "version": "3.14.8-1",
+          "architecture": "aarch64"
+        },
+        "python-annotated-types": {
+          "version": "0.8.0-1",
+          "architecture": "any"
+        },
+        "python-cffi": {
+          "version": "2.1.1-1",
+          "architecture": "aarch64"
+        },
+        "python-cryptography": {
+          "version": "50.0.2-1",
+          "architecture": "aarch64"
+        },
+        "python-gobject": {
+          "version": "3.58.1-1",
+          "architecture": "aarch64"
+        },
+        "python-linkify-it-py": {
+          "version": "2.2.0-1",
+          "architecture": "any"
+        },
+        "python-markdown-it-py": {
+          "version": "4.2.0-1",
+          "architecture": "any"
+        },
+        "python-mdit_py_plugins": {
+          "version": "0.6.1-1",
+          "architecture": "any"
+        },
+        "python-mdurl": {
+          "version": "0.1.2-9",
+          "architecture": "any"
+        },
+        "python-platformdirs": {
+          "version": "4.13.0-1",
+          "architecture": "any"
+        },
+        "python-pycparser": {
+          "version": "3.11-1",
+          "architecture": "any"
+        },
+        "python-pydantic": {
+          "version": "2.14.1-1",
+          "architecture": "any"
+        },
+        "python-pydantic-core": {
+          "version": "3:2.50.1-1",
+          "architecture": "aarch64"
+        },
+        "python-pygments": {
+          "version": "2.21.0-1",
+          "architecture": "any"
+        },
+        "python-pyparted": {
+          "version": "3.13.0-6",
+          "architecture": "aarch64"
+        },
+        "python-rich": {
+          "version": "15.0.0-1",
+          "architecture": "any"
+        },
+        "python-textual": {
+          "version": "8.2.8-2",
+          "architecture": "any"
+        },
+        "python-tqdm": {
+          "version": "4.70.1-1",
+          "architecture": "any"
+        },
+        "python-typing-inspection": {
+          "version": "0.4.4-1",
+          "architecture": "any"
+        },
+        "python-typing_extensions": {
+          "version": "4.16.0-1",
+          "architecture": "any"
+        },
+        "readline": {
+          "version": "8.3.6-1",
+          "architecture": "aarch64"
+        },
+        "rsync": {
+          "version": "3.5.1-3",
+          "architecture": "aarch64"
+        },
+        "sed": {
+          "version": "4.10-2",
+          "architecture": "aarch64"
+        },
+        "shadow": {
+          "version": "4.20.0.arch1-1",
+          "architecture": "aarch64"
+        },
+        "slang": {
+          "version": "2.3.3-4",
+          "architecture": "aarch64"
+        },
+        "spirv-tools": {
+          "version": "1:1.4.363.0-1",
+          "architecture": "aarch64"
+        },
+        "sqlite": {
+          "version": "3.54.0-1",
+          "architecture": "aarch64"
+        },
+        "systemd": {
+          "version": "262.1-1",
+          "architecture": "aarch64"
+        },
+        "systemd-libs": {
+          "version": "262.1-1",
+          "architecture": "aarch64"
+        },
+        "systemd-resolvconf": {
+          "version": "262.1-1",
+          "architecture": "aarch64"
+        },
+        "systemd-sysvcompat": {
+          "version": "262.1-1",
+          "architecture": "aarch64"
+        },
+        "tar": {
+          "version": "1.35-5",
+          "architecture": "aarch64"
+        },
+        "terminus-font": {
+          "version": "4.49.1-8",
+          "architecture": "any"
+        },
+        "thin-provisioning-tools": {
+          "version": "1.3.4-1",
+          "architecture": "aarch64"
+        },
+        "tpm2-tss": {
+          "version": "4.2.0-2",
+          "architecture": "aarch64"
+        },
+        "tzdata": {
+          "version": "2026e-1",
+          "architecture": "aarch64"
+        },
+        "upower": {
+          "version": "1.91.5-1",
+          "architecture": "aarch64"
+        },
+        "util-linux": {
+          "version": "2.42.4-1",
+          "architecture": "aarch64"
+        },
+        "util-linux-libs": {
+          "version": "2.42.4-1",
+          "architecture": "aarch64"
+        },
+        "vim": {
+          "version": "9.2.1178-1",
+          "architecture": "aarch64"
+        },
+        "vim-runtime": {
+          "version": "9.2.1178-1",
+          "architecture": "aarch64"
+        },
+        "wayland": {
+          "version": "1.26.0-1",
+          "architecture": "aarch64"
+        },
+        "which": {
+          "version": "2.25-1",
+          "architecture": "aarch64"
+        },
+        "wpa_supplicant": {
+          "version": "2:2.12-1",
+          "architecture": "aarch64"
+        },
+        "xcb-proto": {
+          "version": "1.17.0-4",
+          "architecture": "any"
+        },
+        "xfsprogs": {
+          "version": "7.2.0-1",
+          "architecture": "aarch64"
+        },
+        "xorgproto": {
+          "version": "2026.1-1",
+          "architecture": "any"
+        },
+        "xxhash": {
+          "version": "0.8.4-1",
+          "architecture": "aarch64"
+        },
+        "xz": {
+          "version": "5.8.4-1",
+          "architecture": "aarch64"
+        },
+        "zeromq": {
+          "version": "4.3.5-3",
+          "architecture": "aarch64"
+        },
+        "zlib": {
+          "version": "1:1.3.2-4",
+          "architecture": "aarch64"
+        },
+        "zstd": {
+          "version": "1.5.7-3",
+          "architecture": "aarch64"
+        }
+      }
+    },
+    "nvidia-n1x-modules-615.78.08-3": {
+      "artifact_sha256": "6cfde5236e724a800da5f0f1fc2b0b1d28525431534a7f9305e6bc1037c3133c",
+      "buildinfo_sha256": "fb817455d359f111f8284748cd2ed39c09d05e003c7ba35baf259197352e388c",
+      "installed": {
+        "acl": {
+          "version": "2.4.0-1",
+          "architecture": "aarch64"
+        },
+        "arch-install-scripts": {
+          "version": "31-2",
+          "architecture": "any"
+        },
+        "archinstall": {
+          "version": "4.5-1",
+          "architecture": "any"
+        },
+        "archlinux-keyring": {
+          "version": "20260909-1",
+          "architecture": "any"
+        },
+        "archlinuxarm-keyring": {
+          "version": "20240419-2",
+          "architecture": "any"
+        },
+        "attr": {
+          "version": "2.6.0-1",
+          "architecture": "aarch64"
+        },
+        "audit": {
+          "version": "4.2.1-1",
+          "architecture": "aarch64"
+        },
+        "base": {
+          "version": "3-3",
+          "architecture": "any"
+        },
+        "bash": {
+          "version": "5.3.20-1",
+          "architecture": "aarch64"
+        },
+        "binutils": {
+          "version": "2.46+r70+g155188ea10a7-1",
+          "architecture": "aarch64"
+        },
+        "brotli": {
+          "version": "1.2.0-1",
+          "architecture": "aarch64"
+        },
+        "btrfs-progs": {
+          "version": "7.1-1",
+          "architecture": "aarch64"
+        },
+        "bzip2": {
+          "version": "1.0.8-6",
+          "architecture": "aarch64"
+        },
+        "ca-certificates": {
+          "version": "20240618-1",
+          "architecture": "any"
+        },
+        "ca-certificates-mozilla": {
+          "version": "3.131-1",
+          "architecture": "aarch64"
+        },
+        "ca-certificates-utils": {
+          "version": "20240618-1",
+          "architecture": "any"
+        },
+        "coreutils": {
+          "version": "9.12-2",
+          "architecture": "aarch64"
+        },
+        "cpio": {
+          "version": "2.15-3",
+          "architecture": "aarch64"
+        },
+        "cryptsetup": {
+          "version": "2.8.8-1",
+          "architecture": "aarch64"
+        },
+        "curl": {
+          "version": "8.23.0-1",
+          "architecture": "aarch64"
+        },
+        "dbus": {
+          "version": "1.16.2-1",
+          "architecture": "aarch64"
+        },
+        "dbus-broker": {
+          "version": "37-3",
+          "architecture": "aarch64"
+        },
+        "dbus-broker-units": {
+          "version": "37-3",
+          "architecture": "aarch64"
+        },
+        "dbus-units": {
+          "version": "37-3",
+          "architecture": "aarch64"
+        },
+        "default-cursors": {
+          "version": "3-1",
+          "architecture": "any"
+        },
+        "device-mapper": {
+          "version": "2.03.43-2",
+          "architecture": "aarch64"
+        },
+        "dhcpcd": {
+          "version": "10.5.2-1",
+          "architecture": "aarch64"
+        },
+        "diffutils": {
+          "version": "3.12-2",
+          "architecture": "aarch64"
+        },
+        "dosfstools": {
+          "version": "4.2-5",
+          "architecture": "aarch64"
+        },
+        "duktape": {
+          "version": "2.7.0-7",
+          "architecture": "aarch64"
+        },
+        "e2fsprogs": {
+          "version": "1.47.4-1",
+          "architecture": "aarch64"
+        },
+        "efibootmgr": {
+          "version": "18-4",
+          "architecture": "aarch64"
+        },
+        "efivar": {
+          "version": "39-2",
+          "architecture": "aarch64"
+        },
+        "egl-gbm": {
+          "version": "1.1.4-1",
+          "architecture": "aarch64"
+        },
+        "egl-wayland": {
+          "version": "4:1.1.24-1",
+          "architecture": "aarch64"
+        },
+        "egl-wayland2": {
+          "version": "1.0.2-1",
+          "architecture": "aarch64"
+        },
+        "egl-x11": {
+          "version": "1.0.6-1",
+          "architecture": "aarch64"
+        },
+        "eglexternalplatform": {
+          "version": "1.2.1-1",
+          "architecture": "any"
+        },
+        "ex-vi-compat": {
+          "version": "3-1",
+          "architecture": "any"
+        },
+        "expat": {
+          "version": "2.9.0-1",
+          "architecture": "aarch64"
+        },
+        "f2fs-tools": {
+          "version": "1.17.0-1",
+          "architecture": "aarch64"
+        },
+        "fakeroot": {
+          "version": "1:1.37.2-3",
+          "architecture": "aarch64"
+        },
+        "file": {
+          "version": "5.48-1",
+          "architecture": "aarch64"
+        },
+        "filesystem": {
+          "version": "2025.10.12-1",
+          "architecture": "any"
+        },
+        "findutils": {
+          "version": "4.11.0-1",
+          "architecture": "aarch64"
+        },
+        "gawk": {
+          "version": "5.4.1-1",
+          "architecture": "aarch64"
+        },
+        "gcc-libs": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "gdbm": {
+          "version": "1.26-2",
+          "architecture": "aarch64"
+        },
+        "gettext": {
+          "version": "1.0-2",
+          "architecture": "aarch64"
+        },
+        "glib2": {
+          "version": "2.90.1-1",
+          "architecture": "aarch64"
+        },
+        "glibc": {
+          "version": "2.43+r22+g8362e8ce10b2-2",
+          "architecture": "aarch64"
+        },
+        "gmp": {
+          "version": "6.3.0-3",
+          "architecture": "aarch64"
+        },
+        "gnulib-l10n": {
+          "version": "20241231-1",
+          "architecture": "any"
+        },
+        "gnupg": {
+          "version": "2.4.9-3",
+          "architecture": "aarch64"
+        },
+        "gnutls": {
+          "version": "3.8.13-3",
+          "architecture": "aarch64"
+        },
+        "gobject-introspection-runtime": {
+          "version": "1.86.0-2",
+          "architecture": "aarch64"
+        },
+        "gpgme": {
+          "version": "2.2.0-1",
+          "architecture": "aarch64"
+        },
+        "gpm": {
+          "version": "1.20.7.r38.ge82d1a6-7",
+          "architecture": "aarch64"
+        },
+        "grep": {
+          "version": "3.12-2",
+          "architecture": "aarch64"
+        },
+        "gzip": {
+          "version": "1.15-1",
+          "architecture": "aarch64"
+        },
+        "hidapi": {
+          "version": "0.15.0-1",
+          "architecture": "aarch64"
+        },
+        "hwdata": {
+          "version": "0.412-1",
+          "architecture": "any"
+        },
+        "iana-etc": {
+          "version": "20260617-1",
+          "architecture": "any"
+        },
+        "icu": {
+          "version": "78.3-1",
+          "architecture": "aarch64"
+        },
+        "iproute2": {
+          "version": "7.2.0-1",
+          "architecture": "aarch64"
+        },
+        "iptables": {
+          "version": "1:1.8.13-1",
+          "architecture": "aarch64"
+        },
+        "iputils": {
+          "version": "20250605-1",
+          "architecture": "aarch64"
+        },
+        "jansson": {
+          "version": "2.15.1-1",
+          "architecture": "aarch64"
+        },
+        "json-c": {
+          "version": "0.19-1",
+          "architecture": "aarch64"
+        },
+        "kbd": {
+          "version": "2.10.0-1",
+          "architecture": "aarch64"
+        },
+        "keyutils": {
+          "version": "1.6.3-4",
+          "architecture": "aarch64"
+        },
+        "kmod": {
+          "version": "34.2-1",
+          "architecture": "aarch64"
+        },
+        "krb5": {
+          "version": "1.22.2-1",
+          "architecture": "aarch64"
+        },
+        "leancrypto": {
+          "version": "1.9.1-1",
+          "architecture": "aarch64"
+        },
+        "libaio": {
+          "version": "0.3.113-5",
+          "architecture": "aarch64"
+        },
+        "libarchive": {
+          "version": "3.8.10-1",
+          "architecture": "aarch64"
+        },
+        "libasan": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libassuan": {
+          "version": "3.0.0-1",
+          "architecture": "aarch64"
+        },
+        "libatomic": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libbpf": {
+          "version": "1.7.0-1",
+          "architecture": "aarch64"
+        },
+        "libcap": {
+          "version": "2.78-1",
+          "architecture": "aarch64"
+        },
+        "libcap-ng": {
+          "version": "0.9.6-1",
+          "architecture": "aarch64"
+        },
+        "libcbor": {
+          "version": "0.14.0-1",
+          "architecture": "aarch64"
+        },
+        "libdaemon": {
+          "version": "0.14-6",
+          "architecture": "aarch64"
+        },
+        "libdrm": {
+          "version": "2.4.134-1",
+          "architecture": "aarch64"
+        },
+        "libedit": {
+          "version": "20260512_3.1-1",
+          "architecture": "aarch64"
+        },
+        "libelf": {
+          "version": "0.196-1",
+          "architecture": "aarch64"
+        },
+        "libevent": {
+          "version": "2.1.13-2",
+          "architecture": "aarch64"
+        },
+        "libffi": {
+          "version": "3.8.0-1",
+          "architecture": "aarch64"
+        },
+        "libfido2": {
+          "version": "1.17.0-1",
+          "architecture": "aarch64"
+        },
+        "libgcc": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libgcrypt": {
+          "version": "1.12.4-1",
+          "architecture": "aarch64"
+        },
+        "libgfortran": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libgirepository": {
+          "version": "1.86.0-2",
+          "architecture": "aarch64"
+        },
+        "libglvnd": {
+          "version": "1.7.0-3",
+          "architecture": "aarch64"
+        },
+        "libgomp": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libgpg-error": {
+          "version": "1.61-1",
+          "architecture": "aarch64"
+        },
+        "libgudev": {
+          "version": "238-3",
+          "architecture": "aarch64"
+        },
+        "libidn2": {
+          "version": "2.3.8-1",
+          "architecture": "aarch64"
+        },
+        "libimobiledevice": {
+          "version": "1.4.0-2",
+          "architecture": "aarch64"
+        },
+        "libimobiledevice-glue": {
+          "version": "1.3.2-1",
+          "architecture": "aarch64"
+        },
+        "libinih": {
+          "version": "62-2",
+          "architecture": "aarch64"
+        },
+        "libksba": {
+          "version": "1.8.1-1",
+          "architecture": "aarch64"
+        },
+        "libldap": {
+          "version": "2.7.1-1",
+          "architecture": "aarch64"
+        },
+        "liblsan": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libmakepkg-dropins": {
+          "version": "20-2",
+          "architecture": "any"
+        },
+        "libmm-glib": {
+          "version": "1.24.2-1",
+          "architecture": "aarch64"
+        },
+        "libmnl": {
+          "version": "1.0.5-2",
+          "architecture": "aarch64"
+        },
+        "libndp": {
+          "version": "1.9-1",
+          "architecture": "aarch64"
+        },
+        "libnetfilter_conntrack": {
+          "version": "1.1.1-1",
+          "architecture": "aarch64"
+        },
+        "libnewt": {
+          "version": "0.52.25-2",
+          "architecture": "aarch64"
+        },
+        "libnfnetlink": {
+          "version": "1.0.2-2",
+          "architecture": "aarch64"
+        },
+        "libnftnl": {
+          "version": "1.3.2-1",
+          "architecture": "aarch64"
+        },
+        "libnghttp2": {
+          "version": "1.70.0-1",
+          "architecture": "aarch64"
+        },
+        "libnghttp3": {
+          "version": "1.18.0-1",
+          "architecture": "aarch64"
+        },
+        "libngtcp2": {
+          "version": "1.25.0-1",
+          "architecture": "aarch64"
+        },
+        "libnl": {
+          "version": "3.12.0-1",
+          "architecture": "aarch64"
+        },
+        "libnm": {
+          "version": "1.58.1-2",
+          "architecture": "aarch64"
+        },
+        "libnsl": {
+          "version": "2.0.1-2",
+          "architecture": "aarch64"
+        },
+        "libobjc": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libp11-kit": {
+          "version": "0.26.5-1",
+          "architecture": "aarch64"
+        },
+        "libpcap": {
+          "version": "1.11.0-1",
+          "architecture": "aarch64"
+        },
+        "libpciaccess": {
+          "version": "0.19-1",
+          "architecture": "aarch64"
+        },
+        "libpgm": {
+          "version": "5.3.128-4",
+          "architecture": "aarch64"
+        },
+        "libplist": {
+          "version": "2.7.0-3",
+          "architecture": "aarch64"
+        },
+        "libpsl": {
+          "version": "0.21.5-2",
+          "architecture": "aarch64"
+        },
+        "libquadmath": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libsasl": {
+          "version": "2.1.28-5",
+          "architecture": "aarch64"
+        },
+        "libseccomp": {
+          "version": "2.6.0-1",
+          "architecture": "aarch64"
+        },
+        "libsecret": {
+          "version": "0.21.8.2-1",
+          "architecture": "aarch64"
+        },
+        "libsodium": {
+          "version": "1.0.22-1",
+          "architecture": "aarch64"
+        },
+        "libssh2": {
+          "version": "1.11.1-7",
+          "architecture": "aarch64"
+        },
+        "libstdc++": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libsysprof-capture": {
+          "version": "51.0-1",
+          "architecture": "aarch64"
+        },
+        "libtasn1": {
+          "version": "4.21.0-1",
+          "architecture": "aarch64"
+        },
+        "libtatsu": {
+          "version": "1.0.5-1",
+          "architecture": "aarch64"
+        },
+        "libteam": {
+          "version": "1.32-3",
+          "architecture": "aarch64"
+        },
+        "libtirpc": {
+          "version": "1.3.8-1",
+          "architecture": "aarch64"
+        },
+        "libtsan": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libubsan": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libunistring": {
+          "version": "1.4.2-1",
+          "architecture": "aarch64"
+        },
+        "liburcu": {
+          "version": "0.15.7-1",
+          "architecture": "aarch64"
+        },
+        "libusb": {
+          "version": "1.0.30-1",
+          "architecture": "aarch64"
+        },
+        "libusbmuxd": {
+          "version": "2.1.1-2",
+          "architecture": "aarch64"
+        },
+        "libverto": {
+          "version": "0.3.2-6",
+          "architecture": "aarch64"
+        },
+        "libx11": {
+          "version": "1.8.13-2",
+          "architecture": "aarch64"
+        },
+        "libxau": {
+          "version": "1.0.12-1",
+          "architecture": "aarch64"
+        },
+        "libxcb": {
+          "version": "1.17.0-1",
+          "architecture": "aarch64"
+        },
+        "libxcrypt": {
+          "version": "4.5.2-1",
+          "architecture": "aarch64"
+        },
+        "libxdmcp": {
+          "version": "1.1.5-2",
+          "architecture": "aarch64"
+        },
+        "libxext": {
+          "version": "1.3.7-1",
+          "architecture": "aarch64"
+        },
+        "libxml2": {
+          "version": "2.15.4-1",
+          "architecture": "aarch64"
+        },
+        "libxshmfence": {
+          "version": "1.3.3-1",
+          "architecture": "aarch64"
+        },
+        "libxxf86vm": {
+          "version": "1.1.7-1",
+          "architecture": "aarch64"
+        },
+        "licenses": {
+          "version": "20240728-1",
+          "architecture": "any"
+        },
+        "linux-api-headers": {
+          "version": "7.2-1",
+          "architecture": "aarch64"
+        },
+        "linux-firmware-cirrus": {
+          "version": "20260622-1",
+          "architecture": "any"
+        },
+        "linux-firmware-mediatek": {
+          "version": "20260622-1",
+          "architecture": "any"
+        },
+        "linux-firmware-whence": {
+          "version": "20260622-1",
+          "architecture": "any"
+        },
+        "llvm-libs": {
+          "version": "23.1.3-3",
+          "architecture": "aarch64"
+        },
+        "lm_sensors": {
+          "version": "1:3.6.2-1",
+          "architecture": "aarch64"
+        },
+        "lmdb": {
+          "version": "0.9.35-1",
+          "architecture": "aarch64"
+        },
+        "lvm2": {
+          "version": "2.03.43-2",
+          "architecture": "aarch64"
+        },
+        "lz4": {
+          "version": "1:1.10.0-2",
+          "architecture": "aarch64"
+        },
+        "lzo": {
+          "version": "2.10-5",
+          "architecture": "aarch64"
+        },
+        "mesa": {
+          "version": "1:26.2.5-1",
+          "architecture": "aarch64"
+        },
+        "meson": {
+          "version": "1.12.1-2",
+          "architecture": "any"
+        },
+        "mkinitcpio": {
+          "version": "42.2-1",
+          "architecture": "any"
+        },
+        "mkinitcpio-busybox": {
+          "version": "1.36.1-1",
+          "architecture": "aarch64"
+        },
+        "mobile-broadband-provider-info": {
+          "version": "20251101-1",
+          "architecture": "any"
+        },
+        "mpdecimal": {
+          "version": "4.0.1-3",
+          "architecture": "aarch64"
+        },
+        "mpfr": {
+          "version": "4.2.2-1",
+          "architecture": "aarch64"
+        },
+        "nano": {
+          "version": "9.2-1",
+          "architecture": "aarch64"
+        },
+        "ncurses": {
+          "version": "6.6-2",
+          "architecture": "aarch64"
+        },
+        "net-tools": {
+          "version": "2.10-3",
+          "architecture": "aarch64"
+        },
+        "netctl": {
+          "version": "1.29-2",
+          "architecture": "any"
+        },
+        "nettle": {
+          "version": "4.0-1",
+          "architecture": "aarch64"
+        },
+        "networkmanager": {
+          "version": "1.58.1-2",
+          "architecture": "aarch64"
+        },
+        "nftables": {
+          "version": "1:1.1.7-3",
+          "architecture": "aarch64"
+        },
+        "ninja": {
+          "version": "1.13.2-3",
+          "architecture": "aarch64"
+        },
+        "npth": {
+          "version": "1.8-1",
+          "architecture": "aarch64"
+        },
+        "nspr": {
+          "version": "4.40-1",
+          "architecture": "aarch64"
+        },
+        "nss": {
+          "version": "3.131-1",
+          "architecture": "aarch64"
+        },
+        "openssh": {
+          "version": "10.6p1-2",
+          "architecture": "aarch64"
+        },
+        "openssl": {
+          "version": "3.6.5-1",
+          "architecture": "aarch64"
+        },
+        "p11-kit": {
+          "version": "0.26.5-1",
+          "architecture": "aarch64"
+        },
+        "pacman": {
+          "version": "7.1.0.r9.g54d9411-3",
+          "architecture": "aarch64"
+        },
+        "pacman-mirrorlist": {
+          "version": "20260411-2",
+          "architecture": "any"
+        },
+        "pam": {
+          "version": "1.7.3-1",
+          "architecture": "aarch64"
+        },
+        "pambase": {
+          "version": "20260616-1",
+          "architecture": "any"
+        },
+        "parted": {
+          "version": "3.8-1",
+          "architecture": "aarch64"
+        },
+        "pciutils": {
+          "version": "3.15.0-1",
+          "architecture": "aarch64"
+        },
+        "pcre": {
+          "version": "8.45-5",
+          "architecture": "aarch64"
+        },
+        "pcre2": {
+          "version": "10.49-1",
+          "architecture": "aarch64"
+        },
+        "pcsclite": {
+          "version": "2.5.3-1",
+          "architecture": "aarch64"
+        },
+        "pinentry": {
+          "version": "1.3.3-1",
+          "architecture": "aarch64"
+        },
+        "pkgconf": {
+          "version": "3.0.7-1",
+          "architecture": "aarch64"
+        },
+        "polkit": {
+          "version": "127-3",
+          "architecture": "aarch64"
+        },
+        "popt": {
+          "version": "1.19-2",
+          "architecture": "aarch64"
+        },
+        "procps-ng": {
+          "version": "4.0.7-1",
+          "architecture": "aarch64"
+        },
+        "psmisc": {
+          "version": "23.7-2",
+          "architecture": "aarch64"
+        },
+        "python": {
+          "version": "3.14.8-1",
+          "architecture": "aarch64"
+        },
+        "python-annotated-types": {
+          "version": "0.8.0-1",
+          "architecture": "any"
+        },
+        "python-cffi": {
+          "version": "2.1.1-1",
+          "architecture": "aarch64"
+        },
+        "python-cryptography": {
+          "version": "50.0.2-1",
+          "architecture": "aarch64"
+        },
+        "python-gobject": {
+          "version": "3.58.1-1",
+          "architecture": "aarch64"
+        },
+        "python-linkify-it-py": {
+          "version": "2.2.0-1",
+          "architecture": "any"
+        },
+        "python-markdown-it-py": {
+          "version": "4.2.0-1",
+          "architecture": "any"
+        },
+        "python-mdit_py_plugins": {
+          "version": "0.6.1-1",
+          "architecture": "any"
+        },
+        "python-mdurl": {
+          "version": "0.1.2-9",
+          "architecture": "any"
+        },
+        "python-platformdirs": {
+          "version": "4.13.0-1",
+          "architecture": "any"
+        },
+        "python-pycparser": {
+          "version": "3.11-1",
+          "architecture": "any"
+        },
+        "python-pydantic": {
+          "version": "2.14.1-1",
+          "architecture": "any"
+        },
+        "python-pydantic-core": {
+          "version": "3:2.50.1-1",
+          "architecture": "aarch64"
+        },
+        "python-pygments": {
+          "version": "2.21.0-1",
+          "architecture": "any"
+        },
+        "python-pyparted": {
+          "version": "3.13.0-6",
+          "architecture": "aarch64"
+        },
+        "python-rich": {
+          "version": "15.0.0-1",
+          "architecture": "any"
+        },
+        "python-textual": {
+          "version": "8.2.8-2",
+          "architecture": "any"
+        },
+        "python-tqdm": {
+          "version": "4.70.1-1",
+          "architecture": "any"
+        },
+        "python-typing-inspection": {
+          "version": "0.4.4-1",
+          "architecture": "any"
+        },
+        "python-typing_extensions": {
+          "version": "4.16.0-1",
+          "architecture": "any"
+        },
+        "readline": {
+          "version": "8.3.6-1",
+          "architecture": "aarch64"
+        },
+        "rsync": {
+          "version": "3.5.1-3",
+          "architecture": "aarch64"
+        },
+        "sed": {
+          "version": "4.10-2",
+          "architecture": "aarch64"
+        },
+        "shadow": {
+          "version": "4.20.0.arch1-1",
+          "architecture": "aarch64"
+        },
+        "slang": {
+          "version": "2.3.3-4",
+          "architecture": "aarch64"
+        },
+        "spirv-tools": {
+          "version": "1:1.4.363.0-1",
+          "architecture": "aarch64"
+        },
+        "sqlite": {
+          "version": "3.54.0-1",
+          "architecture": "aarch64"
+        },
+        "systemd": {
+          "version": "262.1-1",
+          "architecture": "aarch64"
+        },
+        "systemd-libs": {
+          "version": "262.1-1",
+          "architecture": "aarch64"
+        },
+        "systemd-resolvconf": {
+          "version": "262.1-1",
+          "architecture": "aarch64"
+        },
+        "systemd-sysvcompat": {
+          "version": "262.1-1",
+          "architecture": "aarch64"
+        },
+        "tar": {
+          "version": "1.35-5",
+          "architecture": "aarch64"
+        },
+        "terminus-font": {
+          "version": "4.49.1-8",
+          "architecture": "any"
+        },
+        "thin-provisioning-tools": {
+          "version": "1.3.4-1",
+          "architecture": "aarch64"
+        },
+        "tpm2-tss": {
+          "version": "4.2.0-2",
+          "architecture": "aarch64"
+        },
+        "tzdata": {
+          "version": "2026e-1",
+          "architecture": "aarch64"
+        },
+        "upower": {
+          "version": "1.91.5-1",
+          "architecture": "aarch64"
+        },
+        "util-linux": {
+          "version": "2.42.4-1",
+          "architecture": "aarch64"
+        },
+        "util-linux-libs": {
+          "version": "2.42.4-1",
+          "architecture": "aarch64"
+        },
+        "vim": {
+          "version": "9.2.1178-1",
+          "architecture": "aarch64"
+        },
+        "vim-runtime": {
+          "version": "9.2.1178-1",
+          "architecture": "aarch64"
+        },
+        "wayland": {
+          "version": "1.26.0-1",
+          "architecture": "aarch64"
+        },
+        "which": {
+          "version": "2.25-1",
+          "architecture": "aarch64"
+        },
+        "wpa_supplicant": {
+          "version": "2:2.12-1",
+          "architecture": "aarch64"
+        },
+        "xcb-proto": {
+          "version": "1.17.0-4",
+          "architecture": "any"
+        },
+        "xfsprogs": {
+          "version": "7.2.0-1",
+          "architecture": "aarch64"
+        },
+        "xorgproto": {
+          "version": "2026.1-1",
+          "architecture": "any"
+        },
+        "xxhash": {
+          "version": "0.8.4-1",
+          "architecture": "aarch64"
+        },
+        "xz": {
+          "version": "5.8.4-1",
+          "architecture": "aarch64"
+        },
+        "zeromq": {
+          "version": "4.3.5-3",
+          "architecture": "aarch64"
+        },
+        "zlib": {
+          "version": "1:1.3.2-4",
+          "architecture": "aarch64"
+        },
+        "zstd": {
+          "version": "1.5.7-3",
+          "architecture": "aarch64"
+        }
+      }
+    },
+    "h7607a-hardware-1.0.0-3": {
+      "artifact_sha256": "bcce91b04ef1d66578940800216a6052f19d261b71f5bd311be1953aa97c3be1",
+      "buildinfo_sha256": "5bba534236a99762ea93e0315a576f9f208b9608e8275f788fa2707a062da577",
+      "installed": {
+        "acl": {
+          "version": "2.4.0-1",
+          "architecture": "aarch64"
+        },
+        "arch-install-scripts": {
+          "version": "31-2",
+          "architecture": "any"
+        },
+        "archinstall": {
+          "version": "4.5-1",
+          "architecture": "any"
+        },
+        "archlinux-keyring": {
+          "version": "20260909-1",
+          "architecture": "any"
+        },
+        "archlinuxarm-keyring": {
+          "version": "20240419-2",
+          "architecture": "any"
+        },
+        "attr": {
+          "version": "2.6.0-1",
+          "architecture": "aarch64"
+        },
+        "audit": {
+          "version": "4.2.1-1",
+          "architecture": "aarch64"
+        },
+        "base": {
+          "version": "3-3",
+          "architecture": "any"
+        },
+        "bash": {
+          "version": "5.3.20-1",
+          "architecture": "aarch64"
+        },
+        "binutils": {
+          "version": "2.46+r70+g155188ea10a7-1",
+          "architecture": "aarch64"
+        },
+        "brotli": {
+          "version": "1.2.0-1",
+          "architecture": "aarch64"
+        },
+        "btrfs-progs": {
+          "version": "7.1-1",
+          "architecture": "aarch64"
+        },
+        "bzip2": {
+          "version": "1.0.8-6",
+          "architecture": "aarch64"
+        },
+        "ca-certificates": {
+          "version": "20240618-1",
+          "architecture": "any"
+        },
+        "ca-certificates-mozilla": {
+          "version": "3.131-1",
+          "architecture": "aarch64"
+        },
+        "ca-certificates-utils": {
+          "version": "20240618-1",
+          "architecture": "any"
+        },
+        "coreutils": {
+          "version": "9.12-2",
+          "architecture": "aarch64"
+        },
+        "cpio": {
+          "version": "2.15-3",
+          "architecture": "aarch64"
+        },
+        "cryptsetup": {
+          "version": "2.8.8-1",
+          "architecture": "aarch64"
+        },
+        "curl": {
+          "version": "8.23.0-1",
+          "architecture": "aarch64"
+        },
+        "dbus": {
+          "version": "1.16.2-1",
+          "architecture": "aarch64"
+        },
+        "dbus-broker": {
+          "version": "37-3",
+          "architecture": "aarch64"
+        },
+        "dbus-broker-units": {
+          "version": "37-3",
+          "architecture": "aarch64"
+        },
+        "dbus-units": {
+          "version": "37-3",
+          "architecture": "aarch64"
+        },
+        "default-cursors": {
+          "version": "3-1",
+          "architecture": "any"
+        },
+        "device-mapper": {
+          "version": "2.03.43-2",
+          "architecture": "aarch64"
+        },
+        "dhcpcd": {
+          "version": "10.5.2-1",
+          "architecture": "aarch64"
+        },
+        "diffutils": {
+          "version": "3.12-2",
+          "architecture": "aarch64"
+        },
+        "dosfstools": {
+          "version": "4.2-5",
+          "architecture": "aarch64"
+        },
+        "duktape": {
+          "version": "2.7.0-7",
+          "architecture": "aarch64"
+        },
+        "e2fsprogs": {
+          "version": "1.47.4-1",
+          "architecture": "aarch64"
+        },
+        "efibootmgr": {
+          "version": "18-4",
+          "architecture": "aarch64"
+        },
+        "efivar": {
+          "version": "39-2",
+          "architecture": "aarch64"
+        },
+        "egl-gbm": {
+          "version": "1.1.4-1",
+          "architecture": "aarch64"
+        },
+        "egl-wayland": {
+          "version": "4:1.1.24-1",
+          "architecture": "aarch64"
+        },
+        "egl-wayland2": {
+          "version": "1.0.2-1",
+          "architecture": "aarch64"
+        },
+        "egl-x11": {
+          "version": "1.0.6-1",
+          "architecture": "aarch64"
+        },
+        "eglexternalplatform": {
+          "version": "1.2.1-1",
+          "architecture": "any"
+        },
+        "ex-vi-compat": {
+          "version": "3-1",
+          "architecture": "any"
+        },
+        "expat": {
+          "version": "2.9.0-1",
+          "architecture": "aarch64"
+        },
+        "f2fs-tools": {
+          "version": "1.17.0-1",
+          "architecture": "aarch64"
+        },
+        "fakeroot": {
+          "version": "1:1.37.2-3",
+          "architecture": "aarch64"
+        },
+        "file": {
+          "version": "5.48-1",
+          "architecture": "aarch64"
+        },
+        "filesystem": {
+          "version": "2025.10.12-1",
+          "architecture": "any"
+        },
+        "findutils": {
+          "version": "4.11.0-1",
+          "architecture": "aarch64"
+        },
+        "gawk": {
+          "version": "5.4.1-1",
+          "architecture": "aarch64"
+        },
+        "gcc-libs": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "gdbm": {
+          "version": "1.26-2",
+          "architecture": "aarch64"
+        },
+        "gettext": {
+          "version": "1.0-2",
+          "architecture": "aarch64"
+        },
+        "glib2": {
+          "version": "2.90.1-1",
+          "architecture": "aarch64"
+        },
+        "glibc": {
+          "version": "2.43+r22+g8362e8ce10b2-2",
+          "architecture": "aarch64"
+        },
+        "gmp": {
+          "version": "6.3.0-3",
+          "architecture": "aarch64"
+        },
+        "gnulib-l10n": {
+          "version": "20241231-1",
+          "architecture": "any"
+        },
+        "gnupg": {
+          "version": "2.4.9-3",
+          "architecture": "aarch64"
+        },
+        "gnutls": {
+          "version": "3.8.13-3",
+          "architecture": "aarch64"
+        },
+        "gobject-introspection-runtime": {
+          "version": "1.86.0-2",
+          "architecture": "aarch64"
+        },
+        "gpgme": {
+          "version": "2.2.0-1",
+          "architecture": "aarch64"
+        },
+        "gpm": {
+          "version": "1.20.7.r38.ge82d1a6-7",
+          "architecture": "aarch64"
+        },
+        "grep": {
+          "version": "3.12-2",
+          "architecture": "aarch64"
+        },
+        "gzip": {
+          "version": "1.15-1",
+          "architecture": "aarch64"
+        },
+        "hidapi": {
+          "version": "0.15.0-1",
+          "architecture": "aarch64"
+        },
+        "hwdata": {
+          "version": "0.412-1",
+          "architecture": "any"
+        },
+        "iana-etc": {
+          "version": "20260617-1",
+          "architecture": "any"
+        },
+        "icu": {
+          "version": "78.3-1",
+          "architecture": "aarch64"
+        },
+        "iproute2": {
+          "version": "7.2.0-1",
+          "architecture": "aarch64"
+        },
+        "iptables": {
+          "version": "1:1.8.13-1",
+          "architecture": "aarch64"
+        },
+        "iputils": {
+          "version": "20250605-1",
+          "architecture": "aarch64"
+        },
+        "jansson": {
+          "version": "2.15.1-1",
+          "architecture": "aarch64"
+        },
+        "json-c": {
+          "version": "0.19-1",
+          "architecture": "aarch64"
+        },
+        "kbd": {
+          "version": "2.10.0-1",
+          "architecture": "aarch64"
+        },
+        "keyutils": {
+          "version": "1.6.3-4",
+          "architecture": "aarch64"
+        },
+        "kmod": {
+          "version": "34.2-1",
+          "architecture": "aarch64"
+        },
+        "krb5": {
+          "version": "1.22.2-1",
+          "architecture": "aarch64"
+        },
+        "leancrypto": {
+          "version": "1.9.1-1",
+          "architecture": "aarch64"
+        },
+        "libaio": {
+          "version": "0.3.113-5",
+          "architecture": "aarch64"
+        },
+        "libarchive": {
+          "version": "3.8.10-1",
+          "architecture": "aarch64"
+        },
+        "libasan": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libassuan": {
+          "version": "3.0.0-1",
+          "architecture": "aarch64"
+        },
+        "libatomic": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libbpf": {
+          "version": "1.7.0-1",
+          "architecture": "aarch64"
+        },
+        "libcap": {
+          "version": "2.78-1",
+          "architecture": "aarch64"
+        },
+        "libcap-ng": {
+          "version": "0.9.6-1",
+          "architecture": "aarch64"
+        },
+        "libcbor": {
+          "version": "0.14.0-1",
+          "architecture": "aarch64"
+        },
+        "libdaemon": {
+          "version": "0.14-6",
+          "architecture": "aarch64"
+        },
+        "libdrm": {
+          "version": "2.4.134-1",
+          "architecture": "aarch64"
+        },
+        "libedit": {
+          "version": "20260512_3.1-1",
+          "architecture": "aarch64"
+        },
+        "libelf": {
+          "version": "0.196-1",
+          "architecture": "aarch64"
+        },
+        "libevent": {
+          "version": "2.1.13-2",
+          "architecture": "aarch64"
+        },
+        "libffi": {
+          "version": "3.8.0-1",
+          "architecture": "aarch64"
+        },
+        "libfido2": {
+          "version": "1.17.0-1",
+          "architecture": "aarch64"
+        },
+        "libgcc": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libgcrypt": {
+          "version": "1.12.4-1",
+          "architecture": "aarch64"
+        },
+        "libgfortran": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libgirepository": {
+          "version": "1.86.0-2",
+          "architecture": "aarch64"
+        },
+        "libglvnd": {
+          "version": "1.7.0-3",
+          "architecture": "aarch64"
+        },
+        "libgomp": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libgpg-error": {
+          "version": "1.61-1",
+          "architecture": "aarch64"
+        },
+        "libgudev": {
+          "version": "238-3",
+          "architecture": "aarch64"
+        },
+        "libidn2": {
+          "version": "2.3.8-1",
+          "architecture": "aarch64"
+        },
+        "libimobiledevice": {
+          "version": "1.4.0-2",
+          "architecture": "aarch64"
+        },
+        "libimobiledevice-glue": {
+          "version": "1.3.2-1",
+          "architecture": "aarch64"
+        },
+        "libinih": {
+          "version": "62-2",
+          "architecture": "aarch64"
+        },
+        "libksba": {
+          "version": "1.8.1-1",
+          "architecture": "aarch64"
+        },
+        "libldap": {
+          "version": "2.7.1-1",
+          "architecture": "aarch64"
+        },
+        "liblsan": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libmakepkg-dropins": {
+          "version": "20-2",
+          "architecture": "any"
+        },
+        "libmm-glib": {
+          "version": "1.24.2-1",
+          "architecture": "aarch64"
+        },
+        "libmnl": {
+          "version": "1.0.5-2",
+          "architecture": "aarch64"
+        },
+        "libndp": {
+          "version": "1.9-1",
+          "architecture": "aarch64"
+        },
+        "libnetfilter_conntrack": {
+          "version": "1.1.1-1",
+          "architecture": "aarch64"
+        },
+        "libnewt": {
+          "version": "0.52.25-2",
+          "architecture": "aarch64"
+        },
+        "libnfnetlink": {
+          "version": "1.0.2-2",
+          "architecture": "aarch64"
+        },
+        "libnftnl": {
+          "version": "1.3.2-1",
+          "architecture": "aarch64"
+        },
+        "libnghttp2": {
+          "version": "1.70.0-1",
+          "architecture": "aarch64"
+        },
+        "libnghttp3": {
+          "version": "1.18.0-1",
+          "architecture": "aarch64"
+        },
+        "libngtcp2": {
+          "version": "1.25.0-1",
+          "architecture": "aarch64"
+        },
+        "libnl": {
+          "version": "3.12.0-1",
+          "architecture": "aarch64"
+        },
+        "libnm": {
+          "version": "1.58.1-2",
+          "architecture": "aarch64"
+        },
+        "libnsl": {
+          "version": "2.0.1-2",
+          "architecture": "aarch64"
+        },
+        "libobjc": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libp11-kit": {
+          "version": "0.26.5-1",
+          "architecture": "aarch64"
+        },
+        "libpcap": {
+          "version": "1.11.0-1",
+          "architecture": "aarch64"
+        },
+        "libpciaccess": {
+          "version": "0.19-1",
+          "architecture": "aarch64"
+        },
+        "libpgm": {
+          "version": "5.3.128-4",
+          "architecture": "aarch64"
+        },
+        "libplist": {
+          "version": "2.7.0-3",
+          "architecture": "aarch64"
+        },
+        "libpsl": {
+          "version": "0.21.5-2",
+          "architecture": "aarch64"
+        },
+        "libquadmath": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libsasl": {
+          "version": "2.1.28-5",
+          "architecture": "aarch64"
+        },
+        "libseccomp": {
+          "version": "2.6.0-1",
+          "architecture": "aarch64"
+        },
+        "libsecret": {
+          "version": "0.21.8.2-1",
+          "architecture": "aarch64"
+        },
+        "libsodium": {
+          "version": "1.0.22-1",
+          "architecture": "aarch64"
+        },
+        "libssh2": {
+          "version": "1.11.1-7",
+          "architecture": "aarch64"
+        },
+        "libstdc++": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libsysprof-capture": {
+          "version": "51.0-1",
+          "architecture": "aarch64"
+        },
+        "libtasn1": {
+          "version": "4.21.0-1",
+          "architecture": "aarch64"
+        },
+        "libtatsu": {
+          "version": "1.0.5-1",
+          "architecture": "aarch64"
+        },
+        "libteam": {
+          "version": "1.32-3",
+          "architecture": "aarch64"
+        },
+        "libtirpc": {
+          "version": "1.3.8-1",
+          "architecture": "aarch64"
+        },
+        "libtsan": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libubsan": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libunistring": {
+          "version": "1.4.2-1",
+          "architecture": "aarch64"
+        },
+        "liburcu": {
+          "version": "0.15.7-1",
+          "architecture": "aarch64"
+        },
+        "libusb": {
+          "version": "1.0.30-1",
+          "architecture": "aarch64"
+        },
+        "libusbmuxd": {
+          "version": "2.1.1-2",
+          "architecture": "aarch64"
+        },
+        "libverto": {
+          "version": "0.3.2-6",
+          "architecture": "aarch64"
+        },
+        "libx11": {
+          "version": "1.8.13-2",
+          "architecture": "aarch64"
+        },
+        "libxau": {
+          "version": "1.0.12-1",
+          "architecture": "aarch64"
+        },
+        "libxcb": {
+          "version": "1.17.0-1",
+          "architecture": "aarch64"
+        },
+        "libxcrypt": {
+          "version": "4.5.2-1",
+          "architecture": "aarch64"
+        },
+        "libxdmcp": {
+          "version": "1.1.5-2",
+          "architecture": "aarch64"
+        },
+        "libxext": {
+          "version": "1.3.7-1",
+          "architecture": "aarch64"
+        },
+        "libxml2": {
+          "version": "2.15.4-1",
+          "architecture": "aarch64"
+        },
+        "libxshmfence": {
+          "version": "1.3.3-1",
+          "architecture": "aarch64"
+        },
+        "libxxf86vm": {
+          "version": "1.1.7-1",
+          "architecture": "aarch64"
+        },
+        "licenses": {
+          "version": "20240728-1",
+          "architecture": "any"
+        },
+        "linux-api-headers": {
+          "version": "7.2-1",
+          "architecture": "aarch64"
+        },
+        "linux-firmware-cirrus": {
+          "version": "20260622-1",
+          "architecture": "any"
+        },
+        "linux-firmware-mediatek": {
+          "version": "20260622-1",
+          "architecture": "any"
+        },
+        "linux-firmware-whence": {
+          "version": "20260622-1",
+          "architecture": "any"
+        },
+        "llvm-libs": {
+          "version": "23.1.3-3",
+          "architecture": "aarch64"
+        },
+        "lm_sensors": {
+          "version": "1:3.6.2-1",
+          "architecture": "aarch64"
+        },
+        "lmdb": {
+          "version": "0.9.35-1",
+          "architecture": "aarch64"
+        },
+        "lvm2": {
+          "version": "2.03.43-2",
+          "architecture": "aarch64"
+        },
+        "lz4": {
+          "version": "1:1.10.0-2",
+          "architecture": "aarch64"
+        },
+        "lzo": {
+          "version": "2.10-5",
+          "architecture": "aarch64"
+        },
+        "mesa": {
+          "version": "1:26.2.5-1",
+          "architecture": "aarch64"
+        },
+        "meson": {
+          "version": "1.12.1-2",
+          "architecture": "any"
+        },
+        "mkinitcpio": {
+          "version": "42.2-1",
+          "architecture": "any"
+        },
+        "mkinitcpio-busybox": {
+          "version": "1.36.1-1",
+          "architecture": "aarch64"
+        },
+        "mobile-broadband-provider-info": {
+          "version": "20251101-1",
+          "architecture": "any"
+        },
+        "mpdecimal": {
+          "version": "4.0.1-3",
+          "architecture": "aarch64"
+        },
+        "mpfr": {
+          "version": "4.2.2-1",
+          "architecture": "aarch64"
+        },
+        "nano": {
+          "version": "9.2-1",
+          "architecture": "aarch64"
+        },
+        "ncurses": {
+          "version": "6.6-2",
+          "architecture": "aarch64"
+        },
+        "net-tools": {
+          "version": "2.10-3",
+          "architecture": "aarch64"
+        },
+        "netctl": {
+          "version": "1.29-2",
+          "architecture": "any"
+        },
+        "nettle": {
+          "version": "4.0-1",
+          "architecture": "aarch64"
+        },
+        "networkmanager": {
+          "version": "1.58.1-2",
+          "architecture": "aarch64"
+        },
+        "nftables": {
+          "version": "1:1.1.7-3",
+          "architecture": "aarch64"
+        },
+        "ninja": {
+          "version": "1.13.2-3",
+          "architecture": "aarch64"
+        },
+        "npth": {
+          "version": "1.8-1",
+          "architecture": "aarch64"
+        },
+        "nspr": {
+          "version": "4.40-1",
+          "architecture": "aarch64"
+        },
+        "nss": {
+          "version": "3.131-1",
+          "architecture": "aarch64"
+        },
+        "openssh": {
+          "version": "10.6p1-2",
+          "architecture": "aarch64"
+        },
+        "openssl": {
+          "version": "3.6.5-1",
+          "architecture": "aarch64"
+        },
+        "p11-kit": {
+          "version": "0.26.5-1",
+          "architecture": "aarch64"
+        },
+        "pacman": {
+          "version": "7.1.0.r9.g54d9411-3",
+          "architecture": "aarch64"
+        },
+        "pacman-mirrorlist": {
+          "version": "20260411-2",
+          "architecture": "any"
+        },
+        "pam": {
+          "version": "1.7.3-1",
+          "architecture": "aarch64"
+        },
+        "pambase": {
+          "version": "20260616-1",
+          "architecture": "any"
+        },
+        "parted": {
+          "version": "3.8-1",
+          "architecture": "aarch64"
+        },
+        "pciutils": {
+          "version": "3.15.0-1",
+          "architecture": "aarch64"
+        },
+        "pcre": {
+          "version": "8.45-5",
+          "architecture": "aarch64"
+        },
+        "pcre2": {
+          "version": "10.49-1",
+          "architecture": "aarch64"
+        },
+        "pcsclite": {
+          "version": "2.5.3-1",
+          "architecture": "aarch64"
+        },
+        "pinentry": {
+          "version": "1.3.3-1",
+          "architecture": "aarch64"
+        },
+        "pkgconf": {
+          "version": "3.0.7-1",
+          "architecture": "aarch64"
+        },
+        "polkit": {
+          "version": "127-3",
+          "architecture": "aarch64"
+        },
+        "popt": {
+          "version": "1.19-2",
+          "architecture": "aarch64"
+        },
+        "procps-ng": {
+          "version": "4.0.7-1",
+          "architecture": "aarch64"
+        },
+        "psmisc": {
+          "version": "23.7-2",
+          "architecture": "aarch64"
+        },
+        "python": {
+          "version": "3.14.8-1",
+          "architecture": "aarch64"
+        },
+        "python-annotated-types": {
+          "version": "0.8.0-1",
+          "architecture": "any"
+        },
+        "python-cffi": {
+          "version": "2.1.1-1",
+          "architecture": "aarch64"
+        },
+        "python-cryptography": {
+          "version": "50.0.2-1",
+          "architecture": "aarch64"
+        },
+        "python-gobject": {
+          "version": "3.58.1-1",
+          "architecture": "aarch64"
+        },
+        "python-linkify-it-py": {
+          "version": "2.2.0-1",
+          "architecture": "any"
+        },
+        "python-markdown-it-py": {
+          "version": "4.2.0-1",
+          "architecture": "any"
+        },
+        "python-mdit_py_plugins": {
+          "version": "0.6.1-1",
+          "architecture": "any"
+        },
+        "python-mdurl": {
+          "version": "0.1.2-9",
+          "architecture": "any"
+        },
+        "python-platformdirs": {
+          "version": "4.13.0-1",
+          "architecture": "any"
+        },
+        "python-pycparser": {
+          "version": "3.11-1",
+          "architecture": "any"
+        },
+        "python-pydantic": {
+          "version": "2.14.1-1",
+          "architecture": "any"
+        },
+        "python-pydantic-core": {
+          "version": "3:2.50.1-1",
+          "architecture": "aarch64"
+        },
+        "python-pygments": {
+          "version": "2.21.0-1",
+          "architecture": "any"
+        },
+        "python-pyparted": {
+          "version": "3.13.0-6",
+          "architecture": "aarch64"
+        },
+        "python-rich": {
+          "version": "15.0.0-1",
+          "architecture": "any"
+        },
+        "python-textual": {
+          "version": "8.2.8-2",
+          "architecture": "any"
+        },
+        "python-tqdm": {
+          "version": "4.70.1-1",
+          "architecture": "any"
+        },
+        "python-typing-inspection": {
+          "version": "0.4.4-1",
+          "architecture": "any"
+        },
+        "python-typing_extensions": {
+          "version": "4.16.0-1",
+          "architecture": "any"
+        },
+        "readline": {
+          "version": "8.3.6-1",
+          "architecture": "aarch64"
+        },
+        "rsync": {
+          "version": "3.5.1-3",
+          "architecture": "aarch64"
+        },
+        "sed": {
+          "version": "4.10-2",
+          "architecture": "aarch64"
+        },
+        "shadow": {
+          "version": "4.20.0.arch1-1",
+          "architecture": "aarch64"
+        },
+        "slang": {
+          "version": "2.3.3-4",
+          "architecture": "aarch64"
+        },
+        "spirv-tools": {
+          "version": "1:1.4.363.0-1",
+          "architecture": "aarch64"
+        },
+        "sqlite": {
+          "version": "3.54.0-1",
+          "architecture": "aarch64"
+        },
+        "systemd": {
+          "version": "262.1-1",
+          "architecture": "aarch64"
+        },
+        "systemd-libs": {
+          "version": "262.1-1",
+          "architecture": "aarch64"
+        },
+        "systemd-resolvconf": {
+          "version": "262.1-1",
+          "architecture": "aarch64"
+        },
+        "systemd-sysvcompat": {
+          "version": "262.1-1",
+          "architecture": "aarch64"
+        },
+        "tar": {
+          "version": "1.35-5",
+          "architecture": "aarch64"
+        },
+        "terminus-font": {
+          "version": "4.49.1-8",
+          "architecture": "any"
+        },
+        "thin-provisioning-tools": {
+          "version": "1.3.4-1",
+          "architecture": "aarch64"
+        },
+        "tpm2-tss": {
+          "version": "4.2.0-2",
+          "architecture": "aarch64"
+        },
+        "tzdata": {
+          "version": "2026e-1",
+          "architecture": "aarch64"
+        },
+        "upower": {
+          "version": "1.91.5-1",
+          "architecture": "aarch64"
+        },
+        "util-linux": {
+          "version": "2.42.4-1",
+          "architecture": "aarch64"
+        },
+        "util-linux-libs": {
+          "version": "2.42.4-1",
+          "architecture": "aarch64"
+        },
+        "vim": {
+          "version": "9.2.1178-1",
+          "architecture": "aarch64"
+        },
+        "vim-runtime": {
+          "version": "9.2.1178-1",
+          "architecture": "aarch64"
+        },
+        "wayland": {
+          "version": "1.26.0-1",
+          "architecture": "aarch64"
+        },
+        "which": {
+          "version": "2.25-1",
+          "architecture": "aarch64"
+        },
+        "wpa_supplicant": {
+          "version": "2:2.12-1",
+          "architecture": "aarch64"
+        },
+        "xcb-proto": {
+          "version": "1.17.0-4",
+          "architecture": "any"
+        },
+        "xfsprogs": {
+          "version": "7.2.0-1",
+          "architecture": "aarch64"
+        },
+        "xorgproto": {
+          "version": "2026.1-1",
+          "architecture": "any"
+        },
+        "xxhash": {
+          "version": "0.8.4-1",
+          "architecture": "aarch64"
+        },
+        "xz": {
+          "version": "5.8.4-1",
+          "architecture": "aarch64"
+        },
+        "zeromq": {
+          "version": "4.3.5-3",
+          "architecture": "aarch64"
+        },
+        "zlib": {
+          "version": "1:1.3.2-4",
+          "architecture": "aarch64"
+        },
+        "zstd": {
+          "version": "1.5.7-3",
+          "architecture": "aarch64"
+        }
+      }
+    },
+    "power-profiles-daemon-n1x-0.30.nvidia3001c25-1": {
+      "artifact_sha256": "a54cf72c3a1185a1c56a14c621cba6012ffaebf273568b4a77102861687a1206",
+      "buildinfo_sha256": "e9aae3c5c66c9c45339eaba761988437f26f2dc35c52121d4eb210ae525c405d",
+      "installed": {
+        "acl": {
+          "version": "2.4.0-1",
+          "architecture": "aarch64"
+        },
+        "alsa-lib": {
+          "version": "1.2.16.1-1",
+          "architecture": "aarch64"
+        },
+        "alsa-topology-conf": {
+          "version": "1.2.5.1-4",
+          "architecture": "any"
+        },
+        "alsa-ucm-conf": {
+          "version": "1.2.16.1-1",
+          "architecture": "any"
+        },
+        "alsa-utils": {
+          "version": "1.2.16-1",
+          "architecture": "aarch64"
+        },
+        "arch-install-scripts": {
+          "version": "31-2",
+          "architecture": "any"
+        },
+        "archinstall": {
+          "version": "4.5-1",
+          "architecture": "any"
+        },
+        "archlinux-keyring": {
+          "version": "20260909-1",
+          "architecture": "any"
+        },
+        "archlinuxarm-keyring": {
+          "version": "20240419-2",
+          "architecture": "any"
+        },
+        "asusctl": {
+          "version": "6.5.0-1",
+          "architecture": "aarch64"
+        },
+        "attr": {
+          "version": "2.6.0-1",
+          "architecture": "aarch64"
+        },
+        "audit": {
+          "version": "4.2.1-1",
+          "architecture": "aarch64"
+        },
+        "autoconf": {
+          "version": "2.73-1",
+          "architecture": "any"
+        },
+        "automake": {
+          "version": "1.19-1",
+          "architecture": "any"
+        },
+        "base": {
+          "version": "3-3",
+          "architecture": "any"
+        },
+        "base-devel": {
+          "version": "1-2",
+          "architecture": "any"
+        },
+        "bash": {
+          "version": "5.3.20-1",
+          "architecture": "aarch64"
+        },
+        "binutils": {
+          "version": "2.46+r70+g155188ea10a7-1",
+          "architecture": "aarch64"
+        },
+        "bison": {
+          "version": "3.8.2-8",
+          "architecture": "aarch64"
+        },
+        "bluez": {
+          "version": "5.87-2",
+          "architecture": "aarch64"
+        },
+        "bluez-utils": {
+          "version": "5.87-2",
+          "architecture": "aarch64"
+        },
+        "boost-libs": {
+          "version": "1.92.0-1",
+          "architecture": "aarch64"
+        },
+        "brotli": {
+          "version": "1.2.0-1",
+          "architecture": "aarch64"
+        },
+        "btrfs-progs": {
+          "version": "7.1-1",
+          "architecture": "aarch64"
+        },
+        "bzip2": {
+          "version": "1.0.8-6",
+          "architecture": "aarch64"
+        },
+        "ca-certificates": {
+          "version": "20240618-1",
+          "architecture": "any"
+        },
+        "ca-certificates-mozilla": {
+          "version": "3.131-1",
+          "architecture": "aarch64"
+        },
+        "ca-certificates-utils": {
+          "version": "20240618-1",
+          "architecture": "any"
+        },
+        "coreutils": {
+          "version": "9.12-2",
+          "architecture": "aarch64"
+        },
+        "cpio": {
+          "version": "2.15-3",
+          "architecture": "aarch64"
+        },
+        "cryptsetup": {
+          "version": "2.8.8-1",
+          "architecture": "aarch64"
+        },
+        "curl": {
+          "version": "8.23.0-1",
+          "architecture": "aarch64"
+        },
+        "db5.3": {
+          "version": "5.3.28-7",
+          "architecture": "aarch64"
+        },
+        "dbus": {
+          "version": "1.16.2-1",
+          "architecture": "aarch64"
+        },
+        "dbus-broker": {
+          "version": "37-3",
+          "architecture": "aarch64"
+        },
+        "dbus-broker-units": {
+          "version": "37-3",
+          "architecture": "aarch64"
+        },
+        "dbus-units": {
+          "version": "37-3",
+          "architecture": "aarch64"
+        },
+        "debugedit": {
+          "version": "5.3-2",
+          "architecture": "aarch64"
+        },
+        "default-cursors": {
+          "version": "3-1",
+          "architecture": "any"
+        },
+        "device-mapper": {
+          "version": "2.03.43-2",
+          "architecture": "aarch64"
+        },
+        "dhcpcd": {
+          "version": "10.5.2-1",
+          "architecture": "aarch64"
+        },
+        "diffutils": {
+          "version": "3.12-2",
+          "architecture": "aarch64"
+        },
+        "dkms": {
+          "version": "3.4.4-1",
+          "architecture": "any"
+        },
+        "dosfstools": {
+          "version": "4.2-5",
+          "architecture": "aarch64"
+        },
+        "duktape": {
+          "version": "2.7.0-7",
+          "architecture": "aarch64"
+        },
+        "e2fsprogs": {
+          "version": "1.47.4-1",
+          "architecture": "aarch64"
+        },
+        "egl-gbm": {
+          "version": "1.1.4-1",
+          "architecture": "aarch64"
+        },
+        "egl-wayland": {
+          "version": "4:1.1.24-1",
+          "architecture": "aarch64"
+        },
+        "egl-wayland2": {
+          "version": "1.0.2-1",
+          "architecture": "aarch64"
+        },
+        "egl-x11": {
+          "version": "1.0.6-1",
+          "architecture": "aarch64"
+        },
+        "eglexternalplatform": {
+          "version": "1.2.1-1",
+          "architecture": "any"
+        },
+        "elfutils": {
+          "version": "0.196-1",
+          "architecture": "aarch64"
+        },
+        "ex-vi-compat": {
+          "version": "3-1",
+          "architecture": "any"
+        },
+        "expat": {
+          "version": "2.9.0-1",
+          "architecture": "aarch64"
+        },
+        "f2fs-tools": {
+          "version": "1.17.0-1",
+          "architecture": "aarch64"
+        },
+        "fakeroot": {
+          "version": "1:1.37.2-3",
+          "architecture": "aarch64"
+        },
+        "fftw": {
+          "version": "3.3.11-1",
+          "architecture": "aarch64"
+        },
+        "file": {
+          "version": "5.48-1",
+          "architecture": "aarch64"
+        },
+        "filesystem": {
+          "version": "2025.10.12-1",
+          "architecture": "any"
+        },
+        "findutils": {
+          "version": "4.11.0-1",
+          "architecture": "aarch64"
+        },
+        "flex": {
+          "version": "2.6.4-6",
+          "architecture": "aarch64"
+        },
+        "gawk": {
+          "version": "5.4.1-1",
+          "architecture": "aarch64"
+        },
+        "gc": {
+          "version": "8.2.12-1",
+          "architecture": "aarch64"
+        },
+        "gcc": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "gcc-libs": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "gdb": {
+          "version": "18.1-1",
+          "architecture": "aarch64"
+        },
+        "gdb-common": {
+          "version": "18.1-1",
+          "architecture": "aarch64"
+        },
+        "gdbm": {
+          "version": "1.26-2",
+          "architecture": "aarch64"
+        },
+        "gettext": {
+          "version": "1.0-2",
+          "architecture": "aarch64"
+        },
+        "glib2": {
+          "version": "2.90.1-1",
+          "architecture": "aarch64"
+        },
+        "glib2-devel": {
+          "version": "2.90.1-1",
+          "architecture": "aarch64"
+        },
+        "glibc": {
+          "version": "2.43+r22+g8362e8ce10b2-2",
+          "architecture": "aarch64"
+        },
+        "gmp": {
+          "version": "6.3.0-3",
+          "architecture": "aarch64"
+        },
+        "gnulib-l10n": {
+          "version": "20241231-1",
+          "architecture": "any"
+        },
+        "gnupg": {
+          "version": "2.4.9-3",
+          "architecture": "aarch64"
+        },
+        "gnutls": {
+          "version": "3.8.13-3",
+          "architecture": "aarch64"
+        },
+        "gobject-introspection-runtime": {
+          "version": "1.86.0-2",
+          "architecture": "aarch64"
+        },
+        "gpgme": {
+          "version": "2.2.0-1",
+          "architecture": "aarch64"
+        },
+        "gpm": {
+          "version": "1.20.7.r38.ge82d1a6-7",
+          "architecture": "aarch64"
+        },
+        "grep": {
+          "version": "3.12-2",
+          "architecture": "aarch64"
+        },
+        "groff": {
+          "version": "1.24.2-1",
+          "architecture": "aarch64"
+        },
+        "guile": {
+          "version": "3.0.11-1",
+          "architecture": "aarch64"
+        },
+        "gzip": {
+          "version": "1.15-1",
+          "architecture": "aarch64"
+        },
+        "hicolor-icon-theme": {
+          "version": "0.18-1",
+          "architecture": "any"
+        },
+        "hidapi": {
+          "version": "0.15.0-1",
+          "architecture": "aarch64"
+        },
+        "hwdata": {
+          "version": "0.412-1",
+          "architecture": "any"
+        },
+        "iana-etc": {
+          "version": "20260617-1",
+          "architecture": "any"
+        },
+        "icu": {
+          "version": "78.3-1",
+          "architecture": "aarch64"
+        },
+        "iproute2": {
+          "version": "7.2.0-1",
+          "architecture": "aarch64"
+        },
+        "iptables": {
+          "version": "1:1.8.13-1",
+          "architecture": "aarch64"
+        },
+        "iputils": {
+          "version": "20250605-1",
+          "architecture": "aarch64"
+        },
+        "jansson": {
+          "version": "2.15.1-1",
+          "architecture": "aarch64"
+        },
+        "json-c": {
+          "version": "0.19-1",
+          "architecture": "aarch64"
+        },
+        "kbd": {
+          "version": "2.10.0-1",
+          "architecture": "aarch64"
+        },
+        "keyutils": {
+          "version": "1.6.3-4",
+          "architecture": "aarch64"
+        },
+        "kmod": {
+          "version": "34.2-1",
+          "architecture": "aarch64"
+        },
+        "krb5": {
+          "version": "1.22.2-1",
+          "architecture": "aarch64"
+        },
+        "leancrypto": {
+          "version": "1.9.1-1",
+          "architecture": "aarch64"
+        },
+        "libaio": {
+          "version": "0.3.113-5",
+          "architecture": "aarch64"
+        },
+        "libarchive": {
+          "version": "3.8.10-1",
+          "architecture": "aarch64"
+        },
+        "libasan": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libassuan": {
+          "version": "3.0.0-1",
+          "architecture": "aarch64"
+        },
+        "libatomic": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libbpf": {
+          "version": "1.7.0-1",
+          "architecture": "aarch64"
+        },
+        "libcap": {
+          "version": "2.78-1",
+          "architecture": "aarch64"
+        },
+        "libcap-ng": {
+          "version": "0.9.6-1",
+          "architecture": "aarch64"
+        },
+        "libcbor": {
+          "version": "0.14.0-1",
+          "architecture": "aarch64"
+        },
+        "libdaemon": {
+          "version": "0.14-6",
+          "architecture": "aarch64"
+        },
+        "libdrm": {
+          "version": "2.4.134-1",
+          "architecture": "aarch64"
+        },
+        "libedit": {
+          "version": "20260512_3.1-1",
+          "architecture": "aarch64"
+        },
+        "libelf": {
+          "version": "0.196-1",
+          "architecture": "aarch64"
+        },
+        "libevent": {
+          "version": "2.1.13-2",
+          "architecture": "aarch64"
+        },
+        "libffi": {
+          "version": "3.8.0-1",
+          "architecture": "aarch64"
+        },
+        "libfido2": {
+          "version": "1.17.0-1",
+          "architecture": "aarch64"
+        },
+        "libgcc": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libgcrypt": {
+          "version": "1.12.4-1",
+          "architecture": "aarch64"
+        },
+        "libgfortran": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libgirepository": {
+          "version": "1.86.0-2",
+          "architecture": "aarch64"
+        },
+        "libglvnd": {
+          "version": "1.7.0-3",
+          "architecture": "aarch64"
+        },
+        "libgomp": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libgpg-error": {
+          "version": "1.61-1",
+          "architecture": "aarch64"
+        },
+        "libgudev": {
+          "version": "238-3",
+          "architecture": "aarch64"
+        },
+        "libidn2": {
+          "version": "2.3.8-1",
+          "architecture": "aarch64"
+        },
+        "libimobiledevice": {
+          "version": "1.4.0-2",
+          "architecture": "aarch64"
+        },
+        "libimobiledevice-glue": {
+          "version": "1.3.2-1",
+          "architecture": "aarch64"
+        },
+        "libinih": {
+          "version": "62-2",
+          "architecture": "aarch64"
+        },
+        "libisl": {
+          "version": "0.28-1",
+          "architecture": "aarch64"
+        },
+        "libjpeg-turbo": {
+          "version": "3.2.0-2",
+          "architecture": "aarch64"
+        },
+        "libksba": {
+          "version": "1.8.1-1",
+          "architecture": "aarch64"
+        },
+        "libldap": {
+          "version": "2.7.1-1",
+          "architecture": "aarch64"
+        },
+        "liblsan": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libmakepkg-dropins": {
+          "version": "20-2",
+          "architecture": "any"
+        },
+        "libmm-glib": {
+          "version": "1.24.2-1",
+          "architecture": "aarch64"
+        },
+        "libmnl": {
+          "version": "1.0.5-2",
+          "architecture": "aarch64"
+        },
+        "libmpc": {
+          "version": "1.4.1-1",
+          "architecture": "aarch64"
+        },
+        "libndp": {
+          "version": "1.9-1",
+          "architecture": "aarch64"
+        },
+        "libnetfilter_conntrack": {
+          "version": "1.1.1-1",
+          "architecture": "aarch64"
+        },
+        "libnewt": {
+          "version": "0.52.25-2",
+          "architecture": "aarch64"
+        },
+        "libnfnetlink": {
+          "version": "1.0.2-2",
+          "architecture": "aarch64"
+        },
+        "libnftnl": {
+          "version": "1.3.2-1",
+          "architecture": "aarch64"
+        },
+        "libnghttp2": {
+          "version": "1.70.0-1",
+          "architecture": "aarch64"
+        },
+        "libnghttp3": {
+          "version": "1.18.0-1",
+          "architecture": "aarch64"
+        },
+        "libngtcp2": {
+          "version": "1.25.0-1",
+          "architecture": "aarch64"
+        },
+        "libnl": {
+          "version": "3.12.0-1",
+          "architecture": "aarch64"
+        },
+        "libnm": {
+          "version": "1.58.1-2",
+          "architecture": "aarch64"
+        },
+        "libnsl": {
+          "version": "2.0.1-2",
+          "architecture": "aarch64"
+        },
+        "libobjc": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libp11-kit": {
+          "version": "0.26.5-1",
+          "architecture": "aarch64"
+        },
+        "libpcap": {
+          "version": "1.11.0-1",
+          "architecture": "aarch64"
+        },
+        "libpciaccess": {
+          "version": "0.19-1",
+          "architecture": "aarch64"
+        },
+        "libpgm": {
+          "version": "5.3.128-4",
+          "architecture": "aarch64"
+        },
+        "libplist": {
+          "version": "2.7.0-3",
+          "architecture": "aarch64"
+        },
+        "libpsl": {
+          "version": "0.21.5-2",
+          "architecture": "aarch64"
+        },
+        "libquadmath": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libsamplerate": {
+          "version": "0.2.2-3",
+          "architecture": "aarch64"
+        },
+        "libsasl": {
+          "version": "2.1.28-5",
+          "architecture": "aarch64"
+        },
+        "libseccomp": {
+          "version": "2.6.0-1",
+          "architecture": "aarch64"
+        },
+        "libsecret": {
+          "version": "0.21.8.2-1",
+          "architecture": "aarch64"
+        },
+        "libsodium": {
+          "version": "1.0.22-1",
+          "architecture": "aarch64"
+        },
+        "libssh2": {
+          "version": "1.11.1-7",
+          "architecture": "aarch64"
+        },
+        "libstdc++": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libsysprof-capture": {
+          "version": "51.0-1",
+          "architecture": "aarch64"
+        },
+        "libtasn1": {
+          "version": "4.21.0-1",
+          "architecture": "aarch64"
+        },
+        "libtatsu": {
+          "version": "1.0.5-1",
+          "architecture": "aarch64"
+        },
+        "libteam": {
+          "version": "1.32-3",
+          "architecture": "aarch64"
+        },
+        "libtirpc": {
+          "version": "1.3.8-1",
+          "architecture": "aarch64"
+        },
+        "libtool": {
+          "version": "2.6.0+r23+gb08cb0a0-1",
+          "architecture": "aarch64"
+        },
+        "libtsan": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libubsan": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libunistring": {
+          "version": "1.4.2-1",
+          "architecture": "aarch64"
+        },
+        "liburcu": {
+          "version": "0.15.7-1",
+          "architecture": "aarch64"
+        },
+        "libusb": {
+          "version": "1.0.30-1",
+          "architecture": "aarch64"
+        },
+        "libusbmuxd": {
+          "version": "2.1.1-2",
+          "architecture": "aarch64"
+        },
+        "libverto": {
+          "version": "0.3.2-6",
+          "architecture": "aarch64"
+        },
+        "libx11": {
+          "version": "1.8.13-2",
+          "architecture": "aarch64"
+        },
+        "libxau": {
+          "version": "1.0.12-1",
+          "architecture": "aarch64"
+        },
+        "libxcb": {
+          "version": "1.17.0-1",
+          "architecture": "aarch64"
+        },
+        "libxcrypt": {
+          "version": "4.5.2-1",
+          "architecture": "aarch64"
+        },
+        "libxdmcp": {
+          "version": "1.1.5-2",
+          "architecture": "aarch64"
+        },
+        "libxext": {
+          "version": "1.3.7-1",
+          "architecture": "aarch64"
+        },
+        "libxml2": {
+          "version": "2.15.4-1",
+          "architecture": "aarch64"
+        },
+        "libxshmfence": {
+          "version": "1.3.3-1",
+          "architecture": "aarch64"
+        },
+        "libxxf86vm": {
+          "version": "1.1.7-1",
+          "architecture": "aarch64"
+        },
+        "licenses": {
+          "version": "20240728-1",
+          "architecture": "any"
+        },
+        "linux-api-headers": {
+          "version": "7.2-1",
+          "architecture": "aarch64"
+        },
+        "linux-firmware": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-firmware-amd": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-firmware-amdgpu": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-firmware-atheros": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-firmware-broadcom": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-firmware-cirrus": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-firmware-intel": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-firmware-mediatek": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-firmware-nvidia": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-firmware-other": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-firmware-radeon": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-firmware-realtek": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-firmware-ti": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-firmware-whence": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-n1x-nvidia-bin": {
+          "version": "7.0.0.1022.23-2",
+          "architecture": "aarch64"
+        },
+        "llvm-libs": {
+          "version": "23.1.1-1",
+          "architecture": "aarch64"
+        },
+        "lm_sensors": {
+          "version": "1:3.6.2-1",
+          "architecture": "aarch64"
+        },
+        "lmdb": {
+          "version": "0.9.35-1",
+          "architecture": "aarch64"
+        },
+        "lvm2": {
+          "version": "2.03.43-2",
+          "architecture": "aarch64"
+        },
+        "lz4": {
+          "version": "1:1.10.0-2",
+          "architecture": "aarch64"
+        },
+        "lzo": {
+          "version": "2.10-5",
+          "architecture": "aarch64"
+        },
+        "m4": {
+          "version": "1.4.21-2",
+          "architecture": "aarch64"
+        },
+        "make": {
+          "version": "4.4.1-3",
+          "architecture": "aarch64"
+        },
+        "mesa": {
+          "version": "1:26.2.4-1",
+          "architecture": "aarch64"
+        },
+        "meson": {
+          "version": "1.12.1-2",
+          "architecture": "any"
+        },
+        "mkinitcpio": {
+          "version": "42.2-1",
+          "architecture": "any"
+        },
+        "mkinitcpio-busybox": {
+          "version": "1.36.1-1",
+          "architecture": "aarch64"
+        },
+        "mobile-broadband-provider-info": {
+          "version": "20251101-1",
+          "architecture": "any"
+        },
+        "mpdecimal": {
+          "version": "4.0.1-3",
+          "architecture": "aarch64"
+        },
+        "mpfr": {
+          "version": "4.2.2-1",
+          "architecture": "aarch64"
+        },
+        "nano": {
+          "version": "9.2-1",
+          "architecture": "aarch64"
+        },
+        "ncurses": {
+          "version": "6.6-2",
+          "architecture": "aarch64"
+        },
+        "net-tools": {
+          "version": "2.10-3",
+          "architecture": "aarch64"
+        },
+        "netctl": {
+          "version": "1.29-2",
+          "architecture": "any"
+        },
+        "nettle": {
+          "version": "4.0-1",
+          "architecture": "aarch64"
+        },
+        "networkmanager": {
+          "version": "1.58.1-2",
+          "architecture": "aarch64"
+        },
+        "nftables": {
+          "version": "1:1.1.7-3",
+          "architecture": "aarch64"
+        },
+        "ninja": {
+          "version": "1.13.2-3",
+          "architecture": "aarch64"
+        },
+        "npth": {
+          "version": "1.8-1",
+          "architecture": "aarch64"
+        },
+        "nspr": {
+          "version": "4.40-1",
+          "architecture": "aarch64"
+        },
+        "nss": {
+          "version": "3.131-1",
+          "architecture": "aarch64"
+        },
+        "nvidia-n1x-userspace-fix": {
+          "version": "615.78.08-1",
+          "architecture": "aarch64"
+        },
+        "nvidia-open-dkms": {
+          "version": "615.78.08-1",
+          "architecture": "aarch64"
+        },
+        "nvidia-utils": {
+          "version": "615.78.08-1",
+          "architecture": "aarch64"
+        },
+        "nvme-cli": {
+          "version": "3.1-1",
+          "architecture": "aarch64"
+        },
+        "openssh": {
+          "version": "10.6p1-2",
+          "architecture": "aarch64"
+        },
+        "openssl": {
+          "version": "3.6.5-1",
+          "architecture": "aarch64"
+        },
+        "p11-kit": {
+          "version": "0.26.5-1",
+          "architecture": "aarch64"
+        },
+        "pacman": {
+          "version": "7.1.0.r9.g54d9411-3",
+          "architecture": "aarch64"
+        },
+        "pacman-mirrorlist": {
+          "version": "20260411-2",
+          "architecture": "any"
+        },
+        "pam": {
+          "version": "1.7.3-1",
+          "architecture": "aarch64"
+        },
+        "pambase": {
+          "version": "20260616-1",
+          "architecture": "any"
+        },
+        "parted": {
+          "version": "3.8-1",
+          "architecture": "aarch64"
+        },
+        "patch": {
+          "version": "2.8-1",
+          "architecture": "aarch64"
+        },
+        "pciutils": {
+          "version": "3.15.0-1",
+          "architecture": "aarch64"
+        },
+        "pcre": {
+          "version": "8.45-5",
+          "architecture": "aarch64"
+        },
+        "pcre2": {
+          "version": "10.49-1",
+          "architecture": "aarch64"
+        },
+        "pcsclite": {
+          "version": "2.5.2-1",
+          "architecture": "aarch64"
+        },
+        "perl": {
+          "version": "5.42.3-1",
+          "architecture": "aarch64"
+        },
+        "pinentry": {
+          "version": "1.3.3-1",
+          "architecture": "aarch64"
+        },
+        "pkgconf": {
+          "version": "3.0.7-1",
+          "architecture": "aarch64"
+        },
+        "polkit": {
+          "version": "127-3",
+          "architecture": "aarch64"
+        },
+        "popt": {
+          "version": "1.19-2",
+          "architecture": "aarch64"
+        },
+        "power-profiles-daemon-n1x": {
+          "version": "0.30.nvidia3001c25-1",
+          "architecture": "aarch64"
+        },
+        "procps-ng": {
+          "version": "4.0.7-1",
+          "architecture": "aarch64"
+        },
+        "psmisc": {
+          "version": "23.7-2",
+          "architecture": "aarch64"
+        },
+        "python": {
+          "version": "3.14.8-1",
+          "architecture": "aarch64"
+        },
+        "python-annotated-types": {
+          "version": "0.8.0-1",
+          "architecture": "any"
+        },
+        "python-cffi": {
+          "version": "2.1.1-1",
+          "architecture": "aarch64"
+        },
+        "python-cryptography": {
+          "version": "50.0.2-1",
+          "architecture": "aarch64"
+        },
+        "python-gobject": {
+          "version": "3.58.1-1",
+          "architecture": "aarch64"
+        },
+        "python-linkify-it-py": {
+          "version": "2.2.0-1",
+          "architecture": "any"
+        },
+        "python-markdown-it-py": {
+          "version": "4.2.0-1",
+          "architecture": "any"
+        },
+        "python-mdit_py_plugins": {
+          "version": "0.6.1-1",
+          "architecture": "any"
+        },
+        "python-mdurl": {
+          "version": "0.1.2-9",
+          "architecture": "any"
+        },
+        "python-packaging": {
+          "version": "26.3-1",
+          "architecture": "any"
+        },
+        "python-platformdirs": {
+          "version": "4.13.0-1",
+          "architecture": "any"
+        },
+        "python-pycparser": {
+          "version": "3.11-1",
+          "architecture": "any"
+        },
+        "python-pydantic": {
+          "version": "2.14.1-1",
+          "architecture": "any"
+        },
+        "python-pydantic-core": {
+          "version": "3:2.50.1-1",
+          "architecture": "aarch64"
+        },
+        "python-pygments": {
+          "version": "2.21.0-1",
+          "architecture": "any"
+        },
+        "python-pyparted": {
+          "version": "3.13.0-6",
+          "architecture": "aarch64"
+        },
+        "python-rich": {
+          "version": "15.0.0-1",
+          "architecture": "any"
+        },
+        "python-textual": {
+          "version": "8.2.8-2",
+          "architecture": "any"
+        },
+        "python-tqdm": {
+          "version": "4.70.1-1",
+          "architecture": "any"
+        },
+        "python-typing-inspection": {
+          "version": "0.4.4-1",
+          "architecture": "any"
+        },
+        "python-typing_extensions": {
+          "version": "4.16.0-1",
+          "architecture": "any"
+        },
+        "readline": {
+          "version": "8.3.6-1",
+          "architecture": "aarch64"
+        },
+        "rsync": {
+          "version": "3.5.1-3",
+          "architecture": "aarch64"
+        },
+        "sed": {
+          "version": "4.10-2",
+          "architecture": "aarch64"
+        },
+        "shadow": {
+          "version": "4.20.0.arch1-1",
+          "architecture": "aarch64"
+        },
+        "slang": {
+          "version": "2.3.3-4",
+          "architecture": "aarch64"
+        },
+        "source-highlight": {
+          "version": "3.1.9-19",
+          "architecture": "aarch64"
+        },
+        "spirv-tools": {
+          "version": "1:1.4.363.0-1",
+          "architecture": "aarch64"
+        },
+        "sqlite": {
+          "version": "3.54.0-1",
+          "architecture": "aarch64"
+        },
+        "sudo": {
+          "version": "1.9.17.p2-6",
+          "architecture": "aarch64"
+        },
+        "systemd": {
+          "version": "262-1",
+          "architecture": "aarch64"
+        },
+        "systemd-libs": {
+          "version": "262-1",
+          "architecture": "aarch64"
+        },
+        "systemd-resolvconf": {
+          "version": "262-1",
+          "architecture": "aarch64"
+        },
+        "systemd-sysvcompat": {
+          "version": "262-1",
+          "architecture": "aarch64"
+        },
+        "tar": {
+          "version": "1.35-5",
+          "architecture": "aarch64"
+        },
+        "texinfo": {
+          "version": "7.3-1",
+          "architecture": "aarch64"
+        },
+        "thin-provisioning-tools": {
+          "version": "1.3.4-1",
+          "architecture": "aarch64"
+        },
+        "tpm2-tss": {
+          "version": "4.2.0-2",
+          "architecture": "aarch64"
+        },
+        "tzdata": {
+          "version": "2026e-1",
+          "architecture": "aarch64"
+        },
+        "upower": {
+          "version": "1.91.5-1",
+          "architecture": "aarch64"
+        },
+        "usbutils": {
+          "version": "019-1",
+          "architecture": "aarch64"
+        },
+        "util-linux": {
+          "version": "2.42.4-1",
+          "architecture": "aarch64"
+        },
+        "util-linux-libs": {
+          "version": "2.42.4-1",
+          "architecture": "aarch64"
+        },
+        "v4l-utils": {
+          "version": "1.32.0-2",
+          "architecture": "aarch64"
+        },
+        "vim": {
+          "version": "9.2.1178-1",
+          "architecture": "aarch64"
+        },
+        "vim-runtime": {
+          "version": "9.2.1178-1",
+          "architecture": "aarch64"
+        },
+        "wayland": {
+          "version": "1.26.0-1",
+          "architecture": "aarch64"
+        },
+        "which": {
+          "version": "2.25-1",
+          "architecture": "aarch64"
+        },
+        "wpa_supplicant": {
+          "version": "2:2.12-1",
+          "architecture": "aarch64"
+        },
+        "xcb-proto": {
+          "version": "1.17.0-4",
+          "architecture": "any"
+        },
+        "xfsprogs": {
+          "version": "7.2.0-1",
+          "architecture": "aarch64"
+        },
+        "xorgproto": {
+          "version": "2026.1-1",
+          "architecture": "any"
+        },
+        "xxhash": {
+          "version": "0.8.4-1",
+          "architecture": "aarch64"
+        },
+        "xz": {
+          "version": "5.8.4-1",
+          "architecture": "aarch64"
+        },
+        "zeromq": {
+          "version": "4.3.5-3",
+          "architecture": "aarch64"
+        },
+        "zlib": {
+          "version": "1:1.3.2-4",
+          "architecture": "aarch64"
+        },
+        "zstd": {
+          "version": "1.5.7-3",
+          "architecture": "aarch64"
+        }
+      }
+    },
+    "nvidia-n1x-userspace-fix-615.78.08-1": {
+      "artifact_sha256": "197d0259e836ab48f284f57a7fd7819e2493408bb6af0f3412f4728804e5268c",
+      "buildinfo_sha256": "63a8980dfa135538af7af31831ff09a5dbef9d399635b9d9816638baabd6ae40",
+      "installed": {
+        "acl": {
+          "version": "2.4.0-1",
+          "architecture": "aarch64"
+        },
+        "alsa-lib": {
+          "version": "1.2.16.1-1",
+          "architecture": "aarch64"
+        },
+        "alsa-topology-conf": {
+          "version": "1.2.5.1-4",
+          "architecture": "any"
+        },
+        "alsa-ucm-conf": {
+          "version": "1.2.16.1-1",
+          "architecture": "any"
+        },
+        "alsa-utils": {
+          "version": "1.2.16-1",
+          "architecture": "aarch64"
+        },
+        "arch-install-scripts": {
+          "version": "31-2",
+          "architecture": "any"
+        },
+        "archinstall": {
+          "version": "4.5-1",
+          "architecture": "any"
+        },
+        "archlinux-keyring": {
+          "version": "20260909-1",
+          "architecture": "any"
+        },
+        "archlinuxarm-keyring": {
+          "version": "20240419-2",
+          "architecture": "any"
+        },
+        "asusctl": {
+          "version": "6.5.0-1",
+          "architecture": "aarch64"
+        },
+        "attr": {
+          "version": "2.6.0-1",
+          "architecture": "aarch64"
+        },
+        "audit": {
+          "version": "4.2.1-1",
+          "architecture": "aarch64"
+        },
+        "autoconf": {
+          "version": "2.73-1",
+          "architecture": "any"
+        },
+        "automake": {
+          "version": "1.19-1",
+          "architecture": "any"
+        },
+        "base": {
+          "version": "3-3",
+          "architecture": "any"
+        },
+        "base-devel": {
+          "version": "1-2",
+          "architecture": "any"
+        },
+        "bash": {
+          "version": "5.3.20-1",
+          "architecture": "aarch64"
+        },
+        "binutils": {
+          "version": "2.46+r70+g155188ea10a7-1",
+          "architecture": "aarch64"
+        },
+        "bison": {
+          "version": "3.8.2-8",
+          "architecture": "aarch64"
+        },
+        "bluez": {
+          "version": "5.87-2",
+          "architecture": "aarch64"
+        },
+        "bluez-utils": {
+          "version": "5.87-2",
+          "architecture": "aarch64"
+        },
+        "boost-libs": {
+          "version": "1.92.0-1",
+          "architecture": "aarch64"
+        },
+        "brotli": {
+          "version": "1.2.0-1",
+          "architecture": "aarch64"
+        },
+        "btrfs-progs": {
+          "version": "7.1-1",
+          "architecture": "aarch64"
+        },
+        "bzip2": {
+          "version": "1.0.8-6",
+          "architecture": "aarch64"
+        },
+        "ca-certificates": {
+          "version": "20240618-1",
+          "architecture": "any"
+        },
+        "ca-certificates-mozilla": {
+          "version": "3.131-1",
+          "architecture": "aarch64"
+        },
+        "ca-certificates-utils": {
+          "version": "20240618-1",
+          "architecture": "any"
+        },
+        "coreutils": {
+          "version": "9.12-2",
+          "architecture": "aarch64"
+        },
+        "cpio": {
+          "version": "2.15-3",
+          "architecture": "aarch64"
+        },
+        "cryptsetup": {
+          "version": "2.8.8-1",
+          "architecture": "aarch64"
+        },
+        "curl": {
+          "version": "8.23.0-1",
+          "architecture": "aarch64"
+        },
+        "db5.3": {
+          "version": "5.3.28-7",
+          "architecture": "aarch64"
+        },
+        "dbus": {
+          "version": "1.16.2-1",
+          "architecture": "aarch64"
+        },
+        "dbus-broker": {
+          "version": "37-3",
+          "architecture": "aarch64"
+        },
+        "dbus-broker-units": {
+          "version": "37-3",
+          "architecture": "aarch64"
+        },
+        "dbus-units": {
+          "version": "37-3",
+          "architecture": "aarch64"
+        },
+        "debugedit": {
+          "version": "5.3-2",
+          "architecture": "aarch64"
+        },
+        "default-cursors": {
+          "version": "3-1",
+          "architecture": "any"
+        },
+        "device-mapper": {
+          "version": "2.03.43-2",
+          "architecture": "aarch64"
+        },
+        "dhcpcd": {
+          "version": "10.5.2-1",
+          "architecture": "aarch64"
+        },
+        "diffutils": {
+          "version": "3.12-2",
+          "architecture": "aarch64"
+        },
+        "dkms": {
+          "version": "3.4.4-1",
+          "architecture": "any"
+        },
+        "dosfstools": {
+          "version": "4.2-5",
+          "architecture": "aarch64"
+        },
+        "duktape": {
+          "version": "2.7.0-7",
+          "architecture": "aarch64"
+        },
+        "e2fsprogs": {
+          "version": "1.47.4-1",
+          "architecture": "aarch64"
+        },
+        "egl-gbm": {
+          "version": "1.1.4-1",
+          "architecture": "aarch64"
+        },
+        "egl-wayland": {
+          "version": "4:1.1.24-1",
+          "architecture": "aarch64"
+        },
+        "egl-wayland2": {
+          "version": "1.0.2-1",
+          "architecture": "aarch64"
+        },
+        "egl-x11": {
+          "version": "1.0.6-1",
+          "architecture": "aarch64"
+        },
+        "eglexternalplatform": {
+          "version": "1.2.1-1",
+          "architecture": "any"
+        },
+        "elfutils": {
+          "version": "0.196-1",
+          "architecture": "aarch64"
+        },
+        "ex-vi-compat": {
+          "version": "3-1",
+          "architecture": "any"
+        },
+        "expat": {
+          "version": "2.9.0-1",
+          "architecture": "aarch64"
+        },
+        "f2fs-tools": {
+          "version": "1.17.0-1",
+          "architecture": "aarch64"
+        },
+        "fakeroot": {
+          "version": "1:1.37.2-3",
+          "architecture": "aarch64"
+        },
+        "fftw": {
+          "version": "3.3.11-1",
+          "architecture": "aarch64"
+        },
+        "file": {
+          "version": "5.48-1",
+          "architecture": "aarch64"
+        },
+        "filesystem": {
+          "version": "2025.10.12-1",
+          "architecture": "any"
+        },
+        "findutils": {
+          "version": "4.11.0-1",
+          "architecture": "aarch64"
+        },
+        "flex": {
+          "version": "2.6.4-6",
+          "architecture": "aarch64"
+        },
+        "gawk": {
+          "version": "5.4.1-1",
+          "architecture": "aarch64"
+        },
+        "gc": {
+          "version": "8.2.12-1",
+          "architecture": "aarch64"
+        },
+        "gcc": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "gcc-libs": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "gdb": {
+          "version": "18.1-1",
+          "architecture": "aarch64"
+        },
+        "gdb-common": {
+          "version": "18.1-1",
+          "architecture": "aarch64"
+        },
+        "gdbm": {
+          "version": "1.26-2",
+          "architecture": "aarch64"
+        },
+        "gettext": {
+          "version": "1.0-2",
+          "architecture": "aarch64"
+        },
+        "glib2": {
+          "version": "2.90.1-1",
+          "architecture": "aarch64"
+        },
+        "glib2-devel": {
+          "version": "2.90.1-1",
+          "architecture": "aarch64"
+        },
+        "glibc": {
+          "version": "2.43+r22+g8362e8ce10b2-2",
+          "architecture": "aarch64"
+        },
+        "gmp": {
+          "version": "6.3.0-3",
+          "architecture": "aarch64"
+        },
+        "gnulib-l10n": {
+          "version": "20241231-1",
+          "architecture": "any"
+        },
+        "gnupg": {
+          "version": "2.4.9-3",
+          "architecture": "aarch64"
+        },
+        "gnutls": {
+          "version": "3.8.13-3",
+          "architecture": "aarch64"
+        },
+        "gobject-introspection-runtime": {
+          "version": "1.86.0-2",
+          "architecture": "aarch64"
+        },
+        "gpgme": {
+          "version": "2.2.0-1",
+          "architecture": "aarch64"
+        },
+        "gpm": {
+          "version": "1.20.7.r38.ge82d1a6-7",
+          "architecture": "aarch64"
+        },
+        "grep": {
+          "version": "3.12-2",
+          "architecture": "aarch64"
+        },
+        "groff": {
+          "version": "1.24.2-1",
+          "architecture": "aarch64"
+        },
+        "guile": {
+          "version": "3.0.11-1",
+          "architecture": "aarch64"
+        },
+        "gzip": {
+          "version": "1.15-1",
+          "architecture": "aarch64"
+        },
+        "hicolor-icon-theme": {
+          "version": "0.18-1",
+          "architecture": "any"
+        },
+        "hidapi": {
+          "version": "0.15.0-1",
+          "architecture": "aarch64"
+        },
+        "hwdata": {
+          "version": "0.412-1",
+          "architecture": "any"
+        },
+        "iana-etc": {
+          "version": "20260617-1",
+          "architecture": "any"
+        },
+        "icu": {
+          "version": "78.3-1",
+          "architecture": "aarch64"
+        },
+        "iproute2": {
+          "version": "7.2.0-1",
+          "architecture": "aarch64"
+        },
+        "iptables": {
+          "version": "1:1.8.13-1",
+          "architecture": "aarch64"
+        },
+        "iputils": {
+          "version": "20250605-1",
+          "architecture": "aarch64"
+        },
+        "jansson": {
+          "version": "2.15.1-1",
+          "architecture": "aarch64"
+        },
+        "json-c": {
+          "version": "0.19-1",
+          "architecture": "aarch64"
+        },
+        "kbd": {
+          "version": "2.10.0-1",
+          "architecture": "aarch64"
+        },
+        "keyutils": {
+          "version": "1.6.3-4",
+          "architecture": "aarch64"
+        },
+        "kmod": {
+          "version": "34.2-1",
+          "architecture": "aarch64"
+        },
+        "krb5": {
+          "version": "1.22.2-1",
+          "architecture": "aarch64"
+        },
+        "leancrypto": {
+          "version": "1.9.1-1",
+          "architecture": "aarch64"
+        },
+        "libaio": {
+          "version": "0.3.113-5",
+          "architecture": "aarch64"
+        },
+        "libarchive": {
+          "version": "3.8.10-1",
+          "architecture": "aarch64"
+        },
+        "libasan": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libassuan": {
+          "version": "3.0.0-1",
+          "architecture": "aarch64"
+        },
+        "libatomic": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libbpf": {
+          "version": "1.7.0-1",
+          "architecture": "aarch64"
+        },
+        "libcap": {
+          "version": "2.78-1",
+          "architecture": "aarch64"
+        },
+        "libcap-ng": {
+          "version": "0.9.6-1",
+          "architecture": "aarch64"
+        },
+        "libcbor": {
+          "version": "0.14.0-1",
+          "architecture": "aarch64"
+        },
+        "libdaemon": {
+          "version": "0.14-6",
+          "architecture": "aarch64"
+        },
+        "libdrm": {
+          "version": "2.4.134-1",
+          "architecture": "aarch64"
+        },
+        "libedit": {
+          "version": "20260512_3.1-1",
+          "architecture": "aarch64"
+        },
+        "libelf": {
+          "version": "0.196-1",
+          "architecture": "aarch64"
+        },
+        "libevent": {
+          "version": "2.1.13-2",
+          "architecture": "aarch64"
+        },
+        "libffi": {
+          "version": "3.8.0-1",
+          "architecture": "aarch64"
+        },
+        "libfido2": {
+          "version": "1.17.0-1",
+          "architecture": "aarch64"
+        },
+        "libgcc": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libgcrypt": {
+          "version": "1.12.4-1",
+          "architecture": "aarch64"
+        },
+        "libgfortran": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libgirepository": {
+          "version": "1.86.0-2",
+          "architecture": "aarch64"
+        },
+        "libglvnd": {
+          "version": "1.7.0-3",
+          "architecture": "aarch64"
+        },
+        "libgomp": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libgpg-error": {
+          "version": "1.61-1",
+          "architecture": "aarch64"
+        },
+        "libgudev": {
+          "version": "238-3",
+          "architecture": "aarch64"
+        },
+        "libidn2": {
+          "version": "2.3.8-1",
+          "architecture": "aarch64"
+        },
+        "libimobiledevice": {
+          "version": "1.4.0-2",
+          "architecture": "aarch64"
+        },
+        "libimobiledevice-glue": {
+          "version": "1.3.2-1",
+          "architecture": "aarch64"
+        },
+        "libinih": {
+          "version": "62-2",
+          "architecture": "aarch64"
+        },
+        "libisl": {
+          "version": "0.28-1",
+          "architecture": "aarch64"
+        },
+        "libjpeg-turbo": {
+          "version": "3.2.0-2",
+          "architecture": "aarch64"
+        },
+        "libksba": {
+          "version": "1.8.1-1",
+          "architecture": "aarch64"
+        },
+        "libldap": {
+          "version": "2.7.1-1",
+          "architecture": "aarch64"
+        },
+        "liblsan": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libmakepkg-dropins": {
+          "version": "20-2",
+          "architecture": "any"
+        },
+        "libmm-glib": {
+          "version": "1.24.2-1",
+          "architecture": "aarch64"
+        },
+        "libmnl": {
+          "version": "1.0.5-2",
+          "architecture": "aarch64"
+        },
+        "libmpc": {
+          "version": "1.4.1-1",
+          "architecture": "aarch64"
+        },
+        "libndp": {
+          "version": "1.9-1",
+          "architecture": "aarch64"
+        },
+        "libnetfilter_conntrack": {
+          "version": "1.1.1-1",
+          "architecture": "aarch64"
+        },
+        "libnewt": {
+          "version": "0.52.25-2",
+          "architecture": "aarch64"
+        },
+        "libnfnetlink": {
+          "version": "1.0.2-2",
+          "architecture": "aarch64"
+        },
+        "libnftnl": {
+          "version": "1.3.2-1",
+          "architecture": "aarch64"
+        },
+        "libnghttp2": {
+          "version": "1.70.0-1",
+          "architecture": "aarch64"
+        },
+        "libnghttp3": {
+          "version": "1.18.0-1",
+          "architecture": "aarch64"
+        },
+        "libngtcp2": {
+          "version": "1.25.0-1",
+          "architecture": "aarch64"
+        },
+        "libnl": {
+          "version": "3.12.0-1",
+          "architecture": "aarch64"
+        },
+        "libnm": {
+          "version": "1.58.1-2",
+          "architecture": "aarch64"
+        },
+        "libnsl": {
+          "version": "2.0.1-2",
+          "architecture": "aarch64"
+        },
+        "libobjc": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libp11-kit": {
+          "version": "0.26.5-1",
+          "architecture": "aarch64"
+        },
+        "libpcap": {
+          "version": "1.11.0-1",
+          "architecture": "aarch64"
+        },
+        "libpciaccess": {
+          "version": "0.19-1",
+          "architecture": "aarch64"
+        },
+        "libpgm": {
+          "version": "5.3.128-4",
+          "architecture": "aarch64"
+        },
+        "libplist": {
+          "version": "2.7.0-3",
+          "architecture": "aarch64"
+        },
+        "libpsl": {
+          "version": "0.21.5-2",
+          "architecture": "aarch64"
+        },
+        "libquadmath": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libsamplerate": {
+          "version": "0.2.2-3",
+          "architecture": "aarch64"
+        },
+        "libsasl": {
+          "version": "2.1.28-5",
+          "architecture": "aarch64"
+        },
+        "libseccomp": {
+          "version": "2.6.0-1",
+          "architecture": "aarch64"
+        },
+        "libsecret": {
+          "version": "0.21.8.2-1",
+          "architecture": "aarch64"
+        },
+        "libsodium": {
+          "version": "1.0.22-1",
+          "architecture": "aarch64"
+        },
+        "libssh2": {
+          "version": "1.11.1-7",
+          "architecture": "aarch64"
+        },
+        "libstdc++": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libsysprof-capture": {
+          "version": "51.0-1",
+          "architecture": "aarch64"
+        },
+        "libtasn1": {
+          "version": "4.21.0-1",
+          "architecture": "aarch64"
+        },
+        "libtatsu": {
+          "version": "1.0.5-1",
+          "architecture": "aarch64"
+        },
+        "libteam": {
+          "version": "1.32-3",
+          "architecture": "aarch64"
+        },
+        "libtirpc": {
+          "version": "1.3.8-1",
+          "architecture": "aarch64"
+        },
+        "libtool": {
+          "version": "2.6.0+r23+gb08cb0a0-1",
+          "architecture": "aarch64"
+        },
+        "libtsan": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libubsan": {
+          "version": "16.1.1+r12+g301eb08fa2c5-1",
+          "architecture": "aarch64"
+        },
+        "libunistring": {
+          "version": "1.4.2-1",
+          "architecture": "aarch64"
+        },
+        "liburcu": {
+          "version": "0.15.7-1",
+          "architecture": "aarch64"
+        },
+        "libusb": {
+          "version": "1.0.30-1",
+          "architecture": "aarch64"
+        },
+        "libusbmuxd": {
+          "version": "2.1.1-2",
+          "architecture": "aarch64"
+        },
+        "libverto": {
+          "version": "0.3.2-6",
+          "architecture": "aarch64"
+        },
+        "libx11": {
+          "version": "1.8.13-2",
+          "architecture": "aarch64"
+        },
+        "libxau": {
+          "version": "1.0.12-1",
+          "architecture": "aarch64"
+        },
+        "libxcb": {
+          "version": "1.17.0-1",
+          "architecture": "aarch64"
+        },
+        "libxcrypt": {
+          "version": "4.5.2-1",
+          "architecture": "aarch64"
+        },
+        "libxdmcp": {
+          "version": "1.1.5-2",
+          "architecture": "aarch64"
+        },
+        "libxext": {
+          "version": "1.3.7-1",
+          "architecture": "aarch64"
+        },
+        "libxml2": {
+          "version": "2.15.4-1",
+          "architecture": "aarch64"
+        },
+        "libxshmfence": {
+          "version": "1.3.3-1",
+          "architecture": "aarch64"
+        },
+        "libxxf86vm": {
+          "version": "1.1.7-1",
+          "architecture": "aarch64"
+        },
+        "licenses": {
+          "version": "20240728-1",
+          "architecture": "any"
+        },
+        "linux-api-headers": {
+          "version": "7.2-1",
+          "architecture": "aarch64"
+        },
+        "linux-firmware": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-firmware-amd": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-firmware-amdgpu": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-firmware-atheros": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-firmware-broadcom": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-firmware-cirrus": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-firmware-intel": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-firmware-mediatek": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-firmware-nvidia": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-firmware-other": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-firmware-radeon": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-firmware-realtek": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-firmware-ti": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-firmware-whence": {
+          "version": "20260916-1",
+          "architecture": "any"
+        },
+        "linux-n1x-nvidia-bin": {
+          "version": "7.0.0.1022.23-2",
+          "architecture": "aarch64"
+        },
+        "llvm-libs": {
+          "version": "23.1.1-1",
+          "architecture": "aarch64"
+        },
+        "lm_sensors": {
+          "version": "1:3.6.2-1",
+          "architecture": "aarch64"
+        },
+        "lmdb": {
+          "version": "0.9.35-1",
+          "architecture": "aarch64"
+        },
+        "lvm2": {
+          "version": "2.03.43-2",
+          "architecture": "aarch64"
+        },
+        "lz4": {
+          "version": "1:1.10.0-2",
+          "architecture": "aarch64"
+        },
+        "lzo": {
+          "version": "2.10-5",
+          "architecture": "aarch64"
+        },
+        "m4": {
+          "version": "1.4.21-2",
+          "architecture": "aarch64"
+        },
+        "make": {
+          "version": "4.4.1-3",
+          "architecture": "aarch64"
+        },
+        "mesa": {
+          "version": "1:26.2.4-1",
+          "architecture": "aarch64"
+        },
+        "meson": {
+          "version": "1.12.1-2",
+          "architecture": "any"
+        },
+        "mkinitcpio": {
+          "version": "42.2-1",
+          "architecture": "any"
+        },
+        "mkinitcpio-busybox": {
+          "version": "1.36.1-1",
+          "architecture": "aarch64"
+        },
+        "mobile-broadband-provider-info": {
+          "version": "20251101-1",
+          "architecture": "any"
+        },
+        "mpdecimal": {
+          "version": "4.0.1-3",
+          "architecture": "aarch64"
+        },
+        "mpfr": {
+          "version": "4.2.2-1",
+          "architecture": "aarch64"
+        },
+        "nano": {
+          "version": "9.2-1",
+          "architecture": "aarch64"
+        },
+        "ncurses": {
+          "version": "6.6-2",
+          "architecture": "aarch64"
+        },
+        "net-tools": {
+          "version": "2.10-3",
+          "architecture": "aarch64"
+        },
+        "netctl": {
+          "version": "1.29-2",
+          "architecture": "any"
+        },
+        "nettle": {
+          "version": "4.0-1",
+          "architecture": "aarch64"
+        },
+        "networkmanager": {
+          "version": "1.58.1-2",
+          "architecture": "aarch64"
+        },
+        "nftables": {
+          "version": "1:1.1.7-3",
+          "architecture": "aarch64"
+        },
+        "ninja": {
+          "version": "1.13.2-3",
+          "architecture": "aarch64"
+        },
+        "npth": {
+          "version": "1.8-1",
+          "architecture": "aarch64"
+        },
+        "nspr": {
+          "version": "4.40-1",
+          "architecture": "aarch64"
+        },
+        "nss": {
+          "version": "3.131-1",
+          "architecture": "aarch64"
+        },
+        "nvidia-n1x-userspace-fix": {
+          "version": "615.78.08-1",
+          "architecture": "aarch64"
+        },
+        "nvidia-open-dkms": {
+          "version": "615.78.08-1",
+          "architecture": "aarch64"
+        },
+        "nvidia-utils": {
+          "version": "615.78.08-1",
+          "architecture": "aarch64"
+        },
+        "nvme-cli": {
+          "version": "3.1-1",
+          "architecture": "aarch64"
+        },
+        "openssh": {
+          "version": "10.6p1-2",
+          "architecture": "aarch64"
+        },
+        "openssl": {
+          "version": "3.6.5-1",
+          "architecture": "aarch64"
+        },
+        "p11-kit": {
+          "version": "0.26.5-1",
+          "architecture": "aarch64"
+        },
+        "pacman": {
+          "version": "7.1.0.r9.g54d9411-3",
+          "architecture": "aarch64"
+        },
+        "pacman-mirrorlist": {
+          "version": "20260411-2",
+          "architecture": "any"
+        },
+        "pam": {
+          "version": "1.7.3-1",
+          "architecture": "aarch64"
+        },
+        "pambase": {
+          "version": "20260616-1",
+          "architecture": "any"
+        },
+        "parted": {
+          "version": "3.8-1",
+          "architecture": "aarch64"
+        },
+        "patch": {
+          "version": "2.8-1",
+          "architecture": "aarch64"
+        },
+        "pciutils": {
+          "version": "3.15.0-1",
+          "architecture": "aarch64"
+        },
+        "pcre": {
+          "version": "8.45-5",
+          "architecture": "aarch64"
+        },
+        "pcre2": {
+          "version": "10.49-1",
+          "architecture": "aarch64"
+        },
+        "pcsclite": {
+          "version": "2.5.2-1",
+          "architecture": "aarch64"
+        },
+        "perl": {
+          "version": "5.42.3-1",
+          "architecture": "aarch64"
+        },
+        "pinentry": {
+          "version": "1.3.3-1",
+          "architecture": "aarch64"
+        },
+        "pkgconf": {
+          "version": "3.0.7-1",
+          "architecture": "aarch64"
+        },
+        "polkit": {
+          "version": "127-3",
+          "architecture": "aarch64"
+        },
+        "popt": {
+          "version": "1.19-2",
+          "architecture": "aarch64"
+        },
+        "power-profiles-daemon-n1x": {
+          "version": "0.30.nvidia3001c25-1",
+          "architecture": "aarch64"
+        },
+        "procps-ng": {
+          "version": "4.0.7-1",
+          "architecture": "aarch64"
+        },
+        "psmisc": {
+          "version": "23.7-2",
+          "architecture": "aarch64"
+        },
+        "python": {
+          "version": "3.14.8-1",
+          "architecture": "aarch64"
+        },
+        "python-annotated-types": {
+          "version": "0.8.0-1",
+          "architecture": "any"
+        },
+        "python-cffi": {
+          "version": "2.1.1-1",
+          "architecture": "aarch64"
+        },
+        "python-cryptography": {
+          "version": "50.0.2-1",
+          "architecture": "aarch64"
+        },
+        "python-gobject": {
+          "version": "3.58.1-1",
+          "architecture": "aarch64"
+        },
+        "python-linkify-it-py": {
+          "version": "2.2.0-1",
+          "architecture": "any"
+        },
+        "python-markdown-it-py": {
+          "version": "4.2.0-1",
+          "architecture": "any"
+        },
+        "python-mdit_py_plugins": {
+          "version": "0.6.1-1",
+          "architecture": "any"
+        },
+        "python-mdurl": {
+          "version": "0.1.2-9",
+          "architecture": "any"
+        },
+        "python-packaging": {
+          "version": "26.3-1",
+          "architecture": "any"
+        },
+        "python-platformdirs": {
+          "version": "4.13.0-1",
+          "architecture": "any"
+        },
+        "python-pycparser": {
+          "version": "3.11-1",
+          "architecture": "any"
+        },
+        "python-pydantic": {
+          "version": "2.14.1-1",
+          "architecture": "any"
+        },
+        "python-pydantic-core": {
+          "version": "3:2.50.1-1",
+          "architecture": "aarch64"
+        },
+        "python-pygments": {
+          "version": "2.21.0-1",
+          "architecture": "any"
+        },
+        "python-pyparted": {
+          "version": "3.13.0-6",
+          "architecture": "aarch64"
+        },
+        "python-rich": {
+          "version": "15.0.0-1",
+          "architecture": "any"
+        },
+        "python-textual": {
+          "version": "8.2.8-2",
+          "architecture": "any"
+        },
+        "python-tqdm": {
+          "version": "4.70.1-1",
+          "architecture": "any"
+        },
+        "python-typing-inspection": {
+          "version": "0.4.4-1",
+          "architecture": "any"
+        },
+        "python-typing_extensions": {
+          "version": "4.16.0-1",
+          "architecture": "any"
+        },
+        "readline": {
+          "version": "8.3.6-1",
+          "architecture": "aarch64"
+        },
+        "rsync": {
+          "version": "3.5.1-3",
+          "architecture": "aarch64"
+        },
+        "sed": {
+          "version": "4.10-2",
+          "architecture": "aarch64"
+        },
+        "shadow": {
+          "version": "4.20.0.arch1-1",
+          "architecture": "aarch64"
+        },
+        "slang": {
+          "version": "2.3.3-4",
+          "architecture": "aarch64"
+        },
+        "source-highlight": {
+          "version": "3.1.9-19",
+          "architecture": "aarch64"
+        },
+        "spirv-tools": {
+          "version": "1:1.4.363.0-1",
+          "architecture": "aarch64"
+        },
+        "sqlite": {
+          "version": "3.54.0-1",
+          "architecture": "aarch64"
+        },
+        "sudo": {
+          "version": "1.9.17.p2-6",
+          "architecture": "aarch64"
+        },
+        "systemd": {
+          "version": "262-1",
+          "architecture": "aarch64"
+        },
+        "systemd-libs": {
+          "version": "262-1",
+          "architecture": "aarch64"
+        },
+        "systemd-resolvconf": {
+          "version": "262-1",
+          "architecture": "aarch64"
+        },
+        "systemd-sysvcompat": {
+          "version": "262-1",
+          "architecture": "aarch64"
+        },
+        "tar": {
+          "version": "1.35-5",
+          "architecture": "aarch64"
+        },
+        "texinfo": {
+          "version": "7.3-1",
+          "architecture": "aarch64"
+        },
+        "thin-provisioning-tools": {
+          "version": "1.3.4-1",
+          "architecture": "aarch64"
+        },
+        "tpm2-tss": {
+          "version": "4.2.0-2",
+          "architecture": "aarch64"
+        },
+        "tzdata": {
+          "version": "2026e-1",
+          "architecture": "aarch64"
+        },
+        "upower": {
+          "version": "1.91.5-1",
+          "architecture": "aarch64"
+        },
+        "usbutils": {
+          "version": "019-1",
+          "architecture": "aarch64"
+        },
+        "util-linux": {
+          "version": "2.42.4-1",
+          "architecture": "aarch64"
+        },
+        "util-linux-libs": {
+          "version": "2.42.4-1",
+          "architecture": "aarch64"
+        },
+        "v4l-utils": {
+          "version": "1.32.0-2",
+          "architecture": "aarch64"
+        },
+        "vim": {
+          "version": "9.2.1178-1",
+          "architecture": "aarch64"
+        },
+        "vim-runtime": {
+          "version": "9.2.1178-1",
+          "architecture": "aarch64"
+        },
+        "wayland": {
+          "version": "1.26.0-1",
+          "architecture": "aarch64"
+        },
+        "which": {
+          "version": "2.25-1",
+          "architecture": "aarch64"
+        },
+        "wpa_supplicant": {
+          "version": "2:2.12-1",
+          "architecture": "aarch64"
+        },
+        "xcb-proto": {
+          "version": "1.17.0-4",
+          "architecture": "any"
+        },
+        "xfsprogs": {
+          "version": "7.2.0-1",
+          "architecture": "aarch64"
+        },
+        "xorgproto": {
+          "version": "2026.1-1",
+          "architecture": "any"
+        },
+        "xxhash": {
+          "version": "0.8.4-1",
+          "architecture": "aarch64"
+        },
+        "xz": {
+          "version": "5.8.4-1",
+          "architecture": "aarch64"
+        },
+        "zeromq": {
+          "version": "4.3.5-3",
+          "architecture": "aarch64"
+        },
+        "zlib": {
+          "version": "1:1.3.2-4",
+          "architecture": "aarch64"
+        },
+        "zstd": {
+          "version": "1.5.7-3",
+          "architecture": "aarch64"
+        }
+      }
+    }
+  }
+}

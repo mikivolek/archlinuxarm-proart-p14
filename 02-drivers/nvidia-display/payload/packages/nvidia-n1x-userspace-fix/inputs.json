@@ -1,0 +1,10 @@
+{
+  "schema": "h7607a-package-inputs-v1",
+  "package": "nvidia-n1x-userspace-fix",
+  "inputs": [
+    {
+      "artifact_id": "NVIDIA-Linux-aarch64-615.78.08.run",
+      "filename": "NVIDIA-Linux-aarch64-615.78.08.run"
+    }
+  ]
+}

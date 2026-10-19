@@ -1,0 +1,102 @@
+{
+  "schema": "h7607a-components-v1",
+  "components": [
+    {
+      "manifest": "01-platform/kernel/component.yaml",
+      "sha256": "7d53ac8c8d6cf1770e028eda6c885ea6a918909bd6e8fba567549ab2e5329875"
+    },
+    {
+      "manifest": "01-platform/acpi/component.yaml",
+      "sha256": "159363d9a4c9198369fbe339813aea4a865177ff0907689c93a95e588cade8c5"
+    },
+    {
+      "manifest": "02-drivers/nvidia-display/component.yaml",
+      "sha256": "7af01c6a358bd13fee83ee137dc8a4d9694eac193256b0259f04374596945147"
+    },
+    {
+      "manifest": "02-drivers/keyboard/component.yaml",
+      "sha256": "f3fc9c92734a395de5e07882088c140a210fc0d60f5b67513ad471f64bfed900"
+    },
+    {
+      "manifest": "02-drivers/audio/component.yaml",
+      "sha256": "84698dbb901d74b96fcfe674352357f0a522addf9dec27d67dba86ba85361ffa"
+    },
+    {
+      "manifest": "02-drivers/soundwire/component.yaml",
+      "sha256": "52cb7b62674b251980aa47781c5af4a3d985094a80bcf11c4d9cdaed7987d476"
+    },
+    {
+      "manifest": "03-system/power/component.yaml",
+      "sha256": "2718997ce6365b37a7199ca8b9e1f33c90c150ec85be95652a941e9ea68ffc51"
+    },
+    {
+      "manifest": "03-system/policy/component.yaml",
+      "sha256": "1217f1d2dc7587f38e6332d5d3aea2774a979651e3c4739424483b847e7393e8"
+    },
+    {
+      "manifest": "03-system/input-audio/component.yaml",
+      "sha256": "20b380729796d9ba412de2c3b00a6c2ad8a7a8b9ab13d3043f4e394bdb8d3898"
+    },
+    {
+      "manifest": "05-development/python-cuda/component.yaml",
+      "sha256": "dca4b584ef7455a64036230769094344e42f20484fcb596f7c2c6f684d0a6bf5"
+    },
+    {
+      "manifest": "05-development/containers/component.yaml",
+      "sha256": "a0f9cef52bf1bab51a0f0f2c418021819c0049ae957faa6879263f7751fc16a8"
+    },
+    {
+      "manifest": "06-installation/archinstall/component.yaml",
+      "sha256": "a934f10a973d5387a9869bc23fbc23bba09bcd717f3a29cc19f19ecad8282fbc"
+    },
+    {
+      "manifest": "06-installation/wheel-carrier/component.yaml",
+      "sha256": "fb02823b0616879dbaf453d52f778ee2fe09e6dbe22c278647408487245395ad"
+    },
+    {
+      "manifest": "07-build/media/component.yaml",
+      "sha256": "8371248a38be7985fac768865156fa14ca52e35ca945bfc83be83cc59af62869"
+    },
+    {
+      "manifest": "07-build/packages/component.yaml",
+      "sha256": "6095cd1249ea1f12016889eb2976accb6e7d9a0203335dc9cd76008c35674960"
+    },
+    {
+      "manifest": "07-build/locked-inputs/component.yaml",
+      "sha256": "53318290c28743980fb099d3149dce109b1b5ea8b93dc3b40f1722e5b6adf52c"
+    },
+    {
+      "manifest": "08-documentation/current/component.yaml",
+      "sha256": "f638bd283de3c1c9511ccf227c10d89b2e226e3f213693297326d5228c587efa"
+    }
+  ],
+  "assembly": {
+    "type": "custom",
+    "script": "assemble.sh",
+    "repo_url": null,
+    "checkout_hash": null,
+    "sparse": {
+      "enabled": false,
+      "paths": []
+    },
+    "dependencies": [
+      {
+        "name": "bash",
+        "version": "3.2.57",
+        "scope": "shell assembly; observed macOS host"
+      },
+      {
+        "name": "jq",
+        "version": "1.7.1-apple",
+        "scope": "component metadata; observed macOS host"
+      },
+      {
+        "name": "python",
+        "version": "3.13.5",
+        "scope": "image builder; observed native ARM64 Linux host"
+      }
+    ],
+    "image_builder": "scripts/build-live.py",
+    "package_repository": "build/repo"
+  }
+}

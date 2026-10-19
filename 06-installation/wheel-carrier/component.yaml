@@ -1,0 +1,87 @@
+{
+  "schema": "h7607a-component-v1",
+  "id": "wheel-carrier",
+  "type": "custom",
+  "repo_url": null,
+  "checkout_hash": null,
+  "sparse": {
+    "enabled": false,
+    "paths": []
+  },
+  "dependencies": [
+    {
+      "name": "python",
+      "version": "3.14.8-1",
+      "command": "python3",
+      "policy": "pinned-live-inventory",
+      "scope": "runtime"
+    },
+    {
+      "name": "util-linux",
+      "version": "2.42.4-1",
+      "command": "blkid",
+      "policy": "pinned-live-inventory",
+      "scope": "runtime"
+    },
+    {
+      "name": "python",
+      "version": "3.14.8-1",
+      "scope": "ALARM runtime; standard library unless entry lists otherwise"
+    }
+  ],
+  "depends_on": [
+    "python-cuda"
+  ],
+  "items": [
+    {
+      "id": "offline-python-wheel-carrier",
+      "type": "custom",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "code": "src/h7607a/carrier.py",
+      "configuration": "locks/usb-layout.json",
+      "dependencies": [
+        {
+          "name": "python",
+          "version": "3.14.8-1",
+          "command": "python3",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "util-linux",
+          "version": "2.42.4-1",
+          "command": "blkid",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "python",
+          "version": "3.14.8-1",
+          "scope": "ALARM runtime; standard library unless entry lists otherwise"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "source": "payload/locks/usb-layout.json",
+      "destination": "locks/usb-layout.json",
+      "bytes": 10989,
+      "sha256": "f95fdf333bc3a18d95bea2fff220c069bc96fb72b6d1c53e75165bfd474013b2",
+      "mode": 420
+    },
+    {
+      "source": "payload/src/h7607a/carrier.py",
+      "destination": "src/h7607a/carrier.py",
+      "bytes": 19938,
+      "sha256": "6863c7fcedb8ff3ed82e6d5234b3d37644142fc5e55c2b66d3bab18f6cd33a68",
+      "mode": 420
+    }
+  ],
+  "links": []
+}

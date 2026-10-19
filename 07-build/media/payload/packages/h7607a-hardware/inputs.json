@@ -1,0 +1,74 @@
+{
+  "schema": "h7607a-package-inputs-v1",
+  "package": "h7607a-hardware",
+  "inputs": [
+    {
+      "artifact_id": "hid-asus-h7607ba",
+      "filename": "hid-asus.ko"
+    },
+    {
+      "artifact_id": "mt8901-h7607ba-audio",
+      "filename": "mt8901-acp-sdw-legacy-mach.ko"
+    },
+    {
+      "artifact_id": "h7607a-initcpio-install",
+      "filename": "initcpio-install"
+    },
+    {
+      "artifact_id": "h7607a-initcpio-hook",
+      "filename": "initcpio-hook"
+    },
+    {
+      "artifact_id": "h7607a-initcpio-config",
+      "filename": "mkinitcpio.conf"
+    },
+    {
+      "artifact_id": "h7607a-depmod-config",
+      "filename": "depmod.conf"
+    },
+    {
+      "artifact_id": "h7607a-nvidia-config",
+      "filename": "nvidia.conf"
+    },
+    {
+      "artifact_id": "n1x-cppc-init",
+      "filename": "n1x-cppc-init.py"
+    },
+    {
+      "artifact_id": "n1x-cppc-service",
+      "filename": "n1x-cppc-init.service"
+    },
+    {
+      "artifact_id": "soundwire-mtk-interrupt-gate",
+      "filename": "soundwire-mtk.ko"
+    },
+    {
+      "artifact_id": "h7607a-camera-blacklist",
+      "filename": "60-h7607a-no-camera.conf"
+    },
+    {
+      "artifact_id": "h7607a-ucm-card",
+      "filename": "mt8901-soundwir.conf"
+    },
+    {
+      "artifact_id": "h7607a-ucm-playback",
+      "filename": "P16-playback.conf"
+    },
+    {
+      "artifact_id": "h7607a-wireplumber-playback",
+      "filename": "51-h7607a-playback.conf"
+    },
+    {
+      "artifact_id": "h7607a-touchpad-quirk",
+      "filename": "60-h7607a-touchpad.quirks"
+    },
+    {
+      "artifact_id": "h7607a-audio-helper",
+      "filename": "h7607a-audio"
+    },
+    {
+      "artifact_id": "h7607a-brightness-helper",
+      "filename": "h7607a-brightness"
+    }
+  ]
+}

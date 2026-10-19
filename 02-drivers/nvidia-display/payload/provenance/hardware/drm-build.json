@@ -1,0 +1,106 @@
+{
+  "schema": "p16-drm-only-build-v1",
+  "status": "BUILT_NOT_LOADED",
+  "boot_id": "e144edda-ba1a-42c9-9006-fa648145361a",
+  "builder_sha256": "e760c2a8979c6df3ee3e63f4d66d02c7425c661fa8cee2956a1fff42eea506b5",
+  "source_manifest_sha256": "79ee35083684ed95cedb9b209ba4453558cc522918c188264610cee1056b8ce2",
+  "patch_sha256": "2cae1578e998735229b0b26056bb33ad9fad11eab2b925bcff00ecb22939c2e7",
+  "kernel_release": "7.0.0-1022-nvidia",
+  "NVIDIA_version": "615.78.08",
+  "build_only": true,
+  "live_modules_replaced": false,
+  "installed_files_written": false,
+  "candidate_loaded": false,
+  "optical_fix_verified": false,
+  "resource_cleanup_verified": true,
+  "workspace": "/run/p16-drm-e144edda-862",
+  "headers": {
+    "path": "/usr/src/linux-headers-7.0.0-1022-nvidia",
+    "anchors": {
+      ".config": "3702382acae6cb607b441f0a44c2f0929a9ed98b9d33dcf2f731b1a1d1469297",
+      "Module.symvers": "ad63eccd8911085a10d7996b78dd0c40f6bcaa0b32d42986a9cce39e0101a7ba",
+      "Makefile": "f3fdeeaa2053f98aa80f3c0d8efd797bddec5d2dc112ed2232b16cfd720debaf",
+      "include/config/auto.conf": "430df14bc7aec97db7a25388783c0a69f5d0630fb10b6ef2979e1ad99a779389",
+      "include/generated/autoconf.h": "deb435ae4bf00fe209a66e9d146a4ccb03b82a826a0f83b85844cb6e127a0935",
+      "include/generated/utsrelease.h": "7e524323ec20f848311d0666a66207dc2fb595be38b03e55795493a54abf670a",
+      "scripts/module.lds": "076eaff42468545fd1174e65c2e4104ba3030504b2a79576dae2453f9e6e7a25",
+      "include/generated/compile.h": "51a59cedb5d5e7973caea9c2cb72462e2d4920f7b78d3e420a72f70af4d47274"
+    }
+  },
+  "stock_before": {
+    "nvidia-drm": {
+      "path": "/usr/lib/modules/7.0.0-1022-nvidia/updates/dkms/nvidia-drm.ko.zst",
+      "sha256": "212ef5b75681018bff369e3ab586864ce45105842caaa619bd84054e97ea05b3",
+      "modinfo": {
+        "name": "nvidia_drm",
+        "version": "615.78.08",
+        "vermagic": "7.0.0-1022-nvidia SMP preempt mod_unload modversions aarch64",
+        "srcversion": "07E773BB4D6AF2BB51FCF36",
+        "depends": "drm_ttm_helper,nvidia-modeset,drm_display_helper",
+        "signer": ""
+      }
+    },
+    "nvidia-modeset": {
+      "path": "/usr/lib/modules/7.0.0-1022-nvidia/updates/dkms/nvidia-modeset.ko.zst",
+      "sha256": "f390076f7cec4a8fc7079dff8fddd7607b2d82a33b97219767d59cf98ea2475e",
+      "modinfo": {
+        "name": "nvidia_modeset",
+        "version": "615.78.08",
+        "vermagic": "7.0.0-1022-nvidia SMP preempt mod_unload modversions aarch64",
+        "srcversion": "7BA28538668890946505DA9",
+        "depends": "video,nvidia",
+        "signer": ""
+      }
+    }
+  },
+  "source_files_verified": 456,
+  "source_kind": "sealed-kernel-open-archive",
+  "NVIDIA_import_CRCs": {
+    "nvKmsKapiF16ToF32": "0xbf2809a5",
+    "nvKmsKapiF32Add": "0x34f91043",
+    "nvKmsKapiF32Div": "0x34f91043",
+    "nvKmsKapiF32Mul": "0x34f91043",
+    "nvKmsKapiF32ToF16": "0xc9d42b6a",
+    "nvKmsKapiF32ToUI32RMinMag": "0x8dac8e1a",
+    "nvKmsKapiGetFunctionsTable": "0x3c54d266",
+    "nvKmsKapiUI32ToF32": "0x6c458889"
+  },
+  "unprivileged_input_read_preflight": true,
+  "compiler": {
+    "gcc": "gcc (GCC) 16.1.1 20260430\nCopyright (C) 2026 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+    "kernel": "Linux version 7.0.0-1022-nvidia (buildd@bos03-arm64-021) (aarch64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0, GNU ld (GNU Binutils for Ubuntu) 2.42) #23~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Sat Oct  3 00:49:33 UTC 2",
+    "flags_environment": {
+      "PATH": "/usr/bin:/bin",
+      "LC_ALL": "C",
+      "LANG": "C",
+      "TMPDIR": "/run/p16-drm-e144edda-862/tmp"
+    },
+    "compiler_mismatch_override": false
+  },
+  "build_process": {
+    "returncode": 0,
+    "timeout_seconds": 900,
+    "process_group_gone": true
+  },
+  "build_elapsed_seconds": 22.090320511999998,
+  "candidate": {
+    "path": "/run/p16-drm-e144edda-862/nvidia-drm.ko",
+    "sha256": "9b0ceddf9da11337e9b9af1dd1c77e81fc3559cc1bfcdcc67cccd604d72e83bf",
+    "bytes": 6042416,
+    "modinfo": {
+      "name": "nvidia_drm",
+      "version": "615.78.08",
+      "vermagic": "7.0.0-1022-nvidia SMP preempt mod_unload modversions aarch64",
+      "srcversion": "4500F90245077CDA9BEF8C2",
+      "depends": "drm_ttm_helper,nvidia-modeset,drm_display_helper",
+      "signer": ""
+    },
+    "all_import_CRCs_equal_stock": true
+  },
+  "signature_policy": {
+    "lockdown": "[none] integrity confidentiality",
+    "sig_enforce": "N"
+  },
+  "stock_unchanged": true,
+  "headers_unchanged": true
+}

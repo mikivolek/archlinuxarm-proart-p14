@@ -1,0 +1,94 @@
+{
+  "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.5.0\nThread model: posix\n",
+  "linker": "LLD 19.1.7 (https://github.com/rust-lang/llvm-project.git 7e8c93c87c611f21d9bd95100563392f4c18bfe7)\n",
+  "files": {
+    "n1x-asus-ssdt-guard.c": {
+      "bytes": 6847,
+      "sha256": "2909970f31436ce892ff8a8f3122f10e673b0e7570debbffc932a168bcf361f3"
+    },
+    "guard-core.c": {
+      "bytes": 3533,
+      "sha256": "59c0f9945bd13c20758003c167e13c7dfe6d79b75a3d70e1e122824a8238d6e7"
+    },
+    "guard-core.h": {
+      "bytes": 511,
+      "sha256": "00b472755a698118b833a97af72d6eb3b8c88fdfc86f63309a3670aea675ed42"
+    },
+    "n1x-asus-ssdt-guard.efi": {
+      "bytes": 6656,
+      "sha256": "1cbf6bee9129e45afbbe0c25de635a5a53802cbf000b324e45eaaa7a7bee6050"
+    }
+  },
+  "firmware_runtime_tested": false,
+  "headers_provenance": "edk2-source-provenance.json",
+  "own_code_license": "MIT",
+  "vendor_license": "vendor/edk2/License.txt",
+  "historical_commands_with_tool_paths_normalized": [
+    [
+      "clang",
+      "--target=aarch64-pc-windows-msvc",
+      "-ffreestanding",
+      "-fshort-wchar",
+      "-fno-stack-protector",
+      "-fno-builtin",
+      "-mno-stack-arg-probe",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Ivendor/edk2/MdePkg/Include",
+      "-Ivendor/edk2/MdePkg/Include/AArch64",
+      "-c",
+      "n1x-asus-ssdt-guard.c",
+      "-o",
+      "n1x-asus-ssdt-guard.obj"
+    ],
+    [
+      "clang",
+      "--target=aarch64-pc-windows-msvc",
+      "-ffreestanding",
+      "-fshort-wchar",
+      "-fno-stack-protector",
+      "-fno-builtin",
+      "-mno-stack-arg-probe",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Ivendor/edk2/MdePkg/Include",
+      "-Ivendor/edk2/MdePkg/Include/AArch64",
+      "-c",
+      "guard-core.c",
+      "-o",
+      "guard-core.obj"
+    ],
+    [
+      "rust-lld",
+      "-flavor",
+      "link",
+      "/subsystem:efi_application",
+      "/entry:efi_main",
+      "/nodefaultlib",
+      "/machine:arm64",
+      "/base:0",
+      "/timestamp:0",
+      "/out:n1x-asus-ssdt-guard.efi",
+      "n1x-asus-ssdt-guard.obj",
+      "guard-core.obj"
+    ]
+  ],
+  "bundled_artifacts": {
+    "n1x-asus-ssdt-guard.c": "provenance/hardware/ssdt-guard.c",
+    "n1x-asus-ssdt-guard.efi": "assets/hardware/uefi/n1x-asus-ssdt-guard.efi"
+  },
+  "receipt_path_normalization": {
+    "schema": 1,
+    "kind": "historical receipt path normalization",
+    "original_receipt_sha256": "56806ded7fcc62adedfda70ff6405a59e086aa9676919b71457d7a30bc97e283",
+    "scope": "Replace historical host locations with repository artifacts or evidence identities; retain original artifact hashes, measurements and qualification states.",
+    "original_receipt_preserved_outside_release": true,
+    "not_a_new_build_or_hardware_capture": true,
+    "command_scope": "Historical command arguments, with clang/rust-lld executable locations reduced to tool names. They record the original build; they are not a complete current reconstruction recipe.",
+    "compiler_scope": "Historical compiler version/target retained; host-specific InstalledDir omitted."
+  }
+}

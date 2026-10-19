@@ -1,0 +1,3748 @@
+{
+  "schema": "h7607a-alarm-sources-v1",
+  "artifacts": [
+    {
+      "id": "source-acl-2.4.0-1",
+      "path": ".artifacts/sources/alarm/acl-2.4.0-1.src.tar.gz",
+      "bytes": 146225,
+      "sha256": "6880653d77519d552b047417fbc2dc8ccf98ad8dd16d39579c7923b04f6d8cc5",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/6880653d77519d552b047417fbc2dc8ccf98ad8dd16d39579c7923b04f6d8cc5"
+      ],
+      "pkgbase": "acl",
+      "version": "2.4.0-1",
+      "packages": [
+        "acl"
+      ],
+      "licenses": [
+        "LGPL-2.1-or-later AND GPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/acl.git",
+        "tag": "2.4.0-1"
+      }
+    },
+    {
+      "id": "source-arch-install-scripts-31-2",
+      "path": ".artifacts/sources/alarm/arch-install-scripts-31-2.src.tar.gz",
+      "bytes": 37928,
+      "sha256": "40f18d63f371a5e1cd0696ef8c4a37ada4439eb849f1932121c3f6d2bb01945a",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/40f18d63f371a5e1cd0696ef8c4a37ada4439eb849f1932121c3f6d2bb01945a"
+      ],
+      "pkgbase": "arch-install-scripts",
+      "version": "31-2",
+      "packages": [
+        "arch-install-scripts"
+      ],
+      "licenses": [
+        "GPL-2.0-only"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/arch-install-scripts.git",
+        "tag": "31-2"
+      }
+    },
+    {
+      "id": "source-archinstall-4.5-1",
+      "path": ".artifacts/sources/alarm/archinstall-4.5-1.src.tar.gz",
+      "bytes": 2096203,
+      "sha256": "ed6f8bfdc5dbe2f6915a6af425cd2c070fa458b95902a1291285c5b5bbff4c0d",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/ed6f8bfdc5dbe2f6915a6af425cd2c070fa458b95902a1291285c5b5bbff4c0d"
+      ],
+      "pkgbase": "archinstall",
+      "version": "4.5-1",
+      "packages": [
+        "archinstall"
+      ],
+      "licenses": [
+        "GPL-3.0-only"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/archinstall.git",
+        "tag": "4.5-1"
+      }
+    },
+    {
+      "id": "source-archlinux-keyring-20260727-1",
+      "path": ".artifacts/sources/alarm/archlinux-keyring-20260727-1.src.tar.gz",
+      "bytes": 1607246,
+      "sha256": "c387610a84a3ea326f3d6f4f087b928f5c5fc7f520b350b6793215438ed3111f",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/c387610a84a3ea326f3d6f4f087b928f5c5fc7f520b350b6793215438ed3111f"
+      ],
+      "pkgbase": "archlinux-keyring",
+      "version": "20260727-1",
+      "packages": [
+        "archlinux-keyring"
+      ],
+      "licenses": [
+        "GPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/archlinux-keyring.git",
+        "tag": "20260727-1"
+      }
+    },
+    {
+      "id": "source-archlinux-keyring-20260909-1",
+      "path": ".artifacts/sources/alarm/archlinux-keyring-20260909-1.src.tar.gz",
+      "bytes": 1609246,
+      "sha256": "1b755dc63b43ed846d61ff1a368057935d4a755f4eaa5b9ce4e463dab2590bf0",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/1b755dc63b43ed846d61ff1a368057935d4a755f4eaa5b9ce4e463dab2590bf0"
+      ],
+      "pkgbase": "archlinux-keyring",
+      "version": "20260909-1",
+      "packages": [
+        "archlinux-keyring"
+      ],
+      "licenses": [
+        "GPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/archlinux-keyring.git",
+        "tag": "20260909-1"
+      }
+    },
+    {
+      "id": "source-archlinuxarm-keyring-20240419-2",
+      "path": ".artifacts/sources/alarm/archlinuxarm-keyring-20240419-2.src.tar.gz",
+      "bytes": 3339,
+      "sha256": "1f27d0e64b9bf1ae91c48db2714eaacdd229390a28823b7bf9d84a66bd93fe4c",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/1f27d0e64b9bf1ae91c48db2714eaacdd229390a28823b7bf9d84a66bd93fe4c"
+      ],
+      "pkgbase": "archlinuxarm-keyring",
+      "version": "20240419-2",
+      "packages": [
+        "archlinuxarm-keyring"
+      ],
+      "licenses": [
+        "GPL"
+      ],
+      "recipe": {
+        "repository": "https://github.com/archlinuxarm/PKGBUILDs",
+        "commit": "29432c01130efc4ad297dfe8f487d5b79cbaf8e9",
+        "path": "core/archlinuxarm-keyring"
+      }
+    },
+    {
+      "id": "source-attr-2.6.0-1",
+      "path": ".artifacts/sources/alarm/attr-2.6.0-1.src.tar.gz",
+      "bytes": 95059,
+      "sha256": "d2ada8a2b5b6e963fb751d2d2bb0e9ef814dff215b42e56eb2b769ab1093132b",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/d2ada8a2b5b6e963fb751d2d2bb0e9ef814dff215b42e56eb2b769ab1093132b"
+      ],
+      "pkgbase": "attr",
+      "version": "2.6.0-1",
+      "packages": [
+        "attr"
+      ],
+      "licenses": [
+        "LGPL-2.1-or-later AND GPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/attr.git",
+        "tag": "2.6.0-1"
+      }
+    },
+    {
+      "id": "source-audit-4.2.1-1",
+      "path": ".artifacts/sources/alarm/audit-4.2.1-1.src.tar.gz",
+      "bytes": 762513,
+      "sha256": "bd8642fba5257aac243b14f1efb828e7b2de68758dad00e712410e8bb531c0d5",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/bd8642fba5257aac243b14f1efb828e7b2de68758dad00e712410e8bb531c0d5"
+      ],
+      "pkgbase": "audit",
+      "version": "4.2.1-1",
+      "packages": [
+        "audit"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later",
+        "LGPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/audit.git",
+        "tag": "4.2.1-1"
+      }
+    },
+    {
+      "id": "source-base-3-3",
+      "path": ".artifacts/sources/alarm/base-3-3.src.tar.gz",
+      "bytes": 1537,
+      "sha256": "5c8ff4e87a67b5bd07b6c4304681ce2e53b7d832129552748132f0a8f691981e",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/5c8ff4e87a67b5bd07b6c4304681ce2e53b7d832129552748132f0a8f691981e"
+      ],
+      "pkgbase": "base",
+      "version": "3-3",
+      "packages": [
+        "base"
+      ],
+      "licenses": [
+        "GPL"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/base.git",
+        "tag": "3-3"
+      }
+    },
+    {
+      "id": "source-bash-5.3.15-1",
+      "path": ".artifacts/sources/alarm/bash-5.3.15-1.src.tar.gz",
+      "bytes": 11368833,
+      "sha256": "5910c70e5fb4a51be713324bc4172c8f12074aeced5ddc2cfdab2f41d5f822cf",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/5910c70e5fb4a51be713324bc4172c8f12074aeced5ddc2cfdab2f41d5f822cf"
+      ],
+      "pkgbase": "bash",
+      "version": "5.3.15-1",
+      "packages": [
+        "bash"
+      ],
+      "licenses": [
+        "GPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/bash.git",
+        "tag": "5.3.15-1"
+      }
+    },
+    {
+      "id": "source-bash-5.3.20-1",
+      "path": ".artifacts/sources/alarm/bash-5.3.20-1.src.tar.gz",
+      "bytes": 11373806,
+      "sha256": "61676853173e01451c7fb36c55315442240034f80b717216ec6b94f05aef32b8",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/61676853173e01451c7fb36c55315442240034f80b717216ec6b94f05aef32b8"
+      ],
+      "pkgbase": "bash",
+      "version": "5.3.20-1",
+      "packages": [
+        "bash"
+      ],
+      "licenses": [
+        "GPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/bash.git",
+        "tag": "5.3.20-1"
+      }
+    },
+    {
+      "id": "source-binutils-2.46+r70+g155188ea10a7-1",
+      "path": ".artifacts/sources/alarm/binutils-2.46+r70+g155188ea10a7-1.src.tar.gz",
+      "bytes": 70470341,
+      "sha256": "f9841e6316dd7ccd32b070e73de62db6d89c9254bcbc1c175125dbbb8a6efab0",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/f9841e6316dd7ccd32b070e73de62db6d89c9254bcbc1c175125dbbb8a6efab0"
+      ],
+      "pkgbase": "binutils",
+      "version": "2.46+r70+g155188ea10a7-1",
+      "packages": [
+        "binutils"
+      ],
+      "licenses": [
+        "FSFAP",
+        "GFDL-1.3",
+        "GPL-2.0-or-later",
+        "GPL-3.0-or-later",
+        "LGPL-2.0-or-later",
+        "LGPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://github.com/archlinuxarm/PKGBUILDs",
+        "commit": "f615d0907b802a3928d8bc8a647ebec14c7df557",
+        "path": "core/binutils"
+      }
+    },
+    {
+      "id": "source-btrfs-progs-7.1-1",
+      "path": ".artifacts/sources/alarm/btrfs-progs-7.1-1.src.tar.gz",
+      "bytes": 5473806,
+      "sha256": "f13076b3a7a7887b98bc6b59152a18823e198341bb4277d45e5c75b28ad9b3ec",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/f13076b3a7a7887b98bc6b59152a18823e198341bb4277d45e5c75b28ad9b3ec"
+      ],
+      "pkgbase": "btrfs-progs",
+      "version": "7.1-1",
+      "packages": [
+        "btrfs-progs"
+      ],
+      "licenses": [
+        "GPL-2.0-only"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/btrfs-progs.git",
+        "tag": "7.1-1"
+      }
+    },
+    {
+      "id": "source-ca-certificates-20240618-1",
+      "path": ".artifacts/sources/alarm/ca-certificates-20240618-1.src.tar.gz",
+      "bytes": 8870,
+      "sha256": "970c4525e20b66eabed01aec1c11df4d9e172ac42a0c0284dde603610bbbf087",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/970c4525e20b66eabed01aec1c11df4d9e172ac42a0c0284dde603610bbbf087"
+      ],
+      "pkgbase": "ca-certificates",
+      "version": "20240618-1",
+      "packages": [
+        "ca-certificates",
+        "ca-certificates-utils"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/ca-certificates.git",
+        "tag": "20240618-1"
+      }
+    },
+    {
+      "id": "source-coreutils-9.11-2",
+      "path": ".artifacts/sources/alarm/coreutils-9.11-2.src.tar.gz",
+      "bytes": 26714818,
+      "sha256": "268375c423a5ac3d82640e1b5e5524641c047fcca88e19c8a0f368245effab87",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/268375c423a5ac3d82640e1b5e5524641c047fcca88e19c8a0f368245effab87"
+      ],
+      "pkgbase": "coreutils",
+      "version": "9.11-2",
+      "packages": [
+        "coreutils"
+      ],
+      "licenses": [
+        "GFDL-1.3-or-later",
+        "GPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/coreutils.git",
+        "tag": "9.11-2"
+      }
+    },
+    {
+      "id": "source-coreutils-9.12-2",
+      "path": ".artifacts/sources/alarm/coreutils-9.12-2.src.tar.gz",
+      "bytes": 27411652,
+      "sha256": "fb671c127d52302b6fb3c31fc1fc181af1e042d4bf955803a2782725425dcd9b",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/fb671c127d52302b6fb3c31fc1fc181af1e042d4bf955803a2782725425dcd9b"
+      ],
+      "pkgbase": "coreutils",
+      "version": "9.12-2",
+      "packages": [
+        "coreutils"
+      ],
+      "licenses": [
+        "GFDL-1.3-or-later",
+        "GPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/coreutils.git",
+        "tag": "9.12-2"
+      }
+    },
+    {
+      "id": "source-cpio-2.15-3",
+      "path": ".artifacts/sources/alarm/cpio-2.15-3.src.tar.gz",
+      "bytes": 8263510,
+      "sha256": "f1105f18917b80e4fb50dd6249519aab352d982d02d8ad149803ef2d4975eb72",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/f1105f18917b80e4fb50dd6249519aab352d982d02d8ad149803ef2d4975eb72"
+      ],
+      "pkgbase": "cpio",
+      "version": "2.15-3",
+      "packages": [
+        "cpio"
+      ],
+      "licenses": [
+        "GPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/cpio.git",
+        "tag": "2.15-3"
+      }
+    },
+    {
+      "id": "source-cryptsetup-2.8.7-1",
+      "path": ".artifacts/sources/alarm/cryptsetup-2.8.7-1.src.tar.gz",
+      "bytes": 11927923,
+      "sha256": "30cc83ff950a05cb3260f89e19ef12c6037581dc0b933f0c2dd303486ec10243",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/30cc83ff950a05cb3260f89e19ef12c6037581dc0b933f0c2dd303486ec10243"
+      ],
+      "pkgbase": "cryptsetup",
+      "version": "2.8.7-1",
+      "packages": [
+        "cryptsetup"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/cryptsetup.git",
+        "tag": "2.8.7-1"
+      }
+    },
+    {
+      "id": "source-cryptsetup-2.8.8-1",
+      "path": ".artifacts/sources/alarm/cryptsetup-2.8.8-1.src.tar.gz",
+      "bytes": 11956868,
+      "sha256": "d070cbb38bcdb2e839ddb58506e52f0a7ea0b751d76ed9fc377065d9fd59c5c7",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/d070cbb38bcdb2e839ddb58506e52f0a7ea0b751d76ed9fc377065d9fd59c5c7"
+      ],
+      "pkgbase": "cryptsetup",
+      "version": "2.8.8-1",
+      "packages": [
+        "cryptsetup"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/cryptsetup.git",
+        "tag": "2.8.8-1"
+      }
+    },
+    {
+      "id": "source-dbus-1.16.2-1",
+      "path": ".artifacts/sources/alarm/dbus-1.16.2-1.src.tar.gz",
+      "bytes": 1575730,
+      "sha256": "f99e67541f3e9cd9b413d22f89d3876150aa533cbd556acc8e1c2ff1584a937e",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/f99e67541f3e9cd9b413d22f89d3876150aa533cbd556acc8e1c2ff1584a937e"
+      ],
+      "pkgbase": "dbus",
+      "version": "1.16.2-1",
+      "packages": [
+        "dbus"
+      ],
+      "licenses": [
+        "AFL-2.1 OR GPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/dbus.git",
+        "tag": "1.16.2-1"
+      }
+    },
+    {
+      "id": "source-diffutils-3.12-2",
+      "path": ".artifacts/sources/alarm/diffutils-3.12-2.src.tar.gz",
+      "bytes": 9268800,
+      "sha256": "7d72a60b32f0f3d96acd307e9f0ee54fe96859a5d09e9b70dcc499afb780a326",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/7d72a60b32f0f3d96acd307e9f0ee54fe96859a5d09e9b70dcc499afb780a326"
+      ],
+      "pkgbase": "diffutils",
+      "version": "3.12-2",
+      "packages": [
+        "diffutils"
+      ],
+      "licenses": [
+        "GPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/diffutils.git",
+        "tag": "3.12-2"
+      }
+    },
+    {
+      "id": "source-dosfstools-4.2-5",
+      "path": ".artifacts/sources/alarm/dosfstools-4.2-5.src.tar.gz",
+      "bytes": 328457,
+      "sha256": "239d49e1caedc108005397de689abab9deab0bc4d61ca3a2a01353bf18fc785f",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/239d49e1caedc108005397de689abab9deab0bc4d61ca3a2a01353bf18fc785f"
+      ],
+      "pkgbase": "dosfstools",
+      "version": "4.2-5",
+      "packages": [
+        "dosfstools"
+      ],
+      "licenses": [
+        "GPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/dosfstools.git",
+        "tag": "4.2-5"
+      }
+    },
+    {
+      "id": "source-e2fsprogs-1.47.4-1",
+      "path": ".artifacts/sources/alarm/e2fsprogs-1.47.4-1.src.tar.gz",
+      "bytes": 10103945,
+      "sha256": "b815d840edff9181cca7638d8a25480a962e761d6b0aff76f45bf287d505b084",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/b815d840edff9181cca7638d8a25480a962e761d6b0aff76f45bf287d505b084"
+      ],
+      "pkgbase": "e2fsprogs",
+      "version": "1.47.4-1",
+      "packages": [
+        "e2fsprogs"
+      ],
+      "licenses": [
+        "GPL",
+        "LGPL",
+        "MIT"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/e2fsprogs.git",
+        "tag": "1.47.4-1"
+      }
+    },
+    {
+      "id": "source-efibootmgr-18-4",
+      "path": ".artifacts/sources/alarm/efibootmgr-18-4.src.tar.gz",
+      "bytes": 54039,
+      "sha256": "e88a5806db0e06d181bc0e0d9eab8027fde582c4567d2fbacce5b86fb32722d8",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/e88a5806db0e06d181bc0e0d9eab8027fde582c4567d2fbacce5b86fb32722d8"
+      ],
+      "pkgbase": "efibootmgr",
+      "version": "18-4",
+      "packages": [
+        "efibootmgr"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/efibootmgr.git",
+        "tag": "18-4"
+      }
+    },
+    {
+      "id": "source-efivar-39-2",
+      "path": ".artifacts/sources/alarm/efivar-39-2.src.tar.gz",
+      "bytes": 476724,
+      "sha256": "66897c39c7e1d18946e28050ec2bcc2425b1c0418f979e905fc56183c058ab5e",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/66897c39c7e1d18946e28050ec2bcc2425b1c0418f979e905fc56183c058ab5e"
+      ],
+      "pkgbase": "efivar",
+      "version": "39-2",
+      "packages": [
+        "efivar"
+      ],
+      "licenses": [
+        "LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/efivar.git",
+        "tag": "39-2"
+      }
+    },
+    {
+      "id": "source-elfutils-0.195-1",
+      "path": ".artifacts/sources/alarm/elfutils-0.195-1.src.tar.gz",
+      "bytes": 11827170,
+      "sha256": "806f502e5ab64a65160b8b07e7997dddbd876cea12ee8eff5c0756e25049abca",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/806f502e5ab64a65160b8b07e7997dddbd876cea12ee8eff5c0756e25049abca"
+      ],
+      "pkgbase": "elfutils",
+      "version": "0.195-1",
+      "packages": [
+        "libelf"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later OR LGPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://github.com/archlinuxarm/PKGBUILDs",
+        "commit": "dd14bbd94ec014b7c5f8a2d80a38a38822066063",
+        "path": "core/elfutils"
+      }
+    },
+    {
+      "id": "source-elfutils-0.196-1",
+      "path": ".artifacts/sources/alarm/elfutils-0.196-1.src.tar.gz",
+      "bytes": 11919450,
+      "sha256": "89bf199045e94931d070b23142fe8fe5266c0b27355350cb64e9c584acee5a07",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/89bf199045e94931d070b23142fe8fe5266c0b27355350cb64e9c584acee5a07"
+      ],
+      "pkgbase": "elfutils",
+      "version": "0.196-1",
+      "packages": [
+        "libelf"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later OR LGPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://github.com/archlinuxarm/PKGBUILDs",
+        "commit": "351ce02b82098e5149246867457bfdf88d9f0b6f",
+        "path": "core/elfutils"
+      }
+    },
+    {
+      "id": "source-f2fs-tools-1.17.0-1",
+      "path": ".artifacts/sources/alarm/f2fs-tools-1.17.0-1.src.tar.gz",
+      "bytes": 304112,
+      "sha256": "5e337180b397079eefbe7d9d62df7f6ace5f7ed6feeaf34bf606da75051d60ef",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/5e337180b397079eefbe7d9d62df7f6ace5f7ed6feeaf34bf606da75051d60ef"
+      ],
+      "pkgbase": "f2fs-tools",
+      "version": "1.17.0-1",
+      "packages": [
+        "f2fs-tools"
+      ],
+      "licenses": [
+        "GPL-2.0-only AND (GPL-2.0-only OR LGPL-2.1-only)"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/f2fs-tools.git",
+        "tag": "1.17.0-1"
+      }
+    },
+    {
+      "id": "source-findutils-4.11.0-1",
+      "path": ".artifacts/sources/alarm/findutils-4.11.0-1.src.tar.gz",
+      "bytes": 9924887,
+      "sha256": "649a43057e349d1dda592a36a5f49dae372b5438bcf2125e0fb782805662fe65",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/649a43057e349d1dda592a36a5f49dae372b5438bcf2125e0fb782805662fe65"
+      ],
+      "pkgbase": "findutils",
+      "version": "4.11.0-1",
+      "packages": [
+        "findutils"
+      ],
+      "licenses": [
+        "GPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/findutils.git",
+        "tag": "4.11.0-1"
+      }
+    },
+    {
+      "id": "source-gawk-5.4.1-1",
+      "path": ".artifacts/sources/alarm/gawk-5.4.1-1.src.tar.gz",
+      "bytes": 6704502,
+      "sha256": "8b8e0f451d2478d791fea34d697f5d049ee4a4dc9d02786e0a63e8466acf8aa4",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/8b8e0f451d2478d791fea34d697f5d049ee4a4dc9d02786e0a63e8466acf8aa4"
+      ],
+      "pkgbase": "gawk",
+      "version": "5.4.1-1",
+      "packages": [
+        "gawk"
+      ],
+      "licenses": [
+        "GPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/gawk.git",
+        "tag": "5.4.1-1"
+      }
+    },
+    {
+      "id": "source-gcc-16.1.1+r12+g301eb08fa2c5-1",
+      "path": ".artifacts/sources/alarm/gcc-16.1.1+r12+g301eb08fa2c5-1.src.tar.gz",
+      "bytes": 161502077,
+      "sha256": "812072abe4860a794ac5c99864f2da1380a51445f5c156ac760116fd63af61cc",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/812072abe4860a794ac5c99864f2da1380a51445f5c156ac760116fd63af61cc"
+      ],
+      "pkgbase": "gcc",
+      "version": "16.1.1+r12+g301eb08fa2c5-1",
+      "packages": [
+        "gcc-libs",
+        "libasan",
+        "libatomic",
+        "libgcc",
+        "libgfortran",
+        "libgomp",
+        "liblsan",
+        "libobjc",
+        "libquadmath",
+        "libstdc++",
+        "libtsan",
+        "libubsan"
+      ],
+      "licenses": [
+        "GFDL-1.3-or-later",
+        "GPL-3.0-or-later WITH GCC-exception-3.1"
+      ],
+      "recipe": {
+        "repository": "https://github.com/archlinuxarm/PKGBUILDs",
+        "commit": "50e0a93f2daf3a39befae264d0898f8ffae04e34",
+        "path": "core/gcc"
+      }
+    },
+    {
+      "id": "source-gdbm-1.26-2",
+      "path": ".artifacts/sources/alarm/gdbm-1.26-2.src.tar.gz",
+      "bytes": 1503502,
+      "sha256": "540f608cb3afc96b335e22872cd46ed5ded04dc5b2ef66d235c10e276e693354",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/540f608cb3afc96b335e22872cd46ed5ded04dc5b2ef66d235c10e276e693354"
+      ],
+      "pkgbase": "gdbm",
+      "version": "1.26-2",
+      "packages": [
+        "gdbm"
+      ],
+      "licenses": [
+        "GPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/gdbm.git",
+        "tag": "1.26-2"
+      }
+    },
+    {
+      "id": "source-gettext-1.0-2",
+      "path": ".artifacts/sources/alarm/gettext-1.0-2.src.tar.gz",
+      "bytes": 30844161,
+      "sha256": "7c809ec384be097819cf80ea9903f564ebf37bbdd79359924387091f3f68b628",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/7c809ec384be097819cf80ea9903f564ebf37bbdd79359924387091f3f68b628"
+      ],
+      "pkgbase": "gettext",
+      "version": "1.0-2",
+      "packages": [
+        "gettext"
+      ],
+      "licenses": [
+        "GFDL-1.2-only",
+        "GPL-2.0-only",
+        "GPL-2.0-or-later",
+        "LGPL-2.0-only"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/gettext.git",
+        "tag": "1.0-2"
+      }
+    },
+    {
+      "id": "source-glib2-2.88.3-1",
+      "path": ".artifacts/sources/alarm/glib2-2.88.3-1.src.tar.gz",
+      "bytes": 10034680,
+      "sha256": "9849dda6e32d546e1ed1023401af97de2956e2693f9b629262d635679c7f007a",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/9849dda6e32d546e1ed1023401af97de2956e2693f9b629262d635679c7f007a"
+      ],
+      "pkgbase": "glib2",
+      "version": "2.88.3-1",
+      "packages": [
+        "glib2"
+      ],
+      "licenses": [
+        "LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/glib2.git",
+        "tag": "2.88.3-1"
+      }
+    },
+    {
+      "id": "source-glib2-2.90.1-1",
+      "path": ".artifacts/sources/alarm/glib2-2.90.1-1.src.tar.gz",
+      "bytes": 10179569,
+      "sha256": "4fc18cc4d1f8d9d9eeb96b583660989f1bd969b0f88ca656c8b6f0c4956d6c58",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/4fc18cc4d1f8d9d9eeb96b583660989f1bd969b0f88ca656c8b6f0c4956d6c58"
+      ],
+      "pkgbase": "glib2",
+      "version": "2.90.1-1",
+      "packages": [
+        "glib2"
+      ],
+      "licenses": [
+        "LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/glib2.git",
+        "tag": "2.90.1-1"
+      }
+    },
+    {
+      "id": "source-glibc-2.43+r22+g8362e8ce10b2-2",
+      "path": ".artifacts/sources/alarm/glibc-2.43+r22+g8362e8ce10b2-2.src.tar.gz",
+      "bytes": 40188582,
+      "sha256": "2967d9da247835ca83c49eff0e2a8ab3dc121870b59ff7a016830666f55139fd",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/2967d9da247835ca83c49eff0e2a8ab3dc121870b59ff7a016830666f55139fd"
+      ],
+      "pkgbase": "glibc",
+      "version": "2.43+r22+g8362e8ce10b2-2",
+      "packages": [
+        "glibc"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later",
+        "LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://github.com/archlinuxarm/PKGBUILDs",
+        "commit": "f3d82dd0cd144ea3aa9ca036679c10c7732e8760",
+        "path": "core/glibc"
+      }
+    },
+    {
+      "id": "source-gmp-6.3.0-3",
+      "path": ".artifacts/sources/alarm/gmp-6.3.0-3.src.tar.gz",
+      "bytes": 2111039,
+      "sha256": "ba6421b9e28db11243c62bd21ceb230ad33c857dfbf08ffc5d323833524e9c3d",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/ba6421b9e28db11243c62bd21ceb230ad33c857dfbf08ffc5d323833524e9c3d"
+      ],
+      "pkgbase": "gmp",
+      "version": "6.3.0-3",
+      "packages": [
+        "gmp"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later",
+        "LGPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/gmp.git",
+        "tag": "6.3.0-3"
+      }
+    },
+    {
+      "id": "source-gnulib-l10n-20241231-1",
+      "path": ".artifacts/sources/alarm/gnulib-l10n-20241231-1.src.tar.gz",
+      "bytes": 788287,
+      "sha256": "9731b0c0485b3395f53ca676fc0a5f18b7e19d0d2bd7b60dd7607b34108af743",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/9731b0c0485b3395f53ca676fc0a5f18b7e19d0d2bd7b60dd7607b34108af743"
+      ],
+      "pkgbase": "gnulib-l10n",
+      "version": "20241231-1",
+      "packages": [
+        "gnulib-l10n"
+      ],
+      "licenses": [
+        "LGPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/gnulib-l10n.git",
+        "tag": "20241231-1"
+      }
+    },
+    {
+      "id": "source-gnupg-2.4.9-2",
+      "path": ".artifacts/sources/alarm/gnupg-2.4.9-2.src.tar.gz",
+      "bytes": 10814842,
+      "sha256": "e99216f9e4cbc06be7d6ff93d05e1f6fe8ec5d56c59b8725d961350fcab83287",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/e99216f9e4cbc06be7d6ff93d05e1f6fe8ec5d56c59b8725d961350fcab83287"
+      ],
+      "pkgbase": "gnupg",
+      "version": "2.4.9-2",
+      "packages": [
+        "gnupg"
+      ],
+      "licenses": [
+        "BSD-2-Clause",
+        "BSD-3-Clause",
+        "BSD-4-Clause",
+        "CC0-1.0",
+        "GPL-2.0-or-later",
+        "GPL-3.0-or-later",
+        "LGPL-2.1-or-later",
+        "LGPL-3.0-or-later OR GPL-2.0-or-later",
+        "MIT",
+        "Unicode-TOU"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/gnupg.git",
+        "tag": "2.4.9-2"
+      }
+    },
+    {
+      "id": "source-gnupg-2.4.9-3",
+      "path": ".artifacts/sources/alarm/gnupg-2.4.9-3.src.tar.gz",
+      "bytes": 10820425,
+      "sha256": "7f53895d98de8b0daadd57c65305103a8498de388c09e56fa7c59ef7512019cf",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/7f53895d98de8b0daadd57c65305103a8498de388c09e56fa7c59ef7512019cf"
+      ],
+      "pkgbase": "gnupg",
+      "version": "2.4.9-3",
+      "packages": [
+        "gnupg"
+      ],
+      "licenses": [
+        "BSD-2-Clause",
+        "BSD-3-Clause",
+        "BSD-4-Clause",
+        "CC0-1.0",
+        "GPL-2.0-or-later",
+        "GPL-3.0-or-later",
+        "LGPL-2.1-or-later",
+        "LGPL-3.0-or-later OR GPL-2.0-or-later",
+        "MIT",
+        "Unicode-TOU"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/gnupg.git",
+        "tag": "2.4.9-3"
+      }
+    },
+    {
+      "id": "source-gnutls-3.8.13-2",
+      "path": ".artifacts/sources/alarm/gnutls-3.8.13-2.src.tar.gz",
+      "bytes": 7290558,
+      "sha256": "9ea0d80c893cc008fbe320d7e5bdd0527f76403d179a9391a22e7fc9b16c9fdf",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/9ea0d80c893cc008fbe320d7e5bdd0527f76403d179a9391a22e7fc9b16c9fdf"
+      ],
+      "pkgbase": "gnutls",
+      "version": "3.8.13-2",
+      "packages": [
+        "gnutls"
+      ],
+      "licenses": [
+        "GPL-3.0-or-later AND LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://github.com/archlinuxarm/PKGBUILDs",
+        "commit": "2d81ec81003a44dd1f2eebdbc4ba2b00701774b3",
+        "path": "core/gnutls"
+      }
+    },
+    {
+      "id": "source-gnutls-3.8.13-3",
+      "path": ".artifacts/sources/alarm/gnutls-3.8.13-3.src.tar.gz",
+      "bytes": 7290556,
+      "sha256": "d4346835b83ab2adf175f65469a739d2b7464974522f09cd8b4229b32aa8593d",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/d4346835b83ab2adf175f65469a739d2b7464974522f09cd8b4229b32aa8593d"
+      ],
+      "pkgbase": "gnutls",
+      "version": "3.8.13-3",
+      "packages": [
+        "gnutls"
+      ],
+      "licenses": [
+        "GPL-3.0-or-later AND LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://github.com/archlinuxarm/PKGBUILDs",
+        "commit": "1d5e639d0f97efa5df4da6bd33c242571a3e33a7",
+        "path": "core/gnutls"
+      }
+    },
+    {
+      "id": "source-gobject-introspection-1.86.0-2",
+      "path": ".artifacts/sources/alarm/gobject-introspection-1.86.0-2.src.tar.gz",
+      "bytes": 11311363,
+      "sha256": "849e22f1edc8d2d1471bf6439f92bad386de007d553483599a0912154d36f686",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/849e22f1edc8d2d1471bf6439f92bad386de007d553483599a0912154d36f686"
+      ],
+      "pkgbase": "gobject-introspection",
+      "version": "1.86.0-2",
+      "packages": [
+        "gobject-introspection-runtime",
+        "libgirepository"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later",
+        "LGPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/gobject-introspection.git",
+        "tag": "1.86.0-2"
+      }
+    },
+    {
+      "id": "source-gpgme-2.1.2-1",
+      "path": ".artifacts/sources/alarm/gpgme-2.1.2-1.src.tar.gz",
+      "bytes": 1207829,
+      "sha256": "ef82ff57a4335afdf493acb1f1fda77eef31c17e0cc546b9a97b5e2d803110f0",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/ef82ff57a4335afdf493acb1f1fda77eef31c17e0cc546b9a97b5e2d803110f0"
+      ],
+      "pkgbase": "gpgme",
+      "version": "2.1.2-1",
+      "packages": [
+        "gpgme"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later",
+        "LGPL-2.0-or-later",
+        "LGPL-2.1-or-later",
+        "MIT"
+      ],
+      "recipe": {
+        "repository": "https://github.com/archlinuxarm/PKGBUILDs",
+        "commit": "21fab6027a601824e8298c6eb49ca51208773395",
+        "path": "core/gpgme"
+      }
+    },
+    {
+      "id": "source-gpgme-2.2.0-1",
+      "path": ".artifacts/sources/alarm/gpgme-2.2.0-1.src.tar.gz",
+      "bytes": 1210329,
+      "sha256": "62c972d6890f08f8bb596792e4c4dc8cfa1d91273dd1760e1fbb45e9bd8c1285",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/62c972d6890f08f8bb596792e4c4dc8cfa1d91273dd1760e1fbb45e9bd8c1285"
+      ],
+      "pkgbase": "gpgme",
+      "version": "2.2.0-1",
+      "packages": [
+        "gpgme"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later",
+        "LGPL-2.0-or-later",
+        "LGPL-2.1-or-later",
+        "MIT"
+      ],
+      "recipe": {
+        "repository": "https://github.com/archlinuxarm/PKGBUILDs",
+        "commit": "cb5209ed108f613e462aeb0f233e558e78a6f4dc",
+        "path": "core/gpgme"
+      }
+    },
+    {
+      "id": "source-gpm-1.20.7.r38.ge82d1a6-6",
+      "path": ".artifacts/sources/alarm/gpm-1.20.7.r38.ge82d1a6-6.src.tar.gz",
+      "bytes": 855997,
+      "sha256": "926db193e29e2fdab986604683fee784bc58032e5ab5a693d44540d482c4da48",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/926db193e29e2fdab986604683fee784bc58032e5ab5a693d44540d482c4da48"
+      ],
+      "pkgbase": "gpm",
+      "version": "1.20.7.r38.ge82d1a6-6",
+      "packages": [
+        "gpm"
+      ],
+      "licenses": [
+        "GPL"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/gpm.git",
+        "tag": "1.20.7.r38.ge82d1a6-6"
+      }
+    },
+    {
+      "id": "source-gpm-1.20.7.r38.ge82d1a6-7",
+      "path": ".artifacts/sources/alarm/gpm-1.20.7.r38.ge82d1a6-7.src.tar.gz",
+      "bytes": 856957,
+      "sha256": "6d409f480b35268fa6a56554040b83cdaa783f3769557d75d5f2e22a3ac97b02",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/6d409f480b35268fa6a56554040b83cdaa783f3769557d75d5f2e22a3ac97b02"
+      ],
+      "pkgbase": "gpm",
+      "version": "1.20.7.r38.ge82d1a6-7",
+      "packages": [
+        "gpm"
+      ],
+      "licenses": [
+        "GPL"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/gpm.git",
+        "tag": "1.20.7.r38.ge82d1a6-7"
+      }
+    },
+    {
+      "id": "source-grep-3.12-2",
+      "path": ".artifacts/sources/alarm/grep-3.12-2.src.tar.gz",
+      "bytes": 9265279,
+      "sha256": "252dca9bcb4c130b05b6e5956b3af87c54c232609cde953fd02d0636c56e01f3",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/252dca9bcb4c130b05b6e5956b3af87c54c232609cde953fd02d0636c56e01f3"
+      ],
+      "pkgbase": "grep",
+      "version": "3.12-2",
+      "packages": [
+        "grep"
+      ],
+      "licenses": [
+        "GPL3"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/grep.git",
+        "tag": "3.12-2"
+      }
+    },
+    {
+      "id": "source-gzip-1.14-2",
+      "path": ".artifacts/sources/alarm/gzip-1.14-2.src.tar.gz",
+      "bytes": 9114047,
+      "sha256": "65090c5f4a54b2b10955146ead5d1cff62e0532516f60a08dd8b614e57a18c1f",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/65090c5f4a54b2b10955146ead5d1cff62e0532516f60a08dd8b614e57a18c1f"
+      ],
+      "pkgbase": "gzip",
+      "version": "1.14-2",
+      "packages": [
+        "gzip"
+      ],
+      "licenses": [
+        "GPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/gzip.git",
+        "tag": "1.14-2"
+      }
+    },
+    {
+      "id": "source-gzip-1.15-1",
+      "path": ".artifacts/sources/alarm/gzip-1.15-1.src.tar.gz",
+      "bytes": 9591353,
+      "sha256": "a20500e303f8b7430bf967c71e299e17b701262b9677b92801997f1baf3a2617",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/a20500e303f8b7430bf967c71e299e17b701262b9677b92801997f1baf3a2617"
+      ],
+      "pkgbase": "gzip",
+      "version": "1.15-1",
+      "packages": [
+        "gzip"
+      ],
+      "licenses": [
+        "GPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/gzip.git",
+        "tag": "1.15-1"
+      }
+    },
+    {
+      "id": "source-hidapi-0.15.0-1",
+      "path": ".artifacts/sources/alarm/hidapi-0.15.0-1.src.tar.gz",
+      "bytes": 344676,
+      "sha256": "575ecc6e3844fff8705fe99e09593f720043de183474bb228a87300801205ed4",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/575ecc6e3844fff8705fe99e09593f720043de183474bb228a87300801205ed4"
+      ],
+      "pkgbase": "hidapi",
+      "version": "0.15.0-1",
+      "packages": [
+        "hidapi"
+      ],
+      "licenses": [
+        "BSD",
+        "GPL3",
+        "custom"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/hidapi.git",
+        "tag": "0.15.0-1"
+      }
+    },
+    {
+      "id": "source-hwdata-0.410-1",
+      "path": ".artifacts/sources/alarm/hwdata-0.410-1.src.tar.gz",
+      "bytes": 2579748,
+      "sha256": "65d78076f9b28fae055e389143c803e89b61398cf32f39be725ef592b6dd6c3c",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/65d78076f9b28fae055e389143c803e89b61398cf32f39be725ef592b6dd6c3c"
+      ],
+      "pkgbase": "hwdata",
+      "version": "0.410-1",
+      "packages": [
+        "hwdata"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/hwdata.git",
+        "tag": "0.410-1"
+      }
+    },
+    {
+      "id": "source-hwdata-0.412-1",
+      "path": ".artifacts/sources/alarm/hwdata-0.412-1.src.tar.gz",
+      "bytes": 2591557,
+      "sha256": "20889b6724d4092e866ee41ea94eac09c3457ba2d08f5e8503acdddf46a090c6",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/20889b6724d4092e866ee41ea94eac09c3457ba2d08f5e8503acdddf46a090c6"
+      ],
+      "pkgbase": "hwdata",
+      "version": "0.412-1",
+      "packages": [
+        "hwdata"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/hwdata.git",
+        "tag": "0.412-1"
+      }
+    },
+    {
+      "id": "source-iproute2-7.1.0-1",
+      "path": ".artifacts/sources/alarm/iproute2-7.1.0-1.src.tar.gz",
+      "bytes": 1313430,
+      "sha256": "18326a35d2d6aea680cdf1fa00d7a5923acbc4c1e4ae9982b88767fb2b842cd0",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/18326a35d2d6aea680cdf1fa00d7a5923acbc4c1e4ae9982b88767fb2b842cd0"
+      ],
+      "pkgbase": "iproute2",
+      "version": "7.1.0-1",
+      "packages": [
+        "iproute2"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/iproute2.git",
+        "tag": "7.1.0-1"
+      }
+    },
+    {
+      "id": "source-iproute2-7.2.0-1",
+      "path": ".artifacts/sources/alarm/iproute2-7.2.0-1.src.tar.gz",
+      "bytes": 1321979,
+      "sha256": "ea8db4fd86a75eb8f513a1e2073ff6c84e69e7b955622774acce89b5fd576d69",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/ea8db4fd86a75eb8f513a1e2073ff6c84e69e7b955622774acce89b5fd576d69"
+      ],
+      "pkgbase": "iproute2",
+      "version": "7.2.0-1",
+      "packages": [
+        "iproute2"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/iproute2.git",
+        "tag": "7.2.0-1"
+      }
+    },
+    {
+      "id": "source-iptables-1:1.8.13-1",
+      "path": ".artifacts/sources/alarm/iptables-1:1.8.13-1.src.tar.gz",
+      "bytes": 578253,
+      "sha256": "3cb220ecedb3c57b859e58c13937e542df80386d02a8566029aa64ce83b9655a",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/3cb220ecedb3c57b859e58c13937e542df80386d02a8566029aa64ce83b9655a"
+      ],
+      "pkgbase": "iptables",
+      "version": "1:1.8.13-1",
+      "packages": [
+        "iptables"
+      ],
+      "licenses": [
+        "GPL-2.0-only"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/iptables.git",
+        "tag": "1-1.8.13-1"
+      }
+    },
+    {
+      "id": "source-iputils-20250605-1",
+      "path": ".artifacts/sources/alarm/iputils-20250605-1.src.tar.gz",
+      "bytes": 591963,
+      "sha256": "7c7fa586b340494435dac18c9cd2ab5ad4383db70decbe352a8fe973a4082286",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/7c7fa586b340494435dac18c9cd2ab5ad4383db70decbe352a8fe973a4082286"
+      ],
+      "pkgbase": "iputils",
+      "version": "20250605-1",
+      "packages": [
+        "iputils"
+      ],
+      "licenses": [
+        "BSD-3-Clause",
+        "GPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/iputils.git",
+        "tag": "20250605-1"
+      }
+    },
+    {
+      "id": "source-kbd-2.10.0-1",
+      "path": ".artifacts/sources/alarm/kbd-2.10.0-1.src.tar.gz",
+      "bytes": 2353768,
+      "sha256": "bff817f5769524685cf54e5761700d5f1fc140c46f1752c4d00bea97c7ec01e7",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/bff817f5769524685cf54e5761700d5f1fc140c46f1752c4d00bea97c7ec01e7"
+      ],
+      "pkgbase": "kbd",
+      "version": "2.10.0-1",
+      "packages": [
+        "kbd"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/kbd.git",
+        "tag": "2.10.0-1"
+      }
+    },
+    {
+      "id": "source-keyutils-1.6.3-4",
+      "path": ".artifacts/sources/alarm/keyutils-1.6.3-4.src.tar.gz",
+      "bytes": 142735,
+      "sha256": "d524b1ae65d338bcb3753d62c1a1423308031eae74cd7421fb434466b177f746",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/d524b1ae65d338bcb3753d62c1a1423308031eae74cd7421fb434466b177f746"
+      ],
+      "pkgbase": "keyutils",
+      "version": "1.6.3-4",
+      "packages": [
+        "keyutils"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later",
+        "LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/keyutils.git",
+        "tag": "1.6.3-4"
+      }
+    },
+    {
+      "id": "source-kmod-34.2-1",
+      "path": ".artifacts/sources/alarm/kmod-34.2-1.src.tar.gz",
+      "bytes": 294735,
+      "sha256": "4e9488f8452a226a864a95add5f8a43d7374ddd4ed63145b2a56454640e7c3cb",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/4e9488f8452a226a864a95add5f8a43d7374ddd4ed63145b2a56454640e7c3cb"
+      ],
+      "pkgbase": "kmod",
+      "version": "34.2-1",
+      "packages": [
+        "kmod"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later",
+        "LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/kmod.git",
+        "tag": "34.2-1"
+      }
+    },
+    {
+      "id": "source-leancrypto-1.8.0-1",
+      "path": ".artifacts/sources/alarm/leancrypto-1.8.0-1.src.tar.gz",
+      "bytes": 53068967,
+      "sha256": "4d6874b7b39840e28f10f72cfef51a44080377013f3f6cefee7a05dbd2045c18",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/4d6874b7b39840e28f10f72cfef51a44080377013f3f6cefee7a05dbd2045c18"
+      ],
+      "pkgbase": "leancrypto",
+      "version": "1.8.0-1",
+      "packages": [
+        "leancrypto"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later",
+        "LicenseRef-BSDvariant",
+        "LicenseRef-leancrypto"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/leancrypto.git",
+        "tag": "1.8.0-1"
+      }
+    },
+    {
+      "id": "source-leancrypto-1.9.1-1",
+      "path": ".artifacts/sources/alarm/leancrypto-1.9.1-1.src.tar.gz",
+      "bytes": 52789089,
+      "sha256": "89fa33bd7ff614ec84da829d3fd02cae3e852bbaa2c5ab22d9456ecfdf8f004e",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/89fa33bd7ff614ec84da829d3fd02cae3e852bbaa2c5ab22d9456ecfdf8f004e"
+      ],
+      "pkgbase": "leancrypto",
+      "version": "1.9.1-1",
+      "packages": [
+        "leancrypto"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later",
+        "LicenseRef-BSDvariant",
+        "LicenseRef-leancrypto"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/leancrypto.git",
+        "tag": "1.9.1-1"
+      }
+    },
+    {
+      "id": "source-libaio-0.3.113-5",
+      "path": ".artifacts/sources/alarm/libaio-0.3.113-5.src.tar.gz",
+      "bytes": 51052,
+      "sha256": "6fae0521722b7f03073676581fd07bddc6a490ec465a960609bfea21f6c7f483",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/6fae0521722b7f03073676581fd07bddc6a490ec465a960609bfea21f6c7f483"
+      ],
+      "pkgbase": "libaio",
+      "version": "0.3.113-5",
+      "packages": [
+        "libaio"
+      ],
+      "licenses": [
+        "LGPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libaio.git",
+        "tag": "0.3.113-5"
+      }
+    },
+    {
+      "id": "source-libassuan-3.0.0-1",
+      "path": ".artifacts/sources/alarm/libassuan-3.0.0-1.src.tar.gz",
+      "bytes": 595095,
+      "sha256": "f0a70628ca7a906e6260ce9ba4daa037b64d2273207e6b91477619a1d9c17989",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/f0a70628ca7a906e6260ce9ba4daa037b64d2273207e6b91477619a1d9c17989"
+      ],
+      "pkgbase": "libassuan",
+      "version": "3.0.0-1",
+      "packages": [
+        "libassuan"
+      ],
+      "licenses": [
+        "FSFULLR",
+        "GPL-2.0-or-later",
+        "LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libassuan.git",
+        "tag": "3.0.0-1"
+      }
+    },
+    {
+      "id": "source-libbpf-1.7.0-1",
+      "path": ".artifacts/sources/alarm/libbpf-1.7.0-1.src.tar.gz",
+      "bytes": 1055956,
+      "sha256": "0a375437c579ed97d44407b36b5172cc59b1bd731587a08799ed8d1fd02511ac",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/0a375437c579ed97d44407b36b5172cc59b1bd731587a08799ed8d1fd02511ac"
+      ],
+      "pkgbase": "libbpf",
+      "version": "1.7.0-1",
+      "packages": [
+        "libbpf"
+      ],
+      "licenses": [
+        "LGPL-2.1-only OR BSD-2-Clause"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libbpf.git",
+        "tag": "1.7.0-1"
+      }
+    },
+    {
+      "id": "source-libcap-2.78-1",
+      "path": ".artifacts/sources/alarm/libcap-2.78-1.src.tar.gz",
+      "bytes": 275167,
+      "sha256": "886567ca1c3ce5893617603691889a549eb27a715bd3ee4a66586cad735a5a9a",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/886567ca1c3ce5893617603691889a549eb27a715bd3ee4a66586cad735a5a9a"
+      ],
+      "pkgbase": "libcap",
+      "version": "2.78-1",
+      "packages": [
+        "libcap"
+      ],
+      "licenses": [
+        "BSD-3-Clause OR GPL-2.0-only"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libcap.git",
+        "tag": "2.78-1"
+      }
+    },
+    {
+      "id": "source-libcap-ng-0.9.3-1",
+      "path": ".artifacts/sources/alarm/libcap-ng-0.9.3-1.src.tar.gz",
+      "bytes": 128969,
+      "sha256": "8e6c0caa5d967531bc84941c771df7b99867f712078d5e5897d91dd6bce8c2ff",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/8e6c0caa5d967531bc84941c771df7b99867f712078d5e5897d91dd6bce8c2ff"
+      ],
+      "pkgbase": "libcap-ng",
+      "version": "0.9.3-1",
+      "packages": [
+        "libcap-ng"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later",
+        "LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libcap-ng.git",
+        "tag": "0.9.3-1"
+      }
+    },
+    {
+      "id": "source-libcap-ng-0.9.6-1",
+      "path": ".artifacts/sources/alarm/libcap-ng-0.9.6-1.src.tar.gz",
+      "bytes": 189017,
+      "sha256": "3155ba84250bdb274c361d8a36ed64432878fd506fedb29587a9b1df93ed2c7c",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/3155ba84250bdb274c361d8a36ed64432878fd506fedb29587a9b1df93ed2c7c"
+      ],
+      "pkgbase": "libcap-ng",
+      "version": "0.9.6-1",
+      "packages": [
+        "libcap-ng"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later",
+        "LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libcap-ng.git",
+        "tag": "0.9.6-1"
+      }
+    },
+    {
+      "id": "source-libdaemon-0.14-6",
+      "path": ".artifacts/sources/alarm/libdaemon-0.14-6.src.tar.gz",
+      "bytes": 341388,
+      "sha256": "c60eeeb48542fd5ecd50cd3e49e9f437df3b53e8a98a7b636da89d59401f2baf",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/c60eeeb48542fd5ecd50cd3e49e9f437df3b53e8a98a7b636da89d59401f2baf"
+      ],
+      "pkgbase": "libdaemon",
+      "version": "0.14-6",
+      "packages": [
+        "libdaemon"
+      ],
+      "licenses": [
+        "LGPL"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libdaemon.git",
+        "tag": "0.14-6"
+      }
+    },
+    {
+      "id": "source-libgcrypt-1.12.2-1",
+      "path": ".artifacts/sources/alarm/libgcrypt-1.12.2-1.src.tar.gz",
+      "bytes": 4444372,
+      "sha256": "bef7c086bf4bab227c4b7b2c35006a8fd253d247c30042803b82ff0fba644b2f",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/bef7c086bf4bab227c4b7b2c35006a8fd253d247c30042803b82ff0fba644b2f"
+      ],
+      "pkgbase": "libgcrypt",
+      "version": "1.12.2-1",
+      "packages": [
+        "libgcrypt"
+      ],
+      "licenses": [
+        "BSD-3-Clause",
+        "BSD-3-Clause OR GPL-2.0-only",
+        "GPL-2.0-or-later",
+        "LGPL-2.0-or-later",
+        "LGPL-2.1-or-later",
+        "LicenseRef-OCB1",
+        "LicenseRef-scancode-public-domain",
+        "X11"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libgcrypt.git",
+        "tag": "1.12.2-1"
+      }
+    },
+    {
+      "id": "source-libgcrypt-1.12.4-1",
+      "path": ".artifacts/sources/alarm/libgcrypt-1.12.4-1.src.tar.gz",
+      "bytes": 4475783,
+      "sha256": "55ae92a3d30c80252973cf34dfc68c5e1f890cf02dd8991fae052dba4bb06264",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/55ae92a3d30c80252973cf34dfc68c5e1f890cf02dd8991fae052dba4bb06264"
+      ],
+      "pkgbase": "libgcrypt",
+      "version": "1.12.4-1",
+      "packages": [
+        "libgcrypt"
+      ],
+      "licenses": [
+        "BSD-3-Clause",
+        "BSD-3-Clause OR GPL-2.0-only",
+        "GPL-2.0-or-later",
+        "LGPL-2.0-or-later",
+        "LGPL-2.1-or-later",
+        "LicenseRef-OCB1",
+        "LicenseRef-scancode-public-domain",
+        "X11"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libgcrypt.git",
+        "tag": "1.12.4-1"
+      }
+    },
+    {
+      "id": "source-libgpg-error-1.61-1",
+      "path": ".artifacts/sources/alarm/libgpg-error-1.61-1.src.tar.gz",
+      "bytes": 1128122,
+      "sha256": "5106bdf8270078a1ba2f905284b7917aafee67e2893c2bd4ab34a889dedf8b76",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/5106bdf8270078a1ba2f905284b7917aafee67e2893c2bd4ab34a889dedf8b76"
+      ],
+      "pkgbase": "libgpg-error",
+      "version": "1.61-1",
+      "packages": [
+        "libgpg-error"
+      ],
+      "licenses": [
+        "BSD-3-Clause OR LGPL-2.1-or-later",
+        "FSFULLR",
+        "GPL-2.0-or-later",
+        "LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libgpg-error.git",
+        "tag": "1.61-1"
+      }
+    },
+    {
+      "id": "source-libgudev-238-4",
+      "path": ".artifacts/sources/alarm/libgudev-238-4.src.tar.gz",
+      "bytes": 36560,
+      "sha256": "84449586fdf1eb5b585e341e0c48ad6403a52852c4ccff87af167daad574c464",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/84449586fdf1eb5b585e341e0c48ad6403a52852c4ccff87af167daad574c464"
+      ],
+      "pkgbase": "libgudev",
+      "version": "238-4",
+      "packages": [
+        "libgudev"
+      ],
+      "licenses": [
+        "LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libgudev.git",
+        "tag": "238-4"
+      }
+    },
+    {
+      "id": "source-libidn2-2.3.8-1",
+      "path": ".artifacts/sources/alarm/libidn2-2.3.8-1.src.tar.gz",
+      "bytes": 2221640,
+      "sha256": "8f9e7f855662d580653bfea7ddd9e02911cc1c74fd1064ecd2822a81a917366a",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/8f9e7f855662d580653bfea7ddd9e02911cc1c74fd1064ecd2822a81a917366a"
+      ],
+      "pkgbase": "libidn2",
+      "version": "2.3.8-1",
+      "packages": [
+        "libidn2"
+      ],
+      "licenses": [
+        "GPL2",
+        "LGPL3"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libidn2.git",
+        "tag": "2.3.8-1"
+      }
+    },
+    {
+      "id": "source-libimobiledevice-1.4.0-2",
+      "path": ".artifacts/sources/alarm/libimobiledevice-1.4.0-2.src.tar.gz",
+      "bytes": 422714,
+      "sha256": "da27aba32fd643d1d421552cc46685bc7d76fe1ed40e8cce80ab549d64a90657",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/da27aba32fd643d1d421552cc46685bc7d76fe1ed40e8cce80ab549d64a90657"
+      ],
+      "pkgbase": "libimobiledevice",
+      "version": "1.4.0-2",
+      "packages": [
+        "libimobiledevice"
+      ],
+      "licenses": [
+        "LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libimobiledevice.git",
+        "tag": "1.4.0-2"
+      }
+    },
+    {
+      "id": "source-libimobiledevice-glue-1.3.2-1",
+      "path": ".artifacts/sources/alarm/libimobiledevice-glue-1.3.2-1.src.tar.gz",
+      "bytes": 60911,
+      "sha256": "05ab47df8f8e20ad97fb0a92d8532ec3cf0f0d47b20898ce7a5e7a0441d6ae1d",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/05ab47df8f8e20ad97fb0a92d8532ec3cf0f0d47b20898ce7a5e7a0441d6ae1d"
+      ],
+      "pkgbase": "libimobiledevice-glue",
+      "version": "1.3.2-1",
+      "packages": [
+        "libimobiledevice-glue"
+      ],
+      "licenses": [
+        "LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libimobiledevice-glue.git",
+        "tag": "1.3.2-1"
+      }
+    },
+    {
+      "id": "source-libksba-1.8.0-1",
+      "path": ".artifacts/sources/alarm/libksba-1.8.0-1.src.tar.gz",
+      "bytes": 726190,
+      "sha256": "a2a37cfcd1b88000a2854c0c7e45b108deb9dafe3dd2796c2d11dc154916819a",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/a2a37cfcd1b88000a2854c0c7e45b108deb9dafe3dd2796c2d11dc154916819a"
+      ],
+      "pkgbase": "libksba",
+      "version": "1.8.0-1",
+      "packages": [
+        "libksba"
+      ],
+      "licenses": [
+        "GPL-2.0-only",
+        "GPL-3.0-only",
+        "LGPL-3.0-only"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libksba.git",
+        "tag": "1.8.0-1"
+      }
+    },
+    {
+      "id": "source-libksba-1.8.1-1",
+      "path": ".artifacts/sources/alarm/libksba-1.8.1-1.src.tar.gz",
+      "bytes": 726362,
+      "sha256": "ace7a3e0cd23bcd64fcdcc91bd0aac5f8e771157540360177ae31f76eb99c911",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/ace7a3e0cd23bcd64fcdcc91bd0aac5f8e771157540360177ae31f76eb99c911"
+      ],
+      "pkgbase": "libksba",
+      "version": "1.8.1-1",
+      "packages": [
+        "libksba"
+      ],
+      "licenses": [
+        "GPL-2.0-only",
+        "GPL-3.0-only",
+        "LGPL-3.0-only"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libksba.git",
+        "tag": "1.8.1-1"
+      }
+    },
+    {
+      "id": "source-libmakepkg-dropins-20-1",
+      "path": ".artifacts/sources/alarm/libmakepkg-dropins-20-1.src.tar.gz",
+      "bytes": 12594,
+      "sha256": "a8b15c891eaffce7cbd4222cf3f1820b5987be5e38eeb90fb3223754a1b7984f",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/a8b15c891eaffce7cbd4222cf3f1820b5987be5e38eeb90fb3223754a1b7984f"
+      ],
+      "pkgbase": "libmakepkg-dropins",
+      "version": "20-1",
+      "packages": [
+        "libmakepkg-dropins"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libmakepkg-dropins.git",
+        "tag": "20-1"
+      }
+    },
+    {
+      "id": "source-libmakepkg-dropins-20-2",
+      "path": ".artifacts/sources/alarm/libmakepkg-dropins-20-2.src.tar.gz",
+      "bytes": 12594,
+      "sha256": "215113465c11e3430184d071897cbaa7b7b3c47801b7eb180588a4cb19c0647d",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/215113465c11e3430184d071897cbaa7b7b3c47801b7eb180588a4cb19c0647d"
+      ],
+      "pkgbase": "libmakepkg-dropins",
+      "version": "20-2",
+      "packages": [
+        "libmakepkg-dropins"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libmakepkg-dropins.git",
+        "tag": "20-2"
+      }
+    },
+    {
+      "id": "source-libmnl-1.0.5-2",
+      "path": ".artifacts/sources/alarm/libmnl-1.0.5-2.src.tar.gz",
+      "bytes": 319459,
+      "sha256": "fd2708dce632e2ae70e79349ab1934729127761f5198ae8ccf5f898b3717e9bb",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/fd2708dce632e2ae70e79349ab1934729127761f5198ae8ccf5f898b3717e9bb"
+      ],
+      "pkgbase": "libmnl",
+      "version": "1.0.5-2",
+      "packages": [
+        "libmnl"
+      ],
+      "licenses": [
+        "LGPL2.1"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libmnl.git",
+        "tag": "1.0.5-2"
+      }
+    },
+    {
+      "id": "source-libndp-1.9-1",
+      "path": ".artifacts/sources/alarm/libndp-1.9-1.src.tar.gz",
+      "bytes": 30695,
+      "sha256": "1150f97e7a88662ac189c0a108e429b633f1c1da9104db2988d4ecbbeef91066",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/1150f97e7a88662ac189c0a108e429b633f1c1da9104db2988d4ecbbeef91066"
+      ],
+      "pkgbase": "libndp",
+      "version": "1.9-1",
+      "packages": [
+        "libndp"
+      ],
+      "licenses": [
+        "LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libndp.git",
+        "tag": "1.9-1"
+      }
+    },
+    {
+      "id": "source-libnetfilter_conntrack-1.1.1-1",
+      "path": ".artifacts/sources/alarm/libnetfilter_conntrack-1.1.1-1.src.tar.gz",
+      "bytes": 321783,
+      "sha256": "0661b590bbcd773181b6de331244c605d151ecc05af2027a6907283b597f558d",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/0661b590bbcd773181b6de331244c605d151ecc05af2027a6907283b597f558d"
+      ],
+      "pkgbase": "libnetfilter_conntrack",
+      "version": "1.1.1-1",
+      "packages": [
+        "libnetfilter_conntrack"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libnetfilter_conntrack.git",
+        "tag": "1.1.1-1"
+      }
+    },
+    {
+      "id": "source-libnewt-0.52.25-2",
+      "path": ".artifacts/sources/alarm/libnewt-0.52.25-2.src.tar.gz",
+      "bytes": 129838,
+      "sha256": "86de2d29f3e6adbb65130121a2bc847999f8228f72ad5be32371fb055cb81efe",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/86de2d29f3e6adbb65130121a2bc847999f8228f72ad5be32371fb055cb81efe"
+      ],
+      "pkgbase": "libnewt",
+      "version": "0.52.25-2",
+      "packages": [
+        "libnewt"
+      ],
+      "licenses": [
+        "GPL-2.0-only"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libnewt.git",
+        "tag": "0.52.25-2"
+      }
+    },
+    {
+      "id": "source-libnfnetlink-1.0.2-2",
+      "path": ".artifacts/sources/alarm/libnfnetlink-1.0.2-2.src.tar.gz",
+      "bytes": 303758,
+      "sha256": "8c6bfdf9466f8f40c2faacf3394ae0233c2fdf950f9799f61fc8e548b45e21ce",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/8c6bfdf9466f8f40c2faacf3394ae0233c2fdf950f9799f61fc8e548b45e21ce"
+      ],
+      "pkgbase": "libnfnetlink",
+      "version": "1.0.2-2",
+      "packages": [
+        "libnfnetlink"
+      ],
+      "licenses": [
+        "GPL"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libnfnetlink.git",
+        "tag": "1.0.2-2"
+      }
+    },
+    {
+      "id": "source-libnftnl-1.3.1-1",
+      "path": ".artifacts/sources/alarm/libnftnl-1.3.1-1.src.tar.gz",
+      "bytes": 137354,
+      "sha256": "9a54542b2f593f8114b0b508ba6b2977c5cb6b660aeef6bfed5ea0e642181eef",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/9a54542b2f593f8114b0b508ba6b2977c5cb6b660aeef6bfed5ea0e642181eef"
+      ],
+      "pkgbase": "libnftnl",
+      "version": "1.3.1-1",
+      "packages": [
+        "libnftnl"
+      ],
+      "licenses": [
+        "GPL2"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libnftnl.git",
+        "tag": "1.3.1-1"
+      }
+    },
+    {
+      "id": "source-libnftnl-1.3.2-1",
+      "path": ".artifacts/sources/alarm/libnftnl-1.3.2-1.src.tar.gz",
+      "bytes": 138139,
+      "sha256": "1f27f8cbc07b7d5699be8c82fbd755369784a13c1d68ac9f883231cf73eecaa7",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/1f27f8cbc07b7d5699be8c82fbd755369784a13c1d68ac9f883231cf73eecaa7"
+      ],
+      "pkgbase": "libnftnl",
+      "version": "1.3.2-1",
+      "packages": [
+        "libnftnl"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libnftnl.git",
+        "tag": "1.3.2-1"
+      }
+    },
+    {
+      "id": "source-libnl-3.12.0-1",
+      "path": ".artifacts/sources/alarm/libnl-3.12.0-1.src.tar.gz",
+      "bytes": 1211065,
+      "sha256": "c7623cce92a84048ceed389f0d0024701cc8ffa707c246e0ab7f0bac4e38abd1",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/c7623cce92a84048ceed389f0d0024701cc8ffa707c246e0ab7f0bac4e38abd1"
+      ],
+      "pkgbase": "libnl",
+      "version": "3.12.0-1",
+      "packages": [
+        "libnl"
+      ],
+      "licenses": [
+        "LGPL-2.1-only"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libnl.git",
+        "tag": "3.12.0-1"
+      }
+    },
+    {
+      "id": "source-libnsl-2.0.1-2",
+      "path": ".artifacts/sources/alarm/libnsl-2.0.1-2.src.tar.gz",
+      "bytes": 49198,
+      "sha256": "11b24c3f95c44ce70d17e84d652fdbbaa27161958840c19463df6ada0cdd511e",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/11b24c3f95c44ce70d17e84d652fdbbaa27161958840c19463df6ada0cdd511e"
+      ],
+      "pkgbase": "libnsl",
+      "version": "2.0.1-2",
+      "packages": [
+        "libnsl"
+      ],
+      "licenses": [
+        "LGPL-2.1-only"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libnsl.git",
+        "tag": "2.0.1-2"
+      }
+    },
+    {
+      "id": "source-libpgm-5.3.128-4",
+      "path": ".artifacts/sources/alarm/libpgm-5.3.128-4.src.tar.gz",
+      "bytes": 657657,
+      "sha256": "135d9657748ef9d2c532be6d945e5b4e7228375c4f9592c9e4b60685adc043ea",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/135d9657748ef9d2c532be6d945e5b4e7228375c4f9592c9e4b60685adc043ea"
+      ],
+      "pkgbase": "libpgm",
+      "version": "5.3.128-4",
+      "packages": [
+        "libpgm"
+      ],
+      "licenses": [
+        "LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://github.com/archlinuxarm/PKGBUILDs",
+        "commit": "777d864c563292290f0d9483808b604c89f061d5",
+        "path": "extra/libpgm"
+      }
+    },
+    {
+      "id": "source-libplist-2.7.0-3",
+      "path": ".artifacts/sources/alarm/libplist-2.7.0-3.src.tar.gz",
+      "bytes": 219792,
+      "sha256": "d4968e52435c6daa294e5f966bcf6997a373d4e679125ab1424d6bd1ca9727dd",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/d4968e52435c6daa294e5f966bcf6997a373d4e679125ab1424d6bd1ca9727dd"
+      ],
+      "pkgbase": "libplist",
+      "version": "2.7.0-3",
+      "packages": [
+        "libplist"
+      ],
+      "licenses": [
+        "LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libplist.git",
+        "tag": "2.7.0-3"
+      }
+    },
+    {
+      "id": "source-libseccomp-2.6.0-1",
+      "path": ".artifacts/sources/alarm/libseccomp-2.6.0-1.src.tar.gz",
+      "bytes": 214339,
+      "sha256": "a79941eff8ba4d032ad6d3f0f5a862b066d4adde3f7b9db7c8e5cbe91d1178f7",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/a79941eff8ba4d032ad6d3f0f5a862b066d4adde3f7b9db7c8e5cbe91d1178f7"
+      ],
+      "pkgbase": "libseccomp",
+      "version": "2.6.0-1",
+      "packages": [
+        "libseccomp"
+      ],
+      "licenses": [
+        "LGPL-2.1-only"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libseccomp.git",
+        "tag": "2.6.0-1"
+      }
+    },
+    {
+      "id": "source-libsecret-0.21.7-1",
+      "path": ".artifacts/sources/alarm/libsecret-0.21.7-1.src.tar.gz",
+      "bytes": 285021,
+      "sha256": "1162d305e641be9c41fd018cb597286b680322682388c07bda5ab2f0f4551171",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/1162d305e641be9c41fd018cb597286b680322682388c07bda5ab2f0f4551171"
+      ],
+      "pkgbase": "libsecret",
+      "version": "0.21.7-1",
+      "packages": [
+        "libsecret"
+      ],
+      "licenses": [
+        "LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libsecret.git",
+        "tag": "0.21.7-1"
+      }
+    },
+    {
+      "id": "source-libsecret-0.21.8.2-1",
+      "path": ".artifacts/sources/alarm/libsecret-0.21.8.2-1.src.tar.gz",
+      "bytes": 291689,
+      "sha256": "fddbed79f77433a1e3c7f78e3bff02b4f36d57d659566e7adb202307b63f4d69",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/fddbed79f77433a1e3c7f78e3bff02b4f36d57d659566e7adb202307b63f4d69"
+      ],
+      "pkgbase": "libsecret",
+      "version": "0.21.8.2-1",
+      "packages": [
+        "libsecret"
+      ],
+      "licenses": [
+        "LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libsecret.git",
+        "tag": "0.21.8.2-1"
+      }
+    },
+    {
+      "id": "source-libtasn1-4.21.0-1",
+      "path": ".artifacts/sources/alarm/libtasn1-4.21.0-1.src.tar.gz",
+      "bytes": 1815177,
+      "sha256": "b4a03ccce4add06a796307ab6d3fb9517d9fece9a83cc555026b9729a49d4c67",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/b4a03ccce4add06a796307ab6d3fb9517d9fece9a83cc555026b9729a49d4c67"
+      ],
+      "pkgbase": "libtasn1",
+      "version": "4.21.0-1",
+      "packages": [
+        "libtasn1"
+      ],
+      "licenses": [
+        "GFDL-1.3-or-later",
+        "GPL-3.0-or-later",
+        "LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libtasn1.git",
+        "tag": "4.21.0-1"
+      }
+    },
+    {
+      "id": "source-libtatsu-1.0.5-1",
+      "path": ".artifacts/sources/alarm/libtatsu-1.0.5-1.src.tar.gz",
+      "bytes": 29691,
+      "sha256": "39bf3b65c3de756430742d8bd2d3ecac8383d1b7dad75574d614549c6ba62f5a",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/39bf3b65c3de756430742d8bd2d3ecac8383d1b7dad75574d614549c6ba62f5a"
+      ],
+      "pkgbase": "libtatsu",
+      "version": "1.0.5-1",
+      "packages": [
+        "libtatsu"
+      ],
+      "licenses": [
+        "LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libtatsu.git",
+        "tag": "1.0.5-1"
+      }
+    },
+    {
+      "id": "source-libteam-1.32-3",
+      "path": ".artifacts/sources/alarm/libteam-1.32-3.src.tar.gz",
+      "bytes": 177114,
+      "sha256": "f47e484334f48bdf511fbbb73eb248ee575e41f0c1e9e5c7e34bb5f99a1a0433",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/f47e484334f48bdf511fbbb73eb248ee575e41f0c1e9e5c7e34bb5f99a1a0433"
+      ],
+      "pkgbase": "libteam",
+      "version": "1.32-3",
+      "packages": [
+        "libteam"
+      ],
+      "licenses": [
+        "LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libteam.git",
+        "tag": "1.32-3"
+      }
+    },
+    {
+      "id": "source-libunistring-1.4.2-1",
+      "path": ".artifacts/sources/alarm/libunistring-1.4.2-1.src.tar.gz",
+      "bytes": 2793823,
+      "sha256": "228ce42811f596ec5f3624ec6b358ab51f5a999201adc100fb9be262c83ea854",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/228ce42811f596ec5f3624ec6b358ab51f5a999201adc100fb9be262c83ea854"
+      ],
+      "pkgbase": "libunistring",
+      "version": "1.4.2-1",
+      "packages": [
+        "libunistring"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later",
+        "LGPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libunistring.git",
+        "tag": "1.4.2-1"
+      }
+    },
+    {
+      "id": "source-liburcu-0.15.7-1",
+      "path": ".artifacts/sources/alarm/liburcu-0.15.7-1.src.tar.gz",
+      "bytes": 689354,
+      "sha256": "2d705c7d7f9bb97904436ecd211d94e108ed5e55efee134f70d0273faad6766b",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/2d705c7d7f9bb97904436ecd211d94e108ed5e55efee134f70d0273faad6766b"
+      ],
+      "pkgbase": "liburcu",
+      "version": "0.15.7-1",
+      "packages": [
+        "liburcu"
+      ],
+      "licenses": [
+        "LGPL2.1"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/liburcu.git",
+        "tag": "0.15.7-1"
+      }
+    },
+    {
+      "id": "source-libusb-1.0.30-1",
+      "path": ".artifacts/sources/alarm/libusb-1.0.30-1.src.tar.gz",
+      "bytes": 435369,
+      "sha256": "1e46bcf18de2b9bb73eb617c1becaf228ae8d1975ec255e5117eca1b576bb946",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/1e46bcf18de2b9bb73eb617c1becaf228ae8d1975ec255e5117eca1b576bb946"
+      ],
+      "pkgbase": "libusb",
+      "version": "1.0.30-1",
+      "packages": [
+        "libusb"
+      ],
+      "licenses": [
+        "LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libusb.git",
+        "tag": "1.0.30-1"
+      }
+    },
+    {
+      "id": "source-libusbmuxd-2.1.1-2",
+      "path": ".artifacts/sources/alarm/libusbmuxd-2.1.1-2.src.tar.gz",
+      "bytes": 48299,
+      "sha256": "cd56a1862a4e9743903ef88cbfbfddb899595b8534c5ca56b1fafd4c46c731ba",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/cd56a1862a4e9743903ef88cbfbfddb899595b8534c5ca56b1fafd4c46c731ba"
+      ],
+      "pkgbase": "libusbmuxd",
+      "version": "2.1.1-2",
+      "packages": [
+        "libusbmuxd"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later AND LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libusbmuxd.git",
+        "tag": "2.1.1-2"
+      }
+    },
+    {
+      "id": "source-libxcrypt-4.5.2-1",
+      "path": ".artifacts/sources/alarm/libxcrypt-4.5.2-1.src.tar.gz",
+      "bytes": 681653,
+      "sha256": "1534e600f407a7962458fc3c9c761ac082f5fdbabd4b0c8316731ed623d2f192",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/1534e600f407a7962458fc3c9c761ac082f5fdbabd4b0c8316731ed623d2f192"
+      ],
+      "pkgbase": "libxcrypt",
+      "version": "4.5.2-1",
+      "packages": [
+        "libxcrypt"
+      ],
+      "licenses": [
+        "LGPL"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/libxcrypt.git",
+        "tag": "4.5.2-1"
+      }
+    },
+    {
+      "id": "source-linux-aarch64-7.1.6-1",
+      "path": ".artifacts/sources/alarm/linux-aarch64-7.1.6-1.src.tar.gz",
+      "bytes": 159541478,
+      "sha256": "9d86db5757680d6860de3ea00f733ec3e5abcaf585900db70de9e4f5f8e99c23",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/9d86db5757680d6860de3ea00f733ec3e5abcaf585900db70de9e4f5f8e99c23"
+      ],
+      "pkgbase": "linux-aarch64",
+      "version": "7.1.6-1",
+      "packages": [
+        "linux-aarch64"
+      ],
+      "licenses": [
+        "GPL-2.0-only"
+      ],
+      "recipe": {
+        "repository": "https://github.com/archlinuxarm/PKGBUILDs",
+        "commit": "e161225a0e3fbd8295539b444db44178d7086b08",
+        "path": "core/linux-aarch64"
+      }
+    },
+    {
+      "id": "source-linux-api-headers-7.1-1",
+      "path": ".artifacts/sources/alarm/linux-api-headers-7.1-1.src.tar.gz",
+      "bytes": 158360933,
+      "sha256": "5d4ac02f70eeaf10972502f6d836aa0d471e278095e56037ada2bd4347bc99ee",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/5d4ac02f70eeaf10972502f6d836aa0d471e278095e56037ada2bd4347bc99ee"
+      ],
+      "pkgbase": "linux-api-headers",
+      "version": "7.1-1",
+      "packages": [
+        "linux-api-headers"
+      ],
+      "licenses": [
+        "GPL-2.0-only"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/linux-api-headers.git",
+        "tag": "7.1-1"
+      }
+    },
+    {
+      "id": "source-linux-api-headers-7.2-1",
+      "path": ".artifacts/sources/alarm/linux-api-headers-7.2-1.src.tar.gz",
+      "bytes": 160124907,
+      "sha256": "4f29e48990db6a156d5514fb3741eaf2667a105a8bdacd159d31746d40f1edc7",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/4f29e48990db6a156d5514fb3741eaf2667a105a8bdacd159d31746d40f1edc7"
+      ],
+      "pkgbase": "linux-api-headers",
+      "version": "7.2-1",
+      "packages": [
+        "linux-api-headers"
+      ],
+      "licenses": [
+        "GPL-2.0-only"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/linux-api-headers.git",
+        "tag": "7.2-1"
+      }
+    },
+    {
+      "id": "source-linux-firmware-20260622-1",
+      "path": ".artifacts/sources/alarm/linux-firmware-20260622-1.src.tar.gz",
+      "bytes": 951323298,
+      "sha256": "5d4db5b9205923524363412fb6825455dc0d88cfaf65170e0af75b84a87d6aed",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/5d4db5b9205923524363412fb6825455dc0d88cfaf65170e0af75b84a87d6aed"
+      ],
+      "pkgbase": "linux-firmware",
+      "version": "20260622-1",
+      "packages": [
+        "linux-firmware",
+        "linux-firmware-amdgpu",
+        "linux-firmware-atheros",
+        "linux-firmware-broadcom",
+        "linux-firmware-cirrus",
+        "linux-firmware-intel",
+        "linux-firmware-mediatek",
+        "linux-firmware-nvidia",
+        "linux-firmware-other",
+        "linux-firmware-radeon",
+        "linux-firmware-realtek",
+        "linux-firmware-whence"
+      ],
+      "licenses": [
+        "Apache-2.0",
+        "CC0-1.0",
+        "GPL-2.0-only",
+        "LicenseRef-WHENCE",
+        "LicenseRef-amdgpu",
+        "LicenseRef-atheros",
+        "LicenseRef-broadcom",
+        "LicenseRef-cirrus",
+        "LicenseRef-intel",
+        "LicenseRef-mediatek",
+        "LicenseRef-nvidia",
+        "LicenseRef-radeon",
+        "LicenseRef-realtek",
+        "MIT"
+      ],
+      "recipe": {
+        "repository": "https://github.com/archlinuxarm/PKGBUILDs",
+        "commit": "37c7f384e7657d311e3c22f75cac04de0d8db387",
+        "path": "core/linux-firmware"
+      }
+    },
+    {
+      "id": "source-lm_sensors-1:3.6.2-1",
+      "path": ".artifacts/sources/alarm/lm_sensors-1:3.6.2-1.src.tar.gz",
+      "bytes": 299025,
+      "sha256": "455cd68c88e300e96bf15c398ffce57d62d6cf8287acd03b1f77f4c20195e5ea",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/455cd68c88e300e96bf15c398ffce57d62d6cf8287acd03b1f77f4c20195e5ea"
+      ],
+      "pkgbase": "lm_sensors",
+      "version": "1:3.6.2-1",
+      "packages": [
+        "lm_sensors"
+      ],
+      "licenses": [
+        "GPL-2.0-only OR LGPL-2.1-only"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/lm_sensors.git",
+        "tag": "1-3.6.2-1"
+      }
+    },
+    {
+      "id": "source-lvm2-2.03.41-1",
+      "path": ".artifacts/sources/alarm/lvm2-2.03.41-1.src.tar.gz",
+      "bytes": 2916218,
+      "sha256": "573766e78d6fef36c40c7285224e0c9840950f24846a0a31babdeb345adf7af6",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/573766e78d6fef36c40c7285224e0c9840950f24846a0a31babdeb345adf7af6"
+      ],
+      "pkgbase": "lvm2",
+      "version": "2.03.41-1",
+      "packages": [
+        "device-mapper"
+      ],
+      "licenses": [
+        "GPL-2.0-only",
+        "LGPL-2.1-only"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/lvm2.git",
+        "tag": "2.03.41-1"
+      }
+    },
+    {
+      "id": "source-lvm2-2.03.43-2",
+      "path": ".artifacts/sources/alarm/lvm2-2.03.43-2.src.tar.gz",
+      "bytes": 3119480,
+      "sha256": "55d42e75bc930dcfe865a5943d1af04036f39bdaaa5cb30b3666b453c684b1ae",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/55d42e75bc930dcfe865a5943d1af04036f39bdaaa5cb30b3666b453c684b1ae"
+      ],
+      "pkgbase": "lvm2",
+      "version": "2.03.43-2",
+      "packages": [
+        "device-mapper",
+        "lvm2"
+      ],
+      "licenses": [
+        "GPL-2.0-only",
+        "LGPL-2.1-only"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/lvm2.git",
+        "tag": "2.03.43-2"
+      }
+    },
+    {
+      "id": "source-lz4-1:1.10.0-2",
+      "path": ".artifacts/sources/alarm/lz4-1:1.10.0-2.src.tar.gz",
+      "bytes": 384229,
+      "sha256": "563c777f7a222e8158ebb76d8291401a23b08ccdeaf20d6d0f6d11a9dbb82ffa",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/563c777f7a222e8158ebb76d8291401a23b08ccdeaf20d6d0f6d11a9dbb82ffa"
+      ],
+      "pkgbase": "lz4",
+      "version": "1:1.10.0-2",
+      "packages": [
+        "lz4"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/lz4.git",
+        "tag": "1-1.10.0-2"
+      }
+    },
+    {
+      "id": "source-lzo-2.10-5",
+      "path": ".artifacts/sources/alarm/lzo-2.10-5.src.tar.gz",
+      "bytes": 601022,
+      "sha256": "88c4db9fc44ffe954450bb67ed488c49392c75c9eb83294a43a2f8544b622bd0",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/88c4db9fc44ffe954450bb67ed488c49392c75c9eb83294a43a2f8544b622bd0"
+      ],
+      "pkgbase": "lzo",
+      "version": "2.10-5",
+      "packages": [
+        "lzo"
+      ],
+      "licenses": [
+        "GPL"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/lzo.git",
+        "tag": "2.10-5"
+      }
+    },
+    {
+      "id": "source-mkinitcpio-41-4",
+      "path": ".artifacts/sources/alarm/mkinitcpio-41-4.src.tar.gz",
+      "bytes": 1031720,
+      "sha256": "e4c9a9e3b3478b471a6628c2e96a86537c67b7ede23426b165116714d41da659",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/e4c9a9e3b3478b471a6628c2e96a86537c67b7ede23426b165116714d41da659"
+      ],
+      "pkgbase": "mkinitcpio",
+      "version": "41-4",
+      "packages": [
+        "mkinitcpio"
+      ],
+      "licenses": [
+        "GPL-2.0-only"
+      ],
+      "recipe": {
+        "repository": "https://github.com/archlinuxarm/PKGBUILDs",
+        "commit": "49f4cb00ad0294106a6c80af0af71db3600286c1",
+        "path": "core/mkinitcpio"
+      }
+    },
+    {
+      "id": "source-mkinitcpio-42.2-1",
+      "path": ".artifacts/sources/alarm/mkinitcpio-42.2-1.src.tar.gz",
+      "bytes": 17579695,
+      "sha256": "966673ea24eb6d5f045e978e3f93ebd47b99f0997dea0618be79ee7bdc3b8488",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/966673ea24eb6d5f045e978e3f93ebd47b99f0997dea0618be79ee7bdc3b8488"
+      ],
+      "pkgbase": "mkinitcpio",
+      "version": "42.2-1",
+      "packages": [
+        "mkinitcpio"
+      ],
+      "licenses": [
+        "GPL-2.0-only"
+      ],
+      "recipe": {
+        "repository": "https://github.com/archlinuxarm/PKGBUILDs",
+        "commit": "395575019eb7e24f3139976d9d2466879575f521",
+        "path": "core/mkinitcpio"
+      }
+    },
+    {
+      "id": "source-mkinitcpio-busybox-1.36.1-1",
+      "path": ".artifacts/sources/alarm/mkinitcpio-busybox-1.36.1-1.src.tar.gz",
+      "bytes": 2500877,
+      "sha256": "dc982c443b4913aa18ed37f6c061ac4c674181326c41bda10f412fff33b57de6",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/dc982c443b4913aa18ed37f6c061ac4c674181326c41bda10f412fff33b57de6"
+      ],
+      "pkgbase": "mkinitcpio-busybox",
+      "version": "1.36.1-1",
+      "packages": [
+        "mkinitcpio-busybox"
+      ],
+      "licenses": [
+        "GPL"
+      ],
+      "recipe": {
+        "repository": "https://github.com/archlinuxarm/PKGBUILDs",
+        "commit": "45001d234cec804b13c1c2387c6dd9267a71e7bc",
+        "path": "core/mkinitcpio-busybox"
+      }
+    },
+    {
+      "id": "source-modemmanager-1.24.2-2",
+      "path": ".artifacts/sources/alarm/modemmanager-1.24.2-2.src.tar.gz",
+      "bytes": 2099242,
+      "sha256": "40acee9d3c3939d04a4f9cca0977f64cb4383a4a9081f5b43b3acd81f855ee0c",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/40acee9d3c3939d04a4f9cca0977f64cb4383a4a9081f5b43b3acd81f855ee0c"
+      ],
+      "pkgbase": "modemmanager",
+      "version": "1.24.2-2",
+      "packages": [
+        "libmm-glib"
+      ],
+      "licenses": [
+        "LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/modemmanager.git",
+        "tag": "1.24.2-2"
+      }
+    },
+    {
+      "id": "source-mpfr-4.2.2-1",
+      "path": ".artifacts/sources/alarm/mpfr-4.2.2-1.src.tar.gz",
+      "bytes": 1511319,
+      "sha256": "c260ae2e3821a90772431e825b8579693332906fc3cb6032a29b6818d95fdbae",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/c260ae2e3821a90772431e825b8579693332906fc3cb6032a29b6818d95fdbae"
+      ],
+      "pkgbase": "mpfr",
+      "version": "4.2.2-1",
+      "packages": [
+        "mpfr"
+      ],
+      "licenses": [
+        "GPL-3.0-or-later",
+        "LGPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/mpfr.git",
+        "tag": "4.2.2-1"
+      }
+    },
+    {
+      "id": "source-nano-9.1-1",
+      "path": ".artifacts/sources/alarm/nano-9.1-1.src.tar.gz",
+      "bytes": 1766165,
+      "sha256": "2779343ad161cc8c67709382e02f4eace16dc277f57421690eae9188496256d2",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/2779343ad161cc8c67709382e02f4eace16dc277f57421690eae9188496256d2"
+      ],
+      "pkgbase": "nano",
+      "version": "9.1-1",
+      "packages": [
+        "nano"
+      ],
+      "licenses": [
+        "GPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/nano.git",
+        "tag": "9.1-1"
+      }
+    },
+    {
+      "id": "source-nano-9.2-1",
+      "path": ".artifacts/sources/alarm/nano-9.2-1.src.tar.gz",
+      "bytes": 1770544,
+      "sha256": "4aea17e956c6615943e3593297626a7d69e933de4e995511c63591cfb6b9c3fe",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/4aea17e956c6615943e3593297626a7d69e933de4e995511c63591cfb6b9c3fe"
+      ],
+      "pkgbase": "nano",
+      "version": "9.2-1",
+      "packages": [
+        "nano"
+      ],
+      "licenses": [
+        "GPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/nano.git",
+        "tag": "9.2-1"
+      }
+    },
+    {
+      "id": "source-net-tools-2.10-3",
+      "path": ".artifacts/sources/alarm/net-tools-2.10-3.src.tar.gz",
+      "bytes": 230726,
+      "sha256": "96a420a0694cad6f27b942c985e21b09087bf0c1f779541a7c7e72de9a8be35f",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/96a420a0694cad6f27b942c985e21b09087bf0c1f779541a7c7e72de9a8be35f"
+      ],
+      "pkgbase": "net-tools",
+      "version": "2.10-3",
+      "packages": [
+        "net-tools"
+      ],
+      "licenses": [
+        "GPL2"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/net-tools.git",
+        "tag": "2.10-3"
+      }
+    },
+    {
+      "id": "source-netctl-1.29-2",
+      "path": ".artifacts/sources/alarm/netctl-1.29-2.src.tar.gz",
+      "bytes": 59611,
+      "sha256": "64b94e75e09bdc08e25ad4de815c3c8b5705677f1a5c2f4cc2f6558d35b1f328",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/64b94e75e09bdc08e25ad4de815c3c8b5705677f1a5c2f4cc2f6558d35b1f328"
+      ],
+      "pkgbase": "netctl",
+      "version": "1.29-2",
+      "packages": [
+        "netctl"
+      ],
+      "licenses": [
+        "GPL"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/netctl.git",
+        "tag": "1.29-2"
+      }
+    },
+    {
+      "id": "source-nettle-4.0-1",
+      "path": ".artifacts/sources/alarm/nettle-4.0-1.src.tar.gz",
+      "bytes": 2633139,
+      "sha256": "e22e81b737a3713e004ceb87b920ce3ab7cd14dd1ca4ba253a7cfa47646665bd",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/e22e81b737a3713e004ceb87b920ce3ab7cd14dd1ca4ba253a7cfa47646665bd"
+      ],
+      "pkgbase": "nettle",
+      "version": "4.0-1",
+      "packages": [
+        "nettle"
+      ],
+      "licenses": [
+        "LGPL-3.0-or-later OR GPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/nettle.git",
+        "tag": "4.0-1"
+      }
+    },
+    {
+      "id": "source-networkmanager-1.58.1-2",
+      "path": ".artifacts/sources/alarm/networkmanager-1.58.1-2.src.tar.gz",
+      "bytes": 12891475,
+      "sha256": "c74d082d54745bb1a200ee004aa916a98a19ad8ea507d11edf1def21316b244c",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/c74d082d54745bb1a200ee004aa916a98a19ad8ea507d11edf1def21316b244c"
+      ],
+      "pkgbase": "networkmanager",
+      "version": "1.58.1-2",
+      "packages": [
+        "libnm",
+        "networkmanager"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later",
+        "LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://github.com/archlinuxarm/PKGBUILDs",
+        "commit": "f04657820faf2fdaa99e33fbb4bf1352c637e46a",
+        "path": "extra/networkmanager"
+      }
+    },
+    {
+      "id": "source-nftables-1:1.1.6-3",
+      "path": ".artifacts/sources/alarm/nftables-1:1.1.6-3.src.tar.gz",
+      "bytes": 840533,
+      "sha256": "addad7ebb9d44183c027fb871bccc457e938c49e8563c9b242e633c33a44b2f4",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/addad7ebb9d44183c027fb871bccc457e938c49e8563c9b242e633c33a44b2f4"
+      ],
+      "pkgbase": "nftables",
+      "version": "1:1.1.6-3",
+      "packages": [
+        "nftables"
+      ],
+      "licenses": [
+        "GPL-2.0-only"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/nftables.git",
+        "tag": "1-1.1.6-3"
+      }
+    },
+    {
+      "id": "source-nftables-1:1.1.7-3",
+      "path": ".artifacts/sources/alarm/nftables-1:1.1.7-3.src.tar.gz",
+      "bytes": 877631,
+      "sha256": "55ca08c89459780aa5f1485c8755f9bd268654ee3cfcf253be310a3ed376c8fb",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/55ca08c89459780aa5f1485c8755f9bd268654ee3cfcf253be310a3ed376c8fb"
+      ],
+      "pkgbase": "nftables",
+      "version": "1:1.1.7-3",
+      "packages": [
+        "nftables"
+      ],
+      "licenses": [
+        "GPL-2.0-only"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/nftables.git",
+        "tag": "1-1.1.7-3"
+      }
+    },
+    {
+      "id": "source-npth-1.8-1",
+      "path": ".artifacts/sources/alarm/npth-1.8-1.src.tar.gz",
+      "bytes": 324117,
+      "sha256": "8b8a331dd17e88fb42402998d34b2e2d83dbdbf25ff6b79b79ac203b10fe893b",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/8b8a331dd17e88fb42402998d34b2e2d83dbdbf25ff6b79b79ac203b10fe893b"
+      ],
+      "pkgbase": "npth",
+      "version": "1.8-1",
+      "packages": [
+        "npth"
+      ],
+      "licenses": [
+        "LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/npth.git",
+        "tag": "1.8-1"
+      }
+    },
+    {
+      "id": "source-nspr-4.40-1",
+      "path": ".artifacts/sources/alarm/nspr-4.40-1.src.tar.gz",
+      "bytes": 1003175,
+      "sha256": "b41b78f14f908c267c68ce43099b12295e3d9560970792d4a1900ad8a9602a2a",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/b41b78f14f908c267c68ce43099b12295e3d9560970792d4a1900ad8a9602a2a"
+      ],
+      "pkgbase": "nspr",
+      "version": "4.40-1",
+      "packages": [
+        "nspr"
+      ],
+      "licenses": [
+        "MPL-2.0"
+      ],
+      "recipe": {
+        "repository": "https://github.com/archlinuxarm/PKGBUILDs",
+        "commit": "5da60ab7daaca66caddce0ecbe886b1db22b8eca",
+        "path": "core/nspr"
+      }
+    },
+    {
+      "id": "source-nss-3.126-1",
+      "path": ".artifacts/sources/alarm/nss-3.126-1.src.tar.gz",
+      "bytes": 78815589,
+      "sha256": "7de12c43a3b5b3c90e235c669c42639701f88de75c44bf770ab487e3f4ef41fe",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/7de12c43a3b5b3c90e235c669c42639701f88de75c44bf770ab487e3f4ef41fe"
+      ],
+      "pkgbase": "nss",
+      "version": "3.126-1",
+      "packages": [
+        "ca-certificates-mozilla"
+      ],
+      "licenses": [
+        "MPL-2.0"
+      ],
+      "recipe": {
+        "repository": "https://github.com/archlinuxarm/PKGBUILDs",
+        "commit": "c846d385f4a7ee89a98fe917bcc3d62b0d7bdddf",
+        "path": "core/nss"
+      }
+    },
+    {
+      "id": "source-nss-3.131-1",
+      "path": ".artifacts/sources/alarm/nss-3.131-1.src.tar.gz",
+      "bytes": 87338385,
+      "sha256": "fbd809d21db1aa314fb709dc71fe61bcb75a1a608fcf7f3ed00a431aa11810fe",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/fbd809d21db1aa314fb709dc71fe61bcb75a1a608fcf7f3ed00a431aa11810fe"
+      ],
+      "pkgbase": "nss",
+      "version": "3.131-1",
+      "packages": [
+        "ca-certificates-mozilla",
+        "nss"
+      ],
+      "licenses": [
+        "MPL-2.0"
+      ],
+      "recipe": {
+        "repository": "https://github.com/archlinuxarm/PKGBUILDs",
+        "commit": "c1a17bf5c140bc9f8da95dc6686a50e38f4d5261",
+        "path": "core/nss"
+      }
+    },
+    {
+      "id": "source-nvidia-utils-615.78.08-1",
+      "path": ".artifacts/sources/alarm/nvidia-utils-615.78.08-1.src.tar.gz",
+      "bytes": 419874156,
+      "sha256": "711e7c1ded35a9d445bc0eaddff81f331e7855c77314bd03d53c1beadd7710dc",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/711e7c1ded35a9d445bc0eaddff81f331e7855c77314bd03d53c1beadd7710dc"
+      ],
+      "pkgbase": "nvidia-utils",
+      "version": "615.78.08-1",
+      "packages": [
+        "nvidia-open-dkms",
+        "nvidia-utils"
+      ],
+      "licenses": [
+        "LicenseRef-NVIDIA-Driver-License-Agreement",
+        "MIT AND GPL-2.0-only"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/nvidia-utils.git",
+        "tag": "615.78.08-1"
+      }
+    },
+    {
+      "id": "source-pacman-7.1.0.r9.g54d9411-2",
+      "path": ".artifacts/sources/alarm/pacman-7.1.0.r9.g54d9411-2.src.tar.gz",
+      "bytes": 1923278,
+      "sha256": "0f6c78437e3e33835ea4148aab76738d242188ff048c96aab58cb19560d3b91d",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/0f6c78437e3e33835ea4148aab76738d242188ff048c96aab58cb19560d3b91d"
+      ],
+      "pkgbase": "pacman",
+      "version": "7.1.0.r9.g54d9411-2",
+      "packages": [
+        "pacman"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://github.com/archlinuxarm/PKGBUILDs",
+        "commit": "fd636a0077db0efe900d67d4de910c0d270fc8c4",
+        "path": "core/pacman"
+      }
+    },
+    {
+      "id": "source-pacman-7.1.0.r9.g54d9411-3",
+      "path": ".artifacts/sources/alarm/pacman-7.1.0.r9.g54d9411-3.src.tar.gz",
+      "bytes": 1924316,
+      "sha256": "331d386ebbd395b07b836b6f923343806c56a7a2ce00c2db90e80a48b60bf465",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/331d386ebbd395b07b836b6f923343806c56a7a2ce00c2db90e80a48b60bf465"
+      ],
+      "pkgbase": "pacman",
+      "version": "7.1.0.r9.g54d9411-3",
+      "packages": [
+        "pacman"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://github.com/archlinuxarm/PKGBUILDs",
+        "commit": "4f0165886bb4aca79e55cabc0710c486031f2765",
+        "path": "core/pacman"
+      }
+    },
+    {
+      "id": "source-pacman-mirrorlist-20260411-2",
+      "path": ".artifacts/sources/alarm/pacman-mirrorlist-20260411-2.src.tar.gz",
+      "bytes": 825,
+      "sha256": "6c957e15bb73fcf0fc2b683fd538b963dffd16d2486fe8fd041e98811b1db34a",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/6c957e15bb73fcf0fc2b683fd538b963dffd16d2486fe8fd041e98811b1db34a"
+      ],
+      "pkgbase": "pacman-mirrorlist",
+      "version": "20260411-2",
+      "packages": [
+        "pacman-mirrorlist"
+      ],
+      "licenses": [
+        "GPL"
+      ],
+      "recipe": {
+        "repository": "https://github.com/archlinuxarm/PKGBUILDs",
+        "commit": "9cf9ae643cd64d3faf370bd795ad0fa2761e0951",
+        "path": "core/pacman-mirrorlist"
+      }
+    },
+    {
+      "id": "source-pam-1.7.2-2",
+      "path": ".artifacts/sources/alarm/pam-1.7.2-2.src.tar.gz",
+      "bytes": 723952,
+      "sha256": "bb1a9d2eeaa6374f106d4133f97b3038aa156aa81f350ccbadfc31b0335e876b",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/bb1a9d2eeaa6374f106d4133f97b3038aa156aa81f350ccbadfc31b0335e876b"
+      ],
+      "pkgbase": "pam",
+      "version": "1.7.2-2",
+      "packages": [
+        "pam"
+      ],
+      "licenses": [
+        "GPL-2.0-only"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/pam.git",
+        "tag": "1.7.2-2"
+      }
+    },
+    {
+      "id": "source-pam-1.7.3-1",
+      "path": ".artifacts/sources/alarm/pam-1.7.3-1.src.tar.gz",
+      "bytes": 727826,
+      "sha256": "ecedbf390e54e49a6aa9de9d07e1aa679599e01c0adc8bfc52ef117c737d0f27",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/ecedbf390e54e49a6aa9de9d07e1aa679599e01c0adc8bfc52ef117c737d0f27"
+      ],
+      "pkgbase": "pam",
+      "version": "1.7.3-1",
+      "packages": [
+        "pam"
+      ],
+      "licenses": [
+        "GPL-2.0-only"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/pam.git",
+        "tag": "1.7.3-1"
+      }
+    },
+    {
+      "id": "source-pambase-20260616-1",
+      "path": ".artifacts/sources/alarm/pambase-20260616-1.src.tar.gz",
+      "bytes": 3100,
+      "sha256": "8629de413d01cc9f1805ddc2c87570b99e83c2c5b23fbb8f23bb44bb3e81ad61",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/8629de413d01cc9f1805ddc2c87570b99e83c2c5b23fbb8f23bb44bb3e81ad61"
+      ],
+      "pkgbase": "pambase",
+      "version": "20260616-1",
+      "packages": [
+        "pambase"
+      ],
+      "licenses": [
+        "GPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/pambase.git",
+        "tag": "20260616-1"
+      }
+    },
+    {
+      "id": "source-parted-3.8-1",
+      "path": ".artifacts/sources/alarm/parted-3.8-1.src.tar.gz",
+      "bytes": 2048451,
+      "sha256": "24e9aa8bb43ab6469a258a7344cc19628f6cb0310728e8faf3723548bf3ca76d",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/24e9aa8bb43ab6469a258a7344cc19628f6cb0310728e8faf3723548bf3ca76d"
+      ],
+      "pkgbase": "parted",
+      "version": "3.8-1",
+      "packages": [
+        "parted"
+      ],
+      "licenses": [
+        "GPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/parted.git",
+        "tag": "3.8-1"
+      }
+    },
+    {
+      "id": "source-pciutils-3.15.0-1",
+      "path": ".artifacts/sources/alarm/pciutils-3.15.0-1.src.tar.gz",
+      "bytes": 721985,
+      "sha256": "9183042ad1672feae2daf4030e13899a27c2b8812cc6af6481885d9f89c7b283",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/9183042ad1672feae2daf4030e13899a27c2b8812cc6af6481885d9f89c7b283"
+      ],
+      "pkgbase": "pciutils",
+      "version": "3.15.0-1",
+      "packages": [
+        "pciutils"
+      ],
+      "licenses": [
+        "GPL-2.0-only"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/pciutils.git",
+        "tag": "3.15.0-1"
+      }
+    },
+    {
+      "id": "source-pcsclite-2.5.3-1",
+      "path": ".artifacts/sources/alarm/pcsclite-2.5.3-1.src.tar.gz",
+      "bytes": 273336,
+      "sha256": "37efd3c35520a7dfad7760f8bb5b7d8187387429cc1581bb84e442bd7c4b0786",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/37efd3c35520a7dfad7760f8bb5b7d8187387429cc1581bb84e442bd7c4b0786"
+      ],
+      "pkgbase": "pcsclite",
+      "version": "2.5.3-1",
+      "packages": [
+        "pcsclite"
+      ],
+      "licenses": [
+        "0BSD",
+        "BSD-2-Clause",
+        "BSD-3-Clause",
+        "GPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/pcsclite.git",
+        "tag": "2.5.3-1"
+      }
+    },
+    {
+      "id": "source-pinentry-1.3.3-1",
+      "path": ".artifacts/sources/alarm/pinentry-1.3.3-1.src.tar.gz",
+      "bytes": 625588,
+      "sha256": "9b10b48eae6fad0493cfb11ef96b726644770347b0df8360ff620586aea335de",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/9b10b48eae6fad0493cfb11ef96b726644770347b0df8360ff620586aea335de"
+      ],
+      "pkgbase": "pinentry",
+      "version": "1.3.3-1",
+      "packages": [
+        "pinentry"
+      ],
+      "licenses": [
+        "GPL"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/pinentry.git",
+        "tag": "1.3.3-1"
+      }
+    },
+    {
+      "id": "source-polkit-127-3",
+      "path": ".artifacts/sources/alarm/polkit-127-3.src.tar.gz",
+      "bytes": 482252,
+      "sha256": "36b8df5a25b84a42e3ae3af13e1c8ed8ec23a6b676809a3e1ee106bbd94d9fd1",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/36b8df5a25b84a42e3ae3af13e1c8ed8ec23a6b676809a3e1ee106bbd94d9fd1"
+      ],
+      "pkgbase": "polkit",
+      "version": "127-3",
+      "packages": [
+        "polkit"
+      ],
+      "licenses": [
+        "LGPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/polkit.git",
+        "tag": "127-3"
+      }
+    },
+    {
+      "id": "source-procps-ng-4.0.6-3",
+      "path": ".artifacts/sources/alarm/procps-ng-4.0.6-3.src.tar.gz",
+      "bytes": 2327319,
+      "sha256": "e053a6671c40aca69337bf00c594d17cb58ac6823f51feb26257d5e85b50b49f",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/e053a6671c40aca69337bf00c594d17cb58ac6823f51feb26257d5e85b50b49f"
+      ],
+      "pkgbase": "procps-ng",
+      "version": "4.0.6-3",
+      "packages": [
+        "procps-ng"
+      ],
+      "licenses": [
+        "GPL",
+        "LGPL"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/procps-ng.git",
+        "tag": "4.0.6-3"
+      }
+    },
+    {
+      "id": "source-procps-ng-4.0.7-1",
+      "path": ".artifacts/sources/alarm/procps-ng-4.0.7-1.src.tar.gz",
+      "bytes": 2330128,
+      "sha256": "e5299add16d66c06846d81dc303701bddfaa490ef46af03d662bc6a390cbdb0c",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/e5299add16d66c06846d81dc303701bddfaa490ef46af03d662bc6a390cbdb0c"
+      ],
+      "pkgbase": "procps-ng",
+      "version": "4.0.7-1",
+      "packages": [
+        "procps-ng"
+      ],
+      "licenses": [
+        "GPL",
+        "LGPL"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/procps-ng.git",
+        "tag": "4.0.7-1"
+      }
+    },
+    {
+      "id": "source-psmisc-23.7-2",
+      "path": ".artifacts/sources/alarm/psmisc-23.7-2.src.tar.gz",
+      "bytes": 409366,
+      "sha256": "39c57dd1cd074724a8f3a036a8bb2feaa7c505910879c91001a7cc4e5065ccda",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/39c57dd1cd074724a8f3a036a8bb2feaa7c505910879c91001a7cc4e5065ccda"
+      ],
+      "pkgbase": "psmisc",
+      "version": "23.7-2",
+      "packages": [
+        "psmisc"
+      ],
+      "licenses": [
+        "GPL"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/psmisc.git",
+        "tag": "23.7-2"
+      }
+    },
+    {
+      "id": "source-pygobject-3.58.1-1",
+      "path": ".artifacts/sources/alarm/pygobject-3.58.1-1.src.tar.gz",
+      "bytes": 1391560,
+      "sha256": "253950ee8ac9f58919d412021a44458c90d383e9ef95a4e2ed2483514abb1f4d",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/253950ee8ac9f58919d412021a44458c90d383e9ef95a4e2ed2483514abb1f4d"
+      ],
+      "pkgbase": "pygobject",
+      "version": "3.58.1-1",
+      "packages": [
+        "python-gobject"
+      ],
+      "licenses": [
+        "LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/pygobject.git",
+        "tag": "3.58.1-1"
+      }
+    },
+    {
+      "id": "source-python-pyparted-3.13.0-6",
+      "path": ".artifacts/sources/alarm/python-pyparted-3.13.0-6.src.tar.gz",
+      "bytes": 102039,
+      "sha256": "9f47221401c863ddf6215570563d1c5c23f716a7b0d8b8c9702aa704de16a504",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/9f47221401c863ddf6215570563d1c5c23f716a7b0d8b8c9702aa704de16a504"
+      ],
+      "pkgbase": "python-pyparted",
+      "version": "3.13.0-6",
+      "packages": [
+        "python-pyparted"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/python-pyparted.git",
+        "tag": "3.13.0-6"
+      }
+    },
+    {
+      "id": "source-readline-8.3.003-1",
+      "path": ".artifacts/sources/alarm/readline-8.3.003-1.src.tar.gz",
+      "bytes": 3440383,
+      "sha256": "ac608efa29d2501954792bf28119e6134809dc7bf1d50d2ae3883d61ac41ebb3",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/ac608efa29d2501954792bf28119e6134809dc7bf1d50d2ae3883d61ac41ebb3"
+      ],
+      "pkgbase": "readline",
+      "version": "8.3.003-1",
+      "packages": [
+        "readline"
+      ],
+      "licenses": [
+        "GPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/readline.git",
+        "tag": "8.3.003-1"
+      }
+    },
+    {
+      "id": "source-readline-8.3.6-1",
+      "path": ".artifacts/sources/alarm/readline-8.3.6-1.src.tar.gz",
+      "bytes": 3443166,
+      "sha256": "f071768d7c4d4acdecf01f2fe15eda0d79ff7eacba0e2586ad1170624dc1bd99",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/f071768d7c4d4acdecf01f2fe15eda0d79ff7eacba0e2586ad1170624dc1bd99"
+      ],
+      "pkgbase": "readline",
+      "version": "8.3.6-1",
+      "packages": [
+        "readline"
+      ],
+      "licenses": [
+        "GPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/readline.git",
+        "tag": "8.3.6-1"
+      }
+    },
+    {
+      "id": "source-rsync-3.5.1-3",
+      "path": ".artifacts/sources/alarm/rsync-3.5.1-3.src.tar.gz",
+      "bytes": 1590838,
+      "sha256": "5745bbe53529aaa5a88f4621655332f04e47690d9978caf36bee885451680404",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/5745bbe53529aaa5a88f4621655332f04e47690d9978caf36bee885451680404"
+      ],
+      "pkgbase": "rsync",
+      "version": "3.5.1-3",
+      "packages": [
+        "rsync"
+      ],
+      "licenses": [
+        "GPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/rsync.git",
+        "tag": "3.5.1-3"
+      }
+    },
+    {
+      "id": "source-sed-4.10-1",
+      "path": ".artifacts/sources/alarm/sed-4.10-1.src.tar.gz",
+      "bytes": 1739981,
+      "sha256": "d1d3d117fa37d664fe0353eb2b00d9e7b0e688b4f58a0040fb8b917e168fa916",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/d1d3d117fa37d664fe0353eb2b00d9e7b0e688b4f58a0040fb8b917e168fa916"
+      ],
+      "pkgbase": "sed",
+      "version": "4.10-1",
+      "packages": [
+        "sed"
+      ],
+      "licenses": [
+        "GPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/sed.git",
+        "tag": "4.10-1"
+      }
+    },
+    {
+      "id": "source-sed-4.10-2",
+      "path": ".artifacts/sources/alarm/sed-4.10-2.src.tar.gz",
+      "bytes": 1739789,
+      "sha256": "4f8f860a03f647042a67fa2f8b3b12fbf3acb846019b0a1573c592303fd30490",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/4f8f860a03f647042a67fa2f8b3b12fbf3acb846019b0a1573c592303fd30490"
+      ],
+      "pkgbase": "sed",
+      "version": "4.10-2",
+      "packages": [
+        "sed"
+      ],
+      "licenses": [
+        "GPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/sed.git",
+        "tag": "4.10-2"
+      }
+    },
+    {
+      "id": "source-slang-2.3.3-4",
+      "path": ".artifacts/sources/alarm/slang-2.3.3-4.src.tar.gz",
+      "bytes": 1644197,
+      "sha256": "700bf5bf8d89047b0e33cc0da734ce8c1946350c7bdf358d6cec6c8cfcd3474a",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/700bf5bf8d89047b0e33cc0da734ce8c1946350c7bdf358d6cec6c8cfcd3474a"
+      ],
+      "pkgbase": "slang",
+      "version": "2.3.3-4",
+      "packages": [
+        "slang"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/slang.git",
+        "tag": "2.3.3-4"
+      }
+    },
+    {
+      "id": "source-systemd-261.2-1",
+      "path": ".artifacts/sources/alarm/systemd-261.2-1.src.tar.gz",
+      "bytes": 18198112,
+      "sha256": "236d86a925e4222e7ed9de6ebd10b3bde58bee8166887e5c461750e68b2c591d",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/236d86a925e4222e7ed9de6ebd10b3bde58bee8166887e5c461750e68b2c591d"
+      ],
+      "pkgbase": "systemd",
+      "version": "261.2-1",
+      "packages": [
+        "systemd",
+        "systemd-libs",
+        "systemd-resolvconf",
+        "systemd-sysvcompat"
+      ],
+      "licenses": [
+        "CC0-1.0",
+        "GPL-2.0-or-later",
+        "GPL-2.0-or-later WITH Linux-syscall-note",
+        "LGPL-2.1-or-later",
+        "MIT-0"
+      ],
+      "recipe": {
+        "repository": "https://github.com/archlinuxarm/PKGBUILDs",
+        "commit": "9f9f3f40a59b2e0f1d9d8e710a5764ea66ae916f",
+        "path": "core/systemd"
+      }
+    },
+    {
+      "id": "source-systemd-262.1-1",
+      "path": ".artifacts/sources/alarm/systemd-262.1-1.src.tar.gz",
+      "bytes": 18822828,
+      "sha256": "e78be9eed6bdc7c11becbb26508f0e9caebad70c7f8b31b02eb7962e08d2e5af",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/e78be9eed6bdc7c11becbb26508f0e9caebad70c7f8b31b02eb7962e08d2e5af"
+      ],
+      "pkgbase": "systemd",
+      "version": "262.1-1",
+      "packages": [
+        "systemd",
+        "systemd-libs",
+        "systemd-resolvconf",
+        "systemd-sysvcompat"
+      ],
+      "licenses": [
+        "CC0-1.0",
+        "GPL-2.0-or-later",
+        "GPL-2.0-or-later WITH Linux-syscall-note",
+        "LGPL-2.1-or-later",
+        "MIT-0"
+      ],
+      "recipe": {
+        "repository": "https://github.com/archlinuxarm/PKGBUILDs",
+        "commit": "564efbee98c7736a3c25f87b2cbbcacedc5cfa5d",
+        "path": "core/systemd"
+      }
+    },
+    {
+      "id": "source-tar-1.35-2",
+      "path": ".artifacts/sources/alarm/tar-1.35-2.src.tar.gz",
+      "bytes": 2321188,
+      "sha256": "da0aebcc310bf694dc270b2e85dfa3598fbfacc332b724809c853f1d1045e411",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/da0aebcc310bf694dc270b2e85dfa3598fbfacc332b724809c853f1d1045e411"
+      ],
+      "pkgbase": "tar",
+      "version": "1.35-2",
+      "packages": [
+        "tar"
+      ],
+      "licenses": [
+        "GPL3"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/tar.git",
+        "tag": "1.35-2"
+      }
+    },
+    {
+      "id": "source-tar-1.35-5",
+      "path": ".artifacts/sources/alarm/tar-1.35-5.src.tar.gz",
+      "bytes": 13281101,
+      "sha256": "d9ad6ac4256fa1d6be96fd80ce7ffec38b5da3f3d19ca759912d5dafac418b1c",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/d9ad6ac4256fa1d6be96fd80ce7ffec38b5da3f3d19ca759912d5dafac418b1c"
+      ],
+      "pkgbase": "tar",
+      "version": "1.35-5",
+      "packages": [
+        "tar"
+      ],
+      "licenses": [
+        "GPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/tar.git",
+        "tag": "1.35-5"
+      }
+    },
+    {
+      "id": "source-terminus-font-4.49.1-8",
+      "path": ".artifacts/sources/alarm/terminus-font-4.49.1-8.src.tar.gz",
+      "bytes": 608554,
+      "sha256": "a904a68c272d5f68b04956ac86fdc7a761242902b70ae28dee023b27ed40767d",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/a904a68c272d5f68b04956ac86fdc7a761242902b70ae28dee023b27ed40767d"
+      ],
+      "pkgbase": "terminus-font",
+      "version": "4.49.1-8",
+      "packages": [
+        "terminus-font"
+      ],
+      "licenses": [
+        "GPL2",
+        "custom:OFL"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/terminus-font.git",
+        "tag": "4.49.1-8"
+      }
+    },
+    {
+      "id": "source-thin-provisioning-tools-1.3.4-1",
+      "path": ".artifacts/sources/alarm/thin-provisioning-tools-1.3.4-1.src.tar.gz",
+      "bytes": 484932,
+      "sha256": "c314ad38a23ac0e2bb1e54382ea9e729d7bb6ef95889bd177308decd91786b41",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/c314ad38a23ac0e2bb1e54382ea9e729d7bb6ef95889bd177308decd91786b41"
+      ],
+      "pkgbase": "thin-provisioning-tools",
+      "version": "1.3.4-1",
+      "packages": [
+        "thin-provisioning-tools"
+      ],
+      "licenses": [
+        "GPL-3.0-only"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/thin-provisioning-tools.git",
+        "tag": "1.3.4-1"
+      }
+    },
+    {
+      "id": "source-upower-1.91.5-1",
+      "path": ".artifacts/sources/alarm/upower-1.91.5-1.src.tar.gz",
+      "bytes": 216561,
+      "sha256": "c306a4e93100452a99c8735770b5fadae59f207a732468fa5aed8a61add48239",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/c306a4e93100452a99c8735770b5fadae59f207a732468fa5aed8a61add48239"
+      ],
+      "pkgbase": "upower",
+      "version": "1.91.5-1",
+      "packages": [
+        "upower"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/upower.git",
+        "tag": "1.91.5-1"
+      }
+    },
+    {
+      "id": "source-util-linux-2.42.2-1",
+      "path": ".artifacts/sources/alarm/util-linux-2.42.2-1.src.tar.gz",
+      "bytes": 17916326,
+      "sha256": "0c33fa7e19841910a4cab57c4e846398bdf687ffb50f20e0cf4be771d6c3d28c",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/0c33fa7e19841910a4cab57c4e846398bdf687ffb50f20e0cf4be771d6c3d28c"
+      ],
+      "pkgbase": "util-linux",
+      "version": "2.42.2-1",
+      "packages": [
+        "util-linux",
+        "util-linux-libs"
+      ],
+      "licenses": [
+        "BSD-2-Clause",
+        "BSD-3-Clause",
+        "BSD-4-Clause-UC",
+        "GPL-2.0-only",
+        "GPL-2.0-or-later",
+        "GPL-3.0-or-later",
+        "ISC",
+        "LGPL-2.1-or-later",
+        "LicenseRef-PublicDomain"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/util-linux.git",
+        "tag": "2.42.2-1"
+      }
+    },
+    {
+      "id": "source-util-linux-2.42.4-1",
+      "path": ".artifacts/sources/alarm/util-linux-2.42.4-1.src.tar.gz",
+      "bytes": 18009219,
+      "sha256": "2ade94d1a42c481940967e7eb8b62daa1de7a426c2786fb05dd1b16ddf132f20",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/2ade94d1a42c481940967e7eb8b62daa1de7a426c2786fb05dd1b16ddf132f20"
+      ],
+      "pkgbase": "util-linux",
+      "version": "2.42.4-1",
+      "packages": [
+        "util-linux",
+        "util-linux-libs"
+      ],
+      "licenses": [
+        "BSD-2-Clause",
+        "BSD-3-Clause",
+        "BSD-4-Clause-UC",
+        "GPL-2.0-only",
+        "GPL-2.0-or-later",
+        "GPL-3.0-or-later",
+        "ISC",
+        "LGPL-2.1-or-later",
+        "LicenseRef-PublicDomain"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/util-linux.git",
+        "tag": "2.42.4-1"
+      }
+    },
+    {
+      "id": "source-vim-9.2.0849-1",
+      "path": ".artifacts/sources/alarm/vim-9.2.0849-1.src.tar.gz",
+      "bytes": 19770231,
+      "sha256": "f08a13b4994b6e550d12fec7da8bc5323ff757170c453ff9a9bb55e8614eca03",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/f08a13b4994b6e550d12fec7da8bc5323ff757170c453ff9a9bb55e8614eca03"
+      ],
+      "pkgbase": "vim",
+      "version": "9.2.0849-1",
+      "packages": [
+        "vim",
+        "vim-runtime"
+      ],
+      "licenses": [
+        "custom:vim"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/vim.git",
+        "tag": "9.2.0849-1"
+      }
+    },
+    {
+      "id": "source-vim-9.2.1178-1",
+      "path": ".artifacts/sources/alarm/vim-9.2.1178-1.src.tar.gz",
+      "bytes": 20071892,
+      "sha256": "f04fa1e715a7b14d82bf4329bbcf361c40bdb298d9c3deb9d45fec26641cd319",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/f04fa1e715a7b14d82bf4329bbcf361c40bdb298d9c3deb9d45fec26641cd319"
+      ],
+      "pkgbase": "vim",
+      "version": "9.2.1178-1",
+      "packages": [
+        "vim",
+        "vim-runtime"
+      ],
+      "licenses": [
+        "custom:vim"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/vim.git",
+        "tag": "9.2.1178-1"
+      }
+    },
+    {
+      "id": "source-which-2.25-1",
+      "path": ".artifacts/sources/alarm/which-2.25-1.src.tar.gz",
+      "bytes": 205156,
+      "sha256": "a8c4f611c49cefb505905232e44213f38e6f07e373f59027b463767d799c3cdd",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/a8c4f611c49cefb505905232e44213f38e6f07e373f59027b463767d799c3cdd"
+      ],
+      "pkgbase": "which",
+      "version": "2.25-1",
+      "packages": [
+        "which"
+      ],
+      "licenses": [
+        "GPL-3.0-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/which.git",
+        "tag": "2.25-1"
+      }
+    },
+    {
+      "id": "source-xfsprogs-7.2.0-1",
+      "path": ".artifacts/sources/alarm/xfsprogs-7.2.0-1.src.tar.gz",
+      "bytes": 1934177,
+      "sha256": "e95ebd2a90c68841e3d453995979b32f90e6691ad3f118ec2db8cb4a35d3dd22",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/e95ebd2a90c68841e3d453995979b32f90e6691ad3f118ec2db8cb4a35d3dd22"
+      ],
+      "pkgbase": "xfsprogs",
+      "version": "7.2.0-1",
+      "packages": [
+        "xfsprogs"
+      ],
+      "licenses": [
+        "GPL-2.0-only",
+        "LGPL-2.1-only"
+      ],
+      "recipe": {
+        "repository": "https://github.com/archlinuxarm/PKGBUILDs",
+        "commit": "b59548edb9c4906bcd87093156f4975b5f327401",
+        "path": "core/xfsprogs"
+      }
+    },
+    {
+      "id": "source-xxhash-0.8.4-1",
+      "path": ".artifacts/sources/alarm/xxhash-0.8.4-1.src.tar.gz",
+      "bytes": 1152045,
+      "sha256": "3cc11a69dc655dd5a4ada6dd5ed624b09648827dc4c485cacab36a0e480148dc",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/3cc11a69dc655dd5a4ada6dd5ed624b09648827dc4c485cacab36a0e480148dc"
+      ],
+      "pkgbase": "xxhash",
+      "version": "0.8.4-1",
+      "packages": [
+        "xxhash"
+      ],
+      "licenses": [
+        "BSD",
+        "GPL2"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/xxhash.git",
+        "tag": "0.8.4-1"
+      }
+    },
+    {
+      "id": "source-xz-5.8.3-1",
+      "path": ".artifacts/sources/alarm/xz-5.8.3-1.src.tar.gz",
+      "bytes": 1657993,
+      "sha256": "cd5e493a6e6188b37566bd0a7f4c042beef76ad47ef22864669843004846b832",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/cd5e493a6e6188b37566bd0a7f4c042beef76ad47ef22864669843004846b832"
+      ],
+      "pkgbase": "xz",
+      "version": "5.8.3-1",
+      "packages": [
+        "xz"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later AND 0BSD AND LicenseRef-Public-Domain AND LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/xz.git",
+        "tag": "5.8.3-1"
+      }
+    },
+    {
+      "id": "source-xz-5.8.4-1",
+      "path": ".artifacts/sources/alarm/xz-5.8.4-1.src.tar.gz",
+      "bytes": 1666559,
+      "sha256": "5fe5ccc66f4f6a427d41f540ad9cf030dc77f68a4a282de10a7155d70c9111f7",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/5fe5ccc66f4f6a427d41f540ad9cf030dc77f68a4a282de10a7155d70c9111f7"
+      ],
+      "pkgbase": "xz",
+      "version": "5.8.4-1",
+      "packages": [
+        "xz"
+      ],
+      "licenses": [
+        "GPL-2.0-or-later AND 0BSD AND LicenseRef-Public-Domain AND LGPL-2.1-or-later"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/xz.git",
+        "tag": "5.8.4-1"
+      }
+    },
+    {
+      "id": "source-zeromq-4.3.5-3",
+      "path": ".artifacts/sources/alarm/zeromq-4.3.5-3.src.tar.gz",
+      "bytes": 872808,
+      "sha256": "47218f4ea8a7c64a2fff367e0ecd590b4ca1135a3451d699881554381d985000",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/47218f4ea8a7c64a2fff367e0ecd590b4ca1135a3451d699881554381d985000"
+      ],
+      "pkgbase": "zeromq",
+      "version": "4.3.5-3",
+      "packages": [
+        "zeromq"
+      ],
+      "licenses": [
+        "MPL-2.0"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/zeromq.git",
+        "tag": "4.3.5-3"
+      }
+    },
+    {
+      "id": "source-zstd-1.5.7-3",
+      "path": ".artifacts/sources/alarm/zstd-1.5.7-3.src.tar.gz",
+      "bytes": 1889964,
+      "sha256": "3314771945a48d49a7f92e04d9ac6748cfc0008939dcbfd2666da83f145dac1d",
+      "urls": [
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/3314771945a48d49a7f92e04d9ac6748cfc0008939dcbfd2666da83f145dac1d"
+      ],
+      "pkgbase": "zstd",
+      "version": "1.5.7-3",
+      "packages": [
+        "zstd"
+      ],
+      "licenses": [
+        "BSD-3-Clause",
+        "GPL-2.0-only"
+      ],
+      "recipe": {
+        "repository": "https://gitlab.archlinux.org/archlinux/packaging/packages/zstd.git",
+        "tag": "1.5.7-3"
+      }
+    }
+  ]
+}

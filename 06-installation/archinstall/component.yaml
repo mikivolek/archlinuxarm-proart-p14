@@ -1,0 +1,367 @@
+{
+  "schema": "h7607a-component-v1",
+  "id": "archinstall",
+  "type": "custom",
+  "repo_url": "https://github.com/archlinux/archinstall",
+  "checkout_hash": "78982a624824aa415f59bf88c515676a589e3c55",
+  "sparse": {
+    "enabled": false,
+    "paths": []
+  },
+  "dependencies": [
+    {
+      "name": "python",
+      "version": "3.14.8-1",
+      "command": "python3",
+      "policy": "pinned-live-inventory",
+      "scope": "runtime"
+    },
+    {
+      "name": "arch-install-scripts",
+      "version": "31-2",
+      "command": "arch-chroot",
+      "policy": "pinned-live-inventory",
+      "scope": "runtime"
+    },
+    {
+      "name": "pacman",
+      "version": "7.1.0.r9.g54d9411-3",
+      "command": "pacman",
+      "policy": "pinned-live-inventory",
+      "scope": "runtime"
+    },
+    {
+      "name": "networkmanager",
+      "version": "1.58.1-2",
+      "command": "nmtui-connect",
+      "policy": "pinned-live-inventory",
+      "scope": "runtime"
+    },
+    {
+      "name": "systemd",
+      "version": "262.1-1",
+      "command": "timedatectl",
+      "policy": "pinned-live-inventory",
+      "scope": "runtime"
+    },
+    {
+      "name": "util-linux",
+      "version": "2.42.4-1",
+      "command": "lsblk",
+      "policy": "pinned-live-inventory",
+      "scope": "runtime"
+    },
+    {
+      "name": "lvm2",
+      "version": "2.03.43-2",
+      "command": "pvs",
+      "policy": "pinned-live-inventory",
+      "scope": "runtime"
+    },
+    {
+      "name": "mkinitcpio",
+      "version": "42.2-1",
+      "command": "mkinitcpio",
+      "policy": "pinned-live-inventory",
+      "scope": "runtime"
+    },
+    {
+      "name": "glibc",
+      "version": "2.43+r22+g8362e8ce10b2-2",
+      "command": "locale-gen",
+      "policy": "pinned-live-inventory",
+      "scope": "runtime"
+    },
+    {
+      "name": "coreutils",
+      "version": "9.12-2",
+      "command": "env",
+      "policy": "pinned-live-inventory",
+      "scope": "runtime"
+    },
+    {
+      "name": "python",
+      "version": "3.14.8-1",
+      "scope": "ALARM runtime; standard library unless entry lists otherwise"
+    }
+  ],
+  "depends_on": [
+    "media",
+    "wheel-carrier",
+    "policy",
+    "python-cuda",
+    "containers",
+    "packages"
+  ],
+  "items": [
+    {
+      "type": "custom",
+      "repo_url": "https://github.com/archlinux/archinstall",
+      "checkout_hash": "78982a624824aa415f59bf88c515676a589e3c55",
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "note": "Custom adapter to the pinned upstream guided flow; not a replacement installer. Provide exact source and runtime API-file hashes.",
+      "id": "installer-archinstall",
+      "files": [
+        "src/h7607a/archinstall_adapter.py",
+        "src/h7607a/target_execution.py",
+        "src/h7607a/offline_locale.py",
+        "locks/archinstall.json"
+      ]
+    },
+    {
+      "id": "archinstall_adapter.py",
+      "type": "custom",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "code": "src/h7607a/archinstall_adapter.py",
+      "dependencies": [
+        {
+          "name": "python",
+          "version": "3.14.8-1",
+          "command": "python3",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "arch-install-scripts",
+          "version": "31-2",
+          "command": "arch-chroot",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "pacman",
+          "version": "7.1.0.r9.g54d9411-3",
+          "command": "pacman",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "pacman",
+          "version": "7.1.0.r9.g54d9411-3",
+          "command": "pacman-conf",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "pacman",
+          "version": "7.1.0.r9.g54d9411-3",
+          "command": "pacman-key",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "networkmanager",
+          "version": "1.58.1-2",
+          "command": "nmtui-connect",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "networkmanager",
+          "version": "1.58.1-2",
+          "command": "nmcli",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "systemd",
+          "version": "262.1-1",
+          "command": "timedatectl",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "util-linux",
+          "version": "2.42.4-1",
+          "command": "lsblk",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "util-linux",
+          "version": "2.42.4-1",
+          "command": "findmnt",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "util-linux",
+          "version": "2.42.4-1",
+          "command": "blkid",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "lvm2",
+          "version": "2.03.43-2",
+          "command": "pvs",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "util-linux",
+          "version": "2.42.4-1",
+          "command": "mount",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "util-linux",
+          "version": "2.42.4-1",
+          "command": "umount",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "systemd",
+          "version": "262.1-1",
+          "command": "systemctl",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "libarchive",
+          "version": "3.8.10-1",
+          "command": "bsdtar",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        }
+      ]
+    },
+    {
+      "id": "target_execution.py",
+      "type": "custom",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "code": "src/h7607a/target_execution.py",
+      "dependencies": [
+        {
+          "name": "python",
+          "version": "3.14.8-1",
+          "command": "python3",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "util-linux",
+          "version": "2.42.4-1",
+          "command": "unshare",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "arch-install-scripts",
+          "version": "31-2",
+          "command": "arch-chroot",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "mkinitcpio",
+          "version": "42.2-1",
+          "command": "mkinitcpio",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        }
+      ]
+    },
+    {
+      "id": "offline_locale.py",
+      "type": "custom",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "code": "src/h7607a/offline_locale.py",
+      "dependencies": [
+        {
+          "name": "python",
+          "version": "3.14.8-1",
+          "command": "python3",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "glibc",
+          "version": "2.43+r22+g8362e8ce10b2-2",
+          "command": "locale-gen",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "glibc",
+          "version": "2.43+r22+g8362e8ce10b2-2",
+          "command": "locale",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "coreutils",
+          "version": "9.12-2",
+          "command": "env",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "source": "payload/installer/h7607a.py",
+      "destination": "installer/h7607a.py",
+      "bytes": 318,
+      "sha256": "9c274076a772a239d782a11fe0eb57892342e54596d27e1cedafd24590c39e79",
+      "mode": 420
+    },
+    {
+      "source": "payload/locks/archinstall.json",
+      "destination": "locks/archinstall.json",
+      "bytes": 4329,
+      "sha256": "b7cdc49aec0d3068337b344bf8e174592b5fbf7c95854850b345851cb2d94343",
+      "mode": 420
+    },
+    {
+      "source": "payload/src/h7607a/archinstall_adapter.py",
+      "destination": "src/h7607a/archinstall_adapter.py",
+      "bytes": 53588,
+      "sha256": "5bdee53c512bde9867affbe0769d23f9a790acac2423d607c48e12a1ad115cdd",
+      "mode": 420
+    },
+    {
+      "source": "payload/src/h7607a/offline_locale.py",
+      "destination": "src/h7607a/offline_locale.py",
+      "bytes": 6024,
+      "sha256": "ebadd2c994e627c013bcff6b1bcb8b095a5b7891f6b2757c28d0504f99f7159e",
+      "mode": 420
+    },
+    {
+      "source": "payload/src/h7607a/target_execution.py",
+      "destination": "src/h7607a/target_execution.py",
+      "bytes": 6000,
+      "sha256": "c64164e45caec44be4ce6217cbd8f63a6d2f93b8158713a47fa627b5cd88f799",
+      "mode": 420
+    },
+    {
+      "source": "payload/tests/test_archinstall_adapter.py",
+      "destination": "tests/test_archinstall_adapter.py",
+      "bytes": 25787,
+      "sha256": "95d7a4eefadfdbb397bf10bb0c938f0c4766f8b8ec4abc928fc660c84f8b0c03",
+      "mode": 420
+    }
+  ],
+  "links": []
+}

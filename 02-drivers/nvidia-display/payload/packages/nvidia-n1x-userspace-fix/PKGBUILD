@@ -1,0 +1,25 @@
+pkgname=nvidia-n1x-userspace-fix
+pkgver=615.78.08
+pkgrel=1
+pkgdesc='ARM RMAPI library included by NVIDIA but missing from current ALARM nvidia-utils'
+arch=(aarch64)
+url='https://www.nvidia.com/en-us/drivers/unix/'
+license=('LicenseRef-NVIDIA-Driver-License-Agreement')
+depends=("nvidia-utils=$pkgver-1")
+makedepends=(python zstd)
+options=(!strip !debug)
+source=("https://us.download.nvidia.com/XFree86/aarch64/$pkgver/NVIDIA-Linux-aarch64-$pkgver.run"
+        extract-nvidia-library.py)
+noextract=("NVIDIA-Linux-aarch64-$pkgver.run")
+sha256sums=('5076011350181e81a031f0fd012fe35fe4be37c7820d651fb7aaa894af447a37' '67098e1c811ade56ae039d08964d2ae1760d13eb60cceeb75c8d6567706901e1')
+
+prepare() {
+  python "$srcdir/extract-nvidia-library.py" "$srcdir/NVIDIA-Linux-aarch64-$pkgver.run" "$srcdir/selected"
+}
+
+package() {
+  install -Dm644 "$srcdir/selected/libnvidia-rmapi-tegra.so.$pkgver" "$pkgdir/usr/lib/libnvidia-rmapi-tegra.so.$pkgver"
+  ln -s "libnvidia-rmapi-tegra.so.$pkgver" "$pkgdir/usr/lib/libnvidia-rmapi-tegra.so.1"
+  ln -s "libnvidia-rmapi-tegra.so.$pkgver" "$pkgdir/usr/lib/libnvidia-rmapi-tegra.so"
+  install -Dm644 "$srcdir/selected/LICENSE" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}

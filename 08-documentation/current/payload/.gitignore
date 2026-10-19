@@ -1,0 +1,9 @@
+/build/
+/.work/
+/.artifacts/
+__pycache__/
+*.pyc
+/assets/hardware/acpi/h7607a-acpi.cpio
+/assets/hardware/uefi/n1x-asus-ssdt-baseline.bin
+/assets/hardware/uefi/n1x-dsdt-baseline.bin
+/provenance/hardware/power-source.dsl

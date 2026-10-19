@@ -1,0 +1,129 @@
+{
+  "schema": "h7607a-archinstall-lock-v1",
+  "version": "4.5",
+  "package_version": "4.5-1",
+  "upstream_commit": "78982a624824aa415f59bf88c515676a589e3c55",
+  "package_source": "https://archlinuxarm.org/packages/aarch64/archinstall",
+  "api_files": [
+    {
+      "path": "main.py",
+      "sha256": "2772ffee70d007cee61c8c8ac04f9418f7c0caf670626c158b6227f8dade8f5d"
+    },
+    {
+      "path": "scripts/guided.py",
+      "sha256": "1e3b474d78e92eecba9e7dfa59e41aecca2f659be4cae6f1122fe81b57efc34a"
+    },
+    {
+      "path": "lib/args.py",
+      "sha256": "f995582130db7fd21f9ebcbafe3eda192f29754ed336f8f61ca6e33a226e9ed5"
+    },
+    {
+      "path": "lib/plugins.py",
+      "sha256": "e0ee174755e4694e47a565485dc0806bb623ad013924b1fc66e663bea5d99b0f"
+    },
+    {
+      "path": "lib/global_menu.py",
+      "sha256": "879e468692407eace89bb1951100a91355becc67792aa83f956a4336559c943b"
+    },
+    {
+      "path": "lib/installer.py",
+      "sha256": "8a891c129a4baf266f60c0fe9cbbcc38b22c4e895c6708b3fabef0aea7abdea3"
+    },
+    {
+      "path": "lib/pacman/pacman.py",
+      "sha256": "ff31fb5948218cb6a720c587f0e85a65b91c8e85e3f295ee98494f026d6acd99"
+    },
+    {
+      "path": "lib/pacman/config.py",
+      "sha256": "c96ddbaefce682a60ac905c2c2a43ec25c8fbdb4b4df335fce62c82190cc097a"
+    },
+    {
+      "path": "lib/models/mirrors.py",
+      "sha256": "383e8514764c74d47e47d060a19444fa19788bbdc93591364c76a793c83a669c"
+    },
+    {
+      "path": "lib/mirror/mirror_handler.py",
+      "sha256": "63827fb9c7a235a3ab174db22647c796add69576c5ce59f250342c7b7e4a599e"
+    },
+    {
+      "path": "lib/models/bootloader.py",
+      "sha256": "24250646aeb10780c4f95e4de878d2a92bb9a61caef6c43720be3c608a372c72"
+    },
+    {
+      "path": "lib/models/device.py",
+      "sha256": "09bd46470956bf4d4b65b5a2d676474d86af6e0d6a6414248eb8085a34df5067"
+    },
+    {
+      "path": "lib/profile/profiles_handler.py",
+      "sha256": "73971533bd253062d23b83082613977c6f4a61bebdfdc9135a0ffa7817972a5f"
+    },
+    {
+      "path": "lib/disk/filesystem.py",
+      "sha256": "9e7bdf8b952bf48dab23ba143706f1c0099c2f1a467200b2e0aee3a02c222950"
+    },
+    {
+      "path": "lib/disk/device_handler.py",
+      "sha256": "db9c3e5ff0ad40c7213fd13a6a44f4dc8fd1d8d8267a4b2bb07f45122a433d2f"
+    },
+    {
+      "path": "lib/network/network_handler.py",
+      "sha256": "336b3532a85e6b9e3867af36f943a4a0decb440bad972459d1094edb286003b2"
+    },
+    {
+      "path": "default_profiles/profile.py",
+      "sha256": "18a38253c63c1b1bc970b4a056bd0e9b5ec335efa5913df4162b4896daa95904"
+    },
+    {
+      "path": "lib/mirror/mirror_menu.py",
+      "sha256": "b90a12b24eeb7ac3eb5a679b68a830d9ee5f13e42dee25593bb10424c4147050"
+    },
+    {
+      "path": "lib/models/application.py",
+      "sha256": "5eaa103c86dcb6d7e1d955884438dae4452dd3786f2c29a0386dd3b305161d06"
+    },
+    {
+      "path": "lib/models/locale.py",
+      "sha256": "81b5115aa7e8310bea9b6c79c87fc17f5120110ce3d2c37b3103f04d26492fa4"
+    },
+    {
+      "path": "applications/power_management.py",
+      "sha256": "23eb9ba11a8a90de8d56817d1e9973443d64b560a97d192534770c5ec87112b4"
+    }
+  ],
+  "kernel_package": "linux-n1x-nvidia-bin",
+  "hardware_repository": "h7607a",
+  "hardware_packages": {
+    "linux-n1x-nvidia-bin": "7.0.0.1022.23-3",
+    "nvidia-utils": "615.78.08-1",
+    "nvidia-n1x-userspace-fix": "615.78.08-1",
+    "nvidia-n1x-modules": "615.78.08-4",
+    "h7607a-hardware": "1.0.0-4",
+    "power-profiles-daemon-n1x": "0.30.nvidia3001c25-2",
+    "linux-firmware-mediatek": "20260916-1",
+    "linux-firmware-cirrus": "20260916-1",
+    "linux-firmware-whence": "20260916-1"
+  },
+  "initcpio_hook": "h7607a-preload",
+  "incompatible_packages": [
+    "linux",
+    "linux-lts",
+    "linux-zen",
+    "linux-hardened",
+    "linux-rt",
+    "linux-rt-lts",
+    "nvidia",
+    "nvidia-dkms",
+    "nvidia-open",
+    "nvidia-open-dkms",
+    "nvidia-open-lts",
+    "nvidia-lts",
+    "xf86-video-nouveau"
+  ],
+  "artifacts": [],
+  "local_repository_path": "build/repo",
+  "firmware_packages": [
+    "linux-firmware-mediatek",
+    "linux-firmware-cirrus"
+  ],
+  "firmware_scope": "MT7925 Wi-Fi/Bluetooth plus CS42L43 headphone codec, confirmed modinfo declarations and pacman ownership; NVIDIA GSP remains owned by nvidia-utils, and the installer extracts the Cirrus amplifier tuning from the ASUS driver package."
+}

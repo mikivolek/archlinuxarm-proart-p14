@@ -1,0 +1,34 @@
+{
+  "nvKmsKapiF16ToF32": {
+    "crc": "0xbf2809a5",
+    "export": "EXPORT_SYMBOL"
+  },
+  "nvKmsKapiF32Add": {
+    "crc": "0x34f91043",
+    "export": "EXPORT_SYMBOL"
+  },
+  "nvKmsKapiF32Div": {
+    "crc": "0x34f91043",
+    "export": "EXPORT_SYMBOL"
+  },
+  "nvKmsKapiF32Mul": {
+    "crc": "0x34f91043",
+    "export": "EXPORT_SYMBOL"
+  },
+  "nvKmsKapiF32ToF16": {
+    "crc": "0xc9d42b6a",
+    "export": "EXPORT_SYMBOL"
+  },
+  "nvKmsKapiF32ToUI32RMinMag": {
+    "crc": "0x8dac8e1a",
+    "export": "EXPORT_SYMBOL"
+  },
+  "nvKmsKapiGetFunctionsTable": {
+    "crc": "0x3c54d266",
+    "export": "EXPORT_SYMBOL"
+  },
+  "nvKmsKapiUI32ToF32": {
+    "crc": "0x6c458889",
+    "export": "EXPORT_SYMBOL"
+  }
+}

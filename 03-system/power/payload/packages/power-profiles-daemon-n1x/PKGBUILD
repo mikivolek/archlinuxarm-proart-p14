@@ -1,0 +1,26 @@
+pkgname=power-profiles-daemon-n1x
+pkgver=0.30.nvidia3001c25
+pkgrel=2
+pkgdesc='Power profiles with NVIDIA-authored RTX Spark backend from upstream MR 236'
+arch=(aarch64)
+url='https://gitlab.freedesktop.org/upower/power-profiles-daemon/-/merge_requests/236'
+license=('GPL-3.0-only')
+depends=(glib2 libgudev polkit upower python-gobject)
+makedepends=(meson ninja pkgconf glib2-devel)
+provides=(power-profiles-daemon)
+conflicts=(power-profiles-daemon)
+source=(power-profiles-daemon-nvidia-3001c25.tar)
+# Archive made with git archive from upstream MR commit
+# 3001c25a8392d01e3c1e1a7041ebef017cdc9f8c; replaced before build.
+sha256sums=('b479b101585bc65fb2b5eab9c6013fcdf54d7cee31a08ea492affbd009d7a499')
+
+build() {
+  meson setup build --prefix=/usr --libexecdir=lib --buildtype=release \
+    -Dtests=false -Dpylint=disabled -Dmanpage=disabled -Dbashcomp=disabled \
+    -Dgtk_doc=false
+  meson compile -C build
+}
+
+package() {
+  DESTDIR="$pkgdir" meson install -C build
+}

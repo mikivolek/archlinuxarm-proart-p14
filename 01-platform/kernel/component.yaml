@@ -1,0 +1,595 @@
+{
+  "schema": "h7607a-component-v1",
+  "id": "kernel",
+  "type": "patch",
+  "repo_url": "https://github.com/NVIDIA/NV-Kernels",
+  "checkout_hash": "2234cd7f8f8a9fdbceef37f82c531016aab8cf73",
+  "sparse": {
+    "enabled": false,
+    "paths": []
+  },
+  "dependencies": [
+    {
+      "name": "gcc-13-aarch64-linux-gnu",
+      "version": "13.3.0-6ubuntu2~24.04.1",
+      "version_status": "pinned",
+      "source": "native Ubuntu 24.04 build receipt",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "binutils-aarch64-linux-gnu",
+      "version": "2.42-4ubuntu2.10",
+      "version_status": "pinned",
+      "source": "native Ubuntu 24.04 build receipt",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "pahole",
+      "version": "1.25-0ubuntu3",
+      "version_status": "pinned",
+      "source": "native Ubuntu 24.04 build receipt",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "make",
+      "version": "4.3-4.1build2",
+      "version_status": "pinned",
+      "source": "native Ubuntu 24.04 build receipt",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "gawk",
+      "version": "1:5.2.1-2ubuntu0.1",
+      "version_status": "pinned",
+      "source": "native Ubuntu 24.04 build receipt",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "xz-utils",
+      "version": "5.6.1+really5.4.5-1ubuntu0.3",
+      "version_status": "pinned",
+      "source": "native Ubuntu 24.04 build receipt",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "zstd",
+      "version": "1.5.5+dfsg2-2build1.1",
+      "version_status": "pinned",
+      "source": "native Ubuntu 24.04 build receipt",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "openssl",
+      "version": "3.0.13-0ubuntu3.16",
+      "version_status": "pinned",
+      "source": "native Ubuntu 24.04 build receipt",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "kmod",
+      "version": "31+20240202-2ubuntu7.2",
+      "version_status": "pinned",
+      "source": "native Ubuntu 24.04 build receipt",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "bash",
+      "version": "5.3.20-1",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "python",
+      "version": "3.14.8-1",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "coreutils",
+      "version": "9.12-2",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "kmod",
+      "version": "34.2-1",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "mkinitcpio",
+      "version": "42.2-1",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "libarchive",
+      "version": "3.8.10-1",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "gawk",
+      "version": "5.4.1-1",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "pacman",
+      "version": "7.1.0.r9.g54d9411-3",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "bash",
+      "version": "5.2.21-2ubuntu4",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "bc",
+      "version": "1.07.1-3ubuntu4",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "bison",
+      "version": "2:3.8.2+dfsg-1ubuntu0.24.04.1",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "flex",
+      "version": "2.6.4-8.2build1",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "libssl-dev:arm64",
+      "version": "3.0.13-0ubuntu3.16",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "libelf-dev:arm64",
+      "version": "0.190-1.1ubuntu0.1",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "libdw-dev:arm64",
+      "version": "0.190-1.1ubuntu0.1",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "zlib1g-dev:arm64",
+      "version": "1:1.3.dfsg-3.1ubuntu2.2",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "pkg-config:arm64",
+      "version": "1.8.1-2build1",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "pahole",
+      "version": "1.25-0ubuntu3",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "curl",
+      "version": "8.5.0-2ubuntu10.16",
+      "version_status": "available Ubuntu noble-security snapshot; download branch not used in retained build",
+      "note": "curl download branch was not used for the retained build; SOURCE_CACHE supplied input bytes",
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "patch",
+      "version": "2.7.6-7build3",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "kmod",
+      "version": "31+20240202-2ubuntu7.2",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "xz-utils",
+      "version": "5.6.1+really5.4.5-1ubuntu0.3",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "zstd",
+      "version": "1.5.5+dfsg2-2build1.1",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "gawk",
+      "version": "1:5.2.1-2ubuntu0.1",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "make",
+      "version": "4.3-4.1build2",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "gcc-13-aarch64-linux-gnu",
+      "version": "13.3.0-6ubuntu2~24.04.1",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "binutils-aarch64-linux-gnu",
+      "version": "2.42-4ubuntu2.10",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "openssl",
+      "version": "3.0.13-0ubuntu3.16",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "gzip",
+      "version": "1.12-1ubuntu3.2",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "tar",
+      "version": "1.35+dfsg-3ubuntu0.4",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "dpkg",
+      "version": "1.22.6ubuntu6.6",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "coreutils",
+      "version": "9.4-3ubuntu6.3",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "python3",
+      "version": "3.12.3-0ubuntu2.1",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "diffutils",
+      "version": "1:3.10-1ubuntu0.1",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "findutils",
+      "version": "4.9.0-5build1",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "sed",
+      "version": "4.9-2ubuntu0.24.04.1",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    },
+    {
+      "name": "grep",
+      "version": "3.11-4build1",
+      "version_status": "recorded_build_environment",
+      "note": null,
+      "scope": "Ubuntu24.04 kernel source rebuild"
+    }
+  ],
+  "depends_on": [],
+  "items": [
+    {
+      "id": "arm64-bounded-acpi-allocation",
+      "type": "patch",
+      "repo_url": "https://github.com/NVIDIA/NV-Kernels",
+      "checkout_hash": "2234cd7f8f8a9fdbceef37f82c531016aab8cf73",
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "patch": "provenance/hardware/backports/acpi/0001-arm64-bound-acpi-override-allocation.patch",
+      "version": "7.0.0-1022.23~24.04.1",
+      "source_inputs": [
+        {
+          "file": "linux-nvidia-7.0_7.0.0.orig.tar.gz",
+          "sha256": "c6343795c8c7e4feff55f5b309365c8e0eaf49cd6abcb412e32315313f149536",
+          "urls": [
+            "https://ports.ubuntu.com/ubuntu-ports/pool/main/l/linux-nvidia-7.0/linux-nvidia-7.0_7.0.0.orig.tar.gz",
+            "https://launchpad.net/ubuntu/+archive/primary/+files/linux-nvidia-7.0_7.0.0.orig.tar.gz",
+            "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/c6343795c8c7e4feff55f5b309365c8e0eaf49cd6abcb412e32315313f149536"
+          ]
+        },
+        {
+          "file": "linux-nvidia-7.0_7.0.0-1022.23~24.04.1.diff.gz",
+          "sha256": "6dbf6661592f7b6053253eea6b5411e21974627d9b76d4d3e105653c243d7718",
+          "urls": [
+            "https://ports.ubuntu.com/ubuntu-ports/pool/main/l/linux-nvidia-7.0/linux-nvidia-7.0_7.0.0-1022.23~24.04.1.diff.gz",
+            "https://launchpad.net/ubuntu/+archive/primary/+files/linux-nvidia-7.0_7.0.0-1022.23~24.04.1.diff.gz",
+            "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/6dbf6661592f7b6053253eea6b5411e21974627d9b76d4d3e105653c243d7718"
+          ]
+        },
+        {
+          "file": "linux-modules-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb",
+          "sha256": "3cb8bac5ed8ba7385f652240f9154691153f5ae86a3313d324f1e28c89aec126",
+          "urls": [
+            "https://ports.ubuntu.com/ubuntu-ports/pool/main/l/linux-nvidia-7.0/linux-modules-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb",
+            "https://launchpad.net/ubuntu/+archive/primary/+files/linux-modules-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb",
+            "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/3cb8bac5ed8ba7385f652240f9154691153f5ae86a3313d324f1e28c89aec126"
+          ]
+        }
+      ],
+      "dependencies": [
+        {
+          "name": "gcc-13-aarch64-linux-gnu",
+          "version": "13.3.0-6ubuntu2~24.04.1",
+          "version_status": "pinned",
+          "source": "native Ubuntu 24.04 build receipt"
+        },
+        {
+          "name": "binutils-aarch64-linux-gnu",
+          "version": "2.42-4ubuntu2.10",
+          "version_status": "pinned",
+          "source": "native Ubuntu 24.04 build receipt"
+        },
+        {
+          "name": "pahole",
+          "version": "1.25-0ubuntu3",
+          "version_status": "pinned",
+          "source": "native Ubuntu 24.04 build receipt"
+        },
+        {
+          "name": "make",
+          "version": "4.3-4.1build2",
+          "version_status": "pinned",
+          "source": "native Ubuntu 24.04 build receipt"
+        },
+        {
+          "name": "gawk",
+          "version": "1:5.2.1-2ubuntu0.1",
+          "version_status": "pinned",
+          "source": "native Ubuntu 24.04 build receipt"
+        },
+        {
+          "name": "xz-utils",
+          "version": "5.6.1+really5.4.5-1ubuntu0.3",
+          "version_status": "pinned",
+          "source": "native Ubuntu 24.04 build receipt"
+        },
+        {
+          "name": "zstd",
+          "version": "1.5.5+dfsg2-2build1.1",
+          "version_status": "pinned",
+          "source": "native Ubuntu 24.04 build receipt"
+        },
+        {
+          "name": "openssl",
+          "version": "3.0.13-0ubuntu3.16",
+          "version_status": "pinned",
+          "source": "native Ubuntu 24.04 build receipt"
+        },
+        {
+          "name": "kmod",
+          "version": "31+20240202-2ubuntu7.2",
+          "version_status": "pinned",
+          "source": "native Ubuntu 24.04 build receipt"
+        }
+      ],
+      "notes": [
+        "Allocate overridden ACPI tables within one current EFI descriptor.",
+        "Preserve BTF/MODVERSIONS and build all stock modules alongside the kernel.",
+        "Generated module signing keys mean independent rebuilds need not be byte-identical."
+      ]
+    },
+    {
+      "id": "kernel-runtime-bundle",
+      "type": "direct",
+      "repo_url": "https://github.com/NVIDIA/NV-Kernels",
+      "checkout_hash": "2234cd7f8f8a9fdbceef37f82c531016aab8cf73",
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "path": "assets/hardware/kernel/h7607a-kernel-runtime.tar.zst",
+      "package_version": "7.0.0.1022.23-3",
+      "kernel_sha256": "6312b1ab41f586a42a1767e771c7cfc787246e0b83fe708006fff10903768d86",
+      "physical_boot_qualified": false
+    },
+    {
+      "id": "kernel-packaging",
+      "type": "custom",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "code": "packages/linux-n1x-nvidia-bin/PKGBUILD",
+      "dependencies": [
+        {
+          "name": "bash",
+          "version": "5.3.20-1",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        },
+        {
+          "name": "python",
+          "version": "3.14.8-1",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        },
+        {
+          "name": "coreutils",
+          "version": "9.12-2",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        },
+        {
+          "name": "kmod",
+          "version": "34.2-1",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        },
+        {
+          "name": "mkinitcpio",
+          "version": "42.2-1",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        },
+        {
+          "name": "libarchive",
+          "version": "3.8.10-1",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        },
+        {
+          "name": "gawk",
+          "version": "5.4.1-1",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        },
+        {
+          "name": "pacman",
+          "version": "7.1.0.r9.g54d9411-3",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "source": "payload/assets/hardware/kernel/h7607a-kernel-runtime.tar.zst",
+      "destination": "assets/hardware/kernel/h7607a-kernel-runtime.tar.zst",
+      "bytes": 264274598,
+      "sha256": "75b65341b58d7c171ad9482f7227f97bd88ff9e6a98b5a781609b4e5674036f6",
+      "mode": 420
+    },
+    {
+      "source": "payload/packages/linux-n1x-nvidia-bin/PKGBUILD",
+      "destination": "packages/linux-n1x-nvidia-bin/PKGBUILD",
+      "bytes": 3388,
+      "sha256": "3860d61aae9bc72eded982adc788eba07c9ca9fef15a41d9e5573c37929b24b9",
+      "mode": 420
+    },
+    {
+      "source": "payload/packages/linux-n1x-nvidia-bin/inputs.json",
+      "destination": "packages/linux-n1x-nvidia-bin/inputs.json",
+      "bytes": 971,
+      "sha256": "d3a1da6f4432a6c820793ea4660596717c43105bd6f493e8ff9758dca48ea830",
+      "mode": 420
+    },
+    {
+      "source": "payload/packages/linux-n1x-nvidia-bin/linux-n1x-nvidia-bin.preset",
+      "destination": "packages/linux-n1x-nvidia-bin/linux-n1x-nvidia-bin.preset",
+      "bytes": 101,
+      "sha256": "c468c1aab1e85d9d4116748c54a1d079b2fa600991a42e674c349ae83a2955a1",
+      "mode": 420
+    },
+    {
+      "source": "patches/provenance/hardware/backports/acpi/0001-arm64-bound-acpi-override-allocation.patch",
+      "destination": "provenance/hardware/backports/acpi/0001-arm64-bound-acpi-override-allocation.patch",
+      "bytes": 3618,
+      "sha256": "0ababbaed19c7108e8564916fac1b8fecc44010e7f3e4b419c34d01c66049e19",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/acpi/README.md",
+      "destination": "provenance/hardware/backports/acpi/README.md",
+      "bytes": 4268,
+      "sha256": "7d24ae07eda00e0532a6f6211f96c0bc46f269d93f3a2fb40b9080be08cbb17f",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/acpi/build-receipt.json",
+      "destination": "provenance/hardware/backports/acpi/build-receipt.json",
+      "bytes": 8745,
+      "sha256": "8ebdd7226373dbbd86aae93d5dc12577776c35dcf41d5e145ebceaa7728e6416",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/acpi/build.sh",
+      "destination": "provenance/hardware/backports/acpi/build.sh",
+      "bytes": 4170,
+      "sha256": "e71913b3a5fcee7cb97490ef30153f7192dabd5aa6864449ff3de7840dfd8fe4",
+      "mode": 493
+    },
+    {
+      "source": "payload/provenance/hardware/backports/acpi/config-7.0.0-1022-nvidia",
+      "destination": "provenance/hardware/backports/acpi/config-7.0.0-1022-nvidia",
+      "bytes": 370985,
+      "sha256": "300b9d6316a1c772b9cb48eead848444e61d3d177daf74dee4a2007ac5e66667",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/acpi/package.sh",
+      "destination": "provenance/hardware/backports/acpi/package.sh",
+      "bytes": 4580,
+      "sha256": "f367213d074b8f0df99eb6e5e08bbfc3600267f81f17884f53136a257665ff7c",
+      "mode": 493
+    },
+    {
+      "source": "payload/provenance/hardware/backports/acpi/verify-modules.py",
+      "destination": "provenance/hardware/backports/acpi/verify-modules.py",
+      "bytes": 5136,
+      "sha256": "637125bd0a4d330cb589abcc929fa3c7865f060a0980b63fe4602591f17a98e1",
+      "mode": 420
+    }
+  ],
+  "links": []
+}

@@ -1,0 +1,38 @@
+#!/usr/bin/python3
+"""Convenience entry for local rootless GPU containers; ordinary podman remains available."""
+import os
+import sys
+
+
+def command(arguments):
+    if arguments == ["status"]:
+        return ["/usr/bin/nvidia-ctk", "cdi", "list"]
+    if len(arguments) < 2 or arguments[0] != "run":
+        raise ValueError("Usage: h7607a-container status | run IMAGE [COMMAND ...]")
+    _, image, *payload = arguments
+    if not image or image.startswith("-") or any(c.isspace() for c in image):
+        raise ValueError("Provide an explicit image name or digest")
+    return ["/usr/bin/podman", "--remote=false", "--runtime=/usr/bin/crun",
+            "--hooks-dir=/usr/share/h7607a/empty-oci-hooks", "run", "--rm",
+            "--device=nvidia.com/gpu=all", "--group-add=keep-groups", "--userns=keep-id",
+            "--security-opt=no-new-privileges", image, *payload]
+
+
+def main(arguments=None):
+    if os.geteuid() == 0:
+        raise ValueError("Run h7607a-container from your normal login, without sudo")
+    argv = command(sys.argv[1:] if arguments is None else arguments)
+    env = os.environ.copy()
+    # Native CDI is the only injection route used here. Remote sockets and the
+    # legacy NVIDIA environment-driven runtime are not this wrapper's interface.
+    for key in ("NVIDIA_VISIBLE_DEVICES", "CONTAINER_HOST", "CONTAINER_CONNECTION"):
+        env.pop(key, None)
+    os.execve(argv[0], argv, env)
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except (ValueError, OSError) as error:
+        print("h7607a-container: " + str(error), file=sys.stderr)
+        sys.exit(1)

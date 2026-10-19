@@ -1,0 +1,80 @@
+# Exact retained H7607BA assets plus native ABI-verified SoundWire backport.
+pkgname=h7607a-hardware
+pkgver=1.0.0
+pkgrel=4
+pkgdesc='ASUS H7607BA keyboard, audio, input and boot support with SoundWire race repair'
+arch=('aarch64')
+url='https://github.com/pfeifferj/archlinuxarm-proart-p16'
+license=('GPL-2.0-only' 'GPL-2.0-or-later' 'MIT' 'BSD-3-Clause')
+depends=('linux-n1x-nvidia-bin=7.0.0.1022.23-3' 'kmod' 'mkinitcpio' 'python' 'systemd')
+optdepends=(
+  'alsa-lib: speaker and headphone UCM profile'
+  'libinput: PixArt touchpad pressure quirk'
+  'wireplumber: playback policy and the h7607a-audio volume helper'
+)
+backup=('etc/mkinitcpio.conf.d/h7607a.conf')
+options=('!strip' '!debug')
+source=(
+  'hid-asus.ko'
+  'mt8901-acp-sdw-legacy-mach.ko'
+  'initcpio-install'
+  'initcpio-hook'
+  'mkinitcpio.conf'
+  'depmod.conf'
+  'nvidia.conf'
+  'n1x-cppc-init.py'
+  'n1x-cppc-init.service'
+  'soundwire-mtk.ko'
+  '60-h7607a-no-camera.conf'
+  'mt8901-soundwir.conf'
+  'P16-playback.conf'
+  '51-h7607a-playback.conf'
+  '60-h7607a-touchpad.quirks'
+  'h7607a-audio'
+  'h7607a-brightness'
+  'LICENSE'
+  'LICENSE.ucm'
+)
+sha256sums=(
+  '608b9297256b1e6b60fb26589777546a67f6aa2a615a8498ade8e37b8aa8e617'
+  '82061bce3a3b649c9f351b398c59546c8a978b2c3badbaa07436e6221e91d5de'
+  '846ef7ff8038f0f2f5c1b8512424fd8c92c8c1a02e458dc9ea9f79e7f7df03f5'
+  'cde878e5e277782e45a4d10a0b16a086ee9ce011f8d5ab32cba20c5379f878af'
+  'e8e89a13ffea5ca30a7fb4bf633688618d7659bebd47e0843ea30d38c763dc9f'
+  '09ec1f7fbd7eab7ea4fb7fcaaafb1db9b2896fe93ec653a5548620907c9c7e75'
+  '6b71fcb4d8eb66bf6aa1c1d66e60873635dd48e8f68f2511130dbabc688d55c6'
+  'aaae00438e0cad22150263d65b6c0fd00bf0618ca10ab8ddff47c7d00e8c77a8'
+  '14d7908b992750aeb8e960eba1ce7cdf3a3de46af66d5d9abdf1bddc38462c65'
+  '7162e23606a3bbcf4ff15fc2eada8662eee9962b88b5605d11f51e45e74b7d5f'
+  '5d29287c05747e8da3c20c3cb55ea86e46a1b15d41ae55478ca756b3be218c14'
+  '1b6d0a8a85b748d7e09651d4931181a991e388b43729b3201040ef3e3dfb41a1'
+  '25d0ac355f3572d94106ce676e248396a0ee5af6b6ddb9319571719b9bff7e93'
+  '9d03e6256d1f079be95d82ace17e90798e8cf8ac0d1db33090258ece948f5ffc'
+  '2d87cd28673df8ad01f8fadd2d313daf5b412bafea584a894c8334b505fe23f2'
+  '9974b3ff3caf65cc25741332976362527e5e10eb090c7b0e97b9aa95b10d47fc'
+  'b152c2715e71bb0b6a1d5f86d86687dea989af68e5eaa6868b55fe13d8d4ef75'
+  'f904c0073e5132ca2a0640694a1236a25c64dc74c3180e8299ebb555a16ddbc9'
+  'c01bab78a49e3c20ddd3787d45f33b60898b9d26632bf4bf581fa372fefd78ab'
+)
+
+package() {
+  install -Dm644 "$srcdir/hid-asus.ko" "$pkgdir/usr/lib/modules/7.0.0-1022-nvidia/updates/h7607a/hid-asus.ko"
+  install -Dm644 "$srcdir/mt8901-acp-sdw-legacy-mach.ko" "$pkgdir/usr/lib/modules/7.0.0-1022-nvidia/updates/h7607a/mt8901-acp-sdw-legacy-mach.ko"
+  install -Dm644 "$srcdir/initcpio-install" "$pkgdir/usr/lib/initcpio/install/h7607a-preload"
+  install -Dm644 "$srcdir/initcpio-hook" "$pkgdir/usr/lib/initcpio/hooks/h7607a-preload"
+  install -Dm644 "$srcdir/mkinitcpio.conf" "$pkgdir/etc/mkinitcpio.conf.d/h7607a.conf"
+  install -Dm644 "$srcdir/depmod.conf" "$pkgdir/usr/lib/depmod.d/h7607a.conf"
+  install -Dm644 "$srcdir/nvidia.conf" "$pkgdir/usr/lib/modprobe.d/h7607a-nvidia.conf"
+  install -Dm644 "$srcdir/n1x-cppc-init.py" "$pkgdir/usr/lib/h7607a/n1x-cppc-init.py"
+  install -Dm644 "$srcdir/n1x-cppc-init.service" "$pkgdir/usr/lib/systemd/system/n1x-cppc-init.service"
+  install -Dm644 "$srcdir/soundwire-mtk.ko" "$pkgdir/usr/lib/modules/7.0.0-1022-nvidia/updates/h7607a/soundwire-mtk.ko"
+  install -Dm644 "$srcdir/60-h7607a-no-camera.conf" "$pkgdir/usr/lib/modprobe.d/60-h7607a-no-camera.conf"
+  install -Dm644 "$srcdir/mt8901-soundwir.conf" "$pkgdir/usr/share/alsa/ucm2/conf.d/mt8901-soundwir/mt8901-soundwir.conf"
+  install -Dm644 "$srcdir/P16-playback.conf" "$pkgdir/usr/share/alsa/ucm2/MediaTek/mt8901-soundwir/P16-playback.conf"
+  install -Dm644 "$srcdir/51-h7607a-playback.conf" "$pkgdir/usr/share/wireplumber/wireplumber.conf.d/51-h7607a-playback.conf"
+  install -Dm644 "$srcdir/60-h7607a-touchpad.quirks" "$pkgdir/usr/share/libinput/60-h7607a-touchpad.quirks"
+  install -Dm755 "$srcdir/h7607a-audio" "$pkgdir/usr/bin/h7607a-audio"
+  install -Dm755 "$srcdir/h7607a-brightness" "$pkgdir/usr/bin/h7607a-brightness"
+  install -Dm644 "$srcdir/LICENSE" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+  install -Dm644 "$srcdir/LICENSE.ucm" "$pkgdir/usr/share/licenses/$pkgname/LICENSE.ucm"
+}

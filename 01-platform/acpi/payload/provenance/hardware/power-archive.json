@@ -1,0 +1,81 @@
+{
+  "archive": "assets/hardware/acpi/h7607a-acpi.cpio",
+  "archive_bytes": 109568,
+  "archive_sha256": "311dc5b456f1b7a9728814cd8ca105370bdca8383facec141f23217f43eac51d",
+  "format": "uncompressed newc; 4-byte aligned members; 512-byte archive alignment",
+  "members": [
+    {
+      "name": "kernel",
+      "bytes": 0,
+      "mode": "0o40755",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "data_start": 120
+    },
+    {
+      "name": "kernel/firmware",
+      "bytes": 0,
+      "mode": "0o40755",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "data_start": 248
+    },
+    {
+      "name": "kernel/firmware/acpi",
+      "bytes": 0,
+      "mode": "0o40755",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "data_start": 380
+    },
+    {
+      "name": "kernel/firmware/acpi/DSDT.aml",
+      "bytes": 74052,
+      "mode": "0o100644",
+      "sha256": "80e0ad4a051704003d09029cb600a9814e1cd370ce774b9749dc09d2232b5aaf",
+      "data_start": 520
+    },
+    {
+      "name": "kernel/firmware/acpi/SSDT.aml",
+      "bytes": 34465,
+      "mode": "0o100644",
+      "sha256": "9b28ffc14c19f8b7ea2278de88ff9ec070f5f70401107d81fef067a916aa9695",
+      "data_start": 74712
+    }
+  ],
+  "DSDT_payload_byte_identical_to_existing_SSPM_override": true,
+  "original_SSPM_archive_unchanged": true,
+  "original_SSPM_archive_sha256": "407e9ea01c7cdbc07671bcf7490cf58d3cc95fce2f073e044b5853b1ce6a8aa8",
+  "required_current_firmware_guards": [
+    "exact original DSDT",
+    "exact original ASUS SSDT"
+  ],
+  "load_order": [
+    "n1x-sspm-asus-power-override.cpio",
+    "initramfs-linux-n1x.img"
+  ],
+  "selected_kernel": {
+    "release": "7.0.0-1022-nvidia",
+    "CONFIG_ACPI_TABLE_UPGRADE": true,
+    "SSDT_allowed": true,
+    "matching_fields": [
+      "signature4",
+      "OEM_ID6",
+      "OEM_table_ID8"
+    ],
+    "requires_newer_OEM_revision": true,
+    "matching_original_length_required": false,
+    "new_file_length_must_match_new_header": true,
+    "evidence": "kernel-tables.c:397-482,547-600"
+  },
+  "source": "https://github.com/NVIDIA/NV-Kernels/blob/2234cd7f8f8a9fdbceef37f82c531016aab8cf73/drivers/acpi/tables.c",
+  "independent_tar_listing_passed": true,
+  "hardware_boot_verified": false,
+  "USB_modified": false,
+  "existing_default_boot_changed": false,
+  "receipt_path_normalization": {
+    "schema": 1,
+    "kind": "historical receipt path normalization",
+    "original_receipt_sha256": "2d2b58d7624d8dce265b43297217dfbca3f557e8d6d1b2f9a22b968073469431",
+    "scope": "Replace historical host locations with repository artifacts or evidence identities; retain original artifact hashes, measurements and qualification states.",
+    "original_receipt_preserved_outside_release": true,
+    "not_a_new_build_or_hardware_capture": true
+  }
+}

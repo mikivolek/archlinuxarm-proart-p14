@@ -1,0 +1,292 @@
+{
+  "schema": "h7607a-existing-analysis-usb-layout-v1",
+  "whole_bytes": 61530439680,
+  "media_name": "Ultra USB 3.0",
+  "bus_protocol": "USB",
+  "root_uuid": "4dd7d947-b72c-431f-a74e-3272227ba90c",
+  "root_label": "N1XALARM",
+  "ESP_uuid": "8B98-C777",
+  "ESP_mac_volume_uuid": null,
+  "partitions": [
+    {
+      "number": 1,
+      "offset": 1048576,
+      "bytes": 805306368,
+      "label": "N1XESP"
+    },
+    {
+      "number": 2,
+      "offset": 806354944,
+      "bytes": 9930014720,
+      "label": "N1XALARM"
+    },
+    {
+      "number": 3,
+      "offset": 21474836480,
+      "bytes": 40055586304,
+      "label": "P16BACKUP",
+      "partuuid": "eeb249db-42c9-48f7-8651-50f3414ff4fb"
+    }
+  ],
+  "gpt_sha256": {
+    "mbr": "88af62da77866f2e56be36dc744c5a70ba2104a12ab4749fcfe351805d17bcb4",
+    "primary": "3084ca170847f081b9fbcfbe81461751c1be234ee7f4d11faed3ebec86bb78bd",
+    "backup": "2c478389dfc7abedce302aeaa0e602ed8b8cdb219a88e097dcfc84729d69bd7c",
+    "primary_array": "5c90db7274f0f29269a32426d6f3a12a12d9692f123c17bbb0591047bc987f67",
+    "backup_array": "5c90db7274f0f29269a32426d6f3a12a12d9692f123c17bbb0591047bc987f67"
+  },
+  "carrier_header_sha256": "fc2d2249c250031303e9dc9d9382cf37e7358079ba44ca2b6178d5967e2f4e34",
+  "carrier_header_offset": 17179869184,
+  "carrier_header_bytes": 1048576,
+  "carrier_objects": [
+    {
+      "offset": 17180917760,
+      "bytes": 1078064,
+      "sha256": "55e77c3d34104cf1e7951dfdf81937586f5cfaa06c42195861c3c96d75311e2c",
+      "path": "container/packages/libnvidia-container-1.20.1-1-aarch64.pkg.tar.xz"
+    },
+    {
+      "offset": 17181999104,
+      "bytes": 566,
+      "sha256": "2f772e7050a45352d715c75449bfc9404abfd6571c6856d2cc2911804018e1dd",
+      "path": "container/packages/libnvidia-container-1.20.1-1-aarch64.pkg.tar.xz.sig"
+    },
+    {
+      "offset": 17182003200,
+      "bytes": 427480,
+      "sha256": "4e309bcb6360fbb92e5ab2249e4cc3cad6bb3cc26710f4b7499fe37bdd62b347",
+      "path": "container/packages/libpathrs-0.2.6-1-aarch64.pkg.tar.xz"
+    },
+    {
+      "offset": 17182433280,
+      "bytes": 566,
+      "sha256": "cae7f64d48b5bb875c80c1f4a7edd7d20e1a783f60f82daf5657070b353e55f0",
+      "path": "container/packages/libpathrs-0.2.6-1-aarch64.pkg.tar.xz.sig"
+    },
+    {
+      "offset": 17182437376,
+      "bytes": 8442872,
+      "sha256": "3f8522d45affed2bf29d805432fd6039803fb63384a6ba2534d5ef40f24445d3",
+      "path": "container/packages/nvidia-container-toolkit-1.20.1-1-aarch64.pkg.tar.xz"
+    },
+    {
+      "offset": 17190883328,
+      "bytes": 566,
+      "sha256": "246a92cd80e530916b543fa07e3ce2adf28a235b44b72fdd25ba4ea9aed5fcf0",
+      "path": "container/packages/nvidia-container-toolkit-1.20.1-1-aarch64.pkg.tar.xz.sig"
+    },
+    {
+      "offset": 17190887424,
+      "bytes": 2334596,
+      "sha256": "9ae89a4228ea3dad2d197c0d26ab363576cd1b6d466a21d25197e54d0445ddfa",
+      "path": "container/packages/runc-1.5.2-1-aarch64.pkg.tar.xz"
+    },
+    {
+      "offset": 17193222144,
+      "bytes": 566,
+      "sha256": "255b0f1f3a8dc43db7c6381441e9f0012a1d97e7e8a9470fdd3f87d6089ff6ff",
+      "path": "container/packages/runc-1.5.2-1-aarch64.pkg.tar.xz.sig"
+    },
+    {
+      "offset": 17193226240,
+      "bytes": 1816632,
+      "sha256": "71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e",
+      "path": "torch/bootstrap/pip-26.2.1-py3-none-any.whl"
+    },
+    {
+      "offset": 17195044864,
+      "bytes": 5685673,
+      "sha256": "a6464b30f46692d6c7f65d4a0e0450d81dd29de3afc1bb515653973d01c2cd6e",
+      "path": "torch/wheels/cuda_bindings-13.2.0-cp314-cp314-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl"
+    },
+    {
+      "offset": 17200734208,
+      "bytes": 62561,
+      "sha256": "e29e59829c297a7a5233bd9cc71094fc5bddbd076951482670178f9eade39b1f",
+      "path": "torch/wheels/cuda_pathfinder-1.8.3-py3-none-any.whl"
+    },
+    {
+      "offset": 17200799744,
+      "bytes": 2607,
+      "sha256": "d12edc1aad1356236a2ee10c0d794b1aff5d3e79bfeca54867c3bb8e5afd87b0",
+      "path": "torch/wheels/cuda_toolkit-13.2.2-py2.py3-none-any.whl"
+    },
+    {
+      "offset": 17200803840,
+      "bytes": 135032,
+      "sha256": "2ff5690882e8cdb00ef31fb3d01a3094c29f30985426c59495afb1733f3b7238",
+      "path": "torch/wheels/filelock-4.2.0-py3-none-any.whl"
+    },
+    {
+      "offset": 17200939008,
+      "bytes": 221738,
+      "sha256": "8dd6e646e99ea382bd85f97a45e6b526a442d79423a7dc673f1e2756d05fcb5f",
+      "path": "torch/wheels/fsspec-2026.9.0-py3-none-any.whl"
+    },
+    {
+      "offset": 17201164288,
+      "bytes": 134899,
+      "sha256": "85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67",
+      "path": "torch/wheels/jinja2-3.1.6-py3-none-any.whl"
+    },
+    {
+      "offset": 17201299456,
+      "bytes": 24434,
+      "sha256": "1caa2fa5a6184fb233153b35f654e6687bd555476f6170f29d8ee9be1a8b0af9",
+      "path": "torch/wheels/markupsafe-3.0.4-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl"
+    },
+    {
+      "offset": 17201324032,
+      "bytes": 536198,
+      "sha256": "a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c",
+      "path": "torch/wheels/mpmath-1.3.0-py3-none-any.whl"
+    },
+    {
+      "offset": 17201860608,
+      "bytes": 2142205,
+      "sha256": "e3fd2c13a7814cee3746340d8d7f8598a67f16a58bf47fb7f8793fab6efca1b0",
+      "path": "torch/wheels/networkx-3.7-py3-none-any.whl"
+    },
+    {
+      "offset": 17204002816,
+      "bytes": 15710899,
+      "sha256": "4054173604cd8658796053f1f3bc0befb68ec1c0762c57fdad61e199256a8617",
+      "path": "torch/wheels/numpy-2.5.4-cp314-cp314-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl"
+    },
+    {
+      "offset": 17219715072,
+      "bytes": 513048232,
+      "sha256": "4eb1472bf92b741e7cf24da7978dde251b58ddec2092d9f6a04f3623eb4e9a15",
+      "path": "torch/wheels/nvidia_cublas-13.4.1.3-py3-none-manylinux_2_27_aarch64.whl"
+    },
+    {
+      "offset": 17732763648,
+      "bytes": 11760263,
+      "sha256": "d9a5c133f73fcb9013f3ada0da6fb54d4117618d81f3f5a0419417ea6ee829d4",
+      "path": "torch/wheels/nvidia_cuda_cupti-13.2.86-py3-none-manylinux_2_25_aarch64.whl"
+    },
+    {
+      "offset": 17744527360,
+      "bytes": 44755454,
+      "sha256": "1e5d7b411a2eb83f5c71c98d58133a763fc9fa86a4241ee320c5c4782d9ad1fd",
+      "path": "torch/wheels/nvidia_cuda_nvrtc-13.2.86-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl"
+    },
+    {
+      "offset": 17789284352,
+      "bytes": 2341433,
+      "sha256": "37844957894bfdecf90243568d21a2cb251b66106915b71459a23c8e6ef2da69",
+      "path": "torch/wheels/nvidia_cuda_runtime-13.2.86-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl"
+    },
+    {
+      "offset": 17791627264,
+      "bytes": 650976863,
+      "sha256": "a6812a554a1ff0413e9c52b84c26c050380649ab9615f9c16bded368ce9f421f",
+      "path": "torch/wheels/nvidia_cudnn_cu13-9.24.0.43-py3-none-manylinux_2_27_aarch64.whl"
+    },
+    {
+      "offset": 18442604544,
+      "bytes": 218244742,
+      "sha256": "1ed438568ae1088ba2c25789d10205d4104b8b140b7bd942e39a787947a0fb74",
+      "path": "torch/wheels/nvidia_cufft-12.2.0.57-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl"
+    },
+    {
+      "offset": 18660851712,
+      "bytes": 1226736,
+      "sha256": "bec33d7f1f12691dce330275246587569c2ed90b1ce43b0f94b3e1ce9268744b",
+      "path": "torch/wheels/nvidia_cufile-1.17.1.22-py3-none-manylinux_2_27_aarch64.whl"
+    },
+    {
+      "offset": 18662080512,
+      "bytes": 62415161,
+      "sha256": "cb61a0bb7e7a7446b25bf5ff93aa560009dd738b48ed52f57ae764a4cae37381",
+      "path": "torch/wheels/nvidia_curand-10.4.2.66-py3-none-manylinux_2_27_aarch64.whl"
+    },
+    {
+      "offset": 18724499456,
+      "bytes": 250383075,
+      "sha256": "8be097fca28de6be0990ab216ee9b804dd51077e1d1d83acf6c9850650bdc64d",
+      "path": "torch/wheels/nvidia_cusolver-12.2.0.11-py3-none-manylinux_2_27_aarch64.whl"
+    },
+    {
+      "offset": 18974883840,
+      "bytes": 169043093,
+      "sha256": "597eff2cd83e3ab1d1e3a0dce9c9c879d77cf64ec2659bfdb5af6a5d02e7aaa9",
+      "path": "torch/wheels/nvidia_cusparse-12.7.10.12-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl"
+    },
+    {
+      "offset": 19143929856,
+      "bytes": 221051344,
+      "sha256": "4dca476c50bf4780d46cd0bfbd82e2bc10a08e4fef7950917ce8d7578d22a23f",
+      "path": "torch/wheels/nvidia_cusparselt_cu13-0.8.1-py3-none-manylinux2014_aarch64.whl"
+    },
+    {
+      "offset": 19364982784,
+      "bytes": 215983881,
+      "sha256": "ca786ffa5a647c75d4d1f5cc72a6c4f537947e2ba8823d7c8aaf768e7a7b9f77",
+      "path": "torch/wheels/nvidia_nccl_cu13-2.30.7-py3-none-manylinux_2_18_aarch64.whl"
+    },
+    {
+      "offset": 19580968960,
+      "bytes": 39286056,
+      "sha256": "4c90580631da1670c2cecfbdf8365247c4bfd9eabb4de63f2e3004223d1b7f5f",
+      "path": "torch/wheels/nvidia_nvjitlink-13.2.86-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl"
+    },
+    {
+      "offset": 19620257792,
+      "bytes": 60215947,
+      "sha256": "6dc2a197f38e5d0376ad52cd1a2a3617d3cdc150fd5966f4aee9bcebb1d68fe9",
+      "path": "torch/wheels/nvidia_nvshmem_cu13-3.4.5-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl"
+    },
+    {
+      "offset": 19680477184,
+      "bytes": 154292,
+      "sha256": "1c6ae1be92fba569dd271f7b9b3056f99f5642726dc6c53d1b93ae4110c398fb",
+      "path": "torch/wheels/nvidia_nvtx-13.2.86-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl"
+    },
+    {
+      "offset": 19680632832,
+      "bytes": 818216,
+      "sha256": "51a52592b3b99e102b609654876bd65f19f999935166d1352678931132b0c670",
+      "path": "torch/wheels/setuptools-84.0.0-py3-none-any.whl"
+    },
+    {
+      "offset": 19681452032,
+      "bytes": 6299353,
+      "sha256": "e091cc3e99d2141a0ba2847328f5479b05d94a6635cb96148ccb3f34671bd8f5",
+      "path": "torch/wheels/sympy-1.14.0-py3-none-any.whl"
+    },
+    {
+      "offset": 19687751680,
+      "bytes": 460168785,
+      "sha256": "13839d536fbc5bf2e1b6fcbf9e257b6c810c55a5dfe01f36483d9913d17a8c90",
+      "path": "torch/wheels/torch-2.14.1+cu132-cp314-cp314-manylinux_2_28_aarch64.whl"
+    },
+    {
+      "offset": 20147920896,
+      "bytes": 226488654,
+      "sha256": "1f6b48d0591929a3867973acac3dccd4e058585f91bfb41022de496c9ffab304",
+      "path": "torch/wheels/triton-3.8.0-cp314-cp314-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl"
+    },
+    {
+      "offset": 20374413312,
+      "bytes": 45571,
+      "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8",
+      "path": "torch/wheels/typing_extensions-4.16.0-py3-none-any.whl"
+    }
+  ],
+  "backup_boot_identity": {
+    "offset": 21474836480,
+    "bytes": 40055586304,
+    "serial": 1345402434,
+    "sector_shift": 9,
+    "cluster_shift": 8
+  },
+  "writes_allowed_only": [
+    "ESP partition bytes",
+    "root partition bytes"
+  ],
+  "P3_writes_allowed": false,
+  "GPT_writes_allowed": false,
+  "carrier_writes_allowed": false,
+  "origin_receipt_sha256": "a7e90512d77f8646ce7eefaf5714042baa8705f530181f804803cbb32c5fcc21"
+}

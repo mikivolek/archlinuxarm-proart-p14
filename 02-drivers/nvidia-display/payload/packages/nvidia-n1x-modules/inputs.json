@@ -1,0 +1,26 @@
+{
+  "schema": "h7607a-package-inputs-v1",
+  "package": "nvidia-n1x-modules",
+  "inputs": [
+    {
+      "artifact_id": "stock-nvidia.ko.zst",
+      "filename": "nvidia.ko.zst"
+    },
+    {
+      "artifact_id": "nvidia-modeset-pr1368",
+      "filename": "nvidia-modeset.ko.zst"
+    },
+    {
+      "artifact_id": "stock-nvidia-uvm.ko.zst",
+      "filename": "nvidia-uvm.ko.zst"
+    },
+    {
+      "artifact_id": "nvidia-drm-normal-nc",
+      "filename": "nvidia-drm.ko"
+    },
+    {
+      "artifact_id": "provenance-nvidia-pr1368-NVIDIA-COPYING",
+      "filename": "COPYING"
+    }
+  ]
+}

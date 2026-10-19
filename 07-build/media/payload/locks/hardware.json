@@ -1,0 +1,917 @@
+{
+  "schema": "h7607a-hardware-lock-v1",
+  "kernel_release": "7.0.0-1022-nvidia",
+  "NVIDIA_version": "615.78.08",
+  "kernel_sha256": "6312b1ab41f586a42a1767e771c7cfc787246e0b83fe708006fff10903768d86",
+  "device": {
+    "sys_vendor": "ASUS",
+    "product_name": "ProArt P16 H7607BA",
+    "board_vendor": "ASUSTeK COMPUTER INC.",
+    "board_name": "H7607BA",
+    "bios_version": "H7607BA.300",
+    "bios_date": "08/11/2026"
+  },
+  "artifacts": [
+    {
+      "id": "nvidia-drm-normal-nc",
+      "path": "assets/hardware/modules/nvidia-drm.ko",
+      "bytes": 6042416,
+      "sha256": "9b0ceddf9da11337e9b9af1dd1c77e81fc3559cc1bfcdcc67cccd604d72e83bf",
+      "urls": [],
+      "origin": "Included local artifact at assets/hardware/modules/nvidia-drm.ko; source/build evidence under provenance/hardware",
+      "license": "MIT AND GPL-2.0-only",
+      "target": "usr/lib/modules/7.0.0-1022-nvidia/updates/h7607a/nvidia-drm.ko",
+      "package_owner": "nvidia-n1x-modules"
+    },
+    {
+      "id": "hid-asus-h7607ba",
+      "path": "assets/hardware/modules/hid-asus.ko",
+      "bytes": 810056,
+      "sha256": "608b9297256b1e6b60fb26589777546a67f6aa2a615a8498ade8e37b8aa8e617",
+      "urls": [],
+      "origin": "Included local artifact at assets/hardware/modules/hid-asus.ko; source/build evidence under provenance/hardware",
+      "license": "GPL-2.0-or-later",
+      "target": "usr/lib/modules/7.0.0-1022-nvidia/updates/h7607a/hid-asus.ko",
+      "package_owner": "h7607a-hardware",
+      "package_filename": "hid-asus.ko",
+      "mode": 420
+    },
+    {
+      "id": "mt8901-h7607ba-audio",
+      "path": "assets/hardware/modules/mt8901-acp-sdw-legacy-mach.ko",
+      "bytes": 524864,
+      "sha256": "82061bce3a3b649c9f351b398c59546c8a978b2c3badbaa07436e6221e91d5de",
+      "urls": [],
+      "origin": "Included local artifact at assets/hardware/modules/mt8901-acp-sdw-legacy-mach.ko; source/build evidence under provenance/hardware",
+      "license": "GPL-2.0-only",
+      "target": "usr/lib/modules/7.0.0-1022-nvidia/updates/h7607a/mt8901-acp-sdw-legacy-mach.ko",
+      "package_owner": "h7607a-hardware",
+      "package_filename": "mt8901-acp-sdw-legacy-mach.ko",
+      "mode": 420
+    },
+    {
+      "id": "cs35l56-b0-dsp1-misc-10431484-spkid0.wmfw",
+      "path": "assets/hardware/firmware/cirrus/cs35l56-b0-dsp1-misc-10431484-spkid0.wmfw",
+      "bytes": 35764,
+      "sha256": "828f2822701d06cb95d8da5ec8e2a5033b901ec4609a9a31e4336c38d133bdc3",
+      "extract": {
+        "from": {
+          "path": ".artifacts/asus/Audio_Driver_ARM_Cirrus_Z_V1.0.678.52824Sub3_49783.exe",
+          "bytes": 4750256,
+          "sha256": "01ffa79558813cf9e943d63b4a39289471915ab865c32a1138ffe8382175355f",
+          "urls": [
+            "https://dlcdnets.asus.com/pub/ASUS/nb/Image/Driver/Audio/49783/Audio_Driver_ARM_Cirrus_Z_V1.0.678.52824Sub3_49783.exe"
+          ]
+        },
+        "offset": 4284504,
+        "member": "XU_Ext/fw/35L56/3.13.4/dflt/b0_dflt_35l56_3.13.4.wmfw"
+      },
+      "origin": "Extracted from the pinned ASUS driver package on the owner's machine; not stored in this repository or in any package",
+      "license": "ASUS/Cirrus OEM firmware; extracted locally for this owned device; redistribution not asserted",
+      "target": "usr/lib/firmware/cirrus/cs35l56-b0-dsp1-misc-10431484-spkid0.wmfw",
+      "mode": 420
+    },
+    {
+      "id": "cs35l56-b0-dsp1-misc-10431484-spkid0-l1u0.bin",
+      "path": "assets/hardware/firmware/cirrus/cs35l56-b0-dsp1-misc-10431484-spkid0-l1u0.bin",
+      "bytes": 11748,
+      "sha256": "46a6a2d55786a661c1a21c8ea4a2d0bbf9d87bb28342750699c012743a2773ac",
+      "extract": {
+        "from": {
+          "path": ".artifacts/asus/Audio_Driver_ARM_Cirrus_Z_V1.0.678.52824Sub3_49783.exe",
+          "bytes": 4750256,
+          "sha256": "01ffa79558813cf9e943d63b4a39289471915ab865c32a1138ffe8382175355f",
+          "urls": [
+            "https://dlcdnets.asus.com/pub/ASUS/nb/Image/Driver/Audio/49783/Audio_Driver_ARM_Cirrus_Z_V1.0.678.52824Sub3_49783.exe"
+          ]
+        },
+        "offset": 4284504,
+        "member": "XU_Ext/tn/35L56/1484/dflt/b0_dflt_1484_lw_l1u0.bin"
+      },
+      "origin": "Extracted from the pinned ASUS driver package on the owner's machine; not stored in this repository or in any package",
+      "license": "ASUS/Cirrus OEM firmware; extracted locally for this owned device; redistribution not asserted",
+      "target": "usr/lib/firmware/cirrus/cs35l56-b0-dsp1-misc-10431484-spkid0-l1u0.bin",
+      "mode": 420
+    },
+    {
+      "id": "cs35l56-b0-dsp1-misc-10431484-spkid0-l1u1.bin",
+      "path": "assets/hardware/firmware/cirrus/cs35l56-b0-dsp1-misc-10431484-spkid0-l1u1.bin",
+      "bytes": 11748,
+      "sha256": "d9795f52b7c62f01de42a57b6a6f584e011746d1d48b99f62017a15b8199aedc",
+      "extract": {
+        "from": {
+          "path": ".artifacts/asus/Audio_Driver_ARM_Cirrus_Z_V1.0.678.52824Sub3_49783.exe",
+          "bytes": 4750256,
+          "sha256": "01ffa79558813cf9e943d63b4a39289471915ab865c32a1138ffe8382175355f",
+          "urls": [
+            "https://dlcdnets.asus.com/pub/ASUS/nb/Image/Driver/Audio/49783/Audio_Driver_ARM_Cirrus_Z_V1.0.678.52824Sub3_49783.exe"
+          ]
+        },
+        "offset": 4284504,
+        "member": "XU_Ext/tn/35L56/1484/dflt/b0_dflt_1484_rw_l1u1.bin"
+      },
+      "origin": "Extracted from the pinned ASUS driver package on the owner's machine; not stored in this repository or in any package",
+      "license": "ASUS/Cirrus OEM firmware; extracted locally for this owned device; redistribution not asserted",
+      "target": "usr/lib/firmware/cirrus/cs35l56-b0-dsp1-misc-10431484-spkid0-l1u1.bin",
+      "mode": 420
+    },
+    {
+      "id": "acpi-sspm-asus-power",
+      "path": "assets/hardware/acpi/h7607a-acpi.cpio",
+      "bytes": 109568,
+      "sha256": "311dc5b456f1b7a9728814cd8ca105370bdca8383facec141f23217f43eac51d",
+      "urls": [],
+      "origin": "Built on the owner's machine by provenance/hardware/power-archive-builder.py from that P16's own firmware tables; not stored in this repository",
+      "license": "Device firmware with local compatibility modifications; built locally for this owned device; redistribution not asserted",
+      "boot": "h7607a-acpi.cpio"
+    },
+    {
+      "id": "Shell.efi",
+      "path": "assets/hardware/uefi/Shell.efi",
+      "bytes": 1093632,
+      "sha256": "bb498165b74ad742abd4f223a859caf0ab2187bd9178d3394317cf6c125a9c0e",
+      "urls": [],
+      "origin": "Included local artifact at assets/hardware/uefi/Shell.efi; source/build evidence under provenance/hardware",
+      "license": "See original source notice",
+      "boot": "EFI/H7607A/Shell.efi"
+    },
+    {
+      "id": "n1x-dsdt-guard.efi",
+      "path": "assets/hardware/uefi/n1x-dsdt-guard.efi",
+      "bytes": 6656,
+      "sha256": "7e69518dbbfd33912b9d65bd9349c7340da1f4959f00d1c39dcc9efc60e58ea3",
+      "urls": [],
+      "origin": "Included local artifact at assets/hardware/uefi/n1x-dsdt-guard.efi; source/build evidence under provenance/hardware",
+      "license": "See original source notice"
+    },
+    {
+      "id": "n1x-asus-ssdt-guard.efi",
+      "path": "assets/hardware/uefi/n1x-asus-ssdt-guard.efi",
+      "bytes": 6656,
+      "sha256": "1cbf6bee9129e45afbbe0c25de635a5a53802cbf000b324e45eaaa7a7bee6050",
+      "urls": [],
+      "origin": "Included local artifact at assets/hardware/uefi/n1x-asus-ssdt-guard.efi; source/build evidence under provenance/hardware",
+      "license": "See original source notice"
+    },
+    {
+      "id": "n1x-dsdt-baseline.bin",
+      "path": "assets/hardware/uefi/n1x-dsdt-baseline.bin",
+      "bytes": 74052,
+      "sha256": "0b9ed92671568cf36bade16262d068d1a4f3c85634159de46ae00bf0f727a402",
+      "urls": [],
+      "origin": "Dumped by the owner from that P16's firmware and copied here by provenance/hardware/power-archive-builder.py; not stored in this repository",
+      "license": "Device firmware ACPI table (OEM ID NVDA); dumped locally from this owned device; redistribution not asserted"
+    },
+    {
+      "id": "n1x-asus-ssdt-baseline.bin",
+      "path": "assets/hardware/uefi/n1x-asus-ssdt-baseline.bin",
+      "bytes": 34278,
+      "sha256": "46d9ed16af06093cdb849df69646683317d53d7342dfd38f24eab00795d396f0",
+      "urls": [],
+      "origin": "Dumped by the owner from that P16's firmware and copied here by provenance/hardware/power-archive-builder.py; not stored in this repository",
+      "license": "Device firmware ACPI table (OEM ID _ASUS_); dumped locally from this owned device; redistribution not asserted"
+    },
+    {
+      "id": "acpi-dump-script",
+      "path": "assets/hardware/uefi/acpi-dump.nsh",
+      "bytes": 1040,
+      "sha256": "586b206bf10eda0648e5edc3a6891f1f36962e03675c986b5792218c2d9b66c6",
+      "urls": [],
+      "origin": "Repository source; staged as EFI/BOOT/startup.nsh by scripts/stage-acpi-dump.py",
+      "license": "MIT"
+    },
+    {
+      "id": "edk2-license.txt",
+      "path": "assets/hardware/uefi/edk2-license.txt",
+      "bytes": 2732,
+      "sha256": "50ce20c9cfdb0e19ee34fe0a51fc0afe961f743697b068359ab2f862b494df80",
+      "urls": [],
+      "origin": "Included local artifact at assets/hardware/uefi/edk2-license.txt; source/build evidence under provenance/hardware",
+      "license": "See original source notice",
+      "boot": "edk2-license.txt"
+    },
+    {
+      "id": "guard-license.txt",
+      "path": "assets/hardware/uefi/guard-license.txt",
+      "bytes": 1082,
+      "sha256": "b890be482308c5f77ed80c11a6803a7276ad99d731a93133237e36ff3889d901",
+      "urls": [],
+      "origin": "Included local artifact at assets/hardware/uefi/guard-license.txt; source/build evidence under provenance/hardware",
+      "license": "See original source notice"
+    },
+    {
+      "id": "provenance-drm-build.json",
+      "path": "provenance/hardware/drm-build.json",
+      "bytes": 4616,
+      "sha256": "88dfdb488ae2924cef454f42ba5a3d8db36c49bb29058cd06792bbf34c749b94",
+      "urls": [],
+      "origin": "Included local artifact at provenance/hardware/drm-build.json; source/build evidence under provenance/hardware",
+      "license": "See original source notice"
+    },
+    {
+      "id": "provenance-hid-build.json",
+      "path": "provenance/hardware/hid-build.json",
+      "bytes": 16098,
+      "sha256": "8c55103614373c4318114a4a79442f0dda9fec009e5997977d59b2cc7d3677d8",
+      "urls": [],
+      "origin": "Included local artifact at provenance/hardware/hid-build.json; source/build evidence under provenance/hardware",
+      "license": "See original source notice"
+    },
+    {
+      "id": "provenance-audio-build.json",
+      "path": "provenance/hardware/audio-build.json",
+      "bytes": 17305,
+      "sha256": "f990e6f9953fcd7cc19315a37e3a6cdb97d014040fa482abd93649e05e5fbbb5",
+      "urls": [],
+      "origin": "Included local artifact at provenance/hardware/audio-build.json; source/build evidence under provenance/hardware",
+      "license": "See original source notice"
+    },
+    {
+      "id": "provenance-drm.patch",
+      "path": "provenance/hardware/drm.patch",
+      "bytes": 3488,
+      "sha256": "2cae1578e998735229b0b26056bb33ad9fad11eab2b925bcff00ecb22939c2e7",
+      "urls": [],
+      "origin": "Included local artifact at provenance/hardware/drm.patch; source/build evidence under provenance/hardware",
+      "license": "See original source notice"
+    },
+    {
+      "id": "provenance-drm-source-manifest.json",
+      "path": "provenance/hardware/drm-source-manifest.json",
+      "bytes": 46747,
+      "sha256": "79ee35083684ed95cedb9b209ba4453558cc522918c188264610cee1056b8ce2",
+      "urls": [],
+      "origin": "Included local artifact at provenance/hardware/drm-source-manifest.json; source/build evidence under provenance/hardware",
+      "license": "See original source notice"
+    },
+    {
+      "id": "provenance-drm-kernel-open-source.tar.gz",
+      "path": "provenance/hardware/drm-kernel-open-source.tar.gz",
+      "bytes": 1786010,
+      "sha256": "7f687f195288b9b252b6037abf228c983ee698846490f1268eab809b59258916",
+      "urls": [],
+      "origin": "Included local artifact at provenance/hardware/drm-kernel-open-source.tar.gz; source/build evidence under provenance/hardware",
+      "license": "See original source notice"
+    },
+    {
+      "id": "provenance-audio-identity.patch",
+      "path": "provenance/hardware/audio-identity.patch",
+      "bytes": 730,
+      "sha256": "86beaf1e1a8e4e1389c2d3c648781921944967e9b1170118216298442370180f",
+      "urls": [],
+      "origin": "Included local artifact at provenance/hardware/audio-identity.patch; source/build evidence under provenance/hardware",
+      "license": "See original source notice"
+    },
+    {
+      "id": "provenance-audio-source.c",
+      "path": "provenance/hardware/audio-source.c",
+      "bytes": 19201,
+      "sha256": "4a3e4318ede455010a0e92eb776bcad22a7b3a5582d5bd75edfa5a33abf264e0",
+      "urls": [],
+      "origin": "Included local artifact at provenance/hardware/audio-source.c; source/build evidence under provenance/hardware",
+      "license": "See original source notice"
+    },
+    {
+      "id": "provenance-hid-asus.c",
+      "path": "provenance/hardware/hid-asus.c",
+      "bytes": 52689,
+      "sha256": "4639fa303f42679b361e342b7eae4f68bb478566cf84f61278587cc5c90230de",
+      "urls": [],
+      "origin": "Included local artifact at provenance/hardware/hid-asus.c; source/build evidence under provenance/hardware",
+      "license": "See original source notice"
+    },
+    {
+      "id": "provenance-hid-ids.h",
+      "path": "provenance/hardware/hid-ids.h",
+      "bytes": 61602,
+      "sha256": "4a4c05a345b8ddec1ebeb3f5d3e5a38edcc456f26886769a63278c19434000d8",
+      "urls": [],
+      "origin": "Included local artifact at provenance/hardware/hid-ids.h; source/build evidence under provenance/hardware",
+      "license": "See original source notice"
+    },
+    {
+      "id": "provenance-sspm-patch.json",
+      "path": "provenance/hardware/sspm-patch.json",
+      "bytes": 1686,
+      "sha256": "42616270e79331f2ff89b952251daa43807105fc9139b15d1f29e262b7634d0d",
+      "urls": [],
+      "origin": "Included local artifact at provenance/hardware/sspm-patch.json; source/build evidence under provenance/hardware",
+      "license": "See original source notice"
+    },
+    {
+      "id": "provenance-sspm-builder.py",
+      "path": "provenance/hardware/sspm-builder.py",
+      "bytes": 182,
+      "sha256": "d964bb19e16e8df0d4bb51ca1c58d0e91e17dacebae298ac48ad87d66775ae7f",
+      "urls": [],
+      "origin": "Included local artifact at provenance/hardware/sspm-builder.py; source/build evidence under provenance/hardware",
+      "license": "See original source notice"
+    },
+    {
+      "id": "provenance-power-method-changes.json",
+      "path": "provenance/hardware/power-method-changes.json",
+      "bytes": 2026,
+      "sha256": "8b779dff3de70d8a35c16629e7130c3748dbea52a2d652e6de17bde2cd571a01",
+      "urls": [],
+      "origin": "Included local artifact at provenance/hardware/power-method-changes.json; source/build evidence under provenance/hardware",
+      "license": "See original source notice"
+    },
+    {
+      "id": "provenance-power-splice.json",
+      "path": "provenance/hardware/power-splice.json",
+      "bytes": 3793,
+      "sha256": "a08e3d91b99fbfed7b2497dca49f24a531c93d28565a496825f3e2df46fb361c",
+      "urls": [],
+      "origin": "Included local artifact at provenance/hardware/power-splice.json; source/build evidence under provenance/hardware",
+      "license": "See original source notice"
+    },
+    {
+      "id": "provenance-power-source.dsl",
+      "path": "provenance/hardware/power-source.dsl",
+      "bytes": 241833,
+      "sha256": "cff6e8be5665686c95bd83b5e2d73ed0abbacddecc416e57dbd29f91a746472a",
+      "urls": [],
+      "origin": "Derived on the owner's machine by provenance/hardware/power-archive-builder.py from the iasl 20260408 disassembly of that P16's ASUS SSDT and power-source.sed; not stored in this repository",
+      "license": "Disassembly of the device firmware ASUS SSDT with local edits; derived locally for this owned device; redistribution not asserted"
+    },
+    {
+      "id": "provenance-power-source.sed",
+      "path": "provenance/hardware/power-source.sed",
+      "bytes": 839,
+      "sha256": "7c9a16b19cb86488bbdb73da4d88a775a763908abb70291806250cd6d97bdd19",
+      "urls": [],
+      "origin": "Repository source; acpi_builder.py applies it to the iasl -d disassembly of the owner's ASUS SSDT",
+      "license": "MIT"
+    },
+    {
+      "id": "provenance-power-archive-builder.py",
+      "path": "provenance/hardware/power-archive-builder.py",
+      "bytes": 162,
+      "sha256": "3457be1bfb4e77c11725c4325901bcf089e0e7e7ba3a943007e1b68edc9d9f96",
+      "urls": [],
+      "origin": "Included local artifact at provenance/hardware/power-archive-builder.py; source/build evidence under provenance/hardware",
+      "license": "See original source notice"
+    },
+    {
+      "id": "provenance-power-archive.json",
+      "path": "provenance/hardware/power-archive.json",
+      "bytes": 2862,
+      "sha256": "5b81c083703feac3f4f86f0ad80e9862ffdac26625c57de113919ae28f67ae37",
+      "urls": [],
+      "origin": "Included local artifact at provenance/hardware/power-archive.json; source/build evidence under provenance/hardware",
+      "license": "See original source notice"
+    },
+    {
+      "id": "provenance-dsdt-guard.c",
+      "path": "provenance/hardware/dsdt-guard.c",
+      "bytes": 6827,
+      "sha256": "1cdac261e1785797bfa20af45232a1b923537dfd924bb6a9fc8f24db0c6c3905",
+      "urls": [],
+      "origin": "Included local artifact at provenance/hardware/dsdt-guard.c; source/build evidence under provenance/hardware",
+      "license": "See original source notice"
+    },
+    {
+      "id": "provenance-dsdt-guard-build.json",
+      "path": "provenance/hardware/dsdt-guard-build.json",
+      "bytes": 3085,
+      "sha256": "46bedcc94f2a05b2987627da5ac8f49c04188ac9a04f89a8068a14b7a47e4f4d",
+      "urls": [],
+      "origin": "Included local artifact at provenance/hardware/dsdt-guard-build.json; source/build evidence under provenance/hardware",
+      "license": "See original source notice"
+    },
+    {
+      "id": "provenance-ssdt-guard.c",
+      "path": "provenance/hardware/ssdt-guard.c",
+      "bytes": 6847,
+      "sha256": "2909970f31436ce892ff8a8f3122f10e673b0e7570debbffc932a168bcf361f3",
+      "urls": [],
+      "origin": "Included local artifact at provenance/hardware/ssdt-guard.c; source/build evidence under provenance/hardware",
+      "license": "See original source notice"
+    },
+    {
+      "id": "provenance-ssdt-guard-build.json",
+      "path": "provenance/hardware/ssdt-guard-build.json",
+      "bytes": 3152,
+      "sha256": "2003d471169b908cc34a8a77e481a80ef8c7773659f4ee97346691c920f08be5",
+      "urls": [],
+      "origin": "Included local artifact at provenance/hardware/ssdt-guard-build.json; source/build evidence under provenance/hardware",
+      "license": "See original source notice"
+    },
+    {
+      "id": "h7607a-initcpio-install",
+      "path": "assets/hardware/initcpio/install/h7607a-preload",
+      "bytes": 1251,
+      "sha256": "846ef7ff8038f0f2f5c1b8512424fd8c92c8c1a02e458dc9ea9f79e7f7df03f5",
+      "urls": [],
+      "license": "MIT",
+      "origin": "Clean production source; exact native policy retained",
+      "target": "usr/lib/initcpio/install/h7607a-preload",
+      "package_owner": "h7607a-hardware",
+      "package_filename": "initcpio-install",
+      "mode": 420
+    },
+    {
+      "id": "h7607a-initcpio-hook",
+      "path": "assets/hardware/initcpio/hooks/h7607a-preload",
+      "bytes": 279,
+      "sha256": "cde878e5e277782e45a4d10a0b16a086ee9ce011f8d5ab32cba20c5379f878af",
+      "urls": [],
+      "license": "MIT",
+      "origin": "Clean production source; exact native policy retained",
+      "target": "usr/lib/initcpio/hooks/h7607a-preload",
+      "package_owner": "h7607a-hardware",
+      "package_filename": "initcpio-hook",
+      "mode": 420
+    },
+    {
+      "id": "h7607a-initcpio-config",
+      "path": "assets/hardware/initcpio/h7607a.conf",
+      "bytes": 1421,
+      "sha256": "e8e89a13ffea5ca30a7fb4bf633688618d7659bebd47e0843ea30d38c763dc9f",
+      "urls": [],
+      "license": "MIT",
+      "origin": "Clean production source; exact native policy retained",
+      "target": "etc/mkinitcpio.conf.d/h7607a.conf",
+      "package_owner": "h7607a-hardware",
+      "package_filename": "mkinitcpio.conf",
+      "mode": 420
+    },
+    {
+      "id": "h7607a-depmod-config",
+      "path": "assets/hardware/depmod/h7607a.conf",
+      "bytes": 495,
+      "sha256": "09ec1f7fbd7eab7ea4fb7fcaaafb1db9b2896fe93ec653a5548620907c9c7e75",
+      "urls": [],
+      "license": "MIT",
+      "origin": "Clean production source; exact native policy retained",
+      "target": "usr/lib/depmod.d/h7607a.conf",
+      "package_owner": "h7607a-hardware",
+      "package_filename": "depmod.conf",
+      "mode": 420
+    },
+    {
+      "id": "h7607a-nvidia-config",
+      "path": "assets/hardware/modprobe/h7607a-nvidia.conf",
+      "bytes": 121,
+      "sha256": "6b71fcb4d8eb66bf6aa1c1d66e60873635dd48e8f68f2511130dbabc688d55c6",
+      "urls": [],
+      "license": "MIT",
+      "origin": "Clean production source; exact native policy retained",
+      "target": "usr/lib/modprobe.d/h7607a-nvidia.conf",
+      "package_owner": "h7607a-hardware",
+      "package_filename": "nvidia.conf",
+      "mode": 420
+    },
+    {
+      "id": "n1x-cppc-init",
+      "path": "assets/hardware/power/n1x-cppc-init.py",
+      "bytes": 1075,
+      "sha256": "aaae00438e0cad22150263d65b6c0fd00bf0618ca10ab8ddff47c7d00e8c77a8",
+      "urls": [],
+      "license": "MIT",
+      "origin": "Clean production source; exact native policy retained",
+      "target": "usr/lib/h7607a/n1x-cppc-init.py",
+      "package_owner": "h7607a-hardware",
+      "package_filename": "n1x-cppc-init.py",
+      "mode": 420
+    },
+    {
+      "id": "n1x-cppc-service",
+      "path": "assets/hardware/power/n1x-cppc-init.service",
+      "bytes": 356,
+      "sha256": "14d7908b992750aeb8e960eba1ce7cdf3a3de46af66d5d9abdf1bddc38462c65",
+      "urls": [],
+      "license": "MIT",
+      "origin": "Clean production source; exact native policy retained",
+      "target": "usr/lib/systemd/system/n1x-cppc-init.service",
+      "package_owner": "h7607a-hardware",
+      "package_filename": "n1x-cppc-init.service",
+      "mode": 420
+    },
+    {
+      "id": "h7607a-camera-blacklist",
+      "path": "runtime/usr/lib/modprobe.d/60-h7607a-no-camera.conf",
+      "bytes": 201,
+      "sha256": "5d29287c05747e8da3c20c3cb55ea86e46a1b15d41ae55478ca756b3be218c14",
+      "urls": [],
+      "license": "MIT",
+      "origin": "Clean production source; exact native policy retained",
+      "target": "usr/lib/modprobe.d/60-h7607a-no-camera.conf",
+      "package_owner": "h7607a-hardware",
+      "package_filename": "60-h7607a-no-camera.conf",
+      "mode": 420
+    },
+    {
+      "id": "h7607a-ucm-card",
+      "path": "runtime/usr/share/alsa/ucm2/conf.d/mt8901-soundwir/mt8901-soundwir.conf",
+      "bytes": 307,
+      "sha256": "1b6d0a8a85b748d7e09651d4931181a991e388b43729b3201040ef3e3dfb41a1",
+      "urls": [],
+      "license": "BSD-3-Clause",
+      "origin": "Playback-only adaptation of NVIDIA's MT8901 UCM from alsa-ucm-conf pull request 862",
+      "target": "usr/share/alsa/ucm2/conf.d/mt8901-soundwir/mt8901-soundwir.conf",
+      "package_owner": "h7607a-hardware",
+      "package_filename": "mt8901-soundwir.conf",
+      "mode": 420
+    },
+    {
+      "id": "h7607a-ucm-playback",
+      "path": "runtime/usr/share/alsa/ucm2/MediaTek/mt8901-soundwir/P16-playback.conf",
+      "bytes": 2125,
+      "sha256": "25d0ac355f3572d94106ce676e248396a0ee5af6b6ddb9319571719b9bff7e93",
+      "urls": [],
+      "license": "BSD-3-Clause",
+      "origin": "Playback-only adaptation of NVIDIA's MT8901 UCM from alsa-ucm-conf pull request 862",
+      "target": "usr/share/alsa/ucm2/MediaTek/mt8901-soundwir/P16-playback.conf",
+      "package_owner": "h7607a-hardware",
+      "package_filename": "P16-playback.conf",
+      "mode": 420
+    },
+    {
+      "id": "h7607a-wireplumber-playback",
+      "path": "runtime/usr/share/wireplumber/wireplumber.conf.d/51-h7607a-playback.conf",
+      "bytes": 1669,
+      "sha256": "9d03e6256d1f079be95d82ace17e90798e8cf8ac0d1db33090258ece948f5ffc",
+      "urls": [],
+      "license": "MIT",
+      "origin": "Clean production source; exact native policy retained",
+      "target": "usr/share/wireplumber/wireplumber.conf.d/51-h7607a-playback.conf",
+      "package_owner": "h7607a-hardware",
+      "package_filename": "51-h7607a-playback.conf",
+      "mode": 420
+    },
+    {
+      "id": "h7607a-touchpad-quirk",
+      "path": "runtime/usr/share/libinput/60-h7607a-touchpad.quirks",
+      "bytes": 289,
+      "sha256": "2d87cd28673df8ad01f8fadd2d313daf5b412bafea584a894c8334b505fe23f2",
+      "urls": [],
+      "license": "MIT",
+      "origin": "Clean production source; exact native policy retained",
+      "target": "usr/share/libinput/60-h7607a-touchpad.quirks",
+      "package_owner": "h7607a-hardware",
+      "package_filename": "60-h7607a-touchpad.quirks",
+      "mode": 420
+    },
+    {
+      "id": "h7607a-audio-helper",
+      "path": "runtime/usr/bin/h7607a-audio",
+      "bytes": 1528,
+      "sha256": "9974b3ff3caf65cc25741332976362527e5e10eb090c7b0e97b9aa95b10d47fc",
+      "urls": [],
+      "license": "MIT",
+      "origin": "Clean production source; exact native policy retained",
+      "target": "usr/bin/h7607a-audio",
+      "package_owner": "h7607a-hardware",
+      "package_filename": "h7607a-audio",
+      "mode": 493
+    },
+    {
+      "id": "h7607a-brightness-helper",
+      "path": "runtime/usr/bin/h7607a-brightness",
+      "bytes": 3298,
+      "sha256": "b152c2715e71bb0b6a1d5f86d86687dea989af68e5eaa6868b55fe13d8d4ef75",
+      "urls": [],
+      "license": "MIT",
+      "origin": "Clean production source; exact native policy retained",
+      "target": "usr/bin/h7607a-brightness",
+      "package_owner": "h7607a-hardware",
+      "package_filename": "h7607a-brightness",
+      "mode": 493
+    },
+    {
+      "id": "h7607a-boot-template",
+      "path": "assets/hardware/uefi/startup.nsh.in",
+      "bytes": 1328,
+      "sha256": "b49ff21542c6fb2fc79317b3af66dfd651d49788ad9f832aa82fae364002cef4",
+      "urls": [],
+      "license": "MIT",
+      "origin": "Clean production source; exact native policy retained"
+    },
+    {
+      "id": "provenance-nvidia-pr1368-1368.patch",
+      "path": "provenance/hardware/backports/nvidia/1368.patch",
+      "bytes": 1955,
+      "sha256": "54c6946021f3e49ca4dc9744898b6f7691ab7191592f76e4abe14cb1a4c0c03e",
+      "urls": [],
+      "origin": "Native ARM build of pinned NVIDIA 615.78.08 + PR1368; see native-build-receipt.json",
+      "license": "MIT AND GPL-2.0-only"
+    },
+    {
+      "id": "provenance-nvidia-pr1368-NVIDIA-COPYING",
+      "path": "provenance/hardware/backports/nvidia/NVIDIA-COPYING",
+      "bytes": 19391,
+      "sha256": "d8e96d29bc323000e7ba56102d77c88226a7a3d0d94e2081cb4b071ae9de4a06",
+      "urls": [],
+      "origin": "Native ARM build of pinned NVIDIA 615.78.08 + PR1368; see native-build-receipt.json",
+      "license": "MIT AND GPL-2.0-only"
+    },
+    {
+      "id": "provenance-nvidia-pr1368-build-modeset.sh",
+      "path": "provenance/hardware/backports/nvidia/build-modeset.sh",
+      "bytes": 3117,
+      "sha256": "35b98b8a6a4edcef231fa75f5919b5815572163ea0b86c6c936504ad32580a89",
+      "urls": [],
+      "origin": "Native ARM build of pinned NVIDIA 615.78.08 + PR1368; see native-build-receipt.json",
+      "license": "MIT AND GPL-2.0-only"
+    },
+    {
+      "id": "provenance-nvidia-pr1368-candidate-exports.json",
+      "path": "provenance/hardware/backports/nvidia/candidate-exports.json",
+      "bytes": 695,
+      "sha256": "3534be0e788b9db1d9c6d1a0429cbbc43f8ed947d9858efa886eb79730122820",
+      "urls": [],
+      "origin": "Native ARM build of pinned NVIDIA 615.78.08 + PR1368; see native-build-receipt.json",
+      "license": "MIT AND GPL-2.0-only"
+    },
+    {
+      "id": "provenance-nvidia-pr1368-candidate-imports.tsv",
+      "path": "provenance/hardware/backports/nvidia/candidate-imports.tsv",
+      "bytes": 2389,
+      "sha256": "8c0abb81853f972e313f730e1e5788e50fc080d479991310a5b33d57f370d3a0",
+      "urls": [],
+      "origin": "Native ARM build of pinned NVIDIA 615.78.08 + PR1368; see native-build-receipt.json",
+      "license": "MIT AND GPL-2.0-only"
+    },
+    {
+      "id": "provenance-nvidia-pr1368-header-inputs.sha256",
+      "path": "provenance/hardware/backports/nvidia/header-inputs.sha256",
+      "bytes": 299,
+      "sha256": "c27b62bd31bd04f4a2f404deb8a58e9b78fb872186b2730f0b286df9a65b6e3f",
+      "urls": [],
+      "origin": "Native ARM build of pinned NVIDIA 615.78.08 + PR1368; see native-build-receipt.json",
+      "license": "MIT AND GPL-2.0-only"
+    },
+    {
+      "id": "provenance-nvidia-pr1368-module_exports.py",
+      "path": "provenance/hardware/backports/nvidia/module_exports.py",
+      "bytes": 2091,
+      "sha256": "206949fd128faa50e39460a4457cafcb1efcaee34109ff340b41f36d5fed893c",
+      "urls": [],
+      "origin": "Native ARM build of pinned NVIDIA 615.78.08 + PR1368; see native-build-receipt.json",
+      "license": "MIT AND GPL-2.0-only"
+    },
+    {
+      "id": "provenance-nvidia-pr1368-native-build-receipt.json",
+      "path": "provenance/hardware/backports/nvidia/native-build-receipt.json",
+      "bytes": 4875,
+      "sha256": "ef8185cfdcebc4dbecbfbd05422c311ff716370a923478a29da5922ab871e86c",
+      "urls": [],
+      "origin": "Native ARM build of pinned NVIDIA 615.78.08 + PR1368; see native-build-receipt.json",
+      "license": "MIT AND GPL-2.0-only"
+    },
+    {
+      "id": "provenance-nvidia-pr1368-patched-nvkms-kapi-sync.c",
+      "path": "provenance/hardware/backports/nvidia/patched-nvkms-kapi-sync.c",
+      "bytes": 17939,
+      "sha256": "f5e3d56571c7949cd3a92b44c89d515e5666186ee7a4ee900774f7f351a50c93",
+      "urls": [],
+      "origin": "Native ARM build of pinned NVIDIA 615.78.08 + PR1368; see native-build-receipt.json",
+      "license": "MIT AND GPL-2.0-only"
+    },
+    {
+      "id": "provenance-nvidia-pr1368-stock-exports.json",
+      "path": "provenance/hardware/backports/nvidia/stock-exports.json",
+      "bytes": 695,
+      "sha256": "3534be0e788b9db1d9c6d1a0429cbbc43f8ed947d9858efa886eb79730122820",
+      "urls": [],
+      "origin": "Native ARM build of pinned NVIDIA 615.78.08 + PR1368; see native-build-receipt.json",
+      "license": "MIT AND GPL-2.0-only"
+    },
+    {
+      "id": "provenance-nvidia-pr1368-stock-imports.tsv",
+      "path": "provenance/hardware/backports/nvidia/stock-imports.tsv",
+      "bytes": 2389,
+      "sha256": "8c0abb81853f972e313f730e1e5788e50fc080d479991310a5b33d57f370d3a0",
+      "urls": [],
+      "origin": "Native ARM build of pinned NVIDIA 615.78.08 + PR1368; see native-build-receipt.json",
+      "license": "MIT AND GPL-2.0-only"
+    },
+    {
+      "id": "provenance-nvidia-pr1368-stock-nvidia.symvers",
+      "path": "provenance/hardware/backports/nvidia/stock-nvidia.symvers",
+      "bytes": 6125,
+      "sha256": "c4153c325fbbb532a8f1359226701904b118e61f04864fd4c3791af8d78050a8",
+      "urls": [],
+      "origin": "Native ARM build of pinned NVIDIA 615.78.08 + PR1368; see native-build-receipt.json",
+      "license": "MIT AND GPL-2.0-only"
+    },
+    {
+      "id": "soundwire-mtk-interrupt-gate",
+      "path": "assets/hardware/modules/soundwire-mtk.ko",
+      "bytes": 227144,
+      "sha256": "7162e23606a3bbcf4ff15fc2eada8662eee9962b88b5605d11f51e45e74b7d5f",
+      "urls": [],
+      "origin": "Native verified NVIDIA 1022 SoundWire controller + interrupt gate race repair",
+      "license": "GPL-2.0-only",
+      "target": "usr/lib/modules/7.0.0-1022-nvidia/updates/h7607a/soundwire-mtk.ko",
+      "package_owner": "h7607a-hardware",
+      "package_filename": "soundwire-mtk.ko",
+      "mode": 420,
+      "physical_boot_qualified": false,
+      "build_receipt": "provenance/hardware/backports/soundwire/build-receipt.json"
+    },
+    {
+      "id": "provenance-soundwire-gate-0001-soundwire-close-interrupt-gate.patch",
+      "path": "provenance/hardware/backports/soundwire/0001-soundwire-close-interrupt-gate.patch",
+      "bytes": 5558,
+      "sha256": "0251766c52add0dfb792616dd93244aa242f406dd7ff8b20eec043b3fe50fa47",
+      "urls": [],
+      "origin": "Pinned NVIDIA 1022 source and attributed interrupt-gate patch; see source-receipt.json",
+      "license": "GPL-2.0-only"
+    },
+    {
+      "id": "provenance-soundwire-gate-README.md",
+      "path": "provenance/hardware/backports/soundwire/README.md",
+      "bytes": 2898,
+      "sha256": "4e87cbd9c48410516270aedbda5efbfff5d18051fbb5ccb3e1974a7443df9c21",
+      "urls": [],
+      "origin": "Pinned NVIDIA 1022 source and attributed interrupt-gate patch; see source-receipt.json",
+      "license": "GPL-2.0-only"
+    },
+    {
+      "id": "provenance-soundwire-gate-build-receipt.json",
+      "path": "provenance/hardware/backports/soundwire/build-receipt.json",
+      "bytes": 2444,
+      "sha256": "0b5f0661df27c58c4e0549087a9b91e068ed6c65c873597381433c997f5fdb92",
+      "urls": [],
+      "origin": "Pinned NVIDIA 1022 source and attributed interrupt-gate patch; see source-receipt.json",
+      "license": "GPL-2.0-only"
+    },
+    {
+      "id": "provenance-soundwire-gate-build.sh",
+      "path": "provenance/hardware/backports/soundwire/build.sh",
+      "bytes": 1718,
+      "sha256": "318e710a6a1da4dddb92bfe7b57bbc5b4381c0289315114353bbbf245de3136a",
+      "urls": [],
+      "origin": "Pinned NVIDIA 1022 source and attributed interrupt-gate patch; see source-receipt.json",
+      "license": "GPL-2.0-only"
+    },
+    {
+      "id": "provenance-soundwire-gate-check-native.py",
+      "path": "provenance/hardware/backports/soundwire/check-native.py",
+      "bytes": 4450,
+      "sha256": "abd67c19822ee6460fe9ac5bf3c02d38607c27cbb4cb21746998b90fb7084d0c",
+      "urls": [],
+      "origin": "Pinned NVIDIA 1022 source and attributed interrupt-gate patch; see source-receipt.json",
+      "license": "GPL-2.0-only"
+    },
+    {
+      "id": "provenance-soundwire-gate-pristine__drivers__soundwire__bus.h",
+      "path": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/bus.h",
+      "bytes": 7119,
+      "sha256": "c25915dc7b0b0357fd1260229b246c5edbf904e3f956bf8f5d7aa1473fe25663",
+      "urls": [],
+      "origin": "Pinned NVIDIA 1022 source and attributed interrupt-gate patch; see source-receipt.json",
+      "license": "GPL-2.0-only"
+    },
+    {
+      "id": "provenance-soundwire-gate-pristine__drivers__soundwire__mediatek__Makefile",
+      "path": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/Makefile",
+      "bytes": 406,
+      "sha256": "7a4e749b1ba6d3b64dc2593d31305923a9558c90e0e1e2bce65bd776ab5afe59",
+      "urls": [],
+      "origin": "Pinned NVIDIA 1022 source and attributed interrupt-gate patch; see source-receipt.json",
+      "license": "GPL-2.0-only"
+    },
+    {
+      "id": "provenance-soundwire-gate-pristine__drivers__soundwire__mediatek__mt8901-afe-clk.c",
+      "path": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mt8901-afe-clk.c",
+      "bytes": 26311,
+      "sha256": "5a5d9a835707c199b4d463daf8f45eeb98be787daf0b3c20e5f6c1c8ecd7d56c",
+      "urls": [],
+      "origin": "Pinned NVIDIA 1022 source and attributed interrupt-gate patch; see source-receipt.json",
+      "license": "GPL-2.0-only"
+    },
+    {
+      "id": "provenance-soundwire-gate-pristine__drivers__soundwire__mediatek__mt8901-afe-clk.h",
+      "path": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mt8901-afe-clk.h",
+      "bytes": 4422,
+      "sha256": "94dfebcbb8926525af9525e824f4b05f779a99990a4c2f93b42bea5edb47e68f",
+      "urls": [],
+      "origin": "Pinned NVIDIA 1022 source and attributed interrupt-gate patch; see source-receipt.json",
+      "license": "GPL-2.0-only"
+    },
+    {
+      "id": "provenance-soundwire-gate-pristine__drivers__soundwire__mediatek__mtk-sdw-chipglue.c",
+      "path": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw-chipglue.c",
+      "bytes": 756,
+      "sha256": "65c7fef197e6429b39745c5686f4e1ee7a8e9a5d62dc724125d2988c91c941f0",
+      "urls": [],
+      "origin": "Pinned NVIDIA 1022 source and attributed interrupt-gate patch; see source-receipt.json",
+      "license": "GPL-2.0-only"
+    },
+    {
+      "id": "provenance-soundwire-gate-pristine__drivers__soundwire__mediatek__mtk-sdw-common.h",
+      "path": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw-common.h",
+      "bytes": 2872,
+      "sha256": "27f66153ede1414f439b4256b8707b203b7ed33950ee2887155d9a5be4ad19ce",
+      "urls": [],
+      "origin": "Pinned NVIDIA 1022 source and attributed interrupt-gate patch; see source-receipt.json",
+      "license": "GPL-2.0-only"
+    },
+    {
+      "id": "provenance-soundwire-gate-pristine__drivers__soundwire__mediatek__mtk-sdw-core.c",
+      "path": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw-core.c",
+      "bytes": 39612,
+      "sha256": "63ab321028387add5e8fc64e60f667c0ce1011aeea173abca8a71ed12cb1acda",
+      "urls": [],
+      "origin": "Pinned NVIDIA 1022 source and attributed interrupt-gate patch; see source-receipt.json",
+      "license": "GPL-2.0-only"
+    },
+    {
+      "id": "provenance-soundwire-gate-pristine__drivers__soundwire__mediatek__mtk-sdw-core.h",
+      "path": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw-core.h",
+      "bytes": 10518,
+      "sha256": "e4676f25a3d26b5cc2c9a0666bd0f7f2c608543957b3f912caed96106d834795",
+      "urls": [],
+      "origin": "Pinned NVIDIA 1022 source and attributed interrupt-gate patch; see source-receipt.json",
+      "license": "GPL-2.0-only"
+    },
+    {
+      "id": "provenance-soundwire-gate-pristine__drivers__soundwire__mediatek__mtk-sdw-mach.c",
+      "path": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw-mach.c",
+      "bytes": 11712,
+      "sha256": "c482e36577d72c02f1eb713e39e8711aa0093cd92cdf7ee9c88d122e80ab68fe",
+      "urls": [],
+      "origin": "Pinned NVIDIA 1022 source and attributed interrupt-gate patch; see source-receipt.json",
+      "license": "GPL-2.0-only"
+    },
+    {
+      "id": "provenance-soundwire-gate-pristine__drivers__soundwire__mediatek__mtk-sdw-mach.h",
+      "path": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw-mach.h",
+      "bytes": 561,
+      "sha256": "6a1c67da7a0ea0be4cb25270e8aafb5d5779bd56d8f1237f25b8813206ffdc5b",
+      "urls": [],
+      "origin": "Pinned NVIDIA 1022 source and attributed interrupt-gate patch; see source-receipt.json",
+      "license": "GPL-2.0-only"
+    },
+    {
+      "id": "provenance-soundwire-gate-pristine__drivers__soundwire__mediatek__mtk-sdw-top.c",
+      "path": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw-top.c",
+      "bytes": 9570,
+      "sha256": "fef501d26dd8394bca825b110d0506417bf11177fbba103134c776bd65c13129",
+      "urls": [],
+      "origin": "Pinned NVIDIA 1022 source and attributed interrupt-gate patch; see source-receipt.json",
+      "license": "GPL-2.0-only"
+    },
+    {
+      "id": "provenance-soundwire-gate-pristine__drivers__soundwire__mediatek__mtk-sdw-top.h",
+      "path": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw-top.h",
+      "bytes": 3055,
+      "sha256": "a92d60aa4b3406f923f18d3fe9b6deab65fac08c52fe21318ccc7f424de95d5a",
+      "urls": [],
+      "origin": "Pinned NVIDIA 1022 source and attributed interrupt-gate patch; see source-receipt.json",
+      "license": "GPL-2.0-only"
+    },
+    {
+      "id": "provenance-soundwire-gate-pristine__drivers__soundwire__mediatek__mtk-sdw.c",
+      "path": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw.c",
+      "bytes": 46714,
+      "sha256": "7bc9a0b5bc7dae9ff3c38d4e0cf510fea774cc968f6d3a128110c6a083fdec5b",
+      "urls": [],
+      "origin": "Pinned NVIDIA 1022 source and attributed interrupt-gate patch; see source-receipt.json",
+      "license": "GPL-2.0-only"
+    },
+    {
+      "id": "provenance-soundwire-gate-pristine__drivers__soundwire__mediatek__mtk-sdw.h",
+      "path": "provenance/hardware/backports/soundwire/pristine/drivers/soundwire/mediatek/mtk-sdw.h",
+      "bytes": 2484,
+      "sha256": "893dbd1ade2c51cafea3d0640236aaeaf14cd878c3ac8769fed2f5104a2a7766",
+      "urls": [],
+      "origin": "Pinned NVIDIA 1022 source and attributed interrupt-gate patch; see source-receipt.json",
+      "license": "GPL-2.0-only"
+    },
+    {
+      "id": "provenance-soundwire-gate-source-receipt.json",
+      "path": "provenance/hardware/backports/soundwire/source-receipt.json",
+      "bytes": 7500,
+      "sha256": "774b7e28dc744cb0dd42505ed1a188068f77910148694b0aad72ce0bf7cd7127",
+      "urls": [],
+      "origin": "Pinned NVIDIA 1022 source and attributed interrupt-gate patch; see source-receipt.json",
+      "license": "GPL-2.0-only"
+    },
+    {
+      "id": "provenance-nvidia-pr1368-stock-source",
+      "path": "provenance/hardware/backports/nvidia/stock-nvkms-kapi-sync.c",
+      "bytes": 17757,
+      "sha256": "09fa351c8202e78e790d8d903ac48caaa3360d20210a5151f9ddf97cbdb1b499",
+      "urls": []
+    },
+    {
+      "id": "provenance-acpi-builder",
+      "path": "provenance/hardware/acpi_builder.py",
+      "bytes": 16378,
+      "sha256": "14f276c97000dafdd51bc7af948d7b87aecc673df2d399ce14dbbbfb70e20c07",
+      "urls": []
+    }
+  ],
+  "module_srcversions": {
+    "nvidia_drm": "4500F90245077CDA9BEF8C2",
+    "hid_asus": "D5071B2AFD2A51A2FDFD376",
+    "mt8901_acp_sdw_legacy_mach": "F000011BBADEC995F6BBA1D",
+    "soundwire_mtk": "7588DC9A1BF7B049DA48615"
+  },
+  "installed_boot_qualified": false,
+  "physical_qualification_scope": "Physical boot testing covered the retained original hardware assets. The SoundWire interrupt-gate and NVIDIA modeset PR1368 backports have native build/ABI checks, not physical qualification."
+}

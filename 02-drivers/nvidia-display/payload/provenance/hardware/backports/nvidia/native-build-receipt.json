@@ -1,0 +1,129 @@
+{
+  "schema": "h7607a-nvidia-modeset-backport-v1",
+  "created_utc": "2026-10-18T17:52:33.612708+00:00",
+  "status": "BUILD_AND_ABI_VERIFIED",
+  "scope": "Only nvidia-modeset rebuilt; no installed module altered by build; exact existing kernel and other GPU modules retained.",
+  "upstream": {
+    "tag": "615.78.08",
+    "commit": "1a82fbfda8f321b056eb3568850f9316c5e465c5",
+    "source_url": "https://github.com/NVIDIA/open-gpu-kernel-modules/archive/refs/tags/615.78.08.tar.gz",
+    "source": {
+      "path": "open-gpu-kernel-modules-615.78.08.tar.gz",
+      "bytes": 25935480,
+      "sha256": "eac0ecd52facab28ad2963cf7e03ae8d2289d596ad590c703b5f72d65899e2bf"
+    },
+    "pr": "https://github.com/NVIDIA/open-gpu-kernel-modules/pull/1368",
+    "pr_state_observed": "open",
+    "merged": false,
+    "patch_commit": "2fb6ce14f4fbd6b57b3f0cc3c4eb6e6b0c309586",
+    "patch_url": "https://github.com/NVIDIA/open-gpu-kernel-modules/commit/2fb6ce14f4fbd6b57b3f0cc3c4eb6e6b0c309586.patch",
+    "patch": {
+      "path": "1368.patch",
+      "bytes": 1955,
+      "sha256": "54c6946021f3e49ca4dc9744898b6f7691ab7191592f76e4abe14cb1a4c0c03e"
+    },
+    "scope": "One nvKmsKapiFree(cb) plus comment on ALREADY_SIGNALLED; no ABI changes"
+  },
+  "kernel": {
+    "release": "7.0.0-1022-nvidia",
+    "headers_Module_symvers_sha256": "ad63eccd8911085a10d7996b78dd0c40f6bcaa0b32d42986a9cce39e0101a7ba",
+    "config_sha256": "3702382acae6cb607b441f0a44c2f0929a9ed98b9d33dcf2f731b1a1d1469297"
+  },
+  "module": {
+    "artifact": {
+      "path": "nvidia-modeset.ko.zst",
+      "bytes": 854557,
+      "sha256": "3a1e3c07802314073eaaa03846cdd6bd197deec9674f7860fb72479fe3a3b6b5"
+    },
+    "uncompressed": {
+      "path": "nvidia-modeset.ko",
+      "bytes": 3010208,
+      "sha256": "14e33fc5d00e25b4d22a33f32b73348a5360e804b79ca3e239a2372d364911d9"
+    },
+    "version": "615.78.08",
+    "srcversion": "7BA28538668890946505DA9",
+    "srcversion_caveat": "Stock and patched srcversion identical: Kbuild core binary dependency is outside srcversion inputs; identify patch by full artifact SHA256.",
+    "vermagic": "7.0.0-1022-nvidia SMP preempt mod_unload modversions aarch64",
+    "depends": [
+      "video",
+      "nvidia"
+    ],
+    "license": "Dual MIT/GPL"
+  },
+  "validation": {
+    "native_AArch64_build_exit": 0,
+    "exact_imported_symbol_CRCs_match_stock": true,
+    "import_count": 91,
+    "exact_exported_symbol_CRCs_match_stock": true,
+    "export_count": 8,
+    "module_metadata_matches_stock": true,
+    "runtime_hardware_qualified": false
+  },
+  "build": {
+    "script": {
+      "path": "build-modeset.sh",
+      "bytes": 3117,
+      "sha256": "35b98b8a6a4edcef231fa75f5919b5815572163ea0b86c6c936504ad32580a89"
+    },
+    "ELF_export_helper": {
+      "path": "module_exports.py",
+      "bytes": 2091,
+      "sha256": "206949fd128faa50e39460a4457cafcb1efcaee34109ff340b41f36d5fed893c"
+    },
+    "SOURCE_DATE_EPOCH": 1791388800,
+    "deterministic_identity": "h7607a@builder",
+    "notes": [
+      "Native GCC16.1.1 versus kernel GCC13.3 warning: exact imported and exported symbol CRCs match stock.",
+      "BTF omitted because headers do not include vmlinux/pahole; no module loading requirement.",
+      "Upstream unused-variable warnings only.",
+      "Fixed source date/user/host; full second clean bit reproducibility build not performed."
+    ]
+  },
+  "retained_license": {
+    "path": "NVIDIA-COPYING",
+    "bytes": 19391,
+    "sha256": "d8e96d29bc323000e7ba56102d77c88226a7a3d0d94e2081cb4b071ae9de4a06"
+  },
+  "limitations": [
+    "PR remains open; source ownership independently reviewed.",
+    "Host mocked RM/allocator regression does not qualify GPU concurrency.",
+    "No physical runtime or long-duration compositor slab test performed for this artifact."
+  ],
+  "evidence": [
+    {
+      "path": "candidate-imports.tsv",
+      "bytes": 2389,
+      "sha256": "8c0abb81853f972e313f730e1e5788e50fc080d479991310a5b33d57f370d3a0"
+    },
+    {
+      "path": "stock-imports.tsv",
+      "bytes": 2389,
+      "sha256": "8c0abb81853f972e313f730e1e5788e50fc080d479991310a5b33d57f370d3a0"
+    },
+    {
+      "path": "candidate-exports.json",
+      "bytes": 695,
+      "sha256": "3534be0e788b9db1d9c6d1a0429cbbc43f8ed947d9858efa886eb79730122820"
+    },
+    {
+      "path": "stock-exports.json",
+      "bytes": 695,
+      "sha256": "3534be0e788b9db1d9c6d1a0429cbbc43f8ed947d9858efa886eb79730122820"
+    },
+    {
+      "path": "stock-nvidia.symvers",
+      "bytes": 6125,
+      "sha256": "c4153c325fbbb532a8f1359226701904b118e61f04864fd4c3791af8d78050a8"
+    },
+    {
+      "path": "header-inputs.sha256",
+      "bytes": 299,
+      "sha256": "c27b62bd31bd04f4a2f404deb8a58e9b78fb872186b2730f0b286df9a65b6e3f"
+    },
+    {
+      "path": "patched-nvkms-kapi-sync.c",
+      "bytes": 17939,
+      "sha256": "f5e3d56571c7949cd3a92b44c89d515e5666186ee7a4ee900774f7f351a50c93"
+    }
+  ]
+}

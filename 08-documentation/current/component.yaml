@@ -1,0 +1,38 @@
+{
+  "schema": "h7607a-component-v1",
+  "id": "documentation",
+  "type": "direct",
+  "repo_url": null,
+  "checkout_hash": null,
+  "sparse": {
+    "enabled": false,
+    "paths": []
+  },
+  "dependencies": [],
+  "depends_on": [],
+  "items": [],
+  "files": [
+    {
+      "source": "payload/.gitignore",
+      "destination": ".gitignore",
+      "bytes": 218,
+      "sha256": "f8436f2255becb80d8646e3310823dace6b257189fc76bbb6586052f44a774ad",
+      "mode": 420
+    },
+    {
+      "source": "payload/README.md",
+      "destination": "README.md",
+      "bytes": 7434,
+      "sha256": "4f91ab2367ab3e43fda1e88a50d5b9adc7112729c78300715f4110e525028f9c",
+      "mode": 420
+    },
+    {
+      "source": "payload/docs/media-build.md",
+      "destination": "docs/media-build.md",
+      "bytes": 3567,
+      "sha256": "334e6770ae7e0be725bb38d795fed2f0e2d678b7ff74992f802db876dcb5481f",
+      "mode": 420
+    }
+  ],
+  "links": []
+}

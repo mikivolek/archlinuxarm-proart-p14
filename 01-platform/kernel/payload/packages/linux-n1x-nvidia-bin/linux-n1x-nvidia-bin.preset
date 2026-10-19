@@ -1,0 +1,3 @@
+ALL_kver='/boot/vmlinuz-linux-n1x'
+PRESETS=('default')
+default_image='/boot/initramfs-linux-n1x.img'

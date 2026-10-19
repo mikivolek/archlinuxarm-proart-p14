@@ -1,0 +1,112 @@
+{
+  "schema": "h7607a-component-v1",
+  "id": "audio",
+  "type": "patch",
+  "repo_url": "https://github.com/NVIDIA/NV-Kernels",
+  "checkout_hash": "2234cd7f8f8a9fdbceef37f82c531016aab8cf73",
+  "sparse": {
+    "enabled": false,
+    "paths": []
+  },
+  "dependencies": [
+    {
+      "name": "NVIDIA kernel headers",
+      "version": "7.0.0-1022-nvidia",
+      "version_status": "artifact_and_ABI_pinned",
+      "source": "retained native module build receipts",
+      "scope": "source build: Module.symvers SHA256 ad63eccd8911085a10d7996b78dd0c40f6bcaa0b32d42986a9cce39e0101a7ba; original .config SHA256 3702382acae6cb607b441f0a44c2f0929a9ed98b9d33dcf2f731b1a1d1469297"
+    }
+  ],
+  "depends_on": [
+    "kernel"
+  ],
+  "items": [
+    {
+      "id": "h7607ba-machine-identity",
+      "type": "patch",
+      "repo_url": "https://github.com/NVIDIA/NV-Kernels",
+      "checkout_hash": "2234cd7f8f8a9fdbceef37f82c531016aab8cf73",
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "patch": "provenance/hardware/audio-identity.patch",
+      "target": "sound/soc/mediatek/mt8901/mt8901-acp-sdw-legacy-mach.c",
+      "notes": [
+        "Select OEM subsystem 10431484 and headphone backend."
+      ],
+      "dependencies": [
+        {
+          "name": "NVIDIA kernel headers",
+          "version": "7.0.0-1022-nvidia",
+          "version_status": "artifact_and_ABI_pinned",
+          "source": "retained native module build receipts",
+          "scope": "source build: Module.symvers SHA256 ad63eccd8911085a10d7996b78dd0c40f6bcaa0b32d42986a9cce39e0101a7ba; original .config SHA256 3702382acae6cb607b441f0a44c2f0929a9ed98b9d33dcf2f731b1a1d1469297"
+        }
+      ],
+      "source_build_note": "provenance/hardware/audio-build.sh rebuilds the module from audio-source.c with the inputs recorded in audio-build.json and compares it with the shipped binary. Reversing the identity patch on audio-source.c gives the pinned NV-Kernels file."
+    },
+    {
+      "id": "cirrus-oem-tuning",
+      "type": "direct",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "source_url": "https://dlcdnets.asus.com/pub/ASUS/nb/Image/Driver/Audio/49783/Audio_Driver_ARM_Cirrus_Z_V1.0.678.52824Sub3_49783.exe",
+      "version": "ASUS Cirrus 1.0.678.52824; WMFW 3.13.4",
+      "notes": [
+        "The installer downloads the pinned ASUS driver package on the owner's machine and extracts the three tuning files into /usr/lib/firmware/cirrus/; see locks/hardware.json.",
+        "The files are not stored in this repository. Redistribution permission is not asserted."
+      ]
+    }
+  ],
+  "files": [
+    {
+      "source": "payload/assets/hardware/modules/mt8901-acp-sdw-legacy-mach.ko",
+      "destination": "assets/hardware/modules/mt8901-acp-sdw-legacy-mach.ko",
+      "bytes": 524864,
+      "sha256": "82061bce3a3b649c9f351b398c59546c8a978b2c3badbaa07436e6221e91d5de",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/audio-build.json",
+      "destination": "provenance/hardware/audio-build.json",
+      "bytes": 17305,
+      "sha256": "f990e6f9953fcd7cc19315a37e3a6cdb97d014040fa482abd93649e05e5fbbb5",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/audio-build.sh",
+      "destination": "provenance/hardware/audio-build.sh",
+      "bytes": 6427,
+      "sha256": "ba2b718b3efe89277f149d18f31b84e2fd4d7df4da0dcbc23ff3b91e043d49a9",
+      "mode": 493
+    },
+    {
+      "source": "patches/provenance/hardware/audio-identity.patch",
+      "destination": "provenance/hardware/audio-identity.patch",
+      "bytes": 730,
+      "sha256": "86beaf1e1a8e4e1389c2d3c648781921944967e9b1170118216298442370180f",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/audio-source.c",
+      "destination": "provenance/hardware/audio-source.c",
+      "bytes": 19201,
+      "sha256": "4a3e4318ede455010a0e92eb776bcad22a7b3a5582d5bd75edfa5a33abf264e0",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/audio.Kbuild",
+      "destination": "provenance/hardware/audio.Kbuild",
+      "bytes": 38,
+      "sha256": "5fb2bb7d15adf4fc4a766c3ef32c7ec4048237a07bf74ae686e10076ae9f77af",
+      "mode": 420
+    }
+  ],
+  "links": [],
+  "source_build_scope": "Normal assembly preserves the shipped hash-pinned module binaries. Source rebuilds are separate candidates, use the matched header/ABI inputs, and do not inherit physical qualification. Compiler banners in original native receipts report GCC 16.1.1."
+}

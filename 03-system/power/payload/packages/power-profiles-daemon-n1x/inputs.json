@@ -1,0 +1,10 @@
+{
+  "schema": "h7607a-package-inputs-v1",
+  "package": "power-profiles-daemon-n1x",
+  "inputs": [
+    {
+      "artifact_id": "power-profiles-daemon-nvidia-3001c25.tar",
+      "filename": "power-profiles-daemon-nvidia-3001c25.tar"
+    }
+  ]
+}

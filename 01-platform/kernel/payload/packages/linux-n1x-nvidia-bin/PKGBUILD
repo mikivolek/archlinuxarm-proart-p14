@@ -1,0 +1,71 @@
+# Pinned Canonical/NVIDIA kernel plus the ACPI allocation patch.
+# Build the runtime bundle with provenance/hardware/backports/acpi/build.sh
+# and package.sh. Debian userspace and maintainer scripts are not installed.
+pkgname=linux-n1x-nvidia-bin
+pkgver=7.0.0.1022.23
+pkgrel=3
+pkgdesc='NVIDIA N1X kernel with bounded ACPI overrides and matching modules/headers'
+arch=(aarch64)
+url='https://github.com/NVIDIA/NV-Kernels'
+license=('GPL-2.0-only')
+depends=(coreutils kmod mkinitcpio)
+makedepends=(python)
+provides=(linux linux-headers)
+conflicts=(linux-aarch64 linux-aarch64-headers)
+options=(!strip !debug)
+_krel=7.0.0-1022-nvidia
+_version='7.0.0-1022.23~24.04.1'
+_base='https://ports.ubuntu.com/ubuntu-ports/pool/main/l/linux-nvidia-7.0'
+source=(
+  "$_base/linux-image-unsigned-${_krel}_${_version}_arm64.deb"
+  "$_base/linux-modules-${_krel}_${_version}_arm64.deb"
+  "$_base/linux-headers-${_krel}_${_version}_arm64.deb"
+  "$_base/linux-nvidia-7.0-headers-7.0.0-1022_${_version}_all.deb"
+  'h7607a-kernel-runtime.tar.zst'
+  'linux-n1x-nvidia-bin.preset'
+)
+noextract=("${source[@]##*/}")
+sha256sums=(
+  '29ba865f5808bf26c1c8f2c919bb9a59ed395d048f3560bc94a6d753ec03d154'
+  '3cb8bac5ed8ba7385f652240f9154691153f5ae86a3313d324f1e28c89aec126'
+  '93847c99d2a49f9713c464bb76956dc27f6709c7e20296f8eec894632cac3921'
+  '650da497156cf3518debf2f326e161b598d9fd0b41ab9e717e4bc72b3f8f87c8'
+  '75b65341b58d7c171ad9482f7227f97bd88ff9e6a98b5a781609b4e5674036f6'
+  'c468c1aab1e85d9d4116748c54a1d079b2fa600991a42e674c349ae83a2955a1'
+)
+package() {
+  local deb member link
+  install -Dm644 "$srcdir/linux-n1x-nvidia-bin.preset" "$pkgdir/etc/mkinitcpio.d/linux-n1x-nvidia-bin.preset"
+  mkdir -p "$srcdir/extracted" "$pkgdir/usr/lib/modules/$_krel" "$pkgdir/usr/src"
+  # Only headers are reused; never unpack the obsolete stock kernel/modules.
+  for deb in "${noextract[@]:2:2}"; do
+    member=$(bsdtar -tf "$srcdir/$deb" | awk '/^data\.tar/ { print; exit }')
+    [[ -n $member ]] || return 1
+    bsdtar -xOf "$srcdir/$deb" "$member" | bsdtar -xpf - -C "$srcdir/extracted"
+  done
+  cp -a "$srcdir/extracted/usr/src/." "$pkgdir/usr/src/"
+  # Preserve standard installed header links, never the old BTF-coupled modules.
+  for link in build source; do
+    if [[ -L $srcdir/extracted/lib/modules/$_krel/$link ]]; then
+      cp -a "$srcdir/extracted/lib/modules/$_krel/$link" "$pkgdir/usr/lib/modules/$_krel/"
+    fi
+  done
+  bsdtar -xpf "$srcdir/h7607a-kernel-runtime.tar.zst" -C "$pkgdir"
+  python - "$pkgdir/boot/vmlinuz-linux-n1x" "$pkgdir/usr/lib/modules/$_krel/vmlinuz" <<'PY'
+from pathlib import Path
+import hashlib, sys
+first = Path(sys.argv[1]).read_bytes()
+assert hashlib.sha256(first).hexdigest() == '6312b1ab41f586a42a1767e771c7cfc787246e0b83fe708006fff10903768d86'
+assert first == Path(sys.argv[2]).read_bytes()
+assert first[:2] == b'MZ'
+offset = int.from_bytes(first[60:64], 'little')
+assert first[offset:offset+4] == b'PE\0\0'
+assert int.from_bytes(first[offset+4:offset+6], 'little') == 0xaa64
+PY
+  deb=${noextract[0]}
+  member=$(bsdtar -tf "$srcdir/$deb" | awk '/^data\.tar/ { print; exit }')
+  [[ -n $member ]] || return 1
+  install -dm755 "$pkgdir/usr/share/licenses/$pkgname"
+  bsdtar -xOf "$srcdir/$deb" "$member" | bsdtar -xOf - "./usr/share/doc/linux-image-unsigned-$_krel/copyright" > "$pkgdir/usr/share/licenses/$pkgname/copyright"
+  [[ -s $pkgdir/usr/share/licenses/$pkgname/copyright ]]
+}

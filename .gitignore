@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+build/
+.work/
+# Firmware ACPI tables and files derived from them are not redistributable.
+H7607A-ACPI/
+/01-platform/acpi/payload/assets/hardware/acpi/h7607a-acpi.cpio
+/01-platform/acpi/payload/assets/hardware/uefi/n1x-asus-ssdt-baseline.bin
+/01-platform/acpi/payload/assets/hardware/uefi/n1x-dsdt-baseline.bin
+/01-platform/acpi/payload/provenance/hardware/power-source.dsl
+# Pinned inputs fetched with ./assemble.sh --fetch or published in the inputs-1 release.
+/01-platform/kernel/payload/assets/hardware/kernel/h7607a-kernel-runtime.tar.zst
+/02-drivers/nvidia-display/payload/assets/build-inputs/nvidia.ko.zst
+/07-build/locked-inputs/payload/.artifacts/packages/NVIDIA-Linux-aarch64-615.78.08.run
+/07-build/locked-inputs/payload/.artifacts/packages/linux-firmware-mediatek-20260916-1-any.pkg.tar.xz
+/07-build/locked-inputs/payload/.artifacts/packages/linux-image-unsigned-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb
+/07-build/locked-inputs/payload/.artifacts/packages/linux-modules-7.0.0-1022-nvidia_7.0.0-1022.23~24.04.1_arm64.deb
+/07-build/locked-inputs/payload/.artifacts/packages/linux-nvidia-7.0-headers-7.0.0-1022_7.0.0-1022.23~24.04.1_all.deb
+/07-build/locked-inputs/payload/.artifacts/packages/nvidia-open-dkms-615.78.08-1-aarch64.pkg.tar.xz
+/07-build/locked-inputs/payload/.artifacts/packages/nvidia-utils-615.78.08-1-aarch64.pkg.tar.xz
+/07-build/locked-inputs/payload/.artifacts/sources/

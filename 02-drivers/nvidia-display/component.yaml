@@ -1,0 +1,523 @@
+{
+  "schema": "h7607a-component-v1",
+  "id": "nvidia-display",
+  "type": "patch",
+  "repo_url": "https://github.com/NVIDIA/open-gpu-kernel-modules",
+  "checkout_hash": "1a82fbfda8f321b056eb3568850f9316c5e465c5",
+  "sparse": {
+    "enabled": false,
+    "paths": []
+  },
+  "dependencies": [
+    {
+      "name": "gcc",
+      "version": "16.1.1",
+      "version_status": "pinned",
+      "source": "native-build receipt",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "binutils",
+      "version": "2.46.0",
+      "version_status": "pinned",
+      "source": "toolchain.txt",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "make",
+      "version": "4.4.1",
+      "version_status": "pinned",
+      "source": "toolchain.txt",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "zstd",
+      "version": "1.5.7",
+      "version_status": "pinned",
+      "source": "toolchain.txt",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "linux-n1x-nvidia-bin",
+      "version": "7.0.0.1022.23-3",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "nvidia-utils",
+      "version": "615.78.08-1",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "kmod",
+      "version": "34.2-1",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "bash",
+      "version": "5.3.20-1",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "pacman",
+      "version": "7.1.0.r9.g54d9411-3",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "python",
+      "version": "3.14.8-1",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "zstd",
+      "version": "1.5.7-3",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "NVIDIA kernel headers",
+      "version": "7.0.0-1022-nvidia",
+      "version_status": "artifact_and_ABI_pinned",
+      "source": "retained native module build receipts",
+      "scope": "source build: Module.symvers SHA256 ad63eccd8911085a10d7996b78dd0c40f6bcaa0b32d42986a9cce39e0101a7ba; original .config SHA256 3702382acae6cb607b441f0a44c2f0929a9ed98b9d33dcf2f731b1a1d1469297"
+    }
+  ],
+  "depends_on": [
+    "kernel"
+  ],
+  "items": [
+    {
+      "id": "framebuffer-normal-nc",
+      "type": "patch",
+      "repo_url": "https://github.com/NVIDIA/open-gpu-kernel-modules",
+      "checkout_hash": "1a82fbfda8f321b056eb3568850f9316c5e465c5",
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "patch": "provenance/hardware/drm.patch",
+      "version": "615.78.08",
+      "source": "provenance/hardware/drm-kernel-open-source.tar.gz",
+      "notes": [
+        "Map framebuffer for coherent CPU TTY redraws.",
+        "Retain GPU acceleration for Wayland."
+      ],
+      "dependencies": [
+        {
+          "name": "NVIDIA kernel headers",
+          "version": "7.0.0-1022-nvidia",
+          "version_status": "artifact_and_ABI_pinned",
+          "source": "retained native module build receipts",
+          "scope": "source build: Module.symvers SHA256 ad63eccd8911085a10d7996b78dd0c40f6bcaa0b32d42986a9cce39e0101a7ba; original .config SHA256 3702382acae6cb607b441f0a44c2f0929a9ed98b9d33dcf2f731b1a1d1469297"
+        }
+      ],
+      "source_build_note": "provenance/hardware/drm-build.sh rebuilds nvidia-drm.ko from drm-kernel-open-source.tar.gz and drm.patch with the inputs recorded in drm-build.json."
+    },
+    {
+      "id": "modeset-callback-leak",
+      "type": "patch",
+      "repo_url": "https://github.com/NVIDIA/open-gpu-kernel-modules",
+      "checkout_hash": "1a82fbfda8f321b056eb3568850f9316c5e465c5",
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "patch": "provenance/hardware/backports/nvidia/1368.patch",
+      "patch_commit": "2fb6ce14f4fbd6b57b3f0cc3c4eb6e6b0c309586",
+      "version": "615.78.08",
+      "dependencies": [
+        {
+          "name": "gcc",
+          "version": "16.1.1",
+          "version_status": "pinned",
+          "source": "native-build receipt"
+        },
+        {
+          "name": "binutils",
+          "version": "2.46.0",
+          "version_status": "pinned",
+          "source": "toolchain.txt"
+        },
+        {
+          "name": "make",
+          "version": "4.4.1",
+          "version_status": "pinned",
+          "source": "toolchain.txt"
+        },
+        {
+          "name": "zstd",
+          "version": "1.5.7",
+          "version_status": "pinned",
+          "source": "toolchain.txt"
+        },
+        {
+          "name": "NVIDIA kernel headers",
+          "version": "7.0.0-1022-nvidia",
+          "version_status": "artifact_and_ABI_pinned",
+          "source": "retained native module build receipts",
+          "scope": "source build: Module.symvers SHA256 ad63eccd8911085a10d7996b78dd0c40f6bcaa0b32d42986a9cce39e0101a7ba; original .config SHA256 3702382acae6cb607b441f0a44c2f0929a9ed98b9d33dcf2f731b1a1d1469297"
+        }
+      ],
+      "physical_boot_qualified": false
+    },
+    {
+      "id": "gpu-module-package",
+      "type": "custom",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "code": "packages/nvidia-n1x-modules/PKGBUILD",
+      "dependencies": [
+        {
+          "name": "linux-n1x-nvidia-bin",
+          "version": "7.0.0.1022.23-3",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        },
+        {
+          "name": "nvidia-utils",
+          "version": "615.78.08-1",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        },
+        {
+          "name": "kmod",
+          "version": "34.2-1",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        },
+        {
+          "name": "bash",
+          "version": "5.3.20-1",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        },
+        {
+          "name": "pacman",
+          "version": "7.1.0.r9.g54d9411-3",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        }
+      ],
+      "notes": [
+        "Package all four matched NVIDIA modules."
+      ]
+    },
+    {
+      "id": "rmapi-userspace-library",
+      "type": "custom",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "code": "packages/nvidia-n1x-userspace-fix/extract-nvidia-library.py",
+      "dependencies": [
+        {
+          "name": "python",
+          "version": "3.14.8-1",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        },
+        {
+          "name": "zstd",
+          "version": "1.5.7-3",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        },
+        {
+          "name": "nvidia-utils",
+          "version": "615.78.08-1",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        }
+      ],
+      "source_url": "https://us.download.nvidia.com/XFree86/aarch64/615.78.08/NVIDIA-Linux-aarch64-615.78.08.run",
+      "notes": [
+        "Extract libnvidia-rmapi-tegra omitted by pinned ALARM nvidia-utils."
+      ]
+    },
+    {
+      "id": "drm-options",
+      "type": "direct",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "values": {
+        "nvidia_drm": {
+          "modeset": 1,
+          "fbdev": 1,
+          "vblank": 1
+        }
+      }
+    },
+    {
+      "id": "modeset-native-build",
+      "type": "custom",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "code": "provenance/hardware/backports/nvidia/build-modeset.sh",
+      "dependencies": [
+        {
+          "name": "NVIDIA kernel headers",
+          "version": "7.0.0-1022-nvidia",
+          "version_status": "artifact_and_ABI_pinned",
+          "source": "retained native module build receipts",
+          "scope": "source build: Module.symvers SHA256 ad63eccd8911085a10d7996b78dd0c40f6bcaa0b32d42986a9cce39e0101a7ba; original .config SHA256 3702382acae6cb607b441f0a44c2f0929a9ed98b9d33dcf2f731b1a1d1469297"
+        }
+      ],
+      "command_template": [
+        "bash",
+        "provenance/hardware/backports/nvidia/build-modeset.sh",
+        "NVIDIA_ARCHIVE",
+        "PR1368_PATCH",
+        "STOCK_NVIDIA_ZST",
+        "STOCK_MODESET_ZST",
+        "HEADERS",
+        "NEW_BUILD_DIRECTORY"
+      ]
+    },
+    {
+      "id": "nvidia-module-exports",
+      "type": "custom",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "code": "provenance/hardware/backports/nvidia/module_exports.py",
+      "dependencies": []
+    }
+  ],
+  "files": [
+    {
+      "source": "payload/assets/build-inputs/nvidia-modeset.ko.zst",
+      "destination": "assets/build-inputs/nvidia-modeset.ko.zst",
+      "bytes": 776275,
+      "sha256": "f390076f7cec4a8fc7079dff8fddd7607b2d82a33b97219767d59cf98ea2475e",
+      "mode": 420
+    },
+    {
+      "source": "payload/assets/build-inputs/nvidia-uvm.ko.zst",
+      "destination": "assets/build-inputs/nvidia-uvm.ko.zst",
+      "bytes": 711118,
+      "sha256": "75a674e888a75c2c368ef868ed28749cd9add2dfed3783699ded86ac4992ac9c",
+      "mode": 420
+    },
+    {
+      "source": "payload/assets/build-inputs/nvidia.ko.zst",
+      "destination": "assets/build-inputs/nvidia.ko.zst",
+      "bytes": 11563191,
+      "sha256": "e38370575be91aa186ee7c18b8d7e81435ae7825740304c7295d7eb9f8a4b661",
+      "mode": 420
+    },
+    {
+      "source": "payload/assets/hardware/modprobe/h7607a-nvidia.conf",
+      "destination": "assets/hardware/modprobe/h7607a-nvidia.conf",
+      "bytes": 121,
+      "sha256": "6b71fcb4d8eb66bf6aa1c1d66e60873635dd48e8f68f2511130dbabc688d55c6",
+      "mode": 420
+    },
+    {
+      "source": "payload/assets/hardware/modules/nvidia-drm.ko",
+      "destination": "assets/hardware/modules/nvidia-drm.ko",
+      "bytes": 6042416,
+      "sha256": "9b0ceddf9da11337e9b9af1dd1c77e81fc3559cc1bfcdcc67cccd604d72e83bf",
+      "mode": 420
+    },
+    {
+      "source": "payload/assets/hardware/modules/nvidia-modeset.ko.zst",
+      "destination": "assets/hardware/modules/nvidia-modeset.ko.zst",
+      "bytes": 854557,
+      "sha256": "3a1e3c07802314073eaaa03846cdd6bd197deec9674f7860fb72479fe3a3b6b5",
+      "mode": 420
+    },
+    {
+      "source": "payload/packages/nvidia-n1x-modules/PKGBUILD",
+      "destination": "packages/nvidia-n1x-modules/PKGBUILD",
+      "bytes": 1219,
+      "sha256": "30d033083bf452be9468dada1d3946769fd396f894066e0e91692ee68aef8892",
+      "mode": 420
+    },
+    {
+      "source": "payload/packages/nvidia-n1x-modules/inputs.json",
+      "destination": "packages/nvidia-n1x-modules/inputs.json",
+      "bytes": 584,
+      "sha256": "0f13fc1fb2abec9f8cafe0b71b84eb70e5e55c81e3210e3162754aaa126cda45",
+      "mode": 420
+    },
+    {
+      "source": "payload/packages/nvidia-n1x-userspace-fix/PKGBUILD",
+      "destination": "packages/nvidia-n1x-userspace-fix/PKGBUILD",
+      "bytes": 1202,
+      "sha256": "ff831b699701d241293b7a6db05472a29cf987fe631a8b3122290f77c9bb02b9",
+      "mode": 420
+    },
+    {
+      "source": "payload/packages/nvidia-n1x-userspace-fix/extract-nvidia-library.py",
+      "destination": "packages/nvidia-n1x-userspace-fix/extract-nvidia-library.py",
+      "bytes": 2496,
+      "sha256": "67098e1c811ade56ae039d08964d2ae1760d13eb60cceeb75c8d6567706901e1",
+      "mode": 420
+    },
+    {
+      "source": "payload/packages/nvidia-n1x-userspace-fix/inputs.json",
+      "destination": "packages/nvidia-n1x-userspace-fix/inputs.json",
+      "bytes": 229,
+      "sha256": "7c5543287b28064ae96f73cf203e4a6bc5948f6c8be764ac94b699327669e7e5",
+      "mode": 420
+    },
+    {
+      "source": "patches/provenance/hardware/backports/nvidia/1368.patch",
+      "destination": "provenance/hardware/backports/nvidia/1368.patch",
+      "bytes": 1955,
+      "sha256": "54c6946021f3e49ca4dc9744898b6f7691ab7191592f76e4abe14cb1a4c0c03e",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/nvidia/NVIDIA-COPYING",
+      "destination": "provenance/hardware/backports/nvidia/NVIDIA-COPYING",
+      "bytes": 19391,
+      "sha256": "d8e96d29bc323000e7ba56102d77c88226a7a3d0d94e2081cb4b071ae9de4a06",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/nvidia/build-modeset.sh",
+      "destination": "provenance/hardware/backports/nvidia/build-modeset.sh",
+      "bytes": 3117,
+      "sha256": "35b98b8a6a4edcef231fa75f5919b5815572163ea0b86c6c936504ad32580a89",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/nvidia/candidate-exports.json",
+      "destination": "provenance/hardware/backports/nvidia/candidate-exports.json",
+      "bytes": 695,
+      "sha256": "3534be0e788b9db1d9c6d1a0429cbbc43f8ed947d9858efa886eb79730122820",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/nvidia/candidate-imports.tsv",
+      "destination": "provenance/hardware/backports/nvidia/candidate-imports.tsv",
+      "bytes": 2389,
+      "sha256": "8c0abb81853f972e313f730e1e5788e50fc080d479991310a5b33d57f370d3a0",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/nvidia/header-inputs.sha256",
+      "destination": "provenance/hardware/backports/nvidia/header-inputs.sha256",
+      "bytes": 299,
+      "sha256": "c27b62bd31bd04f4a2f404deb8a58e9b78fb872186b2730f0b286df9a65b6e3f",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/nvidia/module_exports.py",
+      "destination": "provenance/hardware/backports/nvidia/module_exports.py",
+      "bytes": 2091,
+      "sha256": "206949fd128faa50e39460a4457cafcb1efcaee34109ff340b41f36d5fed893c",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/nvidia/native-build-receipt.json",
+      "destination": "provenance/hardware/backports/nvidia/native-build-receipt.json",
+      "bytes": 4875,
+      "sha256": "ef8185cfdcebc4dbecbfbd05422c311ff716370a923478a29da5922ab871e86c",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/nvidia/patched-nvkms-kapi-sync.c",
+      "destination": "provenance/hardware/backports/nvidia/patched-nvkms-kapi-sync.c",
+      "bytes": 17939,
+      "sha256": "f5e3d56571c7949cd3a92b44c89d515e5666186ee7a4ee900774f7f351a50c93",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/nvidia/stock-exports.json",
+      "destination": "provenance/hardware/backports/nvidia/stock-exports.json",
+      "bytes": 695,
+      "sha256": "3534be0e788b9db1d9c6d1a0429cbbc43f8ed947d9858efa886eb79730122820",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/nvidia/stock-imports.tsv",
+      "destination": "provenance/hardware/backports/nvidia/stock-imports.tsv",
+      "bytes": 2389,
+      "sha256": "8c0abb81853f972e313f730e1e5788e50fc080d479991310a5b33d57f370d3a0",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/nvidia/stock-nvidia.symvers",
+      "destination": "provenance/hardware/backports/nvidia/stock-nvidia.symvers",
+      "bytes": 6125,
+      "sha256": "c4153c325fbbb532a8f1359226701904b118e61f04864fd4c3791af8d78050a8",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/backports/nvidia/stock-nvkms-kapi-sync.c",
+      "destination": "provenance/hardware/backports/nvidia/stock-nvkms-kapi-sync.c",
+      "bytes": 17757,
+      "sha256": "09fa351c8202e78e790d8d903ac48caaa3360d20210a5151f9ddf97cbdb1b499",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/drm-build.json",
+      "destination": "provenance/hardware/drm-build.json",
+      "bytes": 4616,
+      "sha256": "88dfdb488ae2924cef454f42ba5a3d8db36c49bb29058cd06792bbf34c749b94",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/drm-build.sh",
+      "destination": "provenance/hardware/drm-build.sh",
+      "bytes": 7897,
+      "sha256": "cdbd6c790ccb8afbed5ae2e1fcf4d5d84e2b692ced8c6a296cb36adae600144d",
+      "mode": 493
+    },
+    {
+      "source": "payload/provenance/hardware/drm-kernel-open-source.tar.gz",
+      "destination": "provenance/hardware/drm-kernel-open-source.tar.gz",
+      "bytes": 1786010,
+      "sha256": "7f687f195288b9b252b6037abf228c983ee698846490f1268eab809b59258916",
+      "mode": 420
+    },
+    {
+      "source": "payload/provenance/hardware/drm-source-manifest.json",
+      "destination": "provenance/hardware/drm-source-manifest.json",
+      "bytes": 46747,
+      "sha256": "79ee35083684ed95cedb9b209ba4453558cc522918c188264610cee1056b8ce2",
+      "mode": 420
+    },
+    {
+      "source": "patches/provenance/hardware/drm.patch",
+      "destination": "provenance/hardware/drm.patch",
+      "bytes": 3488,
+      "sha256": "2cae1578e998735229b0b26056bb33ad9fad11eab2b925bcff00ecb22939c2e7",
+      "mode": 420
+    }
+  ],
+  "links": [],
+  "source_build_scope": "Normal assembly preserves the shipped hash-pinned module binaries. Source rebuilds are separate candidates, use the matched header/ABI inputs, and do not inherit physical qualification. Compiler banners in original native receipts report GCC 16.1.1."
+}

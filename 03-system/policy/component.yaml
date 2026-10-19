@@ -1,0 +1,168 @@
+{
+  "schema": "h7607a-component-v1",
+  "id": "policy",
+  "type": "direct",
+  "repo_url": null,
+  "checkout_hash": null,
+  "sparse": {
+    "enabled": false,
+    "paths": []
+  },
+  "dependencies": [
+    {
+      "name": "kmod",
+      "version": "34.2-1",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    },
+    {
+      "name": "systemd",
+      "version": "262.1-1",
+      "version_status": "pinned",
+      "source": "locked ALARM package",
+      "scope": "component build or runtime; see item"
+    }
+  ],
+  "depends_on": [
+    "power"
+  ],
+  "items": [
+    {
+      "id": "mediatek-and-cirrus-firmware",
+      "type": "direct",
+      "repo_url": "https://gitlab.com/kernel-firmware/linux-firmware",
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "packages": {
+        "linux-firmware-mediatek": "20260916-1",
+        "linux-firmware-cirrus": "20260916-1",
+        "linux-firmware-whence": "20260916-1"
+      },
+      "notes": [
+        "Use signed ALARM package hashes; no repository checkout is asserted.",
+        "MT7925 covers Wi-Fi/Bluetooth; Cirrus package supplies CS42L43.",
+        "NVIDIA GSP remains owned by nvidia-utils."
+      ]
+    },
+    {
+      "id": "camera-disable",
+      "type": "direct",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "dependencies": [
+        {
+          "name": "kmod",
+          "version": "34.2-1",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        }
+      ],
+      "notes": [
+        "Block requested camera driver; no capture service."
+      ]
+    },
+    {
+      "id": "microphone-access",
+      "type": "direct",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "dependencies": [
+        {
+          "name": "systemd",
+          "version": "262.1-1",
+          "version_status": "pinned",
+          "source": "locked ALARM package"
+        }
+      ],
+      "notes": [
+        "Restrict ALSA capture PCM nodes to root:root 0600.",
+        "Do not remove shared audio codecs or claim hardware power gating."
+      ]
+    },
+    {
+      "type": "direct",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "id": "policy-power-and-exclusions",
+      "files": [
+        "runtime/etc/systemd/logind.conf.d/60-h7607a-sleep-hold.conf",
+        "runtime/etc/udev/rules.d/72-h7607a-no-microphone.rules",
+        "runtime/usr/lib/modprobe.d/60-h7607a-no-camera.conf"
+      ]
+    },
+    {
+      "id": "policy.py",
+      "type": "custom",
+      "repo_url": null,
+      "checkout_hash": null,
+      "sparse": {
+        "enabled": false,
+        "paths": []
+      },
+      "code": "src/h7607a/policy.py",
+      "dependencies": [
+        {
+          "name": "python",
+          "version": "3.14.8-1",
+          "command": "python3",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        },
+        {
+          "name": "systemd",
+          "version": "262.1-1",
+          "command": "systemctl",
+          "policy": "pinned-live-inventory",
+          "scope": "runtime"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "source": "payload/runtime/etc/systemd/logind.conf.d/60-h7607a-sleep-hold.conf",
+      "destination": "runtime/etc/systemd/logind.conf.d/60-h7607a-sleep-hold.conf",
+      "bytes": 250,
+      "sha256": "ffb500b84c818fb66c9c14aa5ef55acbb4f949c9e0acb495a99ca98d9e666831",
+      "mode": 420
+    },
+    {
+      "source": "payload/runtime/etc/udev/rules.d/72-h7607a-no-microphone.rules",
+      "destination": "runtime/etc/udev/rules.d/72-h7607a-no-microphone.rules",
+      "bytes": 268,
+      "sha256": "d82183a217851c449c6530bb7f5b7e345b5a5ec36f4168d59c385a4a325fa989",
+      "mode": 420
+    },
+    {
+      "source": "payload/runtime/usr/lib/modprobe.d/60-h7607a-no-camera.conf",
+      "destination": "runtime/usr/lib/modprobe.d/60-h7607a-no-camera.conf",
+      "bytes": 201,
+      "sha256": "5d29287c05747e8da3c20c3cb55ea86e46a1b15d41ae55478ca756b3be218c14",
+      "mode": 420
+    },
+    {
+      "source": "payload/src/h7607a/policy.py",
+      "destination": "src/h7607a/policy.py",
+      "bytes": 5371,
+      "sha256": "c59901c537b93552bda0fedfbff96d513c86c9839fdf06eb8fe6e04384c5c59e",
+      "mode": 420
+    }
+  ],
+  "links": []
+}
