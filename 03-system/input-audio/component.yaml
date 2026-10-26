@@ -213,9 +213,9 @@
         }
       ],
       "notes": [
-        "Use PCM0 speakers and PCM1 headphones.",
+        "Use PCM0 speakers, PCM1 headphones and PCM8 for the internal DMIC and headset mic.",
         "Keep normal PipeWire user sockets and WirePlumber session service.",
-        "Disable capture roles; retain A2DP/LE playback Bluetooth roles."
+        "Disable Bluetooth headset (HFP/HSP) roles; retain A2DP/LE playback Bluetooth roles."
       ]
     },
     {
@@ -347,15 +347,15 @@
     {
       "source": "payload/runtime/usr/share/alsa/ucm2/MediaTek/mt8901-soundwir/P16-playback.conf",
       "destination": "runtime/usr/share/alsa/ucm2/MediaTek/mt8901-soundwir/P16-playback.conf",
-      "bytes": 2125,
-      "sha256": "25d0ac355f3572d94106ce676e248396a0ee5af6b6ddb9319571719b9bff7e93",
+      "bytes": 4157,
+      "sha256": "775a464f8bd95970179ad13be24efca5634020cad33faebf11ca25472f159dd5",
       "mode": 420
     },
     {
       "source": "payload/runtime/usr/share/alsa/ucm2/conf.d/mt8901-soundwir/mt8901-soundwir.conf",
       "destination": "runtime/usr/share/alsa/ucm2/conf.d/mt8901-soundwir/mt8901-soundwir.conf",
-      "bytes": 307,
-      "sha256": "1b6d0a8a85b748d7e09651d4931181a991e388b43729b3201040ef3e3dfb41a1",
+      "bytes": 316,
+      "sha256": "4d98aafd5c460e54fdd2ee0a9331254df9743454600430f7b9e57fa34376b64b",
       "mode": 420
     },
     {
@@ -368,8 +368,8 @@
     {
       "source": "payload/runtime/usr/share/wireplumber/wireplumber.conf.d/51-h7607a-playback.conf",
       "destination": "runtime/usr/share/wireplumber/wireplumber.conf.d/51-h7607a-playback.conf",
-      "bytes": 1669,
-      "sha256": "9d03e6256d1f079be95d82ace17e90798e8cf8ac0d1db33090258ece948f5ffc",
+      "bytes": 1553,
+      "sha256": "37cf73011561857221345e3fcbf73233907d262984b6f733f4b299a9082c2312",
       "mode": 420
     }
   ],

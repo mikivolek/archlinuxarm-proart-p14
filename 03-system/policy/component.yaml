@@ -70,28 +70,6 @@
       ]
     },
     {
-      "id": "microphone-access",
-      "type": "direct",
-      "repo_url": null,
-      "checkout_hash": null,
-      "sparse": {
-        "enabled": false,
-        "paths": []
-      },
-      "dependencies": [
-        {
-          "name": "systemd",
-          "version": "262.1-1",
-          "version_status": "pinned",
-          "source": "locked ALARM package"
-        }
-      ],
-      "notes": [
-        "Restrict ALSA capture PCM nodes to root:root 0600.",
-        "Do not remove shared audio codecs or claim hardware power gating."
-      ]
-    },
-    {
       "type": "direct",
       "repo_url": null,
       "checkout_hash": null,
@@ -102,7 +80,6 @@
       "id": "policy-power-and-exclusions",
       "files": [
         "runtime/etc/systemd/logind.conf.d/60-h7607a-sleep-hold.conf",
-        "runtime/etc/udev/rules.d/72-h7607a-no-microphone.rules",
         "runtime/usr/lib/modprobe.d/60-h7607a-no-camera.conf"
       ]
     },
@@ -143,13 +120,6 @@
       "mode": 420
     },
     {
-      "source": "payload/runtime/etc/udev/rules.d/72-h7607a-no-microphone.rules",
-      "destination": "runtime/etc/udev/rules.d/72-h7607a-no-microphone.rules",
-      "bytes": 268,
-      "sha256": "d82183a217851c449c6530bb7f5b7e345b5a5ec36f4168d59c385a4a325fa989",
-      "mode": 420
-    },
-    {
       "source": "payload/runtime/usr/lib/modprobe.d/60-h7607a-no-camera.conf",
       "destination": "runtime/usr/lib/modprobe.d/60-h7607a-no-camera.conf",
       "bytes": 201,
@@ -159,8 +129,8 @@
     {
       "source": "payload/src/h7607a/policy.py",
       "destination": "src/h7607a/policy.py",
-      "bytes": 5371,
-      "sha256": "c59901c537b93552bda0fedfbff96d513c86c9839fdf06eb8fe6e04384c5c59e",
+      "bytes": 5866,
+      "sha256": "b4c31d94167d1e4ac7912b2ab26478cfb981128c9a30e2dbc28ef0bbe60deb91",
       "mode": 420
     }
   ],

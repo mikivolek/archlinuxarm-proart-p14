@@ -1,8 +1,9 @@
 # Exact retained H7607BA assets plus native ABI-verified SoundWire backport.
+# pkgrel 6: internal microphone and headset microphone capture.
 # pkgrel 5: ProArt P14 H7407BA keyboard, audio identity, touchpad and Cirrus 33A1 support.
 pkgname=h7607a-hardware
 pkgver=1.0.0
-pkgrel=5
+pkgrel=6
 pkgdesc='ASUS H7607BA/H7407BA keyboard, audio, input and boot support with SoundWire race repair'
 arch=('aarch64')
 url='https://github.com/pfeifferj/archlinuxarm-proart-p16'
@@ -48,9 +49,9 @@ sha256sums=(
   '14d7908b992750aeb8e960eba1ce7cdf3a3de46af66d5d9abdf1bddc38462c65'
   '7162e23606a3bbcf4ff15fc2eada8662eee9962b88b5605d11f51e45e74b7d5f'
   '5d29287c05747e8da3c20c3cb55ea86e46a1b15d41ae55478ca756b3be218c14'
-  '1b6d0a8a85b748d7e09651d4931181a991e388b43729b3201040ef3e3dfb41a1'
-  '25d0ac355f3572d94106ce676e248396a0ee5af6b6ddb9319571719b9bff7e93'
-  '9d03e6256d1f079be95d82ace17e90798e8cf8ac0d1db33090258ece948f5ffc'
+  '4d98aafd5c460e54fdd2ee0a9331254df9743454600430f7b9e57fa34376b64b'
+  '775a464f8bd95970179ad13be24efca5634020cad33faebf11ca25472f159dd5'
+  '37cf73011561857221345e3fcbf73233907d262984b6f733f4b299a9082c2312'
   'eb53814d76bcce38354500586bf1b105ad93846e45067f562441bf500d4bc353'
   '9974b3ff3caf65cc25741332976362527e5e10eb090c7b0e97b9aa95b10d47fc'
   'b152c2715e71bb0b6a1d5f86d86687dea989af68e5eaa6868b55fe13d8d4ef75'
