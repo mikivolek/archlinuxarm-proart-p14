@@ -1,7 +1,7 @@
 # ProArt P14 (H7407BA) port
 
 this is a fork of [pfeifferj/archlinuxarm-proart-p16](https://github.com/pfeifferj/archlinuxarm-proart-p16),
-all the real work is theirs, huge kudos to pfeifferj. i just ported it to my
+all the hard work is there, huge kudos to pfeifferj. i just ported and tweaked on
 ProArt P14 H7407BA (firmware H7407BA.303, same N1X chip) and it runs fine.
 
 what changed vs upstream:
