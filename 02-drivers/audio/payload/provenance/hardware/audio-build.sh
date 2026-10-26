@@ -37,8 +37,8 @@ clean=(env -i PATH=/usr/bin:/bin LC_ALL=C LANG=C)
 # Source, patch, Kbuild and header values come from audio-build.json; the debs
 # and the configuration are pinned by 07-build/locked-inputs and 01-platform/kernel.
 sha256sum --strict --check <<EOF
-4a3e4318ede455010a0e92eb776bcad22a7b3a5582d5bd75edfa5a33abf264e0  $recipe/audio-source.c
-86beaf1e1a8e4e1389c2d3c648781921944967e9b1170118216298442370180f  $patch_file
+35e6f87db56c6f1c92a2c0ca1b4c58995b3ab8171638679b7264ea060b89b86f  $recipe/audio-source.c
+c40820de7ade3b4ba53cb708402035b20cdea42f756759ad98a07bc63850dce7  $patch_file
 5fb2bb7d15adf4fc4a766c3ef32c7ec4048237a07bf74ae686e10076ae9f77af  $recipe/audio.Kbuild
 93847c99d2a49f9713c464bb76956dc27f6709c7e20296f8eec894632cac3921  $packages/$image_deb
 650da497156cf3518debf2f326e161b598d9fd0b41ab9e717e4bc72b3f8f87c8  $packages/$common_deb

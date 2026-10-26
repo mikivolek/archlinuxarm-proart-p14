@@ -123,6 +123,14 @@
         "product": "4F01",
         "DMI": "ASUS ProArt P16 H7607BA"
       },
+      "additional_matches": [
+        {
+          "vendor": "093A",
+          "product": "4F02",
+          "DMI": "ASUS ProArt P14 H7407BA",
+          "note": "Same bypass values as the P16; not tuned on the P14"
+        }
+      ],
       "values": {
         "AttrPressureRange": "none",
         "AttrPalmPressureThreshold": 0
@@ -353,8 +361,8 @@
     {
       "source": "payload/runtime/usr/share/libinput/60-h7607a-touchpad.quirks",
       "destination": "runtime/usr/share/libinput/60-h7607a-touchpad.quirks",
-      "bytes": 289,
-      "sha256": "2d87cd28673df8ad01f8fadd2d313daf5b412bafea584a894c8334b505fe23f2",
+      "bytes": 525,
+      "sha256": "eb53814d76bcce38354500586bf1b105ad93846e45067f562441bf500d4bc353",
       "mode": 420
     },
     {

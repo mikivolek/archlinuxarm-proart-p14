@@ -559,7 +559,7 @@
       "source": "payload/provenance/hardware/backports/acpi/build-receipt.json",
       "destination": "provenance/hardware/backports/acpi/build-receipt.json",
       "bytes": 8745,
-      "sha256": "8ebdd7226373dbbd86aae93d5dc12577776c35dcf41d5e145ebceaa7728e6416",
+      "sha256": "6a138628aad669c102b7d7ae0a761b313aa7f0770bee153640947944348f0b1e",
       "mode": 420
     },
     {

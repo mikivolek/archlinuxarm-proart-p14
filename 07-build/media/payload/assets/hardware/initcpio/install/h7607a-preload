@@ -15,7 +15,7 @@ build() {
     add_module soundwire_mtk || return 1
     add_file /usr/lib/modprobe.d/h7607a-nvidia.conf || return 1
     # The Cirrus tuning files are not redistributable; only owner-installed copies exist.
-    for firmware in cs35l56-b0-dsp1-misc-10431484-spkid0.wmfw cs35l56-b0-dsp1-misc-10431484-spkid0-l1u0.bin cs35l56-b0-dsp1-misc-10431484-spkid0-l1u1.bin; do
+    for firmware in cs35l56-b0-dsp1-misc-104333a1-spkid0.wmfw cs35l56-b0-dsp1-misc-104333a1-spkid0-l1u0.bin cs35l56-b0-dsp1-misc-104333a1-spkid0-l1u1.bin; do
         if [[ -f /usr/lib/firmware/cirrus/$firmware ]]; then
             add_file "/usr/lib/firmware/cirrus/$firmware" || return 1
         fi

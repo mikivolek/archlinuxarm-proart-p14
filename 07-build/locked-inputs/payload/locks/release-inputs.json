@@ -28,57 +28,57 @@
       ]
     },
     {
-      "id": "repo-h7607a-hardware-1.0.0-4-aarch64.pkg.tar.zst",
-      "path": "build/repo/h7607a-hardware-1.0.0-4-aarch64.pkg.tar.zst",
-      "bytes": 429283,
-      "sha256": "6fce279d2ee321f48812d7198b5dff10754a733edd904df198ebc2969e5ad298",
+      "id": "repo-h7607a-hardware-1.0.0-5-aarch64.pkg.tar.zst",
+      "path": "build/repo/h7607a-hardware-1.0.0-5-aarch64.pkg.tar.zst",
+      "bytes": 429046,
+      "sha256": "de8a1d3611e89551508c6ecc3921dea0cc6578a66e71da678a60ac789c02151d",
       "urls": [
-        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/6fce279d2ee321f48812d7198b5dff10754a733edd904df198ebc2969e5ad298"
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/de8a1d3611e89551508c6ecc3921dea0cc6578a66e71da678a60ac789c02151d"
       ]
     },
     {
-      "id": "repo-h7607a-hardware-1.0.0-4-aarch64.pkg.tar.zst.sig",
-      "path": "build/repo/h7607a-hardware-1.0.0-4-aarch64.pkg.tar.zst.sig",
+      "id": "repo-h7607a-hardware-1.0.0-5-aarch64.pkg.tar.zst.sig",
+      "path": "build/repo/h7607a-hardware-1.0.0-5-aarch64.pkg.tar.zst.sig",
       "bytes": 119,
-      "sha256": "65b548e3c87ec24ff5aaca33bb56a8f2cafe9b68d1267f560ac777e6cd877ba4",
+      "sha256": "9a633ec93f9eacbd5400406b95c165435c7f74c13ee49d63ada4d15217c161bf",
       "urls": [
-        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/65b548e3c87ec24ff5aaca33bb56a8f2cafe9b68d1267f560ac777e6cd877ba4"
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/9a633ec93f9eacbd5400406b95c165435c7f74c13ee49d63ada4d15217c161bf"
       ]
     },
     {
       "id": "repo-h7607a.db.tar.gz",
       "path": "build/repo/h7607a.db.tar.gz",
-      "bytes": 2598,
-      "sha256": "8ddf9b166aaf8ad7d4a420483bba6907e7bced0113b277d8908287b935206315",
+      "bytes": 2577,
+      "sha256": "793052ab39e4869292e3a02b05e9f6173a79c41af4315a74512b90fdbd29c519",
       "urls": [
-        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/8ddf9b166aaf8ad7d4a420483bba6907e7bced0113b277d8908287b935206315"
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/793052ab39e4869292e3a02b05e9f6173a79c41af4315a74512b90fdbd29c519"
       ]
     },
     {
       "id": "repo-h7607a.db.tar.gz.sig",
       "path": "build/repo/h7607a.db.tar.gz.sig",
       "bytes": 119,
-      "sha256": "cfd0529b0ffcb3be0e025471a45d30b5767be64e7c3b98c8d140fae99e22af6d",
+      "sha256": "0bb742de59678a65b5d1ef0f52833a0e7d049ac065db9cdac5a3dfaec31d9091",
       "urls": [
-        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/cfd0529b0ffcb3be0e025471a45d30b5767be64e7c3b98c8d140fae99e22af6d"
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/0bb742de59678a65b5d1ef0f52833a0e7d049ac065db9cdac5a3dfaec31d9091"
       ]
     },
     {
       "id": "repo-h7607a.files.tar.gz",
       "path": "build/repo/h7607a.files.tar.gz",
-      "bytes": 276694,
-      "sha256": "f07aa706d9b0a8dccbd69dc8bc829ec40f6635edf49a68d357b76ae98371307c",
+      "bytes": 276657,
+      "sha256": "4c8ede3cfec53f9b9ea798c7ab84423806985877c2da99d17bea7de4948b2751",
       "urls": [
-        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/f07aa706d9b0a8dccbd69dc8bc829ec40f6635edf49a68d357b76ae98371307c"
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/4c8ede3cfec53f9b9ea798c7ab84423806985877c2da99d17bea7de4948b2751"
       ]
     },
     {
       "id": "repo-h7607a.files.tar.gz.sig",
       "path": "build/repo/h7607a.files.tar.gz.sig",
       "bytes": 119,
-      "sha256": "ed01dcb107195662d4884cd824af828f7ca2a19a6ed9fff6dcbd11aefac64ef0",
+      "sha256": "b928d23ec179add9b42939fa82b6619afec30a09006bbe6f939f931d56fad9bb",
       "urls": [
-        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/ed01dcb107195662d4884cd824af828f7ca2a19a6ed9fff6dcbd11aefac64ef0"
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/b928d23ec179add9b42939fa82b6619afec30a09006bbe6f939f931d56fad9bb"
       ]
     },
     {
@@ -138,55 +138,55 @@
     {
       "id": "repo-linux-n1x-nvidia-bin-7.0.0.1022.23-3-aarch64.pkg.tar.zst",
       "path": "build/repo/linux-n1x-nvidia-bin-7.0.0.1022.23-3-aarch64.pkg.tar.zst",
-      "bytes": 289446034,
-      "sha256": "f8e806b875da4b38329ac0598a91ce5b1c09548e40c65a2b49b14bb6cff956b9",
+      "bytes": 289457492,
+      "sha256": "abbea3b36fa4b76e83cdb374617f436c50113b48ab957a28794bbefe133e926d",
       "urls": [
-        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/f8e806b875da4b38329ac0598a91ce5b1c09548e40c65a2b49b14bb6cff956b9"
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/abbea3b36fa4b76e83cdb374617f436c50113b48ab957a28794bbefe133e926d"
       ]
     },
     {
       "id": "repo-linux-n1x-nvidia-bin-7.0.0.1022.23-3-aarch64.pkg.tar.zst.sig",
       "path": "build/repo/linux-n1x-nvidia-bin-7.0.0.1022.23-3-aarch64.pkg.tar.zst.sig",
       "bytes": 119,
-      "sha256": "fc04b185a593a0fed60efa50cc0d7075236256aa287a04541b36d49780b3ae50",
+      "sha256": "90b19e8208ddd9a9190848b87bb90b051474110fad24145970420063953aada7",
       "urls": [
-        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/fc04b185a593a0fed60efa50cc0d7075236256aa287a04541b36d49780b3ae50"
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/90b19e8208ddd9a9190848b87bb90b051474110fad24145970420063953aada7"
       ]
     },
     {
       "id": "repo-nvidia-n1x-modules-615.78.08-4-aarch64.pkg.tar.zst",
       "path": "build/repo/nvidia-n1x-modules-615.78.08-4-aarch64.pkg.tar.zst",
-      "bytes": 14640822,
-      "sha256": "992677492aebd94677d6e15da8c302296204e535d5fd81bde9cc59106835405e",
+      "bytes": 14640908,
+      "sha256": "4dd9850c88bd0784a4c9b88cd3d5ed5510a0c7133a0041e4d858bd3d73a746c2",
       "urls": [
-        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/992677492aebd94677d6e15da8c302296204e535d5fd81bde9cc59106835405e"
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/4dd9850c88bd0784a4c9b88cd3d5ed5510a0c7133a0041e4d858bd3d73a746c2"
       ]
     },
     {
       "id": "repo-nvidia-n1x-modules-615.78.08-4-aarch64.pkg.tar.zst.sig",
       "path": "build/repo/nvidia-n1x-modules-615.78.08-4-aarch64.pkg.tar.zst.sig",
       "bytes": 119,
-      "sha256": "b7916976690d9f526ce77dfb5f0364e30db994bcef86cbb520e1ae981f58d47b",
+      "sha256": "fa6cfbbfd5dcb7c1a492bf9920f3e79ffaee7b3b260ffde5192b93d9573b0fe0",
       "urls": [
-        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/b7916976690d9f526ce77dfb5f0364e30db994bcef86cbb520e1ae981f58d47b"
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/fa6cfbbfd5dcb7c1a492bf9920f3e79ffaee7b3b260ffde5192b93d9573b0fe0"
       ]
     },
     {
       "id": "repo-nvidia-n1x-userspace-fix-615.78.08-1-aarch64.pkg.tar.zst",
       "path": "build/repo/nvidia-n1x-userspace-fix-615.78.08-1-aarch64.pkg.tar.zst",
-      "bytes": 143731,
-      "sha256": "b067a29ae64a6675d937f4fedee899e28aa10ba8d1aed70efa865d75229ca4ca",
+      "bytes": 143436,
+      "sha256": "06359e40e1a62858b1bcd009f563d34dbb1a5de9227e9e4ed36804eb06d86a2b",
       "urls": [
-        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/b067a29ae64a6675d937f4fedee899e28aa10ba8d1aed70efa865d75229ca4ca"
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/06359e40e1a62858b1bcd009f563d34dbb1a5de9227e9e4ed36804eb06d86a2b"
       ]
     },
     {
       "id": "repo-nvidia-n1x-userspace-fix-615.78.08-1-aarch64.pkg.tar.zst.sig",
       "path": "build/repo/nvidia-n1x-userspace-fix-615.78.08-1-aarch64.pkg.tar.zst.sig",
       "bytes": 119,
-      "sha256": "f844bcded9bd9dbc944896d33c3b3dc5ced0f15bf7f9fdc454f541095814856e",
+      "sha256": "953dcc18a454e74a8f46583ae7115dadda401068251dee5b20a2b75cdac9f870",
       "urls": [
-        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/f844bcded9bd9dbc944896d33c3b3dc5ced0f15bf7f9fdc454f541095814856e"
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/953dcc18a454e74a8f46583ae7115dadda401068251dee5b20a2b75cdac9f870"
       ]
     },
     {
@@ -210,37 +210,37 @@
     {
       "id": "repo-power-profiles-daemon-n1x-0.30.nvidia3001c25-2-aarch64.pkg.tar.zst",
       "path": "build/repo/power-profiles-daemon-n1x-0.30.nvidia3001c25-2-aarch64.pkg.tar.zst",
-      "bytes": 59174,
-      "sha256": "1a5b76081e0552fccc92c7cd0ad565642503a92b151bf2e41531f4a35bd98c5a",
+      "bytes": 59060,
+      "sha256": "ad02ec2bb9d3b03bd2ad7fb1d25a63cf75b19b160bf70bf0ba5519dfcbdda35c",
       "urls": [
-        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/1a5b76081e0552fccc92c7cd0ad565642503a92b151bf2e41531f4a35bd98c5a"
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/ad02ec2bb9d3b03bd2ad7fb1d25a63cf75b19b160bf70bf0ba5519dfcbdda35c"
       ]
     },
     {
       "id": "repo-power-profiles-daemon-n1x-0.30.nvidia3001c25-2-aarch64.pkg.tar.zst.sig",
       "path": "build/repo/power-profiles-daemon-n1x-0.30.nvidia3001c25-2-aarch64.pkg.tar.zst.sig",
       "bytes": 119,
-      "sha256": "78bf9f3ac2541d8f4224b39a1be9802417ca29fe568780f7ba875c8c571233db",
+      "sha256": "4149f52083f658611fbba372a3c4ff120ef38aea3d69c6b4bd325ac310c57386",
       "urls": [
-        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/78bf9f3ac2541d8f4224b39a1be9802417ca29fe568780f7ba875c8c571233db"
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/4149f52083f658611fbba372a3c4ff120ef38aea3d69c6b4bd325ac310c57386"
       ]
     },
     {
       "id": "repo-repository.json",
       "path": "build/repo/repository.json",
       "bytes": 5480,
-      "sha256": "66df1ad22dab93c76c68cca1d1ad8c6fe405d7f3911e36db5d6cd0d0e16637e1",
+      "sha256": "da1a9913d498c2cccee9a107270794af245206c81b26cea801f8a89f8c63bcc9",
       "urls": [
-        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/66df1ad22dab93c76c68cca1d1ad8c6fe405d7f3911e36db5d6cd0d0e16637e1"
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/da1a9913d498c2cccee9a107270794af245206c81b26cea801f8a89f8c63bcc9"
       ]
     },
     {
       "id": "repo-repository.json.sig",
       "path": "build/repo/repository.json.sig",
       "bytes": 119,
-      "sha256": "c9fe19bcf3ee0f5f48adb0c08764272f35dad3ab4e489485da6a77bab3d79376",
+      "sha256": "bdaf37611fb6f0de15dd971c1b8ee7d4856b1621db9b7030f0164e1d601b795a",
       "urls": [
-        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/c9fe19bcf3ee0f5f48adb0c08764272f35dad3ab4e489485da6a77bab3d79376"
+        "https://github.com/pfeifferj/archlinuxarm-proart-p16/releases/download/inputs-1/bdaf37611fb6f0de15dd971c1b8ee7d4856b1621db9b7030f0164e1d601b795a"
       ]
     }
   ]

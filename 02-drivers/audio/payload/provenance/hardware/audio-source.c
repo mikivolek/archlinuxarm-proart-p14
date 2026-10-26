@@ -631,6 +631,11 @@ static int mt8901_card_probe(struct platform_device *pdev)
 	    dmi_match(DMI_BOARD_VENDOR, "ASUSTeK COMPUTER INC.") &&
 	    dmi_match(DMI_BOARD_NAME, "H7607BA"))
 		snd_soc_card_set_pci_ssid(card, 0x1043, 0x1484);
+	else if (dmi_match(DMI_SYS_VENDOR, "ASUS") &&
+		 dmi_match(DMI_PRODUCT_NAME, "ProArt P14 H7407BA") &&
+		 dmi_match(DMI_BOARD_VENDOR, "ASUSTeK COMPUTER INC.") &&
+		 dmi_match(DMI_BOARD_NAME, "H7407BA"))
+		snd_soc_card_set_pci_ssid(card, 0x1043, 0x33a1);
 
 	/* Register the card */
 	ret = devm_snd_soc_register_card(card->dev, card);

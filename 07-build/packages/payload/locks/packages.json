@@ -103,9 +103,9 @@
       "id": "local-key",
       "path": "assets/keys/h7607a-build.gpg",
       "urls": [],
-      "fingerprint": "100A50E46DC2C244F838DCBFABD48F465F4434BD",
-      "bytes": 250,
-      "sha256": "86d33d412a7449109926a2b4ac65504b61a1535da78d913d297d5a50e033bff0"
+      "fingerprint": "0ECD0D16695E8DE01331EFDA65DFF58C22D1F573",
+      "bytes": 240,
+      "sha256": "6d49bcfd32037a6bf14fd6a8982f965f6673d65c15181c15daf86c84a5326b81"
     },
     {
       "id": "archlinuxarm-key",
@@ -258,9 +258,9 @@
       "id": "local-key",
       "path": "assets/keys/h7607a-build.gpg",
       "urls": [],
-      "fingerprint": "100A50E46DC2C244F838DCBFABD48F465F4434BD",
-      "bytes": 250,
-      "sha256": "86d33d412a7449109926a2b4ac65504b61a1535da78d913d297d5a50e033bff0"
+      "fingerprint": "0ECD0D16695E8DE01331EFDA65DFF58C22D1F573",
+      "bytes": 240,
+      "sha256": "6d49bcfd32037a6bf14fd6a8982f965f6673d65c15181c15daf86c84a5326b81"
     },
     "archlinuxarm": {
       "id": "archlinuxarm-key",
@@ -350,7 +350,7 @@
     },
     {
       "name": "h7607a-hardware",
-      "version": "1.0.0-4",
+      "version": "1.0.0-5",
       "architecture": "aarch64",
       "kind": "custom",
       "recipe": "packages/h7607a-hardware",
@@ -364,8 +364,8 @@
           "sha256": "c01bab78a49e3c20ddd3787d45f33b60898b9d26632bf4bf581fa372fefd78ab"
         },
         "packages/h7607a-hardware/PKGBUILD": {
-          "bytes": 4356,
-          "sha256": "fe16b0f126b8bf0c1059cf899dd371d2830cc9ca7c76ec36099af24600747b66"
+          "bytes": 4455,
+          "sha256": "593550810e14f6527f5276dfb348302e22f43103bda82146c708443952cd29ae"
         },
         "packages/h7607a-hardware/inputs.json": {
           "bytes": 1739,

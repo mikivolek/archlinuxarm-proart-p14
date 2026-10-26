@@ -1,3 +1,32 @@
+# ProArt P14 (H7407BA) port
+
+this is a fork of [pfeifferj/archlinuxarm-proart-p16](https://github.com/pfeifferj/archlinuxarm-proart-p16),
+all the real work is theirs, huge kudos to pfeifferj. i just ported it to my
+ProArt P14 H7407BA (firmware H7407BA.303, same N1X chip) and it runs fine.
+
+what changed vs upstream:
+
+- acpi builder knows the P14 firmware H7407BA.303 too (same SSPM `_STA` fix,
+  other offset, the ASUS SSDT needs no splice on this one)
+- `nvidia_drm vblank=0` instead of `vblank=1`. with vblank on, the driver
+  hands out flip timestamps way off from CLOCK_MONOTONIC and GNOME/mutter just
+  freezes after a few frames (screen drawn once, mouse dead, ttys still ok).
+  if you already installed with vblank=1, put the option in
+  `/etc/modprobe.d/` and rebuild the initramfs, the modules load from there
+- keyboard, audio and touchpad bits adjusted for the P14, hashes and locks
+  updated to match, own package signing key
+
+**ACPI tables:** same deal as upstream. the ACPI tables belong to ASUS and
+NVIDIA and the Cirrus tuning firmware to ASUS and Cirrus Logic, neither is
+redistributed here. no firmware table, nor anything derived from one, is in
+this repo, only the hashes. dump your own P14's tables and build the overrides
+yourself, see
+[Building the ACPI overrides](08-documentation/current/payload/docs/acpi-overrides.md).
+
+no warranty, works on my machine. original readme below.
+
+---
+
 # Arch Linux ARM on the ASUS ProArt P16 (H7607BA)
 
 Device enablement and an installer for Arch Linux ARM on the ASUS ProArt P16

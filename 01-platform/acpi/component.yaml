@@ -108,10 +108,10 @@
     {
       "source": "payload/assets/hardware/acpi/h7607a-acpi.cpio",
       "destination": "assets/hardware/acpi/h7607a-acpi.cpio",
-      "bytes": 109568,
-      "sha256": "311dc5b456f1b7a9728814cd8ca105370bdca8383facec141f23217f43eac51d",
+      "bytes": 74240,
+      "sha256": "cf2b9a4ab8d1c98b73cdbf862be19898a3cdfcb17074976d51ae05f44c4b9d2c",
       "mode": 420,
-      "provided_by": "python3 01-platform/acpi/payload/provenance/hardware/power-archive-builder.py --dump DIR, where DIR holds this P16's own DSDT and SSDT dumps"
+      "provided_by": "python3 01-platform/acpi/payload/provenance/hardware/power-archive-builder.py --dump DIR, where DIR holds this P14's own H7407BA.303 DSDT and SSDT dumps"
     },
     {
       "source": "payload/assets/hardware/uefi/acpi-dump.nsh",
@@ -123,24 +123,24 @@
     {
       "source": "payload/assets/hardware/uefi/n1x-asus-ssdt-baseline.bin",
       "destination": "assets/hardware/uefi/n1x-asus-ssdt-baseline.bin",
-      "bytes": 34278,
-      "sha256": "46d9ed16af06093cdb849df69646683317d53d7342dfd38f24eab00795d396f0",
+      "bytes": 34512,
+      "sha256": "566504c681947016dfca1204e0866a01fa05fd94ef116fdf2cceb09b096c69d0",
       "mode": 420,
-      "provided_by": "python3 01-platform/acpi/payload/provenance/hardware/power-archive-builder.py --dump DIR, where DIR holds this P16's own DSDT and SSDT dumps"
+      "provided_by": "python3 01-platform/acpi/payload/provenance/hardware/power-archive-builder.py --dump DIR, where DIR holds this P14's own H7407BA.303 DSDT and SSDT dumps"
     },
     {
       "source": "payload/assets/hardware/uefi/n1x-dsdt-baseline.bin",
       "destination": "assets/hardware/uefi/n1x-dsdt-baseline.bin",
-      "bytes": 74052,
-      "sha256": "0b9ed92671568cf36bade16262d068d1a4f3c85634159de46ae00bf0f727a402",
+      "bytes": 73410,
+      "sha256": "83909a0154fee0ea1579a02b0aa8e6434efdfc48aeea00aaece439fce7037330",
       "mode": 420,
-      "provided_by": "python3 01-platform/acpi/payload/provenance/hardware/power-archive-builder.py --dump DIR, where DIR holds this P16's own DSDT and SSDT dumps"
+      "provided_by": "python3 01-platform/acpi/payload/provenance/hardware/power-archive-builder.py --dump DIR, where DIR holds this P14's own H7407BA.303 DSDT and SSDT dumps"
     },
     {
       "source": "payload/provenance/hardware/acpi_builder.py",
       "destination": "provenance/hardware/acpi_builder.py",
-      "bytes": 16378,
-      "sha256": "14f276c97000dafdd51bc7af948d7b87aecc673df2d399ce14dbbbfb70e20c07",
+      "bytes": 18654,
+      "sha256": "20878f919fb65942cb2d9eb311a311f67f45c17663316dadf04c6f30a4cb0cc9",
       "mode": 420
     },
     {
@@ -177,14 +177,6 @@
       "bytes": 2026,
       "sha256": "8b779dff3de70d8a35c16629e7130c3748dbea52a2d652e6de17bde2cd571a01",
       "mode": 420
-    },
-    {
-      "source": "payload/provenance/hardware/power-source.dsl",
-      "destination": "provenance/hardware/power-source.dsl",
-      "bytes": 241833,
-      "sha256": "cff6e8be5665686c95bd83b5e2d73ed0abbacddecc416e57dbd29f91a746472a",
-      "mode": 420,
-      "provided_by": "python3 01-platform/acpi/payload/provenance/hardware/power-archive-builder.py --dump DIR, where DIR holds this P16's own DSDT and SSDT dumps"
     },
     {
       "source": "payload/provenance/hardware/power-source.sed",
@@ -238,8 +230,8 @@
     {
       "source": "payload/tests/test_acpi_builder.py",
       "destination": "tests/test_acpi_builder.py",
-      "bytes": 9623,
-      "sha256": "237389d820fc842c75d291c1e13d920dabe9c3884a3ad0cc1e095c86498a340d",
+      "bytes": 12301,
+      "sha256": "1da33e83d574451616041d029420de5bc47c5e0b3ae095613942d8b350cb0bb2",
       "mode": 420
     },
     {

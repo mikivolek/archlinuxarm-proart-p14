@@ -34,7 +34,7 @@ clean=(env -i PATH=/usr/bin:/bin LC_ALL=C LANG=C)
 # Source, Kbuild and header values come from hid-build.json; the debs and the
 # configuration are pinned by 07-build/locked-inputs and 01-platform/kernel.
 sha256sum --strict --check <<EOF
-4639fa303f42679b361e342b7eae4f68bb478566cf84f61278587cc5c90230de  $recipe/hid-asus.c
+31b1d026607a85e495dd71cb40cc3a527a66fd32191b975024e62fd8babb816e  $recipe/hid-asus.c
 4a4c05a345b8ddec1ebeb3f5d3e5a38edcc456f26886769a63278c19434000d8  $recipe/hid-ids.h
 21e14c2bf7e4e4d9de3c1d5b82853972b3ba50344fc1492646487724078773eb  $recipe/hid.Kbuild
 93847c99d2a49f9713c464bb76956dc27f6709c7e20296f8eec894632cac3921  $packages/$image_deb

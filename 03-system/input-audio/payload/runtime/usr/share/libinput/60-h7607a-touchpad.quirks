@@ -7,3 +7,12 @@ MatchUdevType=touchpad
 MatchDMIModalias=dmi:*:svnASUS:pnProArtP16H7607BA:*
 AttrPressureRange=none
 AttrPalmPressureThreshold=0
+
+[ASUS ProArt P14 H7407BA PixArt pressure classification]
+MatchBus=i2c
+MatchVendor=0x093A
+MatchProduct=0x4F02
+MatchUdevType=touchpad
+MatchDMIModalias=dmi:*:svnASUS:pnProArtP14H7407BA:*
+AttrPressureRange=none
+AttrPalmPressureThreshold=0

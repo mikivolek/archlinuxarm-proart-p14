@@ -3,23 +3,23 @@
   "components": [
     {
       "manifest": "01-platform/kernel/component.yaml",
-      "sha256": "7d53ac8c8d6cf1770e028eda6c885ea6a918909bd6e8fba567549ab2e5329875"
+      "sha256": "5de9db15499877f3d82c887e0b5273409f1039f540808d782500a8cba6e1a149"
     },
     {
       "manifest": "01-platform/acpi/component.yaml",
-      "sha256": "159363d9a4c9198369fbe339813aea4a865177ff0907689c93a95e588cade8c5"
+      "sha256": "25c70e5ad3b3b826c80bf13faf4b470a18b0c3b7ba97dfc36798cdfe0db1ce90"
     },
     {
       "manifest": "02-drivers/nvidia-display/component.yaml",
-      "sha256": "7af01c6a358bd13fee83ee137dc8a4d9694eac193256b0259f04374596945147"
+      "sha256": "3cb1a9b98a5d9f5c9c36af3176e35237bbd981928e0c7a3876dca870ec113071"
     },
     {
       "manifest": "02-drivers/keyboard/component.yaml",
-      "sha256": "f3fc9c92734a395de5e07882088c140a210fc0d60f5b67513ad471f64bfed900"
+      "sha256": "f756e3e11cdea337a57aafafa691a6017c3d84249d9799faa3452b4eb1b3f1e1"
     },
     {
       "manifest": "02-drivers/audio/component.yaml",
-      "sha256": "84698dbb901d74b96fcfe674352357f0a522addf9dec27d67dba86ba85361ffa"
+      "sha256": "9361c50f09ce85b10c4ee5979af83471fab0c76664450023c4aa391443843632"
     },
     {
       "manifest": "02-drivers/soundwire/component.yaml",
@@ -35,7 +35,7 @@
     },
     {
       "manifest": "03-system/input-audio/component.yaml",
-      "sha256": "20b380729796d9ba412de2c3b00a6c2ad8a7a8b9ab13d3043f4e394bdb8d3898"
+      "sha256": "b7bb4fc2cedd7c7300485918d7bf8b7682956f1024afc710fff06c734d72246d"
     },
     {
       "manifest": "05-development/python-cuda/component.yaml",
@@ -47,7 +47,7 @@
     },
     {
       "manifest": "06-installation/archinstall/component.yaml",
-      "sha256": "a934f10a973d5387a9869bc23fbc23bba09bcd717f3a29cc19f19ecad8282fbc"
+      "sha256": "5ef0cde3ac0a528dda91e6863dce3f53c731b043084501615bc4826bf525e569"
     },
     {
       "manifest": "06-installation/wheel-carrier/component.yaml",
@@ -55,15 +55,15 @@
     },
     {
       "manifest": "07-build/media/component.yaml",
-      "sha256": "8371248a38be7985fac768865156fa14ca52e35ca945bfc83be83cc59af62869"
+      "sha256": "00abaa164cee58a88c9548ce475eafce5f4130baeba6965385169f9688e01ef4"
     },
     {
       "manifest": "07-build/packages/component.yaml",
-      "sha256": "6095cd1249ea1f12016889eb2976accb6e7d9a0203335dc9cd76008c35674960"
+      "sha256": "ab48cbbde1b0eeee8633cda54c3bf959dc660e223716b13c94347a41e5a1476c"
     },
     {
       "manifest": "07-build/locked-inputs/component.yaml",
-      "sha256": "53318290c28743980fb099d3149dce109b1b5ea8b93dc3b40f1722e5b6adf52c"
+      "sha256": "b5127197dbc42df223d887ffb1b3d88d9a33377c76f6ddf025cee107a298ac9e"
     },
     {
       "manifest": "08-documentation/current/component.yaml",

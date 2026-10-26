@@ -98,6 +98,43 @@ class FirmwareTest(unittest.TestCase):
         dsdt = table(b"DSDT")
         builder.firmware("DSDT", dsdt, builder.sha(dsdt), builder.DSDT_OUTPUT, "DSDT")
 
+    def test_dsdt_selects_its_firmware_profile(self):
+        dsdt = table(b"DSDT")
+        profile = dict(builder.PROFILES["H7407BA.303"], dsdt_input=builder.sha(dsdt))
+        with mock.patch.dict(builder.PROFILES, {"H7407BA.303": profile}):
+            self.assertEqual(builder.select_profile("DSDT", dsdt), ("H7407BA.303", profile))
+
+    def test_unknown_dsdt_names_every_supported_firmware(self):
+        with self.assertRaises(ValueError) as caught:
+            builder.select_profile("DSDT", table(b"DSDT"))
+        for version in builder.PROFILES:
+            self.assertIn(version, str(caught.exception))
+
+    def test_override_dump_of_any_profile_is_recognized(self):
+        dsdt = table(b"DSDT")
+        profile = dict(builder.PROFILES["H7407BA.303"], dsdt_output=builder.sha(dsdt))
+        with mock.patch.dict(builder.PROFILES, {"H7407BA.303": profile}), \
+                self.assertRaises(ValueError) as caught:
+            builder.select_profile("DSDT", dsdt)
+        self.assertIn("h7607a-acpi.cpio", str(caught.exception))
+
+
+class ArchiveTest(unittest.TestCase):
+    def build(self, version, ssdt=None):
+        with mock.patch.object(builder, "exact", lambda data, digest, description: data):
+            return builder.archive(table(b"DSDT"), ssdt, builder.PROFILES[version])
+
+    def test_p14_archive_holds_only_the_dsdt(self):
+        result = self.build("H7407BA.303")
+        self.assertIn(b"kernel/firmware/acpi/DSDT.aml", result)
+        self.assertNotIn(b"SSDT.aml", result)
+        self.assertEqual(len(result) % 512, 0)
+
+    def test_p16_archive_holds_both_tables(self):
+        result = self.build(builder.FIRMWARE, ASUS)
+        self.assertIn(b"kernel/firmware/acpi/DSDT.aml", result)
+        self.assertIn(b"kernel/firmware/acpi/SSDT.aml", result)
+
 
 class EditTest(unittest.TestCase):
     def test_literal_line_commands(self):
@@ -190,6 +227,20 @@ class PublishTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             builder.publish(self.repo, {builder.ARCHIVE_PATH: b"archive"})
         self.assertFalse((self.repo / "elsewhere").exists())
+
+
+@unittest.skipUnless(os.environ.get("H7407A_ACPI_DUMP"), "set H7407A_ACPI_DUMP to an H7407BA.303 table dump")
+class P14OwnerDumpTest(unittest.TestCase):
+    def test_reproduces_the_pinned_archive(self):
+        profile = builder.PROFILES["H7407BA.303"]
+        with tempfile.TemporaryDirectory() as directory:
+            repo = Path(directory)
+            result = builder.build(os.environ["H7407A_ACPI_DUMP"], repo=repo, iasl="missing-iasl")
+            expected = {builder.DSDT_PATH: profile["dsdt_input"], builder.SSDT_PATH: profile["ssdt_input"],
+                        builder.ARCHIVE_PATH: profile["archive_output"]}
+            self.assertEqual({path: builder.sha((repo / path).read_bytes()) for path in expected}, expected)
+            self.assertEqual((result["firmware"], result["compiler"], result["written"]),
+                             ("H7407BA.303", None, sorted(expected)))
 
 
 @unittest.skipUnless(os.environ.get("H7607A_ACPI_DUMP") and os.environ.get("H7607A_IASL"),

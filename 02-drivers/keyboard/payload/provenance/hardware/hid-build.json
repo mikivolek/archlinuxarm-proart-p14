@@ -213,8 +213,8 @@
     },
     {
       "path": "source/patched/drivers/hid/hid-asus.c",
-      "bytes": 52689,
-      "sha256": "4639fa303f42679b361e342b7eae4f68bb478566cf84f61278587cc5c90230de"
+      "bytes": 52853,
+      "sha256": "31b1d026607a85e495dd71cb40cc3a527a66fd32191b975024e62fd8babb816e"
     },
     {
       "path": "source/patched/drivers/hid/hid-ids.h",
@@ -261,8 +261,8 @@
     "method": "DIRECT_SEALED_PATCHED_SOURCES",
     "files": {
       "drivers/hid/hid-asus.c": {
-        "sha256": "4639fa303f42679b361e342b7eae4f68bb478566cf84f61278587cc5c90230de",
-        "bytes": 52689
+        "sha256": "31b1d026607a85e495dd71cb40cc3a527a66fd32191b975024e62fd8babb816e",
+        "bytes": 52853
       },
       "drivers/hid/hid-ids.h": {
         "sha256": "4a4c05a345b8ddec1ebeb3f5d3e5a38edcc456f26886769a63278c19434000d8",
@@ -285,8 +285,8 @@
   ],
   "candidate": {
     "path": "/run/p16-native-builds-9bm1xu2_/hid-job/work/output/hid-asus.ko",
-    "sha256": "608b9297256b1e6b60fb26589777546a67f6aa2a615a8498ade8e37b8aa8e617",
-    "bytes": 810056,
+    "sha256": "bbf74b8bcfb82392c9f4e3f1b53f46d73d8a33550e19daccd77102d18f5b04df",
+    "bytes": 811672,
     "modinfo": {
       "name": [
         "hid_asus"
@@ -330,7 +330,7 @@
         "GPL"
       ],
       "srcversion": [
-        "D5071B2AFD2A51A2FDFD376"
+        "022538F9657DB31C6E61534"
       ],
       "signer": []
     },

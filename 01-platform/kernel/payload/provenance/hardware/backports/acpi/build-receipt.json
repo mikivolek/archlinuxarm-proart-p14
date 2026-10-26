@@ -147,14 +147,14 @@
       },
       {
         "module": "mt8901-acp-sdw-legacy-mach.ko",
-        "uncompressed_sha256": "82061bce3a3b649c9f351b398c59546c8a978b2c3badbaa07436e6221e91d5de",
+        "uncompressed_sha256": "a69fd52e6df81c4c1072a1a5f033cf3cad0673dcaf1e93425d141c3b8c5cf8cf",
         "imports_checked": 38,
         "all_import_crcs_match": true,
         "has_coupled_btf": false
       },
       {
         "module": "hid-asus.ko",
-        "uncompressed_sha256": "608b9297256b1e6b60fb26589777546a67f6aa2a615a8498ade8e37b8aa8e617",
+        "uncompressed_sha256": "bbf74b8bcfb82392c9f4e3f1b53f46d73d8a33550e19daccd77102d18f5b04df",
         "imports_checked": 55,
         "all_import_crcs_match": true,
         "has_coupled_btf": false

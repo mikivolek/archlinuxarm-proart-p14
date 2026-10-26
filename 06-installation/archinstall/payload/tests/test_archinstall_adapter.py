@@ -266,8 +266,8 @@ class DeviceTest(unittest.TestCase):
         root = temporary_directory(self)
         self.repo = root / "repo"
         (self.repo / "locks").mkdir(parents=True)
-        device = {"sys_vendor": "ASUS", "product_name": "ProArt P16 H7607BA",
-                  "board_name": "H7607BA", "bios_version": "H7607BA.300"}
+        device = {"sys_vendor": "ASUS", "product_name": "ProArt P14 H7407BA",
+                  "board_name": "H7407BA", "bios_version": "H7407BA.303"}
         (self.repo / "locks/hardware.json").write_text(json.dumps({"device": device}))
         self.dmi = root / "dmi"
         self.dmi.mkdir()
@@ -276,17 +276,22 @@ class DeviceTest(unittest.TestCase):
         (self.dmi / "board_name").write_text(board + "\n")
         (self.dmi / "bios_version").write_text(bios + "\n")
 
-    def test_shipped_lock_accepts_h7607ba_300(self):
-        self.identify("H7607BA", "H7607BA.300")
+    def test_shipped_lock_accepts_h7407ba_303(self):
+        self.identify("H7407BA", "H7407BA.303")
         adapter.verify_device(REPO, self.dmi)
 
+    def test_shipped_lock_refuses_the_p16(self):
+        self.identify("H7607BA", "H7607BA.300")
+        with self.assertRaises(InstallError):
+            adapter.verify_device(REPO, self.dmi)
+
     def test_other_firmware_is_refused(self):
-        self.identify("H7607BA", "H7607BA.301")
+        self.identify("H7407BA", "H7407BA.304")
         with self.assertRaises(InstallError):
             adapter.verify_device(self.repo, self.dmi)
 
     def test_other_board_is_refused(self):
-        self.identify("H7606WI", "H7607BA.300")
+        self.identify("H7607BA", "H7407BA.303")
         with self.assertRaises(InstallError):
             adapter.verify_device(self.repo, self.dmi)
 

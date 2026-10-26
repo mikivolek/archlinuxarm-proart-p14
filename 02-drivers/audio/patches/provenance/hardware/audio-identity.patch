@@ -2,22 +2,27 @@
 +++ b/sound/soc/mediatek/mt8901/mt8901-acp-sdw-legacy-mach.c
 @@ -8,6 +8,7 @@
   */
- 
+
  #include <linux/device.h>
 +#include <linux/dmi.h>
  #include <linux/module.h>
  #include <linux/property.h>
  #include <sound/soc.h>
-@@ -624,6 +625,13 @@
+@@ -624,6 +625,18 @@
  		}
  	}
- 
+
 +	/* OEM SoundWire identity used by the CS35L56 firmware lookup. */
 +	if (dmi_match(DMI_SYS_VENDOR, "ASUS") &&
 +	    dmi_match(DMI_PRODUCT_NAME, "ProArt P16 H7607BA") &&
 +	    dmi_match(DMI_BOARD_VENDOR, "ASUSTeK COMPUTER INC.") &&
 +	    dmi_match(DMI_BOARD_NAME, "H7607BA"))
 +		snd_soc_card_set_pci_ssid(card, 0x1043, 0x1484);
++	else if (dmi_match(DMI_SYS_VENDOR, "ASUS") &&
++		 dmi_match(DMI_PRODUCT_NAME, "ProArt P14 H7407BA") &&
++		 dmi_match(DMI_BOARD_VENDOR, "ASUSTeK COMPUTER INC.") &&
++		 dmi_match(DMI_BOARD_NAME, "H7407BA"))
++		snd_soc_card_set_pci_ssid(card, 0x1043, 0x33a1);
 +
  	/* Register the card */
  	ret = devm_snd_soc_register_card(card->dev, card);

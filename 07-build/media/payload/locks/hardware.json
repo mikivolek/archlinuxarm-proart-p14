@@ -5,11 +5,11 @@
   "kernel_sha256": "6312b1ab41f586a42a1767e771c7cfc787246e0b83fe708006fff10903768d86",
   "device": {
     "sys_vendor": "ASUS",
-    "product_name": "ProArt P16 H7607BA",
+    "product_name": "ProArt P14 H7407BA",
     "board_vendor": "ASUSTeK COMPUTER INC.",
-    "board_name": "H7607BA",
-    "bios_version": "H7607BA.300",
-    "bios_date": "08/11/2026"
+    "board_name": "H7407BA",
+    "bios_version": "H7407BA.303",
+    "bios_date": "09/21/2026"
   },
   "artifacts": [
     {
@@ -26,8 +26,8 @@
     {
       "id": "hid-asus-h7607ba",
       "path": "assets/hardware/modules/hid-asus.ko",
-      "bytes": 810056,
-      "sha256": "608b9297256b1e6b60fb26589777546a67f6aa2a615a8498ade8e37b8aa8e617",
+      "bytes": 811672,
+      "sha256": "bbf74b8bcfb82392c9f4e3f1b53f46d73d8a33550e19daccd77102d18f5b04df",
       "urls": [],
       "origin": "Included local artifact at assets/hardware/modules/hid-asus.ko; source/build evidence under provenance/hardware",
       "license": "GPL-2.0-or-later",
@@ -39,8 +39,8 @@
     {
       "id": "mt8901-h7607ba-audio",
       "path": "assets/hardware/modules/mt8901-acp-sdw-legacy-mach.ko",
-      "bytes": 524864,
-      "sha256": "82061bce3a3b649c9f351b398c59546c8a978b2c3badbaa07436e6221e91d5de",
+      "bytes": 527192,
+      "sha256": "a69fd52e6df81c4c1072a1a5f033cf3cad0673dcaf1e93425d141c3b8c5cf8cf",
       "urls": [],
       "origin": "Included local artifact at assets/hardware/modules/mt8901-acp-sdw-legacy-mach.ko; source/build evidence under provenance/hardware",
       "license": "GPL-2.0-only",
@@ -50,8 +50,8 @@
       "mode": 420
     },
     {
-      "id": "cs35l56-b0-dsp1-misc-10431484-spkid0.wmfw",
-      "path": "assets/hardware/firmware/cirrus/cs35l56-b0-dsp1-misc-10431484-spkid0.wmfw",
+      "id": "cs35l56-b0-dsp1-misc-104333a1-spkid0.wmfw",
+      "path": "assets/hardware/firmware/cirrus/cs35l56-b0-dsp1-misc-104333a1-spkid0.wmfw",
       "bytes": 35764,
       "sha256": "828f2822701d06cb95d8da5ec8e2a5033b901ec4609a9a31e4336c38d133bdc3",
       "extract": {
@@ -68,14 +68,14 @@
       },
       "origin": "Extracted from the pinned ASUS driver package on the owner's machine; not stored in this repository or in any package",
       "license": "ASUS/Cirrus OEM firmware; extracted locally for this owned device; redistribution not asserted",
-      "target": "usr/lib/firmware/cirrus/cs35l56-b0-dsp1-misc-10431484-spkid0.wmfw",
+      "target": "usr/lib/firmware/cirrus/cs35l56-b0-dsp1-misc-104333a1-spkid0.wmfw",
       "mode": 420
     },
     {
-      "id": "cs35l56-b0-dsp1-misc-10431484-spkid0-l1u0.bin",
-      "path": "assets/hardware/firmware/cirrus/cs35l56-b0-dsp1-misc-10431484-spkid0-l1u0.bin",
-      "bytes": 11748,
-      "sha256": "46a6a2d55786a661c1a21c8ea4a2d0bbf9d87bb28342750699c012743a2773ac",
+      "id": "cs35l56-b0-dsp1-misc-104333a1-spkid0-l1u0.bin",
+      "path": "assets/hardware/firmware/cirrus/cs35l56-b0-dsp1-misc-104333a1-spkid0-l1u0.bin",
+      "bytes": 11784,
+      "sha256": "8fbab044e8fc123591f2c80eb00a6bba72954225987510370cc9d8c244479d4d",
       "extract": {
         "from": {
           "path": ".artifacts/asus/Audio_Driver_ARM_Cirrus_Z_V1.0.678.52824Sub3_49783.exe",
@@ -86,18 +86,18 @@
           ]
         },
         "offset": 4284504,
-        "member": "XU_Ext/tn/35L56/1484/dflt/b0_dflt_1484_lw_l1u0.bin"
+        "member": "XU_Ext/tn/35L56/33A1/dflt/b0_dflt_33a1_lw_l1u0.bin"
       },
       "origin": "Extracted from the pinned ASUS driver package on the owner's machine; not stored in this repository or in any package",
       "license": "ASUS/Cirrus OEM firmware; extracted locally for this owned device; redistribution not asserted",
-      "target": "usr/lib/firmware/cirrus/cs35l56-b0-dsp1-misc-10431484-spkid0-l1u0.bin",
+      "target": "usr/lib/firmware/cirrus/cs35l56-b0-dsp1-misc-104333a1-spkid0-l1u0.bin",
       "mode": 420
     },
     {
-      "id": "cs35l56-b0-dsp1-misc-10431484-spkid0-l1u1.bin",
-      "path": "assets/hardware/firmware/cirrus/cs35l56-b0-dsp1-misc-10431484-spkid0-l1u1.bin",
-      "bytes": 11748,
-      "sha256": "d9795f52b7c62f01de42a57b6a6f584e011746d1d48b99f62017a15b8199aedc",
+      "id": "cs35l56-b0-dsp1-misc-104333a1-spkid0-l1u1.bin",
+      "path": "assets/hardware/firmware/cirrus/cs35l56-b0-dsp1-misc-104333a1-spkid0-l1u1.bin",
+      "bytes": 11808,
+      "sha256": "396f3704c8e4e169310977c5f59a142cdece8a053158ceec047f83118f0e027b",
       "extract": {
         "from": {
           "path": ".artifacts/asus/Audio_Driver_ARM_Cirrus_Z_V1.0.678.52824Sub3_49783.exe",
@@ -108,20 +108,20 @@
           ]
         },
         "offset": 4284504,
-        "member": "XU_Ext/tn/35L56/1484/dflt/b0_dflt_1484_rw_l1u1.bin"
+        "member": "XU_Ext/tn/35L56/33A1/dflt/b0_dflt_33a1_rw_l1u1.bin"
       },
       "origin": "Extracted from the pinned ASUS driver package on the owner's machine; not stored in this repository or in any package",
       "license": "ASUS/Cirrus OEM firmware; extracted locally for this owned device; redistribution not asserted",
-      "target": "usr/lib/firmware/cirrus/cs35l56-b0-dsp1-misc-10431484-spkid0-l1u1.bin",
+      "target": "usr/lib/firmware/cirrus/cs35l56-b0-dsp1-misc-104333a1-spkid0-l1u1.bin",
       "mode": 420
     },
     {
       "id": "acpi-sspm-asus-power",
       "path": "assets/hardware/acpi/h7607a-acpi.cpio",
-      "bytes": 109568,
-      "sha256": "311dc5b456f1b7a9728814cd8ca105370bdca8383facec141f23217f43eac51d",
+      "bytes": 74240,
+      "sha256": "cf2b9a4ab8d1c98b73cdbf862be19898a3cdfcb17074976d51ae05f44c4b9d2c",
       "urls": [],
-      "origin": "Built on the owner's machine by provenance/hardware/power-archive-builder.py from that P16's own firmware tables; not stored in this repository",
+      "origin": "Built on the owner's machine by provenance/hardware/power-archive-builder.py from that P14's own H7407BA.303 firmware tables (SSPM DSDT override only); not stored in this repository",
       "license": "Device firmware with local compatibility modifications; built locally for this owned device; redistribution not asserted",
       "boot": "h7607a-acpi.cpio"
     },
@@ -156,19 +156,19 @@
     {
       "id": "n1x-dsdt-baseline.bin",
       "path": "assets/hardware/uefi/n1x-dsdt-baseline.bin",
-      "bytes": 74052,
-      "sha256": "0b9ed92671568cf36bade16262d068d1a4f3c85634159de46ae00bf0f727a402",
+      "bytes": 73410,
+      "sha256": "83909a0154fee0ea1579a02b0aa8e6434efdfc48aeea00aaece439fce7037330",
       "urls": [],
-      "origin": "Dumped by the owner from that P16's firmware and copied here by provenance/hardware/power-archive-builder.py; not stored in this repository",
+      "origin": "Dumped by the owner from that P14's H7407BA.303 firmware and copied here by provenance/hardware/power-archive-builder.py; not stored in this repository",
       "license": "Device firmware ACPI table (OEM ID NVDA); dumped locally from this owned device; redistribution not asserted"
     },
     {
       "id": "n1x-asus-ssdt-baseline.bin",
       "path": "assets/hardware/uefi/n1x-asus-ssdt-baseline.bin",
-      "bytes": 34278,
-      "sha256": "46d9ed16af06093cdb849df69646683317d53d7342dfd38f24eab00795d396f0",
+      "bytes": 34512,
+      "sha256": "566504c681947016dfca1204e0866a01fa05fd94ef116fdf2cceb09b096c69d0",
       "urls": [],
-      "origin": "Dumped by the owner from that P16's firmware and copied here by provenance/hardware/power-archive-builder.py; not stored in this repository",
+      "origin": "Dumped by the owner from that P14's H7407BA.303 firmware and copied here by provenance/hardware/power-archive-builder.py; not stored in this repository",
       "license": "Device firmware ACPI table (OEM ID _ASUS_); dumped locally from this owned device; redistribution not asserted"
     },
     {
@@ -212,7 +212,7 @@
       "id": "provenance-hid-build.json",
       "path": "provenance/hardware/hid-build.json",
       "bytes": 16098,
-      "sha256": "8c55103614373c4318114a4a79442f0dda9fec009e5997977d59b2cc7d3677d8",
+      "sha256": "0d79fcfd229896f6d27a977c94c970f8048be6a6afaea855ec7b7b77bcceb53c",
       "urls": [],
       "origin": "Included local artifact at provenance/hardware/hid-build.json; source/build evidence under provenance/hardware",
       "license": "See original source notice"
@@ -221,7 +221,7 @@
       "id": "provenance-audio-build.json",
       "path": "provenance/hardware/audio-build.json",
       "bytes": 17305,
-      "sha256": "f990e6f9953fcd7cc19315a37e3a6cdb97d014040fa482abd93649e05e5fbbb5",
+      "sha256": "88e1f67637b9759136ad5d2d506596c38a659b7e7d67dd579e97229ba5ab3cb0",
       "urls": [],
       "origin": "Included local artifact at provenance/hardware/audio-build.json; source/build evidence under provenance/hardware",
       "license": "See original source notice"
@@ -256,8 +256,8 @@
     {
       "id": "provenance-audio-identity.patch",
       "path": "provenance/hardware/audio-identity.patch",
-      "bytes": 730,
-      "sha256": "86beaf1e1a8e4e1389c2d3c648781921944967e9b1170118216298442370180f",
+      "bytes": 987,
+      "sha256": "c40820de7ade3b4ba53cb708402035b20cdea42f756759ad98a07bc63850dce7",
       "urls": [],
       "origin": "Included local artifact at provenance/hardware/audio-identity.patch; source/build evidence under provenance/hardware",
       "license": "See original source notice"
@@ -265,8 +265,8 @@
     {
       "id": "provenance-audio-source.c",
       "path": "provenance/hardware/audio-source.c",
-      "bytes": 19201,
-      "sha256": "4a3e4318ede455010a0e92eb776bcad22a7b3a5582d5bd75edfa5a33abf264e0",
+      "bytes": 19455,
+      "sha256": "35e6f87db56c6f1c92a2c0ca1b4c58995b3ab8171638679b7264ea060b89b86f",
       "urls": [],
       "origin": "Included local artifact at provenance/hardware/audio-source.c; source/build evidence under provenance/hardware",
       "license": "See original source notice"
@@ -274,8 +274,8 @@
     {
       "id": "provenance-hid-asus.c",
       "path": "provenance/hardware/hid-asus.c",
-      "bytes": 52689,
-      "sha256": "4639fa303f42679b361e342b7eae4f68bb478566cf84f61278587cc5c90230de",
+      "bytes": 52853,
+      "sha256": "31b1d026607a85e495dd71cb40cc3a527a66fd32191b975024e62fd8babb816e",
       "urls": [],
       "origin": "Included local artifact at provenance/hardware/hid-asus.c; source/build evidence under provenance/hardware",
       "license": "See original source notice"
@@ -324,15 +324,6 @@
       "urls": [],
       "origin": "Included local artifact at provenance/hardware/power-splice.json; source/build evidence under provenance/hardware",
       "license": "See original source notice"
-    },
-    {
-      "id": "provenance-power-source.dsl",
-      "path": "provenance/hardware/power-source.dsl",
-      "bytes": 241833,
-      "sha256": "cff6e8be5665686c95bd83b5e2d73ed0abbacddecc416e57dbd29f91a746472a",
-      "urls": [],
-      "origin": "Derived on the owner's machine by provenance/hardware/power-archive-builder.py from the iasl 20260408 disassembly of that P16's ASUS SSDT and power-source.sed; not stored in this repository",
-      "license": "Disassembly of the device firmware ASUS SSDT with local edits; derived locally for this owned device; redistribution not asserted"
     },
     {
       "id": "provenance-power-source.sed",
@@ -401,7 +392,7 @@
       "id": "h7607a-initcpio-install",
       "path": "assets/hardware/initcpio/install/h7607a-preload",
       "bytes": 1251,
-      "sha256": "846ef7ff8038f0f2f5c1b8512424fd8c92c8c1a02e458dc9ea9f79e7f7df03f5",
+      "sha256": "a2869cb1ced73d7bdc1243d6cf98de05f56af9c40ebe6f5dad86f274242c17e7",
       "urls": [],
       "license": "MIT",
       "origin": "Clean production source; exact native policy retained",
@@ -414,7 +405,7 @@
       "id": "h7607a-initcpio-hook",
       "path": "assets/hardware/initcpio/hooks/h7607a-preload",
       "bytes": 279,
-      "sha256": "cde878e5e277782e45a4d10a0b16a086ee9ce011f8d5ab32cba20c5379f878af",
+      "sha256": "a40fdd57e0ffa4f779568db7a0db254bcb473b7532f033f34f949897303d8b34",
       "urls": [],
       "license": "MIT",
       "origin": "Clean production source; exact native policy retained",
@@ -452,8 +443,8 @@
     {
       "id": "h7607a-nvidia-config",
       "path": "assets/hardware/modprobe/h7607a-nvidia.conf",
-      "bytes": 121,
-      "sha256": "6b71fcb4d8eb66bf6aa1c1d66e60873635dd48e8f68f2511130dbabc688d55c6",
+      "bytes": 187,
+      "sha256": "d3ccd909ff83972633e12f3ccdb9e33d39e13b1b62875dbadf0f8227bb1aab73",
       "urls": [],
       "license": "MIT",
       "origin": "Clean production source; exact native policy retained",
@@ -543,8 +534,8 @@
     {
       "id": "h7607a-touchpad-quirk",
       "path": "runtime/usr/share/libinput/60-h7607a-touchpad.quirks",
-      "bytes": 289,
-      "sha256": "2d87cd28673df8ad01f8fadd2d313daf5b412bafea584a894c8334b505fe23f2",
+      "bytes": 525,
+      "sha256": "eb53814d76bcce38354500586bf1b105ad93846e45067f562441bf500d4bc353",
       "urls": [],
       "license": "MIT",
       "origin": "Clean production source; exact native policy retained",
@@ -901,15 +892,15 @@
     {
       "id": "provenance-acpi-builder",
       "path": "provenance/hardware/acpi_builder.py",
-      "bytes": 16378,
-      "sha256": "14f276c97000dafdd51bc7af948d7b87aecc673df2d399ce14dbbbfb70e20c07",
+      "bytes": 18654,
+      "sha256": "20878f919fb65942cb2d9eb311a311f67f45c17663316dadf04c6f30a4cb0cc9",
       "urls": []
     }
   ],
   "module_srcversions": {
     "nvidia_drm": "4500F90245077CDA9BEF8C2",
-    "hid_asus": "D5071B2AFD2A51A2FDFD376",
-    "mt8901_acp_sdw_legacy_mach": "F000011BBADEC995F6BBA1D",
+    "hid_asus": "022538F9657DB31C6E61534",
+    "mt8901_acp_sdw_legacy_mach": "FCF18F296C0F873AEEFA69D",
     "soundwire_mtk": "7588DC9A1BF7B049DA48615"
   },
   "installed_boot_qualified": false,

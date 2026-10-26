@@ -358,8 +358,8 @@
     {
       "source": "payload/tests/test_archinstall_adapter.py",
       "destination": "tests/test_archinstall_adapter.py",
-      "bytes": 25787,
-      "sha256": "95d7a4eefadfdbb397bf10bb0c938f0c4766f8b8ec4abc928fc660c84f8b0c03",
+      "bytes": 25981,
+      "sha256": "01e78a70c57e5dd2e21cd8de42cbd987f1fa66a7ab38a75b6fae2411eec84686",
       "mode": 420
     }
   ],

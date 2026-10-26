@@ -1,27 +1,30 @@
 #!/usr/bin/env python3
-"""Build the H7607BA.300 ACPI overrides from this P16's own firmware tables.
+"""Build the ACPI overrides from this machine's own firmware tables.
 
+Supported firmware: H7607BA.300 (ProArt P16) and H7407BA.303 (ProArt P14).
 No firmware table, nor anything derived from one, is distributed. Dump the
-DSDT and SSDTs of your own P16 into a directory and pass it as --dump:
+DSDT and SSDTs of your own machine into a directory and pass it as --dump:
 
   UEFI: scripts/stage-acpi-dump.py stages the EDK2 Shell and a dump script on
-  a mounted FAT32 stick. Boot the P16 from it with Secure Boot disabled; the
-  tables land in the stick's H7607A-ACPI folder.
+  a mounted FAT32 stick. Boot the machine from it with Secure Boot disabled;
+  the tables land in the stick's H7607A-ACPI folder.
 
   Linux booted without h7607a-acpi.cpio, such as another distribution's live
-  system on this P16:
+  system on this machine:
     mkdir DIR
     for table in /sys/firmware/acpi/tables/DSDT /sys/firmware/acpi/tables/SSDT*; do
         sudo cat "$table" | tee "DIR/${table##*/}" > /dev/null
     done
 
-The DSDT and the ASUS SSDT (OEM ID _ASUS_, table ID ASUSSSDT) must be those of
-firmware H7607BA.300. power-source.dsl is that SSDT disassembled by ACPICA iasl
-20260408 and edited by power-source.sed. SSPM changes only its _STA predicate,
-and six compiled ASUS methods are spliced into the original SSDT, since
-compiling the whole table would rewrite unrelated AML. The two tables, the ASL
-and the archive are written to their collection paths once every pinned hash
-matches.
+The DSDT selects the firmware profile, and the ASUS SSDT (OEM ID _ASUS_, table
+ID ASUSSSDT) must be that same firmware's. On both, SSPM changes only its _STA
+predicate. On H7607BA.300, power-source.dsl is the ASUS SSDT disassembled by
+ACPICA iasl 20260408 and edited by power-source.sed, and six compiled ASUS
+methods are spliced into the original SSDT, since compiling the whole table
+would rewrite unrelated AML. H7407BA.303 already keeps those methods' FF-A
+responses in named buffers, so its ASUS SSDT is pinned but not overridden and
+iasl is not needed. The tables, the ASL and the archive are written to their
+collection paths once every pinned hash matches.
 """
 import argparse
 import hashlib
@@ -52,6 +55,19 @@ ARCHIVE_PATH = "assets/hardware/acpi/h7607a-acpi.cpio"
 IASL_SOURCE = ("https://github.com/acpica/acpica/releases/download/20260408/acpica-unix-20260408.tar.gz "
                "(SHA-256 e66ceb26d6d514ce164fe22f5a4f7ca165cc38349d7a97f41a21f19b364647a2)")
 EDIT = re.compile(r"(\d+)(?:,(\d+))?s/([^/]+)/([^/]*)/(g?)")
+PROFILES = {
+    FIRMWARE: {"device": "ProArt P16 H7607BA", "dsdt_input": DSDT_INPUT, "dsdt_output": DSDT_OUTPUT,
+               "sspm_offset": 0x10269, "ssdt_input": SSDT_INPUT, "ssdt_output": SSDT_OUTPUT,
+               "splice": True, "archive_output": ARCHIVE_OUTPUT},
+    # Same SSPM _STA predicate at another offset; the ASUS methods need no repair.
+    "H7407BA.303": {"device": "ProArt P14 H7407BA",
+                    "dsdt_input": "83909a0154fee0ea1579a02b0aa8e6434efdfc48aeea00aaece439fce7037330",
+                    "dsdt_output": "47e9574a6cc1f4c92a462a9b0e42467fc5b6009766b80ac2eb1094926e266335",
+                    "sspm_offset": 0x101f7,
+                    "ssdt_input": "566504c681947016dfca1204e0866a01fa05fd94ef116fdf2cceb09b096c69d0",
+                    "ssdt_output": None, "splice": False,
+                    "archive_output": "cf2b9a4ab8d1c98b73cdbf862be19898a3cdfcb17074976d51ae05f44c4b9d2c"},
+}
 
 
 def require(condition, message):
@@ -97,10 +113,10 @@ def encode_length(length, width):
                  [(length >> (4 + i * 8)) & 255 for i in range(width - 1)])
 
 
-def patch_dsdt(original):
-    exact(original, DSDT_INPUT, "Firmware DSDT")
+def patch_dsdt(original, profile=PROFILES[FIRMWARE]):
+    exact(original, profile["dsdt_input"], "Firmware DSDT")
     table(original, b"DSDT", b"NVDA\0\0ANGUS   ", 4)
-    start = 0x10269
+    start = profile["sspm_offset"]
     predicate = b"_OSI\x0dWindows 2022\0"
     require(original[start:start + len(predicate)] == predicate, "SSPM predicate changed")
     modified = bytearray(original)
@@ -109,7 +125,7 @@ def patch_dsdt(original):
     modified[9] = 0
     modified[9] = -sum(modified) % 256
     table(modified, b"DSDT", b"NVDA\0\0ANGUS   ", 5)
-    return exact(bytes(modified), DSDT_OUTPUT, "SSPM override")
+    return exact(bytes(modified), profile["dsdt_output"], "SSPM override")
 
 
 def compiled_method(compiled, name, digest):
@@ -173,16 +189,18 @@ def member(name, data, mode, inode):
     return entry + bytes(-len(entry) % 4)
 
 
-def archive(dsdt, ssdt):
-    exact(dsdt, DSDT_OUTPUT, "SSPM override")
-    exact(ssdt, SSDT_OUTPUT, "ASUS power override")
+def archive(dsdt, ssdt=None, profile=PROFILES[FIRMWARE]):
+    tables = [("DSDT.aml", exact(dsdt, profile["dsdt_output"], "SSPM override"))]
+    if profile["splice"]:
+        tables.append(("SSDT.aml", exact(ssdt, profile["ssdt_output"], "ASUS power override")))
+    directories = ("kernel", "kernel/firmware", "kernel/firmware/acpi")
     result = b"".join(member(name, b"", stat.S_IFDIR | 0o755, inode)
-                      for inode, name in enumerate(("kernel", "kernel/firmware", "kernel/firmware/acpi"), 1))
-    result += member("kernel/firmware/acpi/DSDT.aml", dsdt, stat.S_IFREG | 0o644, 4)
-    result += member("kernel/firmware/acpi/SSDT.aml", ssdt, stat.S_IFREG | 0o644, 5)
-    result += member("TRAILER!!!", b"", 0, 6)
+                      for inode, name in enumerate(directories, 1))
+    for inode, (name, data) in enumerate(tables, len(directories) + 1):
+        result += member("kernel/firmware/acpi/" + name, data, stat.S_IFREG | 0o644, inode)
+    result += member("TRAILER!!!", b"", 0, len(directories) + len(tables) + 1)
     result += bytes(-len(result) % 512)
-    return exact(result, ARCHIVE_OUTPUT, "Production ACPI archive")
+    return exact(result, profile["archive_output"], "Production ACPI archive")
 
 
 def dumped_tables(dump):
@@ -215,14 +233,27 @@ def dumped(found, signature, description, dump):
     return names[0], data
 
 
-def firmware(name, data, expected, override, description):
+def firmware(name, data, expected, override, description, version=FIRMWARE):
     digest = sha(data)
     require(digest != override,
             f"{name} is the {description} from h7607a-acpi.cpio, not the firmware's; dump it with "
             "the UEFI Shell kit or from a Linux booted without that archive")
     require(digest == expected,
-            f"{name} is not the {description} of firmware {FIRMWARE} (SHA-256 {digest}); "
-            f"these overrides are only for BIOS {FIRMWARE}")
+            f"{name} is not the {description} of firmware {version} (SHA-256 {digest}); "
+            f"these overrides are only for BIOS {version}")
+
+
+def select_profile(name, dsdt):
+    """Return the firmware version and profile whose original DSDT is dsdt."""
+    digest = sha(dsdt)
+    for version, profile in PROFILES.items():
+        if digest == profile["dsdt_input"]:
+            return version, profile
+    for profile in PROFILES.values():
+        firmware(name, dsdt, digest, profile["dsdt_output"], "DSDT")
+    supported = ", ".join(PROFILES)
+    raise ValueError(f"{name} is not the DSDT of firmware {supported} (SHA-256 {digest}); "
+                     f"these overrides are only for BIOS {supported}")
 
 
 def commands(script):
@@ -313,40 +344,44 @@ def build(dump, *, repo=REPO, iasl="iasl", sspm_only=False):
     repo = Path(repo).resolve()
     found = dumped_tables(dump)
     dsdt_name, dsdt = dumped(found, b"DSDT", "DSDT", dump)
-    firmware(dsdt_name, dsdt, DSDT_INPUT, DSDT_OUTPUT, "DSDT")
-    overrides = {"DSDT.aml": patch_dsdt(dsdt)}
+    version, profile = select_profile(dsdt_name, dsdt)
+    overrides = {"DSDT.aml": patch_dsdt(dsdt, profile)}
     files = {DSDT_PATH: dsdt}
     names = {"DSDT": dsdt_name}
     compiler = None
     if not sspm_only:
         ssdt_name, ssdt = dumped(found, b"SSDT", "ASUS SSDT (OEM ID _ASUS_, table ID ASUSSSDT)", dump)
-        firmware(ssdt_name, ssdt, SSDT_INPUT, SSDT_OUTPUT, "ASUS SSDT")
+        firmware(ssdt_name, ssdt, profile["ssdt_input"], profile["ssdt_output"], "ASUS SSDT", version)
         names["SSDT"] = ssdt_name
-        source = repo / "provenance/hardware"
-        methods = json.loads((source / "power-method-changes.json").read_text())
-        require(tuple(row["method"] for row in methods) == METHODS, "Unexpected ASL method changes")
-        with tempfile.TemporaryDirectory(prefix="h7607a-acpi-") as work:
-            work = Path(work)
-            iasl = check_iasl(iasl, work)
-            asl = derive_asl(ssdt, (source / "power-source.sed").read_text(), iasl, work)
-            (work / "power.dsl").write_bytes(asl)
-            run_iasl(iasl, ["-p", "power", "power.dsl"], work)
-            compiled = (work / "power.aml").read_bytes()
-        compiler = "ACPICA iasl 20260408"
-        overrides["SSDT.aml"] = splice_ssdt(ssdt, compiled, json.loads((source / "power-splice.json").read_text()))
-        files.update({SSDT_PATH: ssdt, ASL_PATH: asl,
-                      ARCHIVE_PATH: archive(overrides["DSDT.aml"], overrides["SSDT.aml"])})
+        files[SSDT_PATH] = ssdt
+        if profile["splice"]:
+            source = repo / "provenance/hardware"
+            methods = json.loads((source / "power-method-changes.json").read_text())
+            require(tuple(row["method"] for row in methods) == METHODS, "Unexpected ASL method changes")
+            with tempfile.TemporaryDirectory(prefix="h7607a-acpi-") as work:
+                work = Path(work)
+                iasl = check_iasl(iasl, work)
+                asl = derive_asl(ssdt, (source / "power-source.sed").read_text(), iasl, work)
+                (work / "power.dsl").write_bytes(asl)
+                run_iasl(iasl, ["-p", "power", "power.dsl"], work)
+                compiled = (work / "power.aml").read_bytes()
+            compiler = "ACPICA iasl 20260408"
+            overrides["SSDT.aml"] = splice_ssdt(ssdt, compiled,
+                                                json.loads((source / "power-splice.json").read_text()))
+            files[ASL_PATH] = asl
+        files[ARCHIVE_PATH] = archive(overrides["DSDT.aml"], overrides.get("SSDT.aml"), profile)
     written = publish(repo, files)
-    return {"schema": 2, "firmware": FIRMWARE, "compiler": compiler, "dump": names,
+    return {"schema": 2, "firmware": version, "compiler": compiler, "dump": names,
             "overrides": pins(overrides), "outputs": pins(files), "written": written}
 
 
 def cli(*, sspm_only=False):
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--dump", required=True, type=Path, metavar="DIR",
-                        help="Directory holding this P16's DSDT and SSDT dumps")
+                        help="Directory holding this machine's DSDT and SSDT dumps")
     if not sspm_only:
-        parser.add_argument("--iasl", default="iasl", help="ACPICA iasl 20260408 executable")
+        parser.add_argument("--iasl", default="iasl",
+                            help="ACPICA iasl 20260408 executable (H7607BA.300 only)")
     args = parser.parse_args()
     try:
         result = build(args.dump, iasl=getattr(args, "iasl", "iasl"), sspm_only=sspm_only)

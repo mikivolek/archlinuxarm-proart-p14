@@ -834,7 +834,8 @@ static int asus_kbd_register_leds(struct hid_device *hdev)
 		asus_kbd_init(hdev, FEATURE_KBD_LED_REPORT_ID2);
 	}
 
-	if (dmi_match(DMI_PRODUCT_FAMILY, "ProArt P16")) {
+	if (dmi_match(DMI_PRODUCT_FAMILY, "ProArt P16") ||
+	    dmi_match(DMI_PRODUCT_FAMILY, "ProArt P14")) {
 		ret = asus_kbd_disable_oobe(hdev);
 		if (ret < 0)
 			return ret;
@@ -1398,12 +1399,14 @@ static int asus_probe(struct hid_device *hdev, const struct hid_device_id *id)
 	bool is_vendor = false;
 	int ret;
 
-	/* Shared HID ID, but this candidate is limited to the captured P16. */
+	/* Shared HID ID, but this candidate is limited to the captured P16 and P14. */
 	if ((id->driver_data & QUIRK_PAD_FEATURE_REPORTS) &&
 	    (!dmi_match(DMI_SYS_VENDOR, "ASUS") ||
-	     !dmi_match(DMI_PRODUCT_NAME, "ProArt P16 H7607BA") ||
 	     !dmi_match(DMI_BOARD_VENDOR, "ASUSTeK COMPUTER INC.") ||
-	     !dmi_match(DMI_BOARD_NAME, "H7607BA")))
+	     !((dmi_match(DMI_PRODUCT_NAME, "ProArt P16 H7607BA") &&
+		dmi_match(DMI_BOARD_NAME, "H7607BA")) ||
+	       (dmi_match(DMI_PRODUCT_NAME, "ProArt P14 H7407BA") &&
+		dmi_match(DMI_BOARD_NAME, "H7407BA")))))
 		return -ENODEV;
 
 	drvdata = devm_kzalloc(&hdev->dev, sizeof(*drvdata), GFP_KERNEL);

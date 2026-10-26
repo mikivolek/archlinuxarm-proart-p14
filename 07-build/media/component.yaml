@@ -630,14 +630,14 @@
       "source": "payload/assets/hardware/initcpio/hooks/h7607a-preload",
       "destination": "assets/hardware/initcpio/hooks/h7607a-preload",
       "bytes": 279,
-      "sha256": "cde878e5e277782e45a4d10a0b16a086ee9ce011f8d5ab32cba20c5379f878af",
+      "sha256": "a40fdd57e0ffa4f779568db7a0db254bcb473b7532f033f34f949897303d8b34",
       "mode": 420
     },
     {
       "source": "payload/assets/hardware/initcpio/install/h7607a-preload",
       "destination": "assets/hardware/initcpio/install/h7607a-preload",
       "bytes": 1251,
-      "sha256": "846ef7ff8038f0f2f5c1b8512424fd8c92c8c1a02e458dc9ea9f79e7f7df03f5",
+      "sha256": "a2869cb1ced73d7bdc1243d6cf98de05f56af9c40ebe6f5dad86f274242c17e7",
       "mode": 420
     },
     {
@@ -685,8 +685,8 @@
     {
       "source": "payload/locks/hardware.json",
       "destination": "locks/hardware.json",
-      "bytes": 42128,
-      "sha256": "5bf8957495f14d326200329fd351dc112681818cec34efdbea34f7137e5eac6f",
+      "bytes": 41596,
+      "sha256": "8451a08619a45dbef0594be9dc6a0f59c6f4468a201e6314815de896ae891c1a",
       "mode": 420
     },
     {
@@ -720,8 +720,8 @@
     {
       "source": "payload/packages/h7607a-hardware/PKGBUILD",
       "destination": "packages/h7607a-hardware/PKGBUILD",
-      "bytes": 4356,
-      "sha256": "fe16b0f126b8bf0c1059cf899dd371d2830cc9ca7c76ec36099af24600747b66",
+      "bytes": 4455,
+      "sha256": "593550810e14f6527f5276dfb348302e22f43103bda82146c708443952cd29ae",
       "mode": 420
     },
     {
@@ -763,7 +763,7 @@
       "source": "payload/src/h7607a/hardware.py",
       "destination": "src/h7607a/hardware.py",
       "bytes": 10165,
-      "sha256": "fef71bbee7c4ca0328c12e5682baee354a9284d30868b7a575facdabb210fc20",
+      "sha256": "9359c0230387034ffae966686f0310bf0c6659717410d0c39b9bb436d9e641ab",
       "mode": 420
     },
     {

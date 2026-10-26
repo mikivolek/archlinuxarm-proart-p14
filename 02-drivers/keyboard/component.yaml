@@ -87,29 +87,29 @@
     {
       "source": "payload/assets/hardware/modules/hid-asus.ko",
       "destination": "assets/hardware/modules/hid-asus.ko",
-      "bytes": 810056,
-      "sha256": "608b9297256b1e6b60fb26589777546a67f6aa2a615a8498ade8e37b8aa8e617",
+      "bytes": 811672,
+      "sha256": "bbf74b8bcfb82392c9f4e3f1b53f46d73d8a33550e19daccd77102d18f5b04df",
       "mode": 420
     },
     {
       "source": "payload/provenance/hardware/hid-asus.c",
       "destination": "provenance/hardware/hid-asus.c",
-      "bytes": 52689,
-      "sha256": "4639fa303f42679b361e342b7eae4f68bb478566cf84f61278587cc5c90230de",
+      "bytes": 52853,
+      "sha256": "31b1d026607a85e495dd71cb40cc3a527a66fd32191b975024e62fd8babb816e",
       "mode": 420
     },
     {
       "source": "payload/provenance/hardware/hid-build.json",
       "destination": "provenance/hardware/hid-build.json",
       "bytes": 16098,
-      "sha256": "8c55103614373c4318114a4a79442f0dda9fec009e5997977d59b2cc7d3677d8",
+      "sha256": "0d79fcfd229896f6d27a977c94c970f8048be6a6afaea855ec7b7b77bcceb53c",
       "mode": 420
     },
     {
       "source": "payload/provenance/hardware/hid-build.sh",
       "destination": "provenance/hardware/hid-build.sh",
       "bytes": 5733,
-      "sha256": "acec66d41c32ffa6a03375d13d1ff7074f484642d64488c62e2312896fca5de1",
+      "sha256": "3151532fa772f95a6824d943630bf58e16050bc5a733943bc75296247b055f90",
       "mode": 493
     },
     {

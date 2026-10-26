@@ -23,7 +23,7 @@ PACKAGES = {
     'nvidia-utils': '615.78.08-1',
     'nvidia-n1x-userspace-fix': '615.78.08-1',
     'nvidia-n1x-modules': '615.78.08-4',
-    'h7607a-hardware': '1.0.0-4',
+    'h7607a-hardware': '1.0.0-5',
     'linux-firmware-mediatek': '20260916-1',
     'linux-firmware-cirrus': '20260916-1',
     'linux-firmware-whence': '20260916-1',

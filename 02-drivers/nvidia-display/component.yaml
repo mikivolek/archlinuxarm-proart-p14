@@ -266,7 +266,7 @@
         "nvidia_drm": {
           "modeset": 1,
           "fbdev": 1,
-          "vblank": 1
+          "vblank": 0
         }
       }
     },
@@ -338,8 +338,8 @@
     {
       "source": "payload/assets/hardware/modprobe/h7607a-nvidia.conf",
       "destination": "assets/hardware/modprobe/h7607a-nvidia.conf",
-      "bytes": 121,
-      "sha256": "6b71fcb4d8eb66bf6aa1c1d66e60873635dd48e8f68f2511130dbabc688d55c6",
+      "bytes": 187,
+      "sha256": "d3ccd909ff83972633e12f3ccdb9e33d39e13b1b62875dbadf0f8227bb1aab73",
       "mode": 420
     },
     {
