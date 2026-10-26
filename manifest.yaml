@@ -31,7 +31,7 @@
     },
     {
       "manifest": "03-system/policy/component.yaml",
-      "sha256": "1217f1d2dc7587f38e6332d5d3aea2774a979651e3c4739424483b847e7393e8"
+      "sha256": "46332020b9a11fb95f0f72b765a917fe8d3f87dd4103045651d540433996383f"
     },
     {
       "manifest": "03-system/input-audio/component.yaml",
@@ -67,7 +67,7 @@
     },
     {
       "manifest": "08-documentation/current/component.yaml",
-      "sha256": "230c9d413393800297727749744b0ad7ece9f40c2f823c5110a01816b80e1b6f"
+      "sha256": "3f357869b270a406de1af0513776cc4c2b65f0e4853e2368dff25877450ff3b5"
     }
   ],
   "assembly": {

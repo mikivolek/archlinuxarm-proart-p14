@@ -57,8 +57,8 @@
     {
       "source": "payload/docs/hardware.md",
       "destination": "docs/hardware.md",
-      "bytes": 2545,
-      "sha256": "80db5e7d20d44f22f62b8b45d6e95d5cfbb8661f8f0adaab3ac7c854f494f31e",
+      "bytes": 2524,
+      "sha256": "faad9ff9bb45846e23489f9cbb6bbfffe4cf0020107bf29c9f819f2314fcca79",
       "mode": 420
     },
     {
