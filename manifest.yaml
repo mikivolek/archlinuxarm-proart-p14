@@ -35,7 +35,7 @@
     },
     {
       "manifest": "03-system/input-audio/component.yaml",
-      "sha256": "b7bb4fc2cedd7c7300485918d7bf8b7682956f1024afc710fff06c734d72246d"
+      "sha256": "8cbdc1aa0851438670935002c46bc13cd1def0af51270626df699f1d5087b137"
     },
     {
       "manifest": "05-development/python-cuda/component.yaml",
@@ -55,7 +55,7 @@
     },
     {
       "manifest": "07-build/media/component.yaml",
-      "sha256": "00abaa164cee58a88c9548ce475eafce5f4130baeba6965385169f9688e01ef4"
+      "sha256": "13b23549da7c83d30c4d618053fb8b136ee57a0f285907e54a3b9d3fbe535944"
     },
     {
       "manifest": "07-build/packages/component.yaml",
@@ -67,7 +67,7 @@
     },
     {
       "manifest": "08-documentation/current/component.yaml",
-      "sha256": "3f357869b270a406de1af0513776cc4c2b65f0e4853e2368dff25877450ff3b5"
+      "sha256": "ccdbc07476029bed692d557d2a42f2e84b2ca051583dc0c01aabe089d3e32aa7"
     }
   ],
   "assembly": {

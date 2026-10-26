@@ -5,8 +5,9 @@ one machine. The [ACPI overrides](acpi-overrides.md) match only that firmware,
 and the installer checks the board and BIOS version only once the live system
 is up, so do not update the BIOS after installing.
 
-Camera, microphone capture, touchscreen and stylus, fingerprint login and the
-NPU are excluded.
+Camera, touchscreen and stylus, fingerprint login and the NPU are excluded.
+The internal microphone and the headset microphone work; Bluetooth headset
+microphones (HFP/HSP) do not.
 
 ## Known issues
 

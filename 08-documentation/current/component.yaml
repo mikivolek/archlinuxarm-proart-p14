@@ -57,8 +57,8 @@
     {
       "source": "payload/docs/hardware.md",
       "destination": "docs/hardware.md",
-      "bytes": 2524,
-      "sha256": "faad9ff9bb45846e23489f9cbb6bbfffe4cf0020107bf29c9f819f2314fcca79",
+      "bytes": 2586,
+      "sha256": "4759dd9312b80d656c1586bb32aa3356644349d5ad4587f41de2adb2d3e9f2cf",
       "mode": 420
     },
     {
@@ -71,8 +71,8 @@
     {
       "source": "payload/docs/limits.md",
       "destination": "docs/limits.md",
-      "bytes": 900,
-      "sha256": "17b5f558306e3699469771048864f31ec2344d6b3174d8526ef9658654cf8f79",
+      "bytes": 985,
+      "sha256": "f6599b59cf433a900dbd9d1f1317cb6bf595f271c2b183b9f53c70085afd7a50",
       "mode": 420
     },
     {
