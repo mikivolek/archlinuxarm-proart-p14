@@ -1,9 +1,10 @@
 # Exact retained H7607BA assets plus native ABI-verified SoundWire backport.
+# pkgrel 7: UVC webcam enabled (driver no longer blacklisted, V4L2 monitor on).
 # pkgrel 6: internal microphone and headset microphone capture.
 # pkgrel 5: ProArt P14 H7407BA keyboard, audio identity, touchpad and Cirrus 33A1 support.
 pkgname=h7607a-hardware
 pkgver=1.0.0
-pkgrel=6
+pkgrel=7
 pkgdesc='ASUS H7607BA/H7407BA keyboard, audio, input and boot support with SoundWire race repair'
 arch=('aarch64')
 url='https://github.com/pfeifferj/archlinuxarm-proart-p16'
@@ -27,7 +28,6 @@ source=(
   'n1x-cppc-init.py'
   'n1x-cppc-init.service'
   'soundwire-mtk.ko'
-  '60-h7607a-no-camera.conf'
   'mt8901-soundwir.conf'
   'P16-playback.conf'
   '51-h7607a-playback.conf'
@@ -48,10 +48,9 @@ sha256sums=(
   'aaae00438e0cad22150263d65b6c0fd00bf0618ca10ab8ddff47c7d00e8c77a8'
   '14d7908b992750aeb8e960eba1ce7cdf3a3de46af66d5d9abdf1bddc38462c65'
   '7162e23606a3bbcf4ff15fc2eada8662eee9962b88b5605d11f51e45e74b7d5f'
-  '5d29287c05747e8da3c20c3cb55ea86e46a1b15d41ae55478ca756b3be218c14'
   '4d98aafd5c460e54fdd2ee0a9331254df9743454600430f7b9e57fa34376b64b'
   '775a464f8bd95970179ad13be24efca5634020cad33faebf11ca25472f159dd5'
-  '37cf73011561857221345e3fcbf73233907d262984b6f733f4b299a9082c2312'
+  'f11c1c71138c76ce0714bd97f264d5de752bd456763de0508f3b1ca00e0e6134'
   'eb53814d76bcce38354500586bf1b105ad93846e45067f562441bf500d4bc353'
   '9974b3ff3caf65cc25741332976362527e5e10eb090c7b0e97b9aa95b10d47fc'
   'b152c2715e71bb0b6a1d5f86d86687dea989af68e5eaa6868b55fe13d8d4ef75'
@@ -70,7 +69,6 @@ package() {
   install -Dm644 "$srcdir/n1x-cppc-init.py" "$pkgdir/usr/lib/h7607a/n1x-cppc-init.py"
   install -Dm644 "$srcdir/n1x-cppc-init.service" "$pkgdir/usr/lib/systemd/system/n1x-cppc-init.service"
   install -Dm644 "$srcdir/soundwire-mtk.ko" "$pkgdir/usr/lib/modules/7.0.0-1022-nvidia/updates/h7607a/soundwire-mtk.ko"
-  install -Dm644 "$srcdir/60-h7607a-no-camera.conf" "$pkgdir/usr/lib/modprobe.d/60-h7607a-no-camera.conf"
   install -Dm644 "$srcdir/mt8901-soundwir.conf" "$pkgdir/usr/share/alsa/ucm2/conf.d/mt8901-soundwir/mt8901-soundwir.conf"
   install -Dm644 "$srcdir/P16-playback.conf" "$pkgdir/usr/share/alsa/ucm2/MediaTek/mt8901-soundwir/P16-playback.conf"
   install -Dm644 "$srcdir/51-h7607a-playback.conf" "$pkgdir/usr/share/wireplumber/wireplumber.conf.d/51-h7607a-playback.conf"

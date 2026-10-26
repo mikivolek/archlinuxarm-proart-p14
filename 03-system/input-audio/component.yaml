@@ -368,8 +368,8 @@
     {
       "source": "payload/runtime/usr/share/wireplumber/wireplumber.conf.d/51-h7607a-playback.conf",
       "destination": "runtime/usr/share/wireplumber/wireplumber.conf.d/51-h7607a-playback.conf",
-      "bytes": 1553,
-      "sha256": "37cf73011561857221345e3fcbf73233907d262984b6f733f4b299a9082c2312",
+      "bytes": 1614,
+      "sha256": "f11c1c71138c76ce0714bd97f264d5de752bd456763de0508f3b1ca00e0e6134",
       "mode": 420
     }
   ],

@@ -49,27 +49,6 @@
       ]
     },
     {
-      "id": "camera-disable",
-      "type": "direct",
-      "repo_url": null,
-      "checkout_hash": null,
-      "sparse": {
-        "enabled": false,
-        "paths": []
-      },
-      "dependencies": [
-        {
-          "name": "kmod",
-          "version": "34.2-1",
-          "version_status": "pinned",
-          "source": "locked ALARM package"
-        }
-      ],
-      "notes": [
-        "Block requested camera driver; no capture service."
-      ]
-    },
-    {
       "type": "direct",
       "repo_url": null,
       "checkout_hash": null,
@@ -79,8 +58,7 @@
       },
       "id": "policy-power-and-exclusions",
       "files": [
-        "runtime/etc/systemd/logind.conf.d/60-h7607a-sleep-hold.conf",
-        "runtime/usr/lib/modprobe.d/60-h7607a-no-camera.conf"
+        "runtime/etc/systemd/logind.conf.d/60-h7607a-sleep-hold.conf"
       ]
     },
     {
@@ -117,13 +95,6 @@
       "destination": "runtime/etc/systemd/logind.conf.d/60-h7607a-sleep-hold.conf",
       "bytes": 250,
       "sha256": "ffb500b84c818fb66c9c14aa5ef55acbb4f949c9e0acb495a99ca98d9e666831",
-      "mode": 420
-    },
-    {
-      "source": "payload/runtime/usr/lib/modprobe.d/60-h7607a-no-camera.conf",
-      "destination": "runtime/usr/lib/modprobe.d/60-h7607a-no-camera.conf",
-      "bytes": 201,
-      "sha256": "5d29287c05747e8da3c20c3cb55ea86e46a1b15d41ae55478ca756b3be218c14",
       "mode": 420
     },
     {

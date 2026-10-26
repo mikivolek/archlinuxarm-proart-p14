@@ -43,10 +43,6 @@
       "filename": "soundwire-mtk.ko"
     },
     {
-      "artifact_id": "h7607a-camera-blacklist",
-      "filename": "60-h7607a-no-camera.conf"
-    },
-    {
       "artifact_id": "h7607a-ucm-card",
       "filename": "mt8901-soundwir.conf"
     },

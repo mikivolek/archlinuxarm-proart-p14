@@ -480,19 +480,6 @@
       "mode": 420
     },
     {
-      "id": "h7607a-camera-blacklist",
-      "path": "runtime/usr/lib/modprobe.d/60-h7607a-no-camera.conf",
-      "bytes": 201,
-      "sha256": "5d29287c05747e8da3c20c3cb55ea86e46a1b15d41ae55478ca756b3be218c14",
-      "urls": [],
-      "license": "MIT",
-      "origin": "Clean production source; exact native policy retained",
-      "target": "usr/lib/modprobe.d/60-h7607a-no-camera.conf",
-      "package_owner": "h7607a-hardware",
-      "package_filename": "60-h7607a-no-camera.conf",
-      "mode": 420
-    },
-    {
       "id": "h7607a-ucm-card",
       "path": "runtime/usr/share/alsa/ucm2/conf.d/mt8901-soundwir/mt8901-soundwir.conf",
       "bytes": 316,
@@ -521,8 +508,8 @@
     {
       "id": "h7607a-wireplumber-playback",
       "path": "runtime/usr/share/wireplumber/wireplumber.conf.d/51-h7607a-playback.conf",
-      "bytes": 1553,
-      "sha256": "37cf73011561857221345e3fcbf73233907d262984b6f733f4b299a9082c2312",
+      "bytes": 1614,
+      "sha256": "f11c1c71138c76ce0714bd97f264d5de752bd456763de0508f3b1ca00e0e6134",
       "urls": [],
       "license": "MIT",
       "origin": "Clean production source; exact native policy retained",
