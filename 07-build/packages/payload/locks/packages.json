@@ -350,7 +350,7 @@
     },
     {
       "name": "h7607a-hardware",
-      "version": "1.0.0-5",
+      "version": "1.0.0-6",
       "architecture": "aarch64",
       "kind": "custom",
       "recipe": "packages/h7607a-hardware",
@@ -364,8 +364,8 @@
           "sha256": "c01bab78a49e3c20ddd3787d45f33b60898b9d26632bf4bf581fa372fefd78ab"
         },
         "packages/h7607a-hardware/PKGBUILD": {
-          "bytes": 4455,
-          "sha256": "593550810e14f6527f5276dfb348302e22f43103bda82146c708443952cd29ae"
+          "bytes": 4519,
+          "sha256": "298e1c49725a086d856c63229d12ef9d21b96f565609073e0bbacd70962d7baf"
         },
         "packages/h7607a-hardware/inputs.json": {
           "bytes": 1739,

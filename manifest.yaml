@@ -59,7 +59,7 @@
     },
     {
       "manifest": "07-build/packages/component.yaml",
-      "sha256": "ab48cbbde1b0eeee8633cda54c3bf959dc660e223716b13c94347a41e5a1476c"
+      "sha256": "53f44cbcfa4a1f7f57eeeb8edc733a4945b3ac3f602b79b7bab49ed5036663f7"
     },
     {
       "manifest": "07-build/locked-inputs/component.yaml",
