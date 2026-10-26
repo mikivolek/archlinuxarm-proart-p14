@@ -9,9 +9,12 @@ import subprocess
 
 SYSTEM_POLICY_FILES = (
     "etc/systemd/logind.conf.d/60-h7607a-sleep-hold.conf",
-    "etc/udev/rules.d/72-h7607a-no-microphone.rules",
     "etc/systemd/system/power-profiles-daemon.service",
 )
+# PipeWire skips an ALSA card unless every pcm/compr node on it is accessible,
+# so root-only capture nodes also hid the speakers. Capture stays disabled in
+# the WirePlumber policy instead; remove the rule from earlier installs.
+LEGACY_POLICY_FILES = ("etc/udev/rules.d/72-h7607a-no-microphone.rules",)
 SYSTEM_POLICY_SERVICES = ("n1x-cppc-init.service", "power-profiles-daemon.service")
 
 
@@ -66,16 +69,16 @@ def _copy(source, destination, mode):
 def configure_system_policy(target: Path, repo_root: Path | None = None, *, run=subprocess.run) -> dict:
     """Apply hardware policy independently of the installation profile or user.
 
-    Keep manual sleep and the power button available. Restrict only capture PCM
-    nodes, retaining shared playback codecs. The PPD unit changes two ordering/
-    install lines: its vendor After=multi-user.target would cycle if simply
+    Keep manual sleep and the power button available. Capture PCM nodes keep
+    their default access; WirePlumber disables capture nodes. The PPD unit
+    changes two ordering/install lines: its vendor After=multi-user.target would cycle if simply
     enabled in that target. Dependency resets do not work in unit drop-ins.
     """
     target = _target(target)
     overlay = _overlay(repo_root)
     planned = _plan(target, overlay, SYSTEM_POLICY_FILES)
     vendor = _target_path(target, "usr/lib/systemd/system/power-profiles-daemon.service")
-    adapted = (overlay / SYSTEM_POLICY_FILES[2]).read_text()
+    adapted = (overlay / "etc/systemd/system/power-profiles-daemon.service").read_text()
     expected_vendor = adapted.replace("After=n1x-cppc-init.service\n",
                                       "After=multi-user.target display-manager.target\n", 1)
     expected_vendor = expected_vendor.replace("WantedBy=multi-user.target\n", "WantedBy=graphical.target\n", 1)
@@ -87,6 +90,10 @@ def configure_system_policy(target: Path, repo_root: Path | None = None, *, run=
             raise ValueError("Missing packaged hardware service: " + service)
     files = {str(destination.relative_to(target)): _copy(source, destination, 0o644)
              for source, destination in planned}
+    for relative in LEGACY_POLICY_FILES:
+        legacy = _target_path(target, relative)
+        if legacy.is_file() or legacy.is_symlink():
+            legacy.unlink()
     # The immutable live seed may retain links to the vendor unit and its old
     # graphical target. Reenable replaces those links using the adapted unit.
     run(["systemctl", "--root=" + str(target), "reenable", *SYSTEM_POLICY_SERVICES], check=True, timeout=30)
@@ -101,5 +108,5 @@ def configure_system_policy(target: Path, repo_root: Path | None = None, *, run=
     return {"schema": "h7607a-system-policy-v1", "files": files,
             "system_services_enabled": list(SYSTEM_POLICY_SERVICES),
             "automatic_sleep": "held pending physical qualification", "manual_sleep_blocked": False,
-            "power_button_policy_changed": False, "capture_pcm_access": "root only",
+            "power_button_policy_changed": False, "capture_pcm_access": "default (WirePlumber disables capture nodes)",
             "playback_pcm_policy_changed": False}

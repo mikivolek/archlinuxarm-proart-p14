@@ -1,3 +1,0 @@
-# User excludes microphone capture. Run after 70-uaccess and before 73-seat-late.
-# Keep playback/control nodes and the shared CS42L43 output codec available.
-SUBSYSTEM=="sound", KERNEL=="pcmC[0-9]*D[0-9]*c", TAG-="uaccess", OWNER:="root", GROUP:="root", MODE:="0600"

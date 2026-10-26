@@ -22,9 +22,9 @@ rw rootwait console=tty0 acpi=nospcr thermal.tzp=100 mem_sleep_default=s2idle in
 ## Device policy
 
 Both the live and installed systems get the device policy. It blacklists
-`uvcvideo`, makes ALSA capture nodes root-only, has logind ignore idle, lid and
+`uvcvideo`, has logind ignore idle, lid and
 suspend-key events, and enables the CPPC initialization and adapted
 `power-profiles-daemon` units. The `h7607a-hardware` package, also on every
 installation, carries the UCM, the touchpad quirk, `h7607a-brightness`,
 `h7607a-audio` for playback volume and a WirePlumber policy without camera
-monitors or Bluetooth headset capture roles.
+monitors, capture nodes or Bluetooth headset capture roles.
